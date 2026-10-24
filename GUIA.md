@@ -30,7 +30,11 @@ Esta guía la sigue Claude cada sábado. El sitio es estático: `index.html` (es
    - Recalcular con base 21/8 = 100: soja 1240,25, trigo 699,75, maíz 508,25 ¢/bu. Pesos: soja 60 %, maíz 25 %, trigo 15 %.
    - Dejar a la vista las últimas 12 semanas.
    - Actualizar el KPI `indice-canasta-exportadora`.
-5. **Fichas** (`fichas`): reescribir cada ficha con lo que pasó en la semana. Las que tienen nombres fijos son `bancos`, `pasos`, `sudamerica`, `injerencia-arg` y `demografia`. Las fichas de hechos son `conflictos`, `atentados`, `protestas`, `comercio`, `sanciones`, `ataques`, `ia`, `brotes`, `actores`, `organismos` y `movimientos`.
+5. **Fichas** (`fichas`): reescribir cada ficha con lo que pasó en la semana. Las que tienen nombres fijos son `bancos`, `pasos`, `sudamerica`, `injerencia-arg`, `influencia-arg` y `demografia`.
+   - `influencia-arg`: influencia en Argentina de Estados Unidos, Israel, China, Rusia, Reino Unido y Otros. Cada ficha separa los canales Política, Inteligencia y Económica, y suma la novedad de la semana. El chip indica el peso: Alto, Medio o Bajo.
+   - `influyentes`: personas y empresas con influencia en Argentina (Peter Thiel, Palantir, Musk/Starlink, OpenAI, JPMorgan, fondos, XRG, mineras y petroleras). Revisar cada semana si hay novedades y agregar actores nuevos.
+   - El KPI `politicos` cuenta los hechos de injerencia política de la semana. En el mapa 14, los colores son: militar rojo, política azul (#5BA4E6), inteligencia violeta y económica ámbar.
+   - El mapa 5 (protestas) es mundial y no solo de Sudamérica. Las fichas de hechos son `conflictos`, `atentados`, `protestas`, `comercio`, `sanciones`, `ataques`, `ia`, `brotes`, `actores`, `organismos` y `movimientos`.
    - Cada ficha lleva `chip` y `chipc`. Valores de `chipc`: `ok`, `warn` o `crit`.
 6. **Gráficos** (`series`):
    - `encuestas`: la próxima elección relevante.
