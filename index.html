@@ -196,7 +196,7 @@ const MAPAS = [
   {n:2,t:'Alertas de riesgo',q:'Dónde puede empezar o escalar algo pronto.',ley:[['#E3BE55','Probabilidad baja'],['#F0A93A','Media'],['#F0675F','Alta']],src:'CrisisWatch · mercados de predicción'},
   {n:3,t:'Elecciones relevantes',q:'Qué países votan en los próximos 6 meses y quién puede ganar.',grad:['azulrojo','Gana fuerza afín','Gana fuerza distante'],ley:[['#5E7180','Incierto']],nota:'Intensidad = probabilidad del resultado',src:'Encuestas · Polymarket · Metaculus · IFES'},
   {n:4,t:'Afinidad con Argentina',q:'Quién apoya y quién se aleja de Argentina hoy.',grad:['afin','Muy alineado','Hostil'],src:'Análisis de medidas, votos, acuerdos y declaraciones'},
-  {n:5,t:'Protestas y disturbios',q:'Dónde hay estallidos sociales, paros y disturbios.',grad:['seco','Pocas','Muchas'],src:'GDELT · prensa'},
+  {n:5,t:'Protestas y disturbios',q:'Dónde hay estallidos sociales, paros y disturbios.',grad:['seco','Pocas','Muchas'],src:'prensa internacional'},
   {n:6,t:'Rutas y pasos marítimos',q:'Si el comercio fluye: Ormuz, Bab el-Mandeb, Suez, Panamá, Malaca, Bósforo.',ley:[['#5BC08A','Normal'],['#F0A93A','Con demoras'],['#F0675F','Interrumpido']],src:'IMF PortWatch'},
   {n:7,t:'Clima, sequías y ENSO',q:'Dónde la sequía, el exceso de agua o el ENSO cambian la oferta mundial. Selector de escenario Niño / Niña.',grad:['seco','Seco','Húmedo'],src:'NOAA · Copernicus · US Drought Monitor · IMD'},
   {n:8,t:'Desastres activos',q:'Huracanes, terremotos, volcanes, tsunamis, inundaciones, incendios y olas de calor en curso.',ley:[['#E3BE55','Leve'],['#F0A93A','Grave'],['#F0675F','Muy grave']],nota:'Ícono = tipo de desastre',src:'GDACS · USGS · Smithsonian · NOAA · NASA FIRMS'},
@@ -205,7 +205,7 @@ const MAPAS = [
   {n:11,t:'Ciberataques e infraestructura digital',q:'Dónde hubo ataques relevantes y cortes de cables o GPS.',ley:[['#F0675F','Ciberataque'],['#F0A93A','Ransomware'],['#74B9EA','Corte de cable'],['#B48CE8','Interferencia GPS']],src:'CISA · ENISA · prensa especializada'},
   {n:12,t:'Inversiones estratégicas',q:'Dónde invierten los grandes actores privados.',ley:[['#74B9EA','Centros de datos'],['#E3BE55','Minería'],['#F0A93A','Energía'],['#5BC08A','Puertos']],nota:'Tamaño = monto',src:'Comunicados de empresas · prensa económica'},
   {n:13,t:'Migración y demografía',q:'Hacia dónde se mueve la gente y dónde crece o envejece la población.',grad:['edad','Población joven','Envejecida'],nota:'Flechas = flujos migratorios',src:'ACNUR · OIM · ONU'},
-  {n:14,t:'Injerencia extranjera',q:'Quién interviene en qué país, incluida Argentina.',ley:[['#F0675F','Militar'],['#B48CE8','Inteligencia'],['#E3BE55','Económica']],nota:'Flecha llena = confirmado · punteada = sin confirmar',src:'SIPRI · EUvsDisinfo · DFRLab · AidData · prensa'},
+  {n:14,t:'Injerencia extranjera',q:'Quién interviene en qué país, incluida Argentina.',ley:[['#F0675F','Militar'],['#5BA4E6','Política'],['#B48CE8','Inteligencia'],['#E3BE55','Económica']],nota:'Flecha llena = confirmado · punteada = sin confirmar',src:'SIPRI · EUvsDisinfo · DFRLab · AidData · prensa'},
   {n:15,t:'Bloques y alianzas',q:'A qué bloque se acerca cada país.',ley:[['#3B82C4','Occidente'],['#D9534F','Eje Rusia–China–Irán'],['#E3BE55','No alineados']],nota:'Intensidad = grado de alineamiento',src:'Tratados · votos en la ONU · análisis'}
 ];
 
@@ -272,10 +272,11 @@ const PAGES = [
    {k:'fichas',id:'sanciones',w:'half',t:'Sanciones y guerras comerciales',n:2,campos:['Quién','Contra quién','Medida','Efecto en Argentina'],src:'OFAC · UE · USTR'},
    {k:'nota',id:'atlantico',w:'full',t:'Atlántico Sur, Malvinas y pesca',txt:'Nota cualitativa semanal: movimientos del Reino Unido en Malvinas, flotas pesqueras extranjeras en la milla 201, actividad en la Antártida y votos en organismos.'}
  ]},
- {id:'injerencia',nav:'Injerencia extranjera',t:'Injerencia extranjera',p:'Intervención de potencias en otros países y en Argentina: militar, de inteligencia y económica. Cada hecho, con su nivel de confirmación.',bl:[
-   {k:'kpis',w:'full',t:'Hechos de la semana',items:[K('Militares','total','SIPRI · prensa'),K('De inteligencia','total','EUvsDisinfo · DFRLab'),K('Económicos','total','AidData · prensa'),K('En Argentina','total','prensa')]},
+ {id:'injerencia',nav:'Injerencia extranjera',t:'Injerencia extranjera',p:'Intervención de potencias en otros países y en Argentina: militar, política, de inteligencia y económica. Cada hecho, con su nivel de confirmación.',bl:[
+   {k:'kpis',w:'full',t:'Hechos de la semana',items:[K('Militares','total','SIPRI · prensa'),K('Políticos','total','prensa'),K('De inteligencia','total','EUvsDisinfo · DFRLab'),K('Económicos','total','AidData · prensa'),K('En Argentina','total','prensa')]},
    {k:'mapa',w:'full',n:14},
    {k:'fichas',id:'injerencia',w:'full',t:'Fichas por hecho',n:3,campos:['Actor externo','País objetivo','Qué hizo','Confirmación','Efecto en Argentina'],chip:'Vía',src:'SIPRI · EUvsDisinfo · DFRLab · AidData'},
+   {k:'fichas',id:'influencia-arg',w:'full',t:'Influencia extranjera en Argentina, por país',nombres:['Estados Unidos','Israel','China','Rusia','Reino Unido','Otros'],campos:['Política','Inteligencia','Económica','Novedad de la semana'],chip:'Peso',src:'prensa · comunicados oficiales'},
    {k:'fichas',id:'injerencia-arg',w:'full',t:'Injerencia en Argentina: temas abiertos',nombres:['Estación espacial china en Neuquén','Presencia militar británica en Malvinas','Cooperación con el Comando Sur de EE.UU.','Swap con China','Interés extranjero en la Hidrovía','Pesca extranjera en la milla 201'],campos:['Novedades de la semana','Fuente'],chip:'Novedad',src:'prensa · comunicados oficiales'}
  ]},
  {id:'bloques',nav:'Bloques y alianzas',t:'Bloques y alianzas',p:'Cómo se agrupa el mundo hoy: Occidente, el eje Rusia–China–Irán y sus aliados, y los no alineados. Dónde queda Argentina.',bl:[
@@ -286,7 +287,7 @@ const PAGES = [
    {k:'fichas',id:'movimientos',w:'half',t:'Movimientos de la semana',n:2,campos:['País','Se acerca a','Se aleja de','Hecho'],src:'prensa · sitios oficiales'},
    {k:'grupos',w:'full',t:'Alianzas formales e informales',g:[['Occidente',['OTAN','UE','AUKUS','Quad','G7']],['Eje euroasiático',['OTSC','Rusia–China','Rusia–Irán','Rusia–Corea del Norte','Cuba','Venezuela','Nicaragua']],['Foros mixtos',['BRICS+','Org. de Cooperación de Shanghái','G20']],['No alineados',['India','Brasil','Turquía','Arabia Saudita','Indonesia','Sudáfrica']],['Región',['Mercosur','OEA','CELAC']]]}
  ]},
- {id:'internos',nav:'Internos y terrorismo',t:'Conflictos internos y terrorismo',p:'Guerras civiles, golpes, protestas, paros, crimen organizado y atentados terroristas, con foco en Sudamérica y en la amenaza sobre Argentina.',bl:[
+ {id:'internos',nav:'Protestas e internos',t:'Protestas, conflictos internos y terrorismo',p:'Guerras civiles, golpes, protestas, paros, crimen organizado y atentados terroristas, con foco en Sudamérica y en la amenaza sobre Argentina.',bl:[
    {k:'kpis',w:'full',t:'Resumen',items:[K('Protestas de la semana','países','prensa'),K('Paros y huelgas relevantes','total','prensa'),K('Golpes o intentos','total','CrisisWatch'),K('Países sudamericanos en foco','total','prensa')]},
    {k:'mapa',w:'full',n:5},
    {k:'fichas',id:'protestas',w:'full',t:'Protestas por país',n:5,campos:['Motivo','Tamaño'],chip:'Escala',src:'prensa internacional'},
@@ -321,6 +322,7 @@ const PAGES = [
    {k:'kpis',w:'full',t:'Resumen',items:[K('Movimientos de la semana','total','prensa','movimientos-actores'),K('Monto anunciado','USD mil M','comunicados'),K('Con cruce directo con Argentina','total','análisis')]},
    {k:'mapa',w:'two3',n:12},
    {k:'chart',id:'montos',w:'third',t:'Montos anunciados por sector',kind:'hbars',labels:['Centros de datos','Minería','Energía','Agro','Puertos'],src:'comunicados'},
+   {k:'fichas',id:'influyentes',w:'full',t:'Personas y empresas con influencia en Argentina',n:8,campos:['Quién','Qué hace en Argentina','Tipo de influencia','Lectura'],chip:'Para Argentina',src:'prensa · comunicados'},
    {k:'fichas',id:'actores',w:'full',t:'Movimientos de la semana',n:3,campos:['Actor','Qué hizo','Dónde','Interés detrás','Cruce con Argentina'],chip:'Cruce',src:'comunicados · SEC · prensa'},
    {k:'matriz',w:'full',t:'Matriz de intereses'},
    {k:'noticias',id:'actores',w:'full',t:'Noticias relevantes de la semana',n:5}

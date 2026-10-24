@@ -445,7 +445,7 @@
    "u": "temas activos",
    "f": "conteo propio",
    "fecha": "2026-10-23",
-   "nota": "Sea Lion en Malvinas (Tribunal del Mar) y visita de Vance en noviembre."
+   "nota": "Sea Lion en Malvinas (Tribunal del Mar) y visita de Vance en noviembre. Ver la influencia de cada país, por canal, más abajo."
   },
   "movimientos-de-la-semana": {
    "v": 3,
@@ -825,6 +825,14 @@
    "url": "https://www.nbclosangeles.com/news/local/fire-in-orange-county-prompts-evacuation-orders/3957302/",
    "fecha": "2026-10-17",
    "nota": "Incendio Norte en Orange County, California: 230 ha, unas 16.000 personas evacuadas, sin muertos."
+  },
+  "politicos": {
+   "v": 1,
+   "dec": 0,
+   "u": "hechos",
+   "f": "conteo propio",
+   "fecha": "2026-10-23",
+   "nota": "Preparación de la visita de JD Vance a Argentina en noviembre (seguridad, energía y comercio)."
   }
  },
  "fichas": {
@@ -2342,6 +2350,192 @@
      "Tamaño": "Decenas de detenidos en Milán el 17/10; cientos en Bruselas y Lieja."
     }
    }
+  ],
+  "influyentes": [
+   {
+    "nombre": "Peter Thiel",
+    "chip": "Mixto",
+    "chipc": "warn",
+    "f": "La Nación · Forbes Argentina · BA Times",
+    "url": "https://www.lanacion.com.ar/el-mundo/peter-thiel-cuestiona-la-guerra-con-iran-y-lanza-una-inquietante-advertencia-nid22102026/",
+    "campos": {
+     "Quién": "Inversor estadounidense, fundador de PayPal y Palantir; cercano a Trump y a Milei.",
+     "Qué hace en Argentina": "Vive en Buenos Aires desde abril de 2026; compró una mansión en Barrio Parque (unos 12 M USD). Se reunió varias veces con Milei y Caputo, y en agosto tomó cerca del 1 % de Vista Energy (Vaca Muerta, unos 76 M USD). Interés posible en el \"Súper RIGI\" y en centros de datos, sin anuncio oficial. El 21–22/10 se difundió una charla suya en la que dice que EE.UU. no debió iniciar la guerra con Irán.",
+     "Tipo de influencia": "Política, inversión y tecnología",
+     "Lectura": "Aliado ideológico del gobierno y señal de confianza para inversores. Riesgo: polariza la política interna (audiencia en el Congreso y protestas en agosto) y su crítica a la guerra con Irán choca con el alineamiento de Milei con Washington."
+    }
+   },
+   {
+    "nombre": "Palantir",
+    "chip": "Riesgo",
+    "chipc": "crit",
+    "f": "La Política Online",
+    "url": "https://www.lapoliticaonline.com/congreso/preocupacion-en-el-congreso-por-la-posible-habilitacion-de-milei-a-la-empresa-de-macrodatos-palantir-4268/",
+    "campos": {
+     "Quién": "Empresa de análisis de datos para defensa e inteligencia, cofundada por Thiel.",
+     "Qué hace en Argentina": "No hay contrato firmado. Según La Política Online, Bullrich impulsaba un convenio por medio de una agencia de seguridad migratoria y Karina Milei lo frenó. Legisladores temen que la nueva \"Comunidad Informativa Nacional\" de la SIDE (decreto del 2/1/2026) abra la puerta.",
+     "Tipo de influencia": "Tecnología y seguridad",
+     "Lectura": "Riesgo para la soberanía de los datos de los argentinos. Hay que vigilar las compras de Seguridad y de la SIDE."
+    }
+   },
+   {
+    "nombre": "Elon Musk / Starlink",
+    "chip": "Mixto",
+    "chipc": "warn",
+    "f": "MercoPress",
+    "url": "https://en.mercopress.com/2026/07/27/milei-announces-starlink-deal-to-bring-satellite-internet-to-6-000-rural-schools",
+    "campos": {
+     "Quién": "Dueño de SpaceX (Starlink), Tesla y X.",
+     "Qué hace en Argentina": "Acuerdo con Enacom (julio de 2026): Starlink dona 6.000 kits y 24 meses de servicio a escuelas rurales; después lo paga el Fondo de Servicio Universal. El texto del acuerdo no se publicó.",
+     "Tipo de influencia": "Tecnología",
+     "Lectura": "Mejora la conectividad rural, pero genera dependencia de un solo proveedor extranjero y hay poca transparencia."
+    }
+   },
+   {
+    "nombre": "OpenAI y Sur Energy",
+    "chip": "Aliado posible",
+    "chipc": "ok",
+    "f": "BA Times",
+    "url": "https://batimes.com.ar/news/economy/openai-sur-energy-to-build-massive-ai-data-centre-in-patagonia.phtml",
+    "campos": {
+     "Quién": "OpenAI (Sam Altman) con la desarrolladora Sur Energy.",
+     "Qué hace en Argentina": "Carta de intención por \"Stargate Argentina\": un centro de datos de IA en la Patagonia de hasta 500 MW y unos 25.000 M USD, por el RIGI. Todavía sin sitio ni fecha.",
+     "Tipo de influencia": "Tecnología e inversión",
+     "Lectura": "Puede atraer inversión en IA y energía, pero por ahora es solo un anuncio."
+    }
+   },
+   {
+    "nombre": "JPMorgan",
+    "chip": "Mixto",
+    "chipc": "warn",
+    "f": "BA Times",
+    "url": "https://www.batimes.com.ar/news/economy/jpmorgan-courts-argentina-by-readily-refilling-stash-of-dollars.phtml",
+    "campos": {
+     "Quién": "El mayor banco de EE.UU.",
+     "Qué hace en Argentina": "Puso unos 340 M USD en el préstamo repo al BCRA y su exposición a Argentina llega a unos 2.000 M USD. En octubre de 2025 compró pesos por cuenta del Tesoro de EE.UU. Prepara financiamiento de hasta 14.000 M USD para YPF. Caputo y parte de su equipo vienen del banco.",
+     "Tipo de influencia": "Financiera",
+     "Lectura": "Fuente clave de financiamiento, con riesgo de conflicto de interés."
+    }
+   },
+   {
+    "nombre": "Fondos cercanos a Bessent",
+    "chip": "Riesgo",
+    "chipc": "crit",
+    "f": "BA Times",
+    "url": "https://www.batimes.com.ar/news/economy/bessent-steps-in-to-protect-profits-of-friendly-investors-in-argentina.phtml",
+    "campos": {
+     "Quién": "Discovery Capital, Druckenmiller y grandes gestoras (BlackRock, Fidelity, Pimco).",
+     "Qué hace en Argentina": "Tenedores de bonos argentinos favorecidos por el swap de 20.000 M USD del Tesoro de EE.UU. (octubre de 2025).",
+     "Tipo de influencia": "Financiera",
+     "Lectura": "El rescate se percibe como protección a inversores amigos de Washington; la deuda queda atada a sus decisiones."
+    }
+   },
+   {
+    "nombre": "XRG (Emiratos Árabes)",
+    "chip": "Aliado posible",
+    "chipc": "ok",
+    "f": "Buenos Aires Herald",
+    "url": "https://buenosairesherald.com/business/milei-touts-argentinas-energy-boom-defends-investment-incentives",
+    "campos": {
+     "Quién": "Brazo de inversión de ADNOC, la petrolera estatal de Abu Dabi.",
+     "Qué hace en Argentina": "Socio de YPF y Eni en Argentina LNG (51.000 M USD), según destacó Milei en Neuquén el 20/10. En junio compró el 32 % de tres bloques de gas en Vaca Muerta.",
+     "Tipo de influencia": "Inversión",
+     "Lectura": "Aporta capital y mercados para exportar gas, pero suma a un Estado del Golfo en un activo estratégico."
+    }
+   },
+   {
+    "nombre": "Grandes mineras y petroleras",
+    "chip": "Aliado posible",
+    "chipc": "ok",
+    "f": "Panorama Minero · Glencore · Noticias NQN",
+    "url": "https://www.panorama-minero.com/en/news/government-officially-approves-vicuna-s-entry-into-argentina-s-rigi-with-a-us-9-737-billion-investment-plan",
+    "campos": {
+     "Quién": "Chevron, Rio Tinto, Glencore, BHP y Lundin.",
+     "Qué hace en Argentina": "Proyectos aprobados o presentados al RIGI: Vicuña de BHP y Lundin (cobre, 9.737 M USD), El Trapial de Chevron (13.800 M USD), MARA de Glencore (cobre) y Rincón de Rio Tinto (litio, primer embarque en marzo).",
+     "Tipo de influencia": "Inversión",
+     "Lectura": "Traen dólares y exportaciones; a cambio, capturan renta con 30 años de beneficios fiscales. El litio de Rincón va a China."
+    }
+   }
+  ],
+  "influencia-arg": [
+   {
+    "nombre": "Estados Unidos",
+    "chip": "Alto",
+    "chipc": "crit",
+    "f": "Ámbito · Canal 26 · El Economista",
+    "url": "https://www.ambito.com/politica/la-side-recibio-una-autoridad-del-fbi-y-reforzo-la-cooperacion-antiterrorista-eeuu-n6305047",
+    "campos": {
+     "Política": "Es el principal aliado del gobierno. El embajador Peter Lamelas presiona en público contra la presencia china. Se prepara la visita del vicepresidente JD Vance en noviembre.",
+     "Inteligencia": "Cooperación estrecha con la SIDE: su titular se reunió con el director de la CIA en Langley (25/3). El Centro Nacional Antiterrorismo abrió el 16/4 con apoyo del FBI, y el número dos del FBI lo visitó en julio.",
+     "Económica": "Acuerdo de Comercio e Inversión Recíproco firmado el 5/2: baja aranceles a 1.675 productos y amplía la cuota de carne a 100.000 t. El swap de 20.000 M USD de octubre de 2025 se usó en unos 2.700 M y se devolvió en enero.",
+     "Novedad de la semana": "Preparativos de la visita de Vance (seguridad, energía y comercio)."
+    }
+   },
+   {
+    "nombre": "Israel",
+    "chip": "Alto",
+    "chipc": "warn",
+    "f": "EFE vía Swissinfo · Urgente24",
+    "url": "https://www.swissinfo.ch/spa/israel-entregar%C3%A1-medalla-honor-a-milei-y-argentina-abrir%C3%A1-embajada-en-jerusal%C3%A9n-este-abril/91249779",
+    "campos": {
+     "Política": "Alineamiento total del gobierno. Milei recibió en abril la Medalla Presidencial de Honor de Israel. La mudanza de la embajada a Jerusalén, prometida para 2026, sigue sin concretarse; Colombia se adelantó el 14/10.",
+     "Inteligencia": "Memorándum de cooperación contra el terrorismo y el antisemitismo, firmado en junio de 2025.",
+     "Económica": "Foro empresarial argentino-israelí (noviembre de 2025) y negociación de vuelos directos.",
+     "Novedad de la semana": "Sin novedades. Las elecciones del 27/10 en Israel pueden cambiar al interlocutor."
+    }
+   },
+   {
+    "nombre": "China",
+    "chip": "Alto",
+    "chipc": "warn",
+    "f": "El Litoral · BCRA",
+    "url": "https://www.ellitoral.com/internacionales/china-argentina-lamelas-eeuu-diplomacia-tension-comunicado-beijing_0_vbqlcpGmpi.amp.html",
+    "campos": {
+     "Política": "La embajada responde en duro a EE.UU.: en abril acusó al embajador Lamelas de \"difamar\" la cooperación sino-argentina, como antes había hecho con Bessent.",
+     "Inteligencia": "Estación espacial de Bajada del Agrio (Neuquén), operada por un organismo chino; EE.UU. la cuestiona por su posible uso militar.",
+     "Económica": "Principal comprador de soja. Swap renovado en agosto por cinco años (unos 19.000 M USD). Fuerte presencia en el litio.",
+     "Novedad de la semana": "Sin hechos nuevos en la semana."
+    }
+   },
+   {
+    "nombre": "Rusia",
+    "chip": "Medio",
+    "chipc": "crit",
+    "f": "ABC Color (EFE) · iProfesional",
+    "url": "https://www.abc.com.py/internacionales/2026/04/03/una-investigacion-periodistica-revela-campana-rusa-de-desinformacion-en-medios-argentinos/",
+    "campos": {
+     "Política": "Campaña para desacreditar al gobierno: unos 250 artículos pagados en más de 20 medios argentinos (283.000 USD, junio–octubre de 2024).",
+     "Inteligencia": "Red \"La Compañía\", ligada al ex Grupo Wagner y absorbida por la inteligencia exterior rusa; la SIDE la desarticuló en 2025 y confirmó la campaña de prensa en abril de 2026. El caso está en la Justicia.",
+     "Económica": "Peso económico bajo.",
+     "Novedad de la semana": "Sin hechos nuevos."
+    }
+   },
+   {
+    "nombre": "Reino Unido",
+    "chip": "Medio",
+    "chipc": "warn",
+    "f": "Canal 26 · El Economista",
+    "url": "https://www.canal26.com/economia/2026/09/04/petroleras-desafian-las-sanciones-de-argentina-y-confirman-que-avanzaran-con-el-proyecto-sea-lion-en-malvinas/",
+    "campos": {
+     "Política": "Disputa por Malvinas. Argentina llevó el proyecto petrolero Sea Lion al Tribunal Internacional del Derecho del Mar (13/10); audiencia en Hamburgo el 10/11.",
+     "Inteligencia": "Presencia militar en las islas (base de Mount Pleasant).",
+     "Económica": "Navitas y Rockhopper avanzan con Sea Lion con licencia británica, pese a las sanciones argentinas.",
+     "Novedad de la semana": "A la espera de la audiencia del 10/11."
+    }
+   },
+   {
+    "nombre": "Otros",
+    "chip": "Bajo",
+    "chipc": "ok",
+    "f": "Buenos Aires Herald",
+    "url": "https://buenosairesherald.com/business/milei-touts-argentinas-energy-boom-defends-investment-incentives",
+    "campos": {
+     "Política": "Emiratos Árabes: su fondo XRG es socio de Argentina LNG, destacado por Milei el 20/10. Irán y Hezbolá: amenaza terrorista histórica (ver \"Amenaza sobre Argentina\").",
+     "Inteligencia": "Sin hechos nuevos.",
+     "Económica": "XRG compró en junio el 32 % de tres bloques de gas en Vaca Muerta.",
+     "Novedad de la semana": "Milei citó a XRG como socio de Argentina LNG (20/10)."
+    }
+   }
   ]
  },
  "pendientes": [],
@@ -2987,28 +3181,28 @@
  "noticias": {
   "actores": [
    {
+    "t": "Peter Thiel, que vive en Buenos Aires, dice que EE.UU. no debió iniciar la guerra con Irán",
+    "por": "Es uno de los aliados más visibles de Milei y su crítica choca con el alineamiento del gobierno con Washington.",
+    "f": "La Nación",
+    "url": "https://www.lanacion.com.ar/el-mundo/peter-thiel-cuestiona-la-guerra-con-iran-y-lanza-una-inquietante-advertencia-nid22102026/"
+   },
+   {
+    "t": "Milei destaca al fondo emiratí XRG como socio de Argentina LNG (51.000 M USD)",
+    "por": "Capital del Golfo para exportar gas de Vaca Muerta.",
+    "f": "Buenos Aires Herald",
+    "url": "https://buenosairesherald.com/business/milei-touts-argentinas-energy-boom-defends-investment-incentives"
+   },
+   {
     "t": "Anthropic negocia 45.000 millones de USD en cómputo con Nscale y prepara su salida a bolsa",
     "por": "La IA dispara la demanda de energía y minerales.",
     "f": "LLM Daily",
     "url": "https://buttondown.com/agent-k/archive/llm-daily-october-21-2026/"
    },
    {
-    "t": "OpenAI lleva sus modelos a Google Cloud y compra Orchestra Bio",
-    "por": "Más competencia y acceso a IA para empresas locales.",
-    "f": "CNBC",
-    "url": "https://www.cnbc.com/amp/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html"
-   },
-   {
     "t": "TotalEnergies anuncia 10.000 millones de USD en Argentina",
     "por": "Inversión directa en Vaca Muerta.",
     "f": "Reuters vía GBM",
     "url": "https://gbm.com/media/noticia/totalenergies-invertira-10-000-millones-de-dolares-en-argentina-dice-ceo-pouyanne-2/"
-   },
-   {
-    "t": "La inversión extranjera en minería argentina llegó a un récord de 24.849 millones de USD (stock, marzo)",
-    "por": "Rio Tinto, BHP, Lundin y Glencore aceleran litio y cobre.",
-    "f": "Bloomberg Línea",
-    "url": "https://www.bloomberglinea.com/latinoamerica/argentina/inversion-extranjera-record-en-mineria-las-grandes-companias-detras-de-la-nueva-ola-de-capitales/"
    },
    {
     "t": "Navitas y Rockhopper siguen con Sea Lion pese a las sanciones argentinas",
@@ -3292,9 +3486,64 @@
     "152": "#2E86AB",
     "068": "#2E86AB",
     "600": "#3A6A80",
-    "858": "#3A4A55"
+    "858": "#3A4A55",
+    "250": "#2E86AB",
+    "008": "#2E86AB",
+    "840": "#3A6A80",
+    "380": "#3A4A55",
+    "056": "#3A4A55"
    },
-   "nota": "Protestas en Sudamérica esta semana (cualitativo)"
+   "nota": "Protestas de la semana en el mundo. Rojo: masivas o con choques; ámbar: moderadas. El detalle, en las fichas de protestas.",
+   "puntos": [
+    {
+     "lat": 48.86,
+     "lon": 2.35,
+     "c": "#F0675F",
+     "r": 7,
+     "t": "Francia: unas 550.000 personas (17/10), 272 detenidos",
+     "lbl": "Francia"
+    },
+    {
+     "lat": 41.33,
+     "lon": 19.82,
+     "c": "#F0675F",
+     "r": 6,
+     "t": "Albania: sexto día de protestas estudiantiles, choques en Tirana",
+     "lbl": "Albania"
+    },
+    {
+     "lat": 38.9,
+     "lon": -77.0,
+     "c": "#E3BE55",
+     "r": 6,
+     "t": "EE.UU.: marchas \"No Kings\" en todo el país (17/10)",
+     "lbl": "EE.UU."
+    },
+    {
+     "lat": 45.46,
+     "lon": 9.19,
+     "c": "#E3BE55",
+     "r": 4,
+     "t": "Italia: decenas de detenidos en Milán (17/10)",
+     "lbl": ""
+    },
+    {
+     "lat": 50.85,
+     "lon": 4.35,
+     "c": "#E3BE55",
+     "r": 4,
+     "t": "Bélgica: marchas por el costo de la educación",
+     "lbl": ""
+    },
+    {
+     "lat": -33.45,
+     "lon": -70.67,
+     "c": "#E3BE55",
+     "r": 5,
+     "t": "Chile: miles contra los recortes de Kast (18/10)",
+     "lbl": "Chile"
+    }
+   ]
   },
   "6": {
    "puntos": [
@@ -3660,6 +3909,43 @@
      "c": "#E3BE55",
      "dash": true,
      "t": "China → Argentina: swap y estación de Neuquén (sin novedades)"
+    },
+    {
+     "de": [
+      38,
+      -97
+     ],
+     "a": [
+      -34.6,
+      -58.4
+     ],
+     "c": "#5BA4E6",
+     "t": "EE.UU. → Argentina: alineamiento político, acuerdo comercial y cooperación SIDE–CIA–FBI (confirmado)"
+    },
+    {
+     "de": [
+      31.8,
+      35.2
+     ],
+     "a": [
+      -34.6,
+      -58.4
+     ],
+     "c": "#5BA4E6",
+     "dash": true,
+     "t": "Israel → Argentina: alineamiento político; mudanza de embajada pendiente"
+    },
+    {
+     "de": [
+      55.75,
+      37.6
+     ],
+     "a": [
+      -34.6,
+      -58.4
+     ],
+     "c": "#B48CE8",
+     "t": "Rusia → Argentina: red de desinformación \"La Compañía\" (confirmada por la SIDE)"
     }
    ],
    "nota": "Flecha llena = confirmado · punteada = atribuido o sin novedad"
