@@ -1063,6 +1063,128 @@
    "fecha": "2026-10-14",
    "sig": "-",
    "nota": "Advertencia del FMI en su reunión anual de Bangkok."
+  },
+  "gasto-militar-mundial": {
+   "v": 2887,
+   "dec": 0,
+   "u": "miles de M USD",
+   "f": "SIPRI",
+   "url": "https://www.sipri.org/media/press-release/2026/global-military-spending-surges-2025",
+   "fecha": "2025-12-31",
+   "sig": "-",
+   "nota": "Año 2025: +2,9 % real, undécimo año seguido de suba. Sin EE.UU., creció 9,2 %. Se publica cada abril."
+  },
+  "gasto-militar-pbi": {
+   "v": 2.5,
+   "dec": 1,
+   "u": "% del PBI mundial",
+   "f": "SIPRI",
+   "url": "https://www.sipri.org/media/press-release/2026/global-military-spending-surges-2025",
+   "fecha": "2025-12-31",
+   "sig": "-",
+   "nota": "El nivel más alto desde 2009."
+  },
+  "gasto-militar-eeuu": {
+   "v": 954,
+   "dec": 0,
+   "u": "miles de M USD",
+   "f": "SIPRI vía Pravda",
+   "url": "https://www.pravda.com.ua/eng/news/2026/04/27/8031976/",
+   "fecha": "2025-12-31",
+   "sig": "-",
+   "nota": "Bajó en 2025 por falta de ayuda nueva a Ucrania; el Congreso aprobó más de 1 billón para 2026."
+  },
+  "gasto-militar-china": {
+   "v": 336,
+   "dec": 0,
+   "u": "miles de M USD",
+   "f": "SIPRI vía Pravda",
+   "url": "https://www.pravda.com.ua/eng/news/2026/04/27/8031976/",
+   "fecha": "2025-12-31",
+   "sig": "-",
+   "nota": "+7,4 % en 2025."
+  },
+  "gasto-militar-rusia": {
+   "v": 190,
+   "dec": 0,
+   "u": "miles de M USD",
+   "f": "SIPRI vía Pravda",
+   "url": "https://www.pravda.com.ua/eng/news/2026/04/27/8031976/",
+   "fecha": "2025-12-31",
+   "sig": "-",
+   "nota": "+5,9 % en 2025. EE.UU., China y Rusia suman el 51 % del gasto mundial."
+  },
+  "gasto-militar-europa": {
+   "v": 14,
+   "dec": 0,
+   "u": "% real",
+   "f": "SIPRI",
+   "url": "https://www.sipri.org/media/press-release/2026/global-military-spending-surges-2025",
+   "fecha": "2025-12-31",
+   "sig": "-",
+   "nota": "Europa aumentó 14 % y Asia y Oceanía 8,1 %. Alemania pasó a China como cuarto exportador de armas."
+  },
+  "fao-alimentos": {
+   "v": 136.0,
+   "dec": 1,
+   "u": "pts",
+   "f": "FAO (2/10)",
+   "url": "https://fastmarkets.com/insights/fao-food-price-index-rises-in-september-on-higher-cereal-vegoil-prices-and-benchmark-at-highest-since-november-2022",
+   "fecha": "2026-09-30",
+   "sig": "+",
+   "nota": "Septiembre: +1,5 % en el mes y +5,8 % en el año; el más alto desde noviembre de 2022. Le conviene a Argentina como exportador de alimentos."
+  },
+  "fao-cereales": {
+   "v": 122.8,
+   "dec": 1,
+   "u": "pts",
+   "f": "FAO (2/10)",
+   "url": "https://fastmarkets.com/insights/fao-food-price-index-rises-in-september-on-higher-cereal-vegoil-prices-and-benchmark-at-highest-since-november-2022",
+   "fecha": "2026-09-30",
+   "sig": "+",
+   "nota": "+5,1 % en el mes y +17,2 % en el año: trigo +6,3 % y maíz +5,6 % por el mar Negro y Ormuz."
+  },
+  "fao-aceites": {
+   "v": 198.6,
+   "dec": 1,
+   "u": "pts",
+   "f": "FAO (2/10)",
+   "url": "https://fastmarkets.com/insights/fao-food-price-index-rises-in-september-on-higher-cereal-vegoil-prices-and-benchmark-at-highest-since-november-2022",
+   "fecha": "2026-09-30",
+   "sig": "+",
+   "nota": "+0,9 % en el mes y +18,3 % en el año. El aceite de girasol bajó."
+  },
+  "bitcoin": {
+   "v": 81457,
+   "dec": 0,
+   "u": "USD",
+   "f": "TradeMap",
+   "url": "https://trademap.com.br/noticias/news-8487413",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "nota": "Unos 81.500 USD; estaba en 80.900 el 15/10. Muy por debajo del máximo de 126.000 de octubre de 2025. Capitalización de 1,6 billones y 60 % del mercado cripto (Forbes, 15/10)."
+  },
+  "jet-fuel": {
+   "v": 187,
+   "dec": 0,
+   "u": "USD/bbl",
+   "f": "IATA y Platts vía Eurocontrol",
+   "url": "https://www.eurocontrol.int/sites/default/files/2026-10/eurocontrol-seven-year-forecast-2026-2032-report.pdf",
+   "fecha": "2026-10-02",
+   "d": 8,
+   "dt": "pct",
+   "sig": "-",
+   "nota": "Promedio mundial, semana al 2/10; más del doble que antes de la guerra. El combustible ya es el 31 % de los costos de las aerolíneas."
+  },
+  "pasajes": {
+   "v": 7,
+   "dec": 0,
+   "u": "% anual",
+   "f": "IATA (junio)",
+   "url": "https://www.voyages-d-affaires.com/en/?p=224497",
+   "fecha": "2026-06-08",
+   "sig": "-",
+   "nota": "Suba prevista del ingreso por pasaje en 2026. Las aerolíneas ganarán la mitad que en 2025 (23.000 M USD); las de Medio Oriente, con pérdidas."
   }
  },
  "fichas": {
@@ -2456,6 +2578,45 @@
      "Hijos por mujer": "1,4",
      "2050": "3,2 millones"
     }
+   },
+   {
+    "nombre": "Nigeria",
+    "chip": "Crece rápido",
+    "chipc": "ok",
+    "f": "ONU WPP 2024 vía Worldometer · GeoRank",
+    "url": "https://georank.org/population/nigeria/saudi-arabia",
+    "campos": {
+     "Población": "242 millones",
+     "Edad mediana": "18 años",
+     "Hijos por mujer": "4,2",
+     "2050": "361 millones"
+    }
+   },
+   {
+    "nombre": "Pakistán",
+    "chip": "Crece rápido",
+    "chipc": "ok",
+    "f": "ONU WPP 2024 vía Worldometer · GeoRank",
+    "url": "https://georank.org/population/pakistan/uzbekistan",
+    "campos": {
+     "Población": "259 millones",
+     "Edad mediana": "21 años",
+     "Hijos por mujer": "3,4",
+     "2050": "373 millones"
+    }
+   },
+   {
+    "nombre": "Etiopía",
+    "chip": "Crece rápido",
+    "chipc": "ok",
+    "f": "ONU WPP 2024 vía Worldometer · GeoRank",
+    "url": "https://georank.org/population/ethiopia/liberia",
+    "campos": {
+     "Población": "139 millones",
+     "Edad mediana": "19 años",
+     "Hijos por mujer": "3,7",
+     "2050": "226 millones"
+    }
    }
   ],
   "organismos": [
@@ -2970,7 +3131,9 @@
     "UE",
     "Brasil",
     "Rusia",
-    "Irán"
+    "Irán",
+    "Nigeria",
+    "Pakistán"
    ],
    "values": [
     1477,
@@ -2979,7 +3142,9 @@
     452,
     214,
     144,
-    92
+    92,
+    242,
+    259
    ],
    "values2": [
     1680,
@@ -2988,10 +3153,12 @@
     448,
     217,
     133,
-    99
+    99,
+    361,
+    373
    ],
    "src": "ONU WPP 2024 · Eurostat",
-   "nota": "Escenario medio de la ONU (UE: Eurostat). China y Rusia pierden población, la UE apenas baja e India sigue creciendo.",
+   "nota": "Escenario medio de la ONU (UE: Eurostat). China y Rusia pierden población, la UE apenas baja e India sigue creciendo. Nigeria y Pakistán son los que más crecen: en 2050 Pakistán será el 4.º país más poblado y Nigeria el 5.º. A fin de siglo, Nigeria tendría unos 480 millones y quedaría 4.ª, detrás de India, China y Pakistán (ONU, escenario medio).",
    "f": "ONU",
    "url": "https://population.un.org/wpp/"
   },

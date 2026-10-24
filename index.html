@@ -245,6 +245,7 @@ const PAGES = [
    {k:'fichas',id:'bancos',w:'full',t:'Política monetaria de bancos centrales',nombres:['Fed (EE.UU.)','BCE (zona euro)','Banco de Inglaterra','Banco de Japón','Banco Popular de China','Banco Central do Brasil','Banco Central de Chile','Banco de Rusia','Banco de la Reserva de India'],campos:['Tasa','Última decisión','Próxima reunión','Sesgo'],src:'sitios oficiales'},
    {k:'kpis',w:'half',t:'Finanzas globales',items:[K('Tesoro EE.UU. 10 años','%','FRED'),K('Índice dólar (DXY)','pts','ICE'),K('Riesgo emergentes (EMBI)','pb','JP Morgan'),K('Volatilidad (VIX)','pts','CBOE')]},
    {k:'kpis',w:'full',t:'Bolsas del mundo',items:[K('S&P 500','pts','S&P Dow Jones','sp500'),K('Nasdaq Composite','pts','Nasdaq','nasdaq'),K('Dow Jones','pts','S&P Dow Jones','dow-jones'),K('Euro Stoxx 50','pts','STOXX','euro-stoxx-50'),K('Nikkei 225','pts','Nikkei','nikkei-225'),K('Shanghai Composite','pts','SSE','shanghai'),K('Hang Seng','pts','HSI','hang-seng'),K('Ibovespa (Brasil)','pts','B3','ibovespa'),K('FTSE 100 (Londres)','pts','LSE','ftse-100'),K('DAX (Alemania)','pts','Deutsche Börse','dax'),K('Kospi (Corea)','pts','KRX','kospi'),K('Sensex (India)','pts','BSE','sensex')]},
+   {k:'kpis',w:'full',t:'Alimentos, cripto y viajes',items:[K('Precios de alimentos (FAO)','pts','FAO','fao-alimentos'),K('Cereales (FAO)','pts','FAO','fao-cereales'),K('Aceites vegetales (FAO)','pts','FAO','fao-aceites'),K('Bitcoin','USD','mercado','bitcoin'),K('Combustible de aviones','USD/bbl','IATA','jet-fuel'),K('Pasajes aéreos 2026','% anual','IATA','pasajes')]},
    {k:'chart',id:'pib',w:'half',t:'Crecimiento esperado del PIB 2026, países prioritarios (%)',kind:'bars',labels:['EE.UU.','China','Rusia','UE','R. Unido','Israel','Irán','India','Brasil','Chile','Bolivia','Paraguay','Uruguay'],src:'FMI · OCDE'},
    {k:'kpis',w:'full',t:'Socios comerciales',items:[K('Real por dólar','BRL','BCB'),K('Actividad Brasil','var. %','IBGE'),K('Yuan por dólar','CNY','PBoC'),K('PMI China','pts','NBS'),K('Inflación EE.UU.','% anual','BLS'),K('PMI EE.UU.','pts','ISM'),K('Inflación zona euro','% anual','Eurostat'),K('PMI zona euro','pts','HCOB')]},
    {k:'mapa',w:'half',n:10},
@@ -268,6 +269,7 @@ const PAGES = [
    {k:'fichas',id:'clima-claves',w:'full',t:'Fichas clave',nombres:['Monzón de India','Temporada de huracanes','Bajantes: Panamá, Mississippi, Rin'],campos:['Estado','Qué cambió','Efecto en Argentina'],src:'IMD · NOAA · ACP · USACE'}
  ]},
  {id:'geopolitica',nav:'Geopolítica y guerras',t:'Geopolítica y guerras',p:'Conflictos entre Estados, tensiones que pueden escalar, sanciones y el Atlántico Sur.',bl:[
+   {k:'kpis',w:'full',t:'Gasto militar',items:[K('Gasto militar mundial','miles de M USD','SIPRI','gasto-militar-mundial'),K('Sobre el PBI mundial','%','SIPRI','gasto-militar-pbi'),K('Estados Unidos','miles de M USD','SIPRI','gasto-militar-eeuu'),K('China','miles de M USD','SIPRI','gasto-militar-china'),K('Rusia','miles de M USD','SIPRI','gasto-militar-rusia'),K('Europa: suba 2025','% real','SIPRI','gasto-militar-europa')]},
    {k:'kpis',w:'full',t:'Resumen',items:[K('Conflictos activos','total','UCDP · CrisisWatch'),K('De alta intensidad','total','UCDP · CrisisWatch'),K('Alertas abiertas','total','CrisisWatch'),K('Pasos marítimos en alerta','de 6','PortWatch')]},
    {k:'mapa',w:'full',n:1},
    {k:'chart',id:'intensidad',w:'half',t:'Intensidad por conflicto (nivel de la semana)',kind:'hbars',labels:['Conflicto A','Conflicto B','Conflicto C','Conflicto D','Conflicto E'],src:'UCDP · CrisisWatch'},
@@ -335,9 +337,9 @@ const PAGES = [
  {id:'migracion',nav:'Migración y demografía',t:'Migración y demografía',p:'Flujos migratorios de la semana y la demografía que anticipa conflictos y mercados futuros.',bl:[
    {k:'kpis',w:'full',t:'Resumen',items:[K('Desplazados forzados en el mundo','millones','ACNUR'),K('Crisis migratorias activas','total','ACNUR · OIM'),K('Remesas a la región','USD mil M','Banco Mundial')]},
    {k:'mapa',w:'full',n:13},
-   {k:'chart',id:'poblacion',w:'half',t:'Población hoy y en 2050 (millones)',kind:'pairs',labels:['India','China','EE.UU.','UE','Brasil','Rusia','Irán'],src:'ONU'},
+   {k:'chart',id:'poblacion',w:'half',t:'Población hoy y en 2050 (millones)',kind:'pairs',labels:['India','China','EE.UU.','UE','Brasil','Rusia','Irán','Nigeria','Pakistán'],src:'ONU'},
    {k:'fichas',id:'migraciones',w:'half',t:'Crisis migratorias',n:2,campos:['Origen','Destinos','Personas','Efecto en Argentina'],src:'ACNUR · OIM · R4V'},
-   {k:'fichas',id:'demografia',w:'full',t:'Demografía de países prioritarios',nombres:PAISES13,campos:['Población','Edad mediana','Hijos por mujer','2050'],src:'ONU · Banco Mundial'}
+   {k:'fichas',id:'demografia',w:'full',t:'Demografía de países prioritarios',nombres:PAISES13.concat(['Nigeria','Pakistán','Etiopía']),campos:['Población','Edad mediana','Hijos por mujer','2050'],src:'ONU · Banco Mundial'}
  ]},
  {id:'organismos',nav:'Organismos',t:'Organismos internacionales y regulación',p:'Situaciones importantes en organismos multilaterales que afectan al mundo o a Argentina.',bl:[
    {k:'kpis',w:'full',t:'Resumen',items:[K('Situaciones abiertas','total','sitios oficiales'),K('Nuevas esta semana','total','sitios oficiales'),K('Resueltas','total','sitios oficiales')]},
