@@ -833,6 +833,134 @@
    "f": "conteo propio",
    "fecha": "2026-10-23",
    "nota": "Preparación de la visita de JD Vance a Argentina en noviembre (seguridad, energía y comercio)."
+  },
+  "sp500": {
+   "v": 7623.68,
+   "dec": 0,
+   "u": "pts",
+   "f": "CNBC",
+   "url": "https://www.cnbc.com/2026/10/22/stock-market-today-live-update.html",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "nota": "−0,52 % el viernes. A 2,8 % de su máximo de 52 semanas.",
+   "d": -0.5,
+   "dt": "pct"
+  },
+  "nasdaq": {
+   "v": 25955.34,
+   "dec": 0,
+   "u": "pts",
+   "f": "CNBC",
+   "url": "https://www.cnbc.com/2026/10/22/stock-market-today-live-update.html",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "nota": "Segunda semana seguida en baja por la venta de acciones de IA.",
+   "d": -0.7,
+   "dt": "pct"
+  },
+  "dow-jones": {
+   "v": 52215.16,
+   "dec": 0,
+   "u": "pts",
+   "f": "CNBC",
+   "url": "https://www.cnbc.com/2026/10/22/stock-market-today-live-update.html",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "nota": "−1,23 % el viernes por el petróleo arriba de 100 USD; tercera semana en alza.",
+   "d": 0.4,
+   "dt": "pct"
+  },
+  "euro-stoxx-50": {
+   "v": 6068.22,
+   "dec": 0,
+   "u": "pts",
+   "f": "Yahoo Finance",
+   "url": "https://finance.yahoo.com/quote/%5ESTOXX50E/",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "nota": "−0,31 % el viernes; −3,4 % en el mes. Pesan las protestas en Francia."
+  },
+  "nikkei-225": {
+   "v": 62693.16,
+   "dec": 0,
+   "u": "pts",
+   "f": "Armenpress · Yahoo Finance",
+   "url": "https://armenpress.am/en/article/1263656",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "nota": "−0,34 % el viernes, presionado por tecnológicas y semiconductores."
+  },
+  "shanghai": {
+   "v": 3690.48,
+   "dec": 0,
+   "u": "pts",
+   "f": "Trading Economics",
+   "url": "https://tradingeconomics.com/china/stock-market",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "nota": "+0,89 % el viernes, con compras de fondos estatales; −5,1 % en el mes."
+  },
+  "hang-seng": {
+   "v": 23093.37,
+   "dec": 0,
+   "u": "pts",
+   "f": "Armenpress",
+   "url": "https://armenpress.am/en/article/1263656",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "nota": "+0,69 % el viernes; −6,7 % en el mes."
+  },
+  "ibovespa": {
+   "v": 205082.56,
+   "dec": 0,
+   "u": "pts",
+   "f": "Estadão vía Tribuna do Agreste",
+   "url": "https://www.tribunadoagreste.com.br/geral/2026/10/23/1004191-ibovespa-registra-alta-em-meio-a-expectativa-eleitoral-mas-fecha-em-baixa-semanal",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "nota": "+0,47 % el viernes; +27,3 % en 2026. El mercado apuesta a una victoria de Flávio Bolsonaro.",
+   "d": -0.17,
+   "dt": "pct"
+  },
+  "ftse-100": {
+   "v": 10690.36,
+   "dec": 0,
+   "u": "pts",
+   "f": "Armenpress · Yahoo Finance",
+   "url": "https://armenpress.am/en/article/1263692",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "nota": "−0,32 % el viernes, tras el derrumbe de la confianza del consumidor británico."
+  },
+  "dax": {
+   "v": 25181.65,
+   "dec": 0,
+   "u": "pts",
+   "f": "Armenpress · Bloomberg",
+   "url": "https://armenpress.am/en/article/1263692",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "nota": "−0,75 % el viernes. El diferencial de Francia con Alemania tocó 170 pb, el máximo desde 2011."
+  },
+  "kospi": {
+   "v": 5550.3,
+   "dec": 0,
+   "u": "pts",
+   "f": "Seoul Economic Daily",
+   "url": "https://en.sedaily.com/finance/2026/10/23/kospi-closes-up-030-percent-at-555030",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "nota": "+0,30 % el viernes; −19,4 % en el mes por la venta de acciones de chips."
+  },
+  "sensex": {
+   "v": 73123.83,
+   "dec": 0,
+   "u": "pts",
+   "f": "Business Standard",
+   "url": "https://www.business-standard.com/amp/markets/news/stock-market-live-october-23-nse-bse-sensex-today-nifty50-gift-nifty-crude-oil-prices-jio-ipo-q2-results-today-126102300078_1.html",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "nota": "−0,17 % el viernes, cuarta baja seguida por la tensión en Medio Oriente."
   }
  },
  "fichas": {
