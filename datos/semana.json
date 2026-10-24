@@ -961,6 +961,108 @@
    "fecha": "2026-10-23",
    "sig": "+",
    "nota": "−0,17 % el viernes, cuarta baja seguida por la tensión en Medio Oriente."
+  },
+  "spr-eeuu": {
+   "v": 282.7,
+   "dec": 1,
+   "u": "M barriles",
+   "f": "EIA (vía TankerTrackers)",
+   "url": "https://tankertrackers.com/report/eia?year=2026",
+   "fecha": "2026-10-16",
+   "d": -0.11,
+   "dt": "pct",
+   "sig": "+",
+   "nota": "El nivel más bajo desde 1982–83; eran 415 M el 6/3. EE.UU. aportó 172 M a la liberación de la AIE y debe recibir unos 200 M de vuelta entre noviembre y diciembre."
+  },
+  "spr-china": {
+   "v": 1400,
+   "dec": 0,
+   "u": "M barriles",
+   "f": "EIA vía IBTimes",
+   "url": "https://www.ibtimes.co.uk/china-oil-stockpile-hormuz-crisis-1820440",
+   "fecha": "2025-12-31",
+   "sig": "+",
+   "nota": "Estimación de fines de 2025: unos 360 M estatales y 1.000 M comerciales. No es miembro de la AIE; usó sus propias reservas y bajó compras. Sin dato actualizado."
+  },
+  "spr-japon": {
+   "v": 204,
+   "dec": 0,
+   "u": "días",
+   "f": "Hellenic Shipping News · METI",
+   "url": "https://www.hellenicshippingnews.com/?p=1145478",
+   "fecha": "2026-08-21",
+   "sig": "+",
+   "nota": "Días de consumo cubiertos: 103 estatales y 98 privados. Liberó unos 50 días de reservas estatales y quiere volver a 90 en el año fiscal 2026-27."
+  },
+  "spr-corea": {
+   "v": 90,
+   "dec": 0,
+   "u": "M barriles",
+   "f": "S&P Global",
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/crude-oil/052826-south-korea-eases-refiners-crude-stockpiling-mandate-under-iea-plan",
+   "fecha": "2026-05-28",
+   "sig": "+",
+   "nota": "Stock comercial de las refinadoras. Comprometió un récord de 22,5 M a la AIE y bajó la obligación privada de 40 a 20 días. Sin dato de reservas estatales."
+  },
+  "spr-india": {
+   "v": 26,
+   "dec": 0,
+   "u": "M barriles (aprox.)",
+   "f": "VisionIAS (ministro de Petróleo)",
+   "url": "https://visionias.in/current-affairs/news-today/2026-03-25/economy/indias-strategic-petroleum-reserves-sprs-about-two-thirds-full-union-minister",
+   "fecha": "2026-03-25",
+   "sig": "+",
+   "nota": "Cálculo propio: dos tercios de una capacidad de 5,33 millones de toneladas. No participó de la liberación de la AIE."
+  },
+  "spr-aie": {
+   "v": 400,
+   "dec": 0,
+   "u": "M barriles",
+   "f": "AIE · political.org",
+   "url": "https://www.iea.org/news/iea-member-countries-to-carry-out-largest-ever-oil-stock-release-amid-market-disruptions-from-middle-east-conflict/",
+   "fecha": "2026-10-15",
+   "sig": "+",
+   "nota": "La mayor liberación de la historia, acordada el 11/3 (en 2022 fueron 183 M). Unos 330 M ya entregados a mediados de octubre; la AIE dice que superará los 400 M."
+  },
+  "deuda-global": {
+   "v": 365,
+   "dec": 0,
+   "u": "billones USD",
+   "f": "IIF vía Khaleej Times",
+   "url": "https://www.khaleejtimes.com/business/uae-government-debt-falls-as-global-debt-hits-a-record-dh1339-trillion",
+   "fecha": "2026-06-30",
+   "sig": "-",
+   "nota": "Récord en el primer semestre de 2026 (más de 365 billones); eran unos 353 en marzo. Incluye gobiernos, empresas y familias."
+  },
+  "deuda-global-pbi": {
+   "v": 310,
+   "dec": 0,
+   "u": "% PBI",
+   "f": "IIF vía Khaleej Times",
+   "url": "https://www.khaleejtimes.com/business/uae-government-debt-falls-as-global-debt-hits-a-record-dh1339-trillion",
+   "fecha": "2026-06-30",
+   "sig": "-",
+   "nota": "Aproximado."
+  },
+  "deuda-publica-mundial": {
+   "v": 94,
+   "dec": 0,
+   "u": "% PBI",
+   "f": "FMI vía Pattaya Mail",
+   "url": "https://www.pattayamail.com/thailandnews/imf-warns-in-bangkok-global-public-debt-could-hit-100-of-gdp-by-2029-568416",
+   "fecha": "2025-12-31",
+   "sig": "-",
+   "nota": "Deuda de los gobiernos del mundo en 2025."
+  },
+  "deuda-publica-2029": {
+   "v": 100,
+   "dec": 0,
+   "u": "% PBI, proyección",
+   "f": "FMI (14/10)",
+   "url": "https://www.pattayamail.com/thailandnews/imf-warns-in-bangkok-global-public-debt-could-hit-100-of-gdp-by-2029-568416",
+   "fecha": "2026-10-14",
+   "sig": "-",
+   "nota": "Advertencia del FMI en su reunión anual de Bangkok."
   }
  },
  "fichas": {
@@ -2664,6 +2766,112 @@
      "Novedad de la semana": "Milei citó a XRG como socio de Argentina LNG (20/10)."
     }
    }
+  ],
+  "importaciones": [
+   {
+    "nombre": "Gas natural licuado (GNL)",
+    "chip": "Alto",
+    "chipc": "crit",
+    "f": "INDEC · El Ancasti · Energy Connects",
+    "url": "https://www.energyconnects.com/news/gas-lng/2026/october/lng-trade-through-hormuz-extends-rebound-despite-shipping-risks/",
+    "campos": {
+     "Peso en las importaciones": "867 M USD de GNL y 190 M USD de gas por gasoducto entre enero y septiembre.",
+     "Proveedores de Argentina": "Compras a traders (Trafigura, Naturgy), sin país de origen informado; el gas por gasoducto viene de Bolivia.",
+     "Principales productores del mundo": "EE.UU. 26 % de las exportaciones mundiales en 2025; con Qatar y Australia suman 63 %.",
+     "Riesgo hoy": "El GNL se pagó a 24–27 USD/MMBTU, contra 12 en 2025. El tránsito de GNL por Ormuz sigue más de 75 % debajo de antes de la guerra."
+    }
+   },
+   {
+    "nombre": "Urea",
+    "chip": "Alto",
+    "chipc": "crit",
+    "f": "Bichos de Campo · Banco Mundial",
+    "url": "https://bichosdecampo.com/saluden-a-la-urea-que-se-va-mas-del-60-de-la-urea-importada-por-la-argentina-proviene-de-la-region-de-medio-oriente-en-conflicto/",
+    "campos": {
+     "Peso en las importaciones": "2 % de lo importado en septiembre; 1,52 millones de toneladas en 2025.",
+     "Proveedores de Argentina": "En 2025: Omán 16 %, Turkmenistán 14 %, Qatar 12,5 % y Emiratos 4 %. El 63 % vino de la zona hoy en guerra.",
+     "Principales productores del mundo": "Egipto 13 %, Arabia Saudita 13 %, China 13 %, Omán 9 %, Nigeria 8,5 % (2023). El Golfo exporta cerca del 40 % de la urea mundial.",
+     "Riesgo hoy": "Ormuz canaliza un cuarto del comercio mundial de urea; Qatar suspendió su producción y China mantiene cupos de exportación."
+    }
+   },
+   {
+    "nombre": "Fertilizantes fosfatados (MAP y DAP)",
+    "chip": "Alto",
+    "chipc": "crit",
+    "f": "Bolsa de Comercio de Rosario · Producer",
+    "url": "https://www.bcr.com.ar/es/print/pdf/node/117006",
+    "campos": {
+     "Peso en las importaciones": "767.000 toneladas en el primer semestre; todos los fertilizantes sumaron 1.762 M USD.",
+     "Proveedores de Argentina": "Sin dato verificado (posiblemente Marruecos, China y Arabia Saudita).",
+     "Principales productores del mundo": "El Golfo exporta 23 % del DAP mundial; la saudita Ma'aden es la mayor de la región.",
+     "Riesgo hoy": "China restringe la exportación de fosfatados desde marzo; el azufre duplicó su precio y el DAP subió 27 %."
+    }
+   },
+   {
+    "nombre": "Potasio",
+    "chip": "Bajo",
+    "chipc": "ok",
+    "f": "USGS · RFE/RL",
+    "url": "https://pubs.usgs.gov/periodicals/mcs2026/mcs2026-potash.pdf",
+    "campos": {
+     "Peso en las importaciones": "Bajo: 39.000 toneladas en el primer semestre.",
+     "Proveedores de Argentina": "Sin dato verificado.",
+     "Principales productores del mundo": "Canadá 31 %, Rusia 20 %, China 13 % y Bielorrusia 12 % de la producción mundial (USGS, 2025).",
+     "Riesgo hoy": "Bajo. EE.UU. levantó sanciones a Bielorrusia; la UE las mantiene."
+    }
+   },
+   {
+    "nombre": "Gasoil y combustibles",
+    "chip": "Medio",
+    "chipc": "warn",
+    "f": "INDEC · Outlook India",
+    "url": "https://www.outlookindia.com/national/us-mulls-90-day-diesel-export-ban-as-indias-shipments-surge",
+    "campos": {
+     "Peso en las importaciones": "Los combustibles sumaron 3.025 M USD entre enero y septiembre (+10 %).",
+     "Proveedores de Argentina": "Sin dato verificado.",
+     "Principales productores del mundo": "Sin dato verificado.",
+     "Riesgo hoy": "EE.UU. evalúa prohibir por 90 días la exportación de diésel (25/9); Rusia mantiene restricciones."
+    }
+   },
+   {
+    "nombre": "Soja para moler",
+    "chip": "Bajo",
+    "chipc": "ok",
+    "f": "Bichos de Campo",
+    "url": "https://bichosdecampo.com/en-el-primer-cuatrimestre-de-2026-la-soja-importada-represento-una-de-cada-cuatro-toneladas-procesadas-por-la-industria-aceitera-argentina/",
+    "campos": {
+     "Peso en las importaciones": "5,4 % de lo importado entre enero y septiembre: el producto más comprado.",
+     "Proveedores de Argentina": "Paraguay, principal proveedor. En abril, la soja importada fue el 30 % de la molienda.",
+     "Principales productores del mundo": "Brasil, EE.UU., Argentina y Paraguay.",
+     "Riesgo hoy": "Bajo; depende de la cosecha regional, que El Niño puede mejorar."
+    }
+   },
+   {
+    "nombre": "Autos y autopartes",
+    "chip": "Bajo",
+    "chipc": "ok",
+    "f": "iProfesional · INDEC",
+    "url": "https://www.iprofesional.com/autos/460370-autos-importados-arrasan-con-mercado-argentino-y-asi-ponen-en-jaque-a-la-industria-local",
+    "campos": {
+     "Peso en las importaciones": "Autos: 3.965 M USD entre enero y septiembre (6,4 % en septiembre). Autopartes: 4,3 % en septiembre.",
+     "Proveedores de Argentina": "De los autos patentados en el primer semestre: 41,5 % vino de Brasil y 13,7 % de China (34 % fueron nacionales).",
+     "Principales productores del mundo": "Sin dato verificado.",
+     "Riesgo hoy": "Bajo. China gana terreno."
+    }
+   },
+   {
+    "nombre": "Celulares y electrónica",
+    "chip": "Bajo",
+    "chipc": "ok",
+    "f": "IANS · Los Andes · El Economista",
+    "url": "https://ianslive.in/india-emerges-as-primary-alternative-to-china-in-global-smartphone-supply-chain-report--20260831162116",
+    "campos": {
+     "Peso en las importaciones": "Celulares: 2,5 % de lo importado en septiembre; arancel 0 % desde el 15/1.",
+     "Proveedores de Argentina": "China, mayormente.",
+     "Principales productores del mundo": "China fabrica cerca del 63 % de los celulares del mundo e India el 18 %; con Vietnam superan el 90 %.",
+     "Riesgo hoy": "Bajo en abastecimiento. Uno de cada tres celulares entraría de contrabando."
+    }
+   }
   ]
  },
  "pendientes": [],
@@ -3206,6 +3414,58 @@
    "url": "https://iri.columbia.edu/our-expertise/climate/forecasts/enso/current/",
    "nota": "Probabilidad de El Niño por trimestre; La Niña, 0 % en todos. Los 27 modelos dan un evento muy fuerte (+2 °C o más) hasta el verano. NOAA (8/10): 83 % de un evento histórico en oct–dic. En jun–ago 2027 lo más probable ya es neutral (51 %).",
    "dec": 0
+  },
+  "deuda": {
+   "labels": [
+    "Japón",
+    "EE.UU.",
+    "China",
+    "R. Unido",
+    "Bolivia",
+    "Brasil",
+    "Zona euro*",
+    "India",
+    "Argentina",
+    "Israel",
+    "Chile",
+    "Irán",
+    "Rusia"
+   ],
+   "values": [
+    199.4,
+    126.8,
+    104.4,
+    102.0,
+    100.2,
+    97.0,
+    88.9,
+    83.1,
+    69.3,
+    68.8,
+    42.8,
+    39.1,
+    19.1
+   ],
+   "u": "%",
+   "colores": [
+    "var(--crit)",
+    "var(--crit)",
+    "var(--crit)",
+    "var(--crit)",
+    "var(--crit)",
+    "var(--warn)",
+    "var(--warn)",
+    "var(--warn)",
+    "var(--accent)",
+    "var(--warn)",
+    "var(--ok)",
+    "var(--ok)",
+    "var(--ok)"
+   ],
+   "src": "FMI, WEO octubre 2026",
+   "f": "FMI DataMapper",
+   "url": "https://www.imf.org/external/datamapper/GGXWDG_NGDP",
+   "nota": "Deuda bruta del gobierno general, proyección 2026. Rojo: 100 % o más; ámbar: 60 a 100 %; verde: menos de 60 %; celeste: Argentina, como referencia. EE.UU. y Reino Unido: FMI, sin confirmar si es la edición de octubre. Rusia: edición de abril. *Zona euro: Eurostat, primer trimestre. Paraguay (31 %) y Uruguay (61 %) solo tienen datos de CEPAL, que mide distinto."
   }
  },
  "notas": {

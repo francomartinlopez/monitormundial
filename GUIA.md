@@ -34,7 +34,10 @@ Esta guía la sigue Claude cada sábado. El sitio es estático: `index.html` (es
    - `influencia-arg`: influencia en Argentina de Estados Unidos, Israel, China, Rusia, Reino Unido y Otros. Cada ficha separa los canales Política, Inteligencia y Económica, y suma la novedad de la semana. El chip indica el peso: Alto, Medio o Bajo.
    - `influyentes`: personas y empresas con influencia en Argentina (Peter Thiel, Palantir, Musk/Starlink, OpenAI, JPMorgan, fondos, XRG, mineras y petroleras). Revisar cada semana si hay novedades y agregar actores nuevos.
    - El KPI `politicos` cuenta los hechos de injerencia política de la semana. En el mapa 14, los colores son: militar rojo, política azul (#5BA4E6), inteligencia violeta y económica ámbar.
-   - El mapa 5 (protestas) es mundial y no solo de Sudamérica. Las fichas de hechos son `conflictos`, `atentados`, `protestas`, `comercio`, `sanciones`, `ataques`, `ia`, `brotes`, `actores`, `organismos` y `movimientos`.
+   - El mapa 5 (protestas) es mundial y no solo de Sudamérica.
+   - `importaciones`: de dónde viene lo que Argentina importa (GNL, urea, fosfatados, potasio, gasoil, soja, autos, celulares). Actualizar con el informe mensual de comercio exterior (ICA) del INDEC y con los riesgos de abastecimiento.
+   - Valores semanales nuevos: las bolsas del mundo (S&P 500, Nasdaq, Dow Jones, Euro Stoxx 50, Nikkei, Shanghai, Hang Seng, Ibovespa, FTSE 100, DAX, Kospi y Sensex) y las reservas estratégicas de petróleo (spr-eeuu sale de la EIA todos los miércoles; spr-aie con las liberaciones).
+   - `series.deuda` (deuda pública sobre PBI, FMI) se actualiza en abril y octubre. Los KPIs de deuda mundial salen del IIF (trimestral). Las fichas de hechos son `conflictos`, `atentados`, `protestas`, `comercio`, `sanciones`, `ataques`, `ia`, `brotes`, `actores`, `organismos` y `movimientos`.
    - Cada ficha lleva `chip` y `chipc`. Valores de `chipc`: `ok`, `warn` o `crit`.
 6. **Gráficos** (`series`):
    - `encuestas`: la próxima elección relevante.

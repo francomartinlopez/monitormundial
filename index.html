@@ -251,6 +251,10 @@ const PAGES = [
    {k:'fichas',id:'comercio',w:'half',t:'Medidas comerciales de la semana',n:3,campos:['País','Medida','Productos','Efecto en Argentina'],src:'OMC · USTR · Comisión Europea'},
    {k:'mapa',w:'half',n:6},
    {k:'kpis',w:'half',t:'Fletes',items:[K('Baltic Dry Index','pts','Baltic Exchange'),K('Contenedor Asia–Sudamérica','USD/FEU','Drewry')]},
+   {k:'kpis',w:'full',t:'Reservas estratégicas de petróleo',items:[K('EE.UU. (SPR)','M barriles','EIA','spr-eeuu'),K('China','M barriles','estimaciones','spr-china'),K('Japón','días','METI · AIE','spr-japon'),K('Corea del Sur','M barriles','S&P Global','spr-corea'),K('India','M barriles','ISPRL','spr-india'),K('Liberación AIE 2026','M barriles','AIE','spr-aie')]},
+   {k:'chart',id:'deuda',w:'two3',t:'Deuda pública sobre PBI, países prioritarios (%)',kind:'hbars',labels:['País A','País B','País C'],src:'FMI, Monitor Fiscal'},
+   {k:'kpis',w:'third',t:'Deuda mundial',items:[K('Deuda global total','billones USD','IIF','deuda-global'),K('Deuda global sobre PBI','%','IIF','deuda-global-pbi'),K('Deuda pública mundial','% PBI','FMI','deuda-publica-mundial'),K('Deuda pública mundial en 2029','% PBI, proyección','FMI','deuda-publica-2029')]},
+   {k:'fichas',id:'importaciones',w:'full',t:'De dónde viene lo que Argentina importa (enero–septiembre 2026: China 23 %, Brasil 21 %, UE 14 %, EE.UU. 9 %)',n:8,campos:['Peso en las importaciones','Proveedores de Argentina','Principales productores del mundo','Riesgo hoy'],chip:'Riesgo',src:'INDEC · OEC · AIE · IFA'},
    {k:'fichas',id:'pasos',w:'full',t:'Pasos marítimos',nombres:['Ormuz','Bab el-Mandeb','Suez','Panamá','Malaca','Bósforo'],campos:['Tránsito','Qué cambió','Efecto en Argentina'],src:'IMF PortWatch · Lloyd\'s List · UKMTO · ACP'}
  ]},
  {id:'clima',nav:'Clima',t:'Clima en el mundo',p:'Sequías, el ENSO y sus dos escenarios, cosechas de los competidores, desastres y rutas. Todo fuera de Argentina.',bl:[
