@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Monitor Mundial</title>
+<meta name="description" content="El mundo, mirado desde Argentina: economía, clima, guerras, conflictos, elecciones, tecnología, salud, actores privados, migración y organismos internacionales. Actualización semanal.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Archivo:wdth,wght@62..125,400..800&family=Source+Sans+3:wght@400;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: tablero oscuro de una columna de 1200px; cabecera fija con las 12 páginas; bloques en grilla de 12 columnas. Un solo tema (oscuro) por decisión. */
+:root{
+  --bg:#0A1116; --panel:#111B22; --panel2:#16232C; --line:#22333E;
+  --ink:#E6EDF1; --muted:#8FA1AC; --nd:#56697460;
+  --accent:#74B9EA; --accent-soft:#163049; --accent-ink:#06131C;
+  --ok:#5BC08A; --warn:#F0A93A; --crit:#F0675F;
+  --f-display:"Archivo","Arial Narrow",system-ui,sans-serif;
+  --f-body:"Source Sans 3","Segoe UI",system-ui,sans-serif;
+  --f-data:"IBM Plex Mono",ui-monospace,Menlo,monospace;
+  --r:6px;
+  color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--bg);color:var(--ink);font:400 16px/1.5 var(--f-body);padding-bottom:env(safe-area-inset-bottom,0px)}
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);background:var(--panel);z-index:10}
+a{color:var(--accent);text-underline-offset:2px}
+button:focus-visible,a:focus-visible,path:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:1200px;margin:0 auto;padding-left:max(16px,env(safe-area-inset-left,0px));padding-right:max(16px,env(safe-area-inset-right,0px))}
+h1,h2,h3{font-family:var(--f-display);font-stretch:78%;line-height:1.08;margin:0;text-wrap:balance}
+p{margin:0}
+.eyebrow{font:500 .72rem/1.2 var(--f-data);letter-spacing:.09em;text-transform:uppercase;color:var(--muted)}
+.muted{color:var(--muted)}
+.num{font-family:var(--f-data);font-variant-numeric:tabular-nums}
+
+/* cabecera */
+header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--panel);border-bottom:1px solid var(--line)}
+.top .wrap{display:flex;flex-direction:column;gap:4px;padding-top:10px}
+.brand{display:flex;align-items:baseline;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}
+.brand b{font:800 1.2rem/1 var(--f-display);font-stretch:70%;letter-spacing:.04em;text-transform:uppercase}
+.brand b span{color:var(--accent)}
+.brand .sub{font-size:.9rem;color:var(--muted)}
+.stamp{font:500 .76rem/1.2 var(--f-data);color:var(--muted)}
+.stamp i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--warn);margin-right:6px;vertical-align:1px}
+nav.idx{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin:0 -6px}
+nav.idx::-webkit-scrollbar{display:none}
+nav.idx a{flex:none;font:600 .86rem/1 var(--f-body);color:var(--muted);text-decoration:none;padding:10px 8px 11px;border-bottom:3px solid transparent;white-space:nowrap}
+nav.idx a:hover{color:var(--ink)}
+nav.idx a.on{color:var(--ink);border-bottom-color:var(--accent)}
+
+/* página */
+main{padding-block:12px 48px}
+.sec{padding-top:36px;scroll-margin-top:calc(env(safe-area-inset-top,0px) + 96px)}
+.sec+.sec{margin-top:40px;border-top:1px solid var(--line)}
+.intro{padding-top:20px}
+.phead{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;max-width:76ch}
+.phead h1{font-size:clamp(1.9rem,4.4vw,2.8rem);font-weight:780}
+.phead p{color:var(--muted);font-size:1.05rem}
+.boceto{display:inline-flex;align-items:center;gap:8px;font:500 .74rem/1.3 var(--f-data);color:var(--warn);border:1px dashed var(--warn);border-radius:4px;padding:4px 8px;align-self:flex-start}
+.grid{display:grid;grid-template-columns:repeat(12,minmax(0,1fr));gap:16px}
+.b{grid-column:span 12;background:var(--panel);border:1px solid var(--line);border-radius:var(--r);padding:16px 18px;display:flex;flex-direction:column;gap:12px;min-width:0}
+.b.half{grid-column:span 6}.b.third{grid-column:span 4}.b.two3{grid-column:span 8}
+.b.bare{background:none;border:0;padding:0}
+@media (max-width:860px){.b.half,.b.third,.b.two3{grid-column:span 12}}
+.bh{display:flex;justify-content:space-between;align-items:baseline;gap:6px 12px;flex-wrap:wrap}
+.bh h2{font-size:1.25rem;font-weight:720;font-stretch:84%}
+.src{font:400 .74rem/1.3 var(--f-data);color:var(--muted)}
+.ph{display:block;height:10px;border-radius:3px;background:var(--panel2)}
+
+/* chips */
+.chip{display:inline-flex;align-items:center;gap:6px;font:600 .7rem/1 var(--f-data);letter-spacing:.05em;text-transform:uppercase;padding:5px 7px;border-radius:4px;background:var(--panel2);color:var(--muted);white-space:nowrap}
+.chip.ok{background:#163323;color:var(--ok)}.chip.warn{background:#3A2B12;color:var(--warn)}.chip.crit{background:#3A1B1A;color:var(--crit)}.chip.acc{background:var(--accent-soft);color:var(--accent)}
+.dot{width:10px;height:10px;border-radius:50%;display:inline-block;background:var(--nd);flex:none;border:1px solid var(--line)}
+
+/* resumen */
+.hero{display:grid;grid-template-columns:6px 1fr;gap:16px;padding-left:0;overflow:hidden}
+.hero .stripe{background:var(--accent);border-radius:0 3px 3px 0}
+.hero .tx{display:flex;flex-direction:column;gap:10px;padding-block:4px}
+.hero h2{font-size:clamp(1.4rem,3.2vw,2rem);font-weight:760}
+
+/* semáforos */
+.sems{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+@media (max-width:860px){.sems{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media (max-width:480px){.sems{grid-template-columns:repeat(2,minmax(0,1fr))}}
+.sem{background:var(--panel);padding:12px 14px;display:flex;flex-direction:column;gap:8px}
+.sem .n{font-weight:700;line-height:1.2}
+.sem .lights{display:flex;gap:5px}
+.sem .lights i{width:12px;height:12px;border-radius:50%;border:1.5px solid var(--line);background:transparent}
+.sem .s{font:500 .72rem/1.2 var(--f-data);color:var(--muted)}
+
+/* números */
+.kpis{display:grid;grid-template-columns:repeat(auto-fill,minmax(170px,1fr));gap:8px}
+.kpi{background:var(--panel2);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px 14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.kpi .l{font-size:.86rem;line-height:1.3;color:var(--ink)}
+.kpi .v{font:600 1.7rem/1.05 var(--f-data);font-variant-numeric:tabular-nums;color:var(--muted);display:flex;align-items:baseline;gap:5px}
+.kpi .v small{font-size:.76rem;font-weight:400}
+.kpi .d{font:400 .74rem/1.3 var(--f-data);color:var(--muted)}
+
+/* alertas */
+.alerts{display:flex;flex-direction:column;gap:10px}
+.alert{display:grid;grid-template-columns:5px 1fr;gap:12px;border:1px solid var(--line);border-radius:var(--r);background:var(--panel2);overflow:hidden}
+.alert .stripe{background:var(--warn)}
+.alert .c{padding:12px 12px 12px 0;display:flex;flex-direction:column;gap:8px;min-width:0}
+.alert .t{display:flex;gap:6px;flex-wrap:wrap;align-items:center}
+.alert h3{font-size:1.05rem;font-stretch:88%;font-weight:700}
+.fields{display:grid;grid-template-columns:minmax(110px,max-content) 1fr;gap:4px 12px;font-size:.88rem}
+.fields dt{color:var(--muted)}
+.fields dd{margin:0;color:var(--muted)}
+
+/* mapas */
+.map{position:relative;border-radius:4px;background:#0C161D;border:1px solid var(--line);overflow:hidden}
+.map svg{display:block;width:100%;height:auto}
+#world .c{fill:#1A2832;stroke:#0C161D;stroke-width:.5}#world .c.pri{fill:#24435A;stroke:#3C6C8E;stroke-width:.8}#world .c.arg{fill:var(--accent);stroke:var(--accent)}
+.map .c{fill:#1A2832;stroke:#0C161D;stroke-width:.5}
+.map .c.pri{fill:#24435A;stroke:#3C6C8E;stroke-width:.8}
+.map .c.arg{fill:var(--accent);stroke:var(--accent)}
+.map .empty{position:absolute;left:12px;bottom:10px;font:500 .72rem/1.2 var(--f-data);color:var(--muted);background:#0C161DCC;padding:4px 7px;border-radius:4px}
+.legend{display:flex;flex-wrap:wrap;gap:6px 14px;font-size:.82rem;color:var(--muted)}
+.legend span{display:inline-flex;align-items:center;gap:6px}
+.legend i{width:12px;height:12px;border-radius:3px;display:inline-block}
+.legend .grad{width:120px;height:10px;border-radius:3px}
+.layers{display:flex;flex-wrap:wrap;gap:6px}
+.layers button{font:600 .82rem/1.15 var(--f-body);border:1px solid var(--line);background:var(--panel2);color:var(--muted);padding:7px 10px;border-radius:999px;cursor:pointer}
+.layers button:hover{color:var(--ink)}
+.layers button[aria-pressed="true"]{background:var(--accent);color:var(--accent-ink);border-color:var(--accent)}
+.layerinfo{display:flex;flex-direction:column;gap:6px}
+.layerinfo h3{font-size:1.4rem;font-weight:740}
+
+/* gráficos fantasma */
+.ghost svg{display:block;width:100%;height:auto}
+.cal .ev{display:flex;gap:8px;align-items:flex-start;margin-top:8px;font-size:.88rem;line-height:1.35}
+.cal .ev .dot{width:10px;height:10px;border-radius:50%;flex:none;margin-top:4px}
+.ghost text{fill:var(--muted);font:400 11px var(--f-data)}
+
+/* fichas */
+.cards{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:10px}
+.card{background:var(--panel2);border:1px solid var(--line);border-radius:var(--r);padding:12px 14px;display:flex;flex-direction:column;gap:8px;min-width:0}
+.card .h{display:flex;justify-content:space-between;gap:8px;align-items:flex-start}
+.card h3{font-size:1.05rem;font-weight:700;font-stretch:86%}
+.card .fields{grid-template-columns:1fr;gap:2px;font-size:.88rem}
+.card .fields dt{font:600 .68rem/1.3 var(--f-data);letter-spacing:.06em;text-transform:uppercase;margin-top:6px}
+.kpi .v.tx{font-size:1.15rem;line-height:1.2;font-family:var(--f-body);font-weight:700}
+
+/* listas y tablas */
+.list{display:flex;flex-direction:column}
+.list .it{display:grid;grid-template-columns:28px 1fr;gap:10px;padding:10px 0;border-top:1px solid var(--line)}
+.list .it:first-child{border-top:0}
+.list .k{font:500 .8rem/1.6 var(--f-data);color:var(--muted)}
+.list .it div{display:flex;flex-direction:column;gap:5px;min-width:0}
+.scroll{overflow-x:auto}
+table{border-collapse:collapse;width:100%;font-size:.88rem}
+th,td{text-align:left;padding:8px 10px;border-bottom:1px solid var(--line);vertical-align:top}
+th{font:600 .72rem/1.2 var(--f-data);letter-spacing:.06em;text-transform:uppercase;color:var(--muted)}
+td.st{width:1%;white-space:nowrap}
+
+/* calendario */
+.cal{display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:var(--r);overflow:hidden}
+@media (max-width:640px){.cal{grid-template-columns:repeat(3,minmax(0,1fr))}}
+.cal > div{background:var(--panel);padding:10px 12px;min-height:92px;display:flex;flex-direction:column;gap:8px}
+.cal b{font:600 .78rem/1 var(--f-data);text-transform:uppercase;letter-spacing:.06em;color:var(--muted)}
+
+.groups{display:flex;flex-wrap:wrap;gap:6px}
+footer{border-top:1px solid var(--line);padding-block:20px 32px;color:var(--muted);font-size:.86rem}
+footer .wrap{display:flex;flex-direction:column;gap:6px}
+</style>
+</head>
+<body>
+<header class="top">
+  <div class="wrap">
+    <div class="brand">
+      <div><b>Monitor <span>Mundial</span></b> <span class="sub">El mundo, mirado desde Argentina</span></div>
+      <span class="stamp" id="stamp"><i></i>Boceto · sin datos reales · corte semanal: viernes</span>
+    </div>
+    <nav class="idx" id="nav" aria-label="Secciones"></nav>
+  </div>
+</header>
+<main class="wrap" id="main"></main>
+<footer><div class="wrap">
+  <p>Monitor Mundial / Monitor Global · Actualización semanal: corte el viernes al cierre de Wall Street, publicación el sábado.</p>
+  <p>Solo hechos fuera de Argentina y su impacto sobre el país. Fuentes públicas y gratuitas, citadas en cada bloque.</p>
+</div></footer>
+
+<script>
+/* ---------- definiciones ---------- */
+const CANALES = ['Dólares comerciales','Energía','Financiamiento','Logística','Socios comerciales','Seguridad y soberanía'];
+
+const PRIORIDAD = {'840':'EE.UU.','156':'China','643':'Rusia','826':'Reino Unido','376':'Israel','364':'Irán','356':'India','076':'Brasil','152':'Chile','068':'Bolivia','600':'Paraguay','858':'Uruguay'};
+const UE = ['040','056','100','191','196','203','208','233','246','250','276','300','348','372','380','428','440','442','470','528','616','620','642','703','705','724','752'];
+const PAISES13 = ['Estados Unidos','China','Rusia','Unión Europea','Reino Unido','Israel','Irán','India','Brasil','Chile','Bolivia','Paraguay','Uruguay'];
+
+const G = {azulrojo:'linear-gradient(90deg,#3B82C4,#5E7180,#D9534F)', seco:'linear-gradient(90deg,#B5651D,#3A4A55,#2E86AB)', afin:'linear-gradient(90deg,#2E7DBF,#6BA6D6,#5E7180,#D98A5F,#C7362F)', verderojo:'linear-gradient(90deg,#5BC08A,#5E7180,#F0675F)', edad:'linear-gradient(90deg,#F2C14E,#5E7180,#6C8EBF)'};
+const MAPAS = [
+  {n:1,t:'Conflictos activos',q:'Dónde hay guerras y conflictos internos hoy.',ley:[['#F0675F','Guerra entre Estados'],['#F0A93A','Guerra civil'],['#B48CE8','Insurgencia'],['#E6EDF1','Atentado terrorista']],nota:'Tamaño del punto = víctimas de la semana',src:'UCDP · CrisisWatch · prensa'},
+  {n:2,t:'Alertas de riesgo',q:'Dónde puede empezar o escalar algo pronto.',ley:[['#E3BE55','Probabilidad baja'],['#F0A93A','Media'],['#F0675F','Alta']],src:'CrisisWatch · mercados de predicción'},
+  {n:3,t:'Elecciones relevantes',q:'Qué países votan en los próximos 6 meses y quién puede ganar.',grad:['azulrojo','Gana fuerza afín','Gana fuerza distante'],ley:[['#5E7180','Incierto']],nota:'Intensidad = probabilidad del resultado',src:'Encuestas · Polymarket · Metaculus · IFES'},
+  {n:4,t:'Afinidad con Argentina',q:'Quién apoya y quién se aleja de Argentina hoy.',grad:['afin','Muy alineado','Hostil'],src:'Análisis de medidas, votos, acuerdos y declaraciones'},
+  {n:5,t:'Protestas y disturbios',q:'Dónde hay estallidos sociales, paros y disturbios.',grad:['seco','Pocas','Muchas'],src:'GDELT · prensa'},
+  {n:6,t:'Rutas y pasos marítimos',q:'Si el comercio fluye: Ormuz, Bab el-Mandeb, Suez, Panamá, Malaca, Bósforo.',ley:[['#5BC08A','Normal'],['#F0A93A','Con demoras'],['#F0675F','Interrumpido']],src:'IMF PortWatch'},
+  {n:7,t:'Clima, sequías y ENSO',q:'Dónde la sequía, el exceso de agua o el ENSO cambian la oferta mundial. Selector de escenario Niño / Niña.',grad:['seco','Seco','Húmedo'],src:'NOAA · Copernicus · US Drought Monitor · IMD'},
+  {n:8,t:'Desastres activos',q:'Huracanes, terremotos, volcanes, tsunamis, inundaciones, incendios y olas de calor en curso.',ley:[['#E3BE55','Leve'],['#F0A93A','Grave'],['#F0675F','Muy grave']],nota:'Ícono = tipo de desastre',src:'GDACS · USGS · Smithsonian · NOAA · NASA FIRMS'},
+  {n:9,t:'Salud humana y animal',q:'Dónde hay epidemias y brotes en personas y animales.',ley:[['#F0675F','Brote en personas'],['#B48CE8','Brote en animales']],nota:'Tamaño = gravedad',src:'OMS · OPS · ECDC · OMSA'},
+  {n:10,t:'Política comercial',q:'Qué países abren o cierran su comercio y suben o bajan aranceles.',grad:['verderojo','Apertura','Restricción'],src:'OMC · USTR · Comisión Europea · Global Trade Alert'},
+  {n:11,t:'Ciberataques e infraestructura digital',q:'Dónde hubo ataques relevantes y cortes de cables o GPS.',ley:[['#F0675F','Ciberataque'],['#F0A93A','Ransomware'],['#74B9EA','Corte de cable'],['#B48CE8','Interferencia GPS']],src:'CISA · ENISA · prensa especializada'},
+  {n:12,t:'Inversiones estratégicas',q:'Dónde invierten los grandes actores privados.',ley:[['#74B9EA','Centros de datos'],['#E3BE55','Minería'],['#F0A93A','Energía'],['#5BC08A','Puertos']],nota:'Tamaño = monto',src:'Comunicados de empresas · prensa económica'},
+  {n:13,t:'Migración y demografía',q:'Hacia dónde se mueve la gente y dónde crece o envejece la población.',grad:['edad','Población joven','Envejecida'],nota:'Flechas = flujos migratorios',src:'ACNUR · OIM · ONU'},
+  {n:14,t:'Injerencia extranjera',q:'Quién interviene en qué país, incluida Argentina.',ley:[['#F0675F','Militar'],['#B48CE8','Inteligencia'],['#E3BE55','Económica']],nota:'Flecha llena = confirmado · punteada = sin confirmar',src:'SIPRI · EUvsDisinfo · DFRLab · AidData · prensa'},
+  {n:15,t:'Bloques y alianzas',q:'A qué bloque se acerca cada país.',ley:[['#3B82C4','Occidente'],['#D9534F','Eje Rusia–China–Irán'],['#E3BE55','No alineados']],nota:'Intensidad = grado de alineamiento',src:'Tratados · votos en la ONU · análisis'}
+];
+
+const VULNER = [
+  ['Concentración de exportaciones en el complejo soja','Caída del precio o de la demanda china'],
+  ['Dependencia de Brasil para la industria','Recesión o devaluación en Brasil'],
+  ['Fertilizantes importados','Restricciones de China, sanciones a Rusia, Ormuz'],
+  ['GNL importado en invierno','Conflictos o inviernos fríos en el norte'],
+  ['Necesidad de financiamiento en dólares','Tasas de EE.UU., dólar fuerte, aversión al riesgo'],
+  ['Acceso al mercado europeo','Reglas ambientales, protestas de productores'],
+  ['Exportaciones por rutas largas a Asia','Cierre de pasos, suba de fletes'],
+  ['Atlántico Sur y recursos pesqueros','Flotas extranjeras, tensión con el Reino Unido'],
+  ['Sistemas digitales del Estado y bancos','Campañas de ataque en la región'],
+  ['Fronteras sanitarias','Brotes en países limítrofes']
+];
+
+/* ---------- páginas ---------- */
+const slug = t => t.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'');
+const ALIAS = {'soja-en-chicago':'soja-poroto','petroleo-brent':'brent','bono-tesoro-ee-uu-10-anos':'tesoro-ee-uu-10-anos','pmi-manufacturero-china':'pmi-china','fase-enso':'fase-enso-actual','conflictos-de-alta-intensidad':'de-alta-intensidad'};
+const K = (l,u,s,id) => ({l,u,s,id: id || ALIAS[slug(l)] || slug(l)});
+const PAGES = [
+ {id:'portada',nav:'Portada',t:'Esta semana',p:'La foto del mundo en una pantalla: qué cambió afuera y por dónde le pega a la Argentina.',bl:[
+   {k:'resumen',w:'full'},
+   {k:'semaforos',w:'full',t:'Canales de impacto en Argentina'},
+   {k:'kpis',w:'full',t:'Indicadores clave',items:[K('Soja en Chicago','USD/t','CME'),K('Petróleo Brent','USD/bbl','ICE'),K('Bono Tesoro EE.UU. 10 años','%','FRED'),K('Índice dólar (DXY)','pts','ICE'),K('Real por dólar','BRL','BCB'),K('PMI manufacturero China','pts','NBS'),K('Fase ENSO','prob. %','NOAA'),K('Pasos marítimos en alerta','de 6','PortWatch'),K('Conflictos de alta intensidad','activos','UCDP · CrisisWatch'),K('Próxima elección relevante','días','IFES')]},
+   {k:'mapa',w:'half',n:2,mini:true},
+   {k:'alertas',id:'alertas-geo',w:'half',t:'Alertas de riesgo',n:2},
+   {k:'vulner',w:'half'},
+   {k:'noticias',id:'portada',w:'half',t:'Las 3 noticias de mayor impacto',n:3}
+ ]},
+ {id:'mapa',nav:'Mapa mundial',t:'Mapa mundial',p:'Quince capas, una pregunta por capa. Argentina en celeste; los países prioritarios, resaltados.',bl:[{k:'explorer',w:'full'}]},
+ {id:'economia',nav:'Economía',t:'Economía global',p:'Cuánto vale lo que vende Argentina, cuánto cuesta financiarse y cómo están los socios.',bl:[
+   {k:'kpis',w:'two3',t:'Precios de exportación argentinos',items:[K('Índice canasta exportadora','base 100','cálculo propio'),K('Soja poroto','USD/t','CME'),K('Harina de soja','USD/t','CME'),K('Aceite de soja','USD/t','CME'),K('Maíz','USD/t','CME'),K('Trigo','USD/t','CME'),K('Girasol','USD/t','FOB'),K('Cebada','USD/t','FOB'),K('Carne vacuna','USD/t','USDA'),K('Litio (carbonato)','USD/t','índices'),K('Oro','USD/oz','LBMA'),K('Cobre','USD/t','LME'),K('Plata','USD/oz','LBMA')]},
+   {k:'chart',id:'canasta',w:'third',t:'Canasta exportadora, últimas semanas',kind:'trend',src:'cálculo propio'},
+   {k:'kpis',w:'half',t:'Energía',items:[K('Brent','USD/bbl','ICE'),K('WTI','USD/bbl','CME'),K('Gas Henry Hub','USD/MMBtu','CME'),K('Gas TTF Europa','EUR/MWh','ICE'),K('GNL Asia (JKM)','USD/MMBtu','prensa')]},
+   {k:'kpis',w:'half',t:'Fertilizantes',items:[K('Urea','USD/t','Banco Mundial'),K('Fosfato diamónico','USD/t','Banco Mundial'),K('Potasa','USD/t','Banco Mundial'),K('Abastecimiento','semáforo','prensa')]},
+   {k:'fichas',id:'bancos',w:'full',t:'Política monetaria de bancos centrales',nombres:['Fed (EE.UU.)','BCE (zona euro)','Banco de Inglaterra','Banco de Japón','Banco Popular de China','Banco Central do Brasil','Banco Central de Chile','Banco de Rusia','Banco de la Reserva de India'],campos:['Tasa','Última decisión','Próxima reunión','Sesgo'],src:'sitios oficiales'},
+   {k:'kpis',w:'half',t:'Finanzas globales',items:[K('Tesoro EE.UU. 10 años','%','FRED'),K('Índice dólar (DXY)','pts','ICE'),K('Riesgo emergentes (EMBI)','pb','JP Morgan'),K('Volatilidad (VIX)','pts','CBOE')]},
+   {k:'chart',id:'pib',w:'half',t:'Crecimiento esperado del PIB 2026, países prioritarios (%)',kind:'bars',labels:['EE.UU.','China','Rusia','UE','R. Unido','Israel','Irán','India','Brasil','Chile','Bolivia','Paraguay','Uruguay'],src:'FMI · OCDE'},
+   {k:'kpis',w:'full',t:'Socios comerciales',items:[K('Real por dólar','BRL','BCB'),K('Actividad Brasil','var. %','IBGE'),K('Yuan por dólar','CNY','PBoC'),K('PMI China','pts','NBS'),K('Inflación EE.UU.','% anual','BLS'),K('PMI EE.UU.','pts','ISM'),K('Inflación zona euro','% anual','Eurostat'),K('PMI zona euro','pts','HCOB')]},
+   {k:'mapa',w:'half',n:10},
+   {k:'fichas',id:'comercio',w:'half',t:'Medidas comerciales de la semana',n:3,campos:['País','Medida','Productos','Efecto en Argentina'],src:'OMC · USTR · Comisión Europea'},
+   {k:'mapa',w:'half',n:6},
+   {k:'kpis',w:'half',t:'Fletes',items:[K('Baltic Dry Index','pts','Baltic Exchange'),K('Contenedor Asia–Sudamérica','USD/FEU','Drewry')]},
+   {k:'fichas',id:'pasos',w:'full',t:'Pasos marítimos',nombres:['Ormuz','Bab el-Mandeb','Suez','Panamá','Malaca','Bósforo'],campos:['Tránsito','Qué cambió','Efecto en Argentina'],src:'IMF PortWatch · Lloyd\'s List · UKMTO · ACP'}
+ ]},
+ {id:'clima',nav:'Clima',t:'Clima en el mundo',p:'Sequías, el ENSO y sus dos escenarios, cosechas de los competidores, desastres y rutas. Todo fuera de Argentina.',bl:[
+   {k:'kpis',w:'two3',t:'Estado del clima global',items:[K('Fase ENSO actual','fase','NOAA CPC'),K('Anomalía Pacífico (Niño 3.4)','°C','NOAA CPC'),K('Probabilidad de El Niño','%','NOAA · IRI'),K('Probabilidad de La Niña','%','NOAA · IRI'),K('Sequías activas en zonas productoras','total','Copernicus'),K('Monzón de India','vs. normal','IMD'),K('Soja: producción competidores','Mt','USDA · CONAB'),K('Maíz: producción competidores','Mt','USDA · CONAB'),K('Trigo: producción competidores','Mt','USDA')]},
+   {k:'chart',id:'enso-trim',w:'third',t:'Probabilidad de El Niño por trimestre (%)',kind:'bars',labels:['NDE Niña','NDE Niño','DEF Niña','DEF Niño','EFM Niña','EFM Niño'],src:'NOAA CPC · IRI'},
+   {k:'fichas',id:'enso',w:'full',t:'Los dos escenarios del ENSO, fuera de Argentina',nombres:['Escenario El Niño','Escenario La Niña'],campos:['Probabilidad','Quién gana cosecha','Quién pierde cosecha','Efecto en precios','Efecto en Argentina'],chip:'Prob.',src:'NOAA · IRI · Bureau of Meteorology'},
+   {k:'mapa',w:'full',n:7},
+   {k:'fichas',id:'sequias',w:'full',t:'Sequías activas',n:3,campos:['Región','Cultivos afectados','Severidad','Efecto en Argentina'],src:'US Drought Monitor · Copernicus · CONAB'},
+   {k:'mapa',w:'two3',n:8},
+   {k:'kpis',w:'third',t:'Desastres de la semana',items:[K('Huracanes y tifones','activos','NOAA · JTWC'),K('Terremotos M6+','semana','USGS'),K('Erupciones volcánicas','activas','Smithsonian'),K('Tsunamis','alertas','NOAA'),K('Inundaciones graves','activas','GDACS'),K('Incendios grandes','activos','NASA FIRMS')]},
+   {k:'fichas',id:'clima-claves',w:'full',t:'Fichas clave',nombres:['Monzón de India','Temporada de huracanes','Bajantes: Panamá, Mississippi, Rin'],campos:['Estado','Qué cambió','Efecto en Argentina'],src:'IMD · NOAA · ACP · USACE'}
+ ]},
+ {id:'geopolitica',nav:'Geopolítica y guerras',t:'Geopolítica y guerras',p:'Conflictos entre Estados, tensiones que pueden escalar, sanciones y el Atlántico Sur.',bl:[
+   {k:'kpis',w:'full',t:'Resumen',items:[K('Conflictos activos','total','UCDP · CrisisWatch'),K('De alta intensidad','total','UCDP · CrisisWatch'),K('Alertas abiertas','total','CrisisWatch'),K('Pasos marítimos en alerta','de 6','PortWatch')]},
+   {k:'mapa',w:'full',n:1},
+   {k:'chart',id:'intensidad',w:'half',t:'Intensidad por conflicto (nivel de la semana)',kind:'hbars',labels:['Conflicto A','Conflicto B','Conflicto C','Conflicto D','Conflicto E'],src:'UCDP · CrisisWatch'},
+   {k:'mapa',w:'half',n:2},
+   {k:'fichas',id:'conflictos',w:'full',t:'Fichas de conflicto',n:3,campos:['Países','Estado','Intensidad','Qué cambió','Canal en Argentina','Impacto'],src:'UCDP · CrisisWatch'},
+   {k:'alertas',id:'alertas-geo',w:'half',t:'Alertas de riesgo',n:2},
+   {k:'fichas',id:'sanciones',w:'half',t:'Sanciones y guerras comerciales',n:2,campos:['Quién','Contra quién','Medida','Efecto en Argentina'],src:'OFAC · UE · USTR'},
+   {k:'nota',id:'atlantico',w:'full',t:'Atlántico Sur, Malvinas y pesca',txt:'Nota cualitativa semanal: movimientos del Reino Unido en Malvinas, flotas pesqueras extranjeras en la milla 201, actividad en la Antártida y votos en organismos.'}
+ ]},
+ {id:'injerencia',nav:'Injerencia extranjera',t:'Injerencia extranjera',p:'Intervención de potencias en otros países y en Argentina: militar, de inteligencia y económica. Cada hecho, con su nivel de confirmación.',bl:[
+   {k:'kpis',w:'full',t:'Hechos de la semana',items:[K('Militares','total','SIPRI · prensa'),K('De inteligencia','total','EUvsDisinfo · DFRLab'),K('Económicos','total','AidData · prensa'),K('En Argentina','total','prensa')]},
+   {k:'mapa',w:'full',n:14},
+   {k:'fichas',id:'injerencia',w:'full',t:'Fichas por hecho',n:3,campos:['Actor externo','País objetivo','Qué hizo','Confirmación','Efecto en Argentina'],chip:'Vía',src:'SIPRI · EUvsDisinfo · DFRLab · AidData'},
+   {k:'fichas',id:'injerencia-arg',w:'full',t:'Injerencia en Argentina: temas abiertos',nombres:['Estación espacial china en Neuquén','Presencia militar británica en Malvinas','Cooperación con el Comando Sur de EE.UU.','Swap con China','Interés extranjero en la Hidrovía','Pesca extranjera en la milla 201'],campos:['Novedades de la semana','Fuente'],chip:'Novedad',src:'prensa · comunicados oficiales'}
+ ]},
+ {id:'bloques',nav:'Bloques y alianzas',t:'Bloques y alianzas',p:'Cómo se agrupa el mundo hoy: Occidente, el eje Rusia–China–Irán y sus aliados, y los no alineados. Dónde queda Argentina.',bl:[
+   {k:'kpis',w:'full',t:'Resumen',items:[K('Países en Occidente','total','análisis'),K('Países en el eje euroasiático','total','análisis'),K('No alineados','total','análisis'),K('Movimientos de la semana','total','prensa')]},
+   {k:'mapa',w:'two3',n:15},
+   {k:'fichas',id:'arg-bloque',w:'third',t:'Posición de Argentina',nombres:['Argentina'],campos:['Bloque','Qué cambió','Votos recientes en la ONU'],chip:'Bloque',src:'votos ONU · acuerdos'},
+   {k:'chart',id:'red',w:'half',t:'Red de alianzas',kind:'red',src:'tratados y acuerdos'},
+   {k:'fichas',id:'movimientos',w:'half',t:'Movimientos de la semana',n:2,campos:['País','Se acerca a','Se aleja de','Hecho'],src:'prensa · sitios oficiales'},
+   {k:'grupos',w:'full',t:'Alianzas formales e informales',g:[['Occidente',['OTAN','UE','AUKUS','Quad','G7']],['Eje euroasiático',['OTSC','Rusia–China','Rusia–Irán','Rusia–Corea del Norte','Cuba','Venezuela','Nicaragua']],['Foros mixtos',['BRICS+','Org. de Cooperación de Shanghái','G20']],['No alineados',['India','Brasil','Turquía','Arabia Saudita','Indonesia','Sudáfrica']],['Región',['Mercosur','OEA','CELAC']]]}
+ ]},
+ {id:'internos',nav:'Internos y terrorismo',t:'Conflictos internos y terrorismo',p:'Guerras civiles, golpes, protestas, paros, crimen organizado y atentados terroristas, con foco en Sudamérica y en la amenaza sobre Argentina.',bl:[
+   {k:'kpis',w:'full',t:'Resumen',items:[K('Protestas de la semana','países','prensa'),K('Paros y huelgas relevantes','total','prensa'),K('Golpes o intentos','total','CrisisWatch'),K('Países sudamericanos en foco','total','prensa')]},
+   {k:'mapa',w:'full',n:5},
+   {k:'fichas',id:'protestas',w:'full',t:'Protestas por país',n:5,campos:['Motivo','Tamaño'],chip:'Escala',src:'prensa internacional'},
+   {k:'fichas',id:'sudamerica',w:'full',t:'Sudamérica',nombres:['Brasil','Chile','Bolivia','Paraguay','Uruguay','Perú','Venezuela','Ecuador'],campos:['Estado','Qué pasó','Impacto en Argentina'],src:'GDELT · prensa regional'},
+   {k:'kpis',w:'full',t:'Terrorismo',items:[K('Atentados de la semana','total','prensa'),K('Muertos en atentados','semana','prensa'),K('Amenaza sobre Argentina','nivel','lectura propia')]},
+   {k:'fichas',id:'atentados',w:'two3',t:'Atentados de la semana',n:3,campos:['Lugar y fecha','Autor o reivindicación','Víctimas','Efecto en Argentina'],chip:'Tipo',src:'prensa · comunicados oficiales'},
+   {k:'fichas',id:'amenaza-arg',w:'third',t:'Amenaza sobre Argentina',nombres:['Argentina'],campos:['Nivel','Señales de la semana','Antecedentes','Qué vigilar'],chip:'Nivel',src:'avisos de viaje EE.UU. y Reino Unido · prensa · lectura propia'}
+ ]},
+ {id:'politica',nav:'Política y elecciones',t:'Política y elecciones',p:'Quién vota, quién puede ganar y quién está cerca o lejos de Argentina.',bl:[
+   {k:'kpis',w:'full',t:'Resumen',items:[K('Próxima elección relevante','días','IFES'),K('Elecciones en 6 meses','total','IFES'),K('Gobiernos inestables','total','prensa')]},
+   {k:'mapa',w:'half',n:3},
+   {k:'mapa',w:'half',n:4},
+   {k:'calendario',id:'elecciones',w:'full',t:'Calendario electoral, próximos 6 meses'},
+   {k:'chart',id:'encuestas',w:'half',t:'Encuestas de la próxima elección',kind:'hbars',labels:['Candidato A','Candidato B','Candidato C','Otros'],src:'encuestadoras'},
+   {k:'fichas',id:'estabilidad',w:'half',t:'Estabilidad de gobiernos',n:3,campos:['País','Situación','Riesgo','Efecto en Argentina'],src:'prensa'},
+   {k:'fichas',id:'paises',w:'full',t:'Países prioritarios',nombres:PAISES13,campos:['Gobierno','Afinidad','Hechos de la semana','Próxima elección'],chip:'Afinidad',src:'votos ONU/OEA · acuerdos · declaraciones'}
+ ]},
+ {id:'tecnologia',nav:'Tecnología y ciber',t:'Tecnología y ciberseguridad',p:'Ataques digitales, infraestructura crítica e inteligencia artificial.',bl:[
+   {k:'kpis',w:'full',t:'Resumen',items:[K('Vulnerabilidades críticas nuevas','semana','CISA KEV'),K('Ataques relevantes','semana','CISA · ENISA'),K('Cortes de cables o GPS','semana','prensa')]},
+   {k:'mapa',w:'full',n:11},
+   {k:'fichas',id:'ataques',w:'full',t:'Ataques de la semana',n:3,campos:['Víctima','Sector','Actor atribuido','Efecto en Argentina'],src:'CISA · ENISA · prensa'},
+   {k:'fichas',id:'ia',w:'full',t:'Inteligencia artificial y chips',nombres:['Modelos y avances','Regulación (EE.UU., UE, China)','Controles de chips','Centros de datos y recursos','IA y empleo en servicios'],campos:['Qué pasó','Canal en Argentina'],src:'sitios oficiales · BIS · AIE'}
+ ]},
+ {id:'salud',nav:'Salud',t:'Salud humana y animal',p:'Epidemias, pandemias y brotes fuera de Argentina que pueden llegar al país o frenar el comercio.',bl:[
+   {k:'kpis',w:'full',t:'Resumen',items:[K('Emergencias OMS vigentes','total','OMS'),K('Brotes humanos activos','total','OMS · ECDC'),K('Brotes en la región','total','OPS'),K('Brotes animales relevantes','total','OMSA')]},
+   {k:'mapa',w:'two3',n:9},
+   {k:'chart',id:'brotes',w:'third',t:'Casos por brote',kind:'hbars',labels:['Brote A','Brote B','Brote C','Brote D'],src:'OMS · OPS'},
+   {k:'fichas',id:'brotes',w:'full',t:'Fichas por brote',n:3,campos:['Enfermedad','País','Casos y tendencia','Riesgo para Argentina'],src:'OMS · OPS · ECDC · OMSA'},
+   {k:'fichas',id:'restricciones',w:'full',t:'Restricciones de viaje y comercio',n:2,campos:['País','Medida','Motivo','Efecto en Argentina'],src:'OMS · CDC'}
+ ]},
+ {id:'actores',nav:'Actores privados',t:'Actores estratégicos privados',p:'Empresas, fondos e inversores que mueven la economía mundial, y su cruce con los intereses de Argentina.',bl:[
+   {k:'kpis',w:'full',t:'Resumen',items:[K('Movimientos de la semana','total','prensa','movimientos-actores'),K('Monto anunciado','USD mil M','comunicados'),K('Con cruce directo con Argentina','total','análisis')]},
+   {k:'mapa',w:'two3',n:12},
+   {k:'chart',id:'montos',w:'third',t:'Montos anunciados por sector',kind:'hbars',labels:['Centros de datos','Minería','Energía','Agro','Puertos'],src:'comunicados'},
+   {k:'fichas',id:'actores',w:'full',t:'Movimientos de la semana',n:3,campos:['Actor','Qué hizo','Dónde','Interés detrás','Cruce con Argentina'],chip:'Cruce',src:'comunicados · SEC · prensa'},
+   {k:'matriz',w:'full',t:'Matriz de intereses'},
+   {k:'noticias',id:'actores',w:'full',t:'Noticias relevantes de la semana',n:5}
+ ]},
+ {id:'migracion',nav:'Migración y demografía',t:'Migración y demografía',p:'Flujos migratorios de la semana y la demografía que anticipa conflictos y mercados futuros.',bl:[
+   {k:'kpis',w:'full',t:'Resumen',items:[K('Desplazados forzados en el mundo','millones','ACNUR'),K('Crisis migratorias activas','total','ACNUR · OIM'),K('Remesas a la región','USD mil M','Banco Mundial')]},
+   {k:'mapa',w:'full',n:13},
+   {k:'chart',id:'poblacion',w:'half',t:'Población hoy y en 2050 (millones)',kind:'pairs',labels:['India','China','EE.UU.','UE','Brasil','Rusia','Irán'],src:'ONU'},
+   {k:'fichas',id:'migraciones',w:'half',t:'Crisis migratorias',n:2,campos:['Origen','Destinos','Personas','Efecto en Argentina'],src:'ACNUR · OIM · R4V'},
+   {k:'fichas',id:'demografia',w:'full',t:'Demografía de países prioritarios',nombres:PAISES13,campos:['Población','Edad mediana','Hijos por mujer','2050'],src:'ONU · Banco Mundial'}
+ ]},
+ {id:'organismos',nav:'Organismos',t:'Organismos internacionales y regulación',p:'Situaciones importantes en organismos multilaterales que afectan al mundo o a Argentina.',bl:[
+   {k:'kpis',w:'full',t:'Resumen',items:[K('Situaciones abiertas','total','sitios oficiales'),K('Nuevas esta semana','total','sitios oficiales'),K('Resueltas','total','sitios oficiales')]},
+   {k:'fichas',id:'organismos',w:'full',t:'Situaciones importantes',n:3,campos:['Organismo','Qué pasó','Por qué importa al mundo','Cómo afecta a Argentina'],chip:'Estado',src:'sitios oficiales'},
+   {k:'grupos',w:'full',t:'Organismos que se siguen'}
+ ]}
+];
+
+const GRUPOS = [['Financieros',['FMI','Banco Mundial','BID','CAF','BPI']],['Comercio',['OMC','Mercosur']],['Energía',['OPEP+','AIE']],['Política y seguridad',['ONU','Comité de Descolonización','OEA','G20','G7','BRICS']],['Cumplimiento',['GAFI','OCDE','Comité de Basilea']],['Regulación sectorial',['Codex Alimentarius','OMSA','OMS','OMI','OACI','UIT']],['Ambiente',['COP','Diversidad Biológica','Tratado Antártico']],['Justicia',['Corte Internacional de Justicia','Tribunal del Mar','CIADI']]];
+
+/* ---------- utilidades ---------- */
+const $ = s => document.querySelector(s);
+const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+let MUNDO = null;
+const head = (t, src) => `<div class="bh"><h2>${esc(t)}</h2>${src ? `<span class="src">Fuente: ${esc(src)}</span>` : ''}</div>`;
+const fields = (arr, vals) => `<dl class="fields">${arr.map(f => { const v = vals && vals[f]; return `<dt>${esc(f)}</dt><dd${v ? ' style="color:var(--ink)"' : ''}>${v ? esc(v) : '—'}</dd>`; }).join('')}</dl>`;
+let DATA = {valores:{}, fichas:{}, series:{}, notas:{}, noticias:{}};
+const fmt = (v, dec) => typeof v === 'number' ? v.toLocaleString('es-AR', {minimumFractionDigits: dec ?? (Math.abs(v) >= 1000 ? 0 : 2), maximumFractionDigits: dec ?? (Math.abs(v) >= 1000 ? 0 : 2)}) : esc(v);
+const fecha = d => { if(!d) return ''; const [y, m, dd] = d.split('-'); return `${+dd}/${+m}`; };
+function kpiHTML(i){
+  const x = DATA.valores[i.id];
+  if(!x) return `<div class="kpi"><span class="l">${esc(i.l)}</span><span class="v">—<small>${esc(i.u)}</small></span><span class="d">Δ semana — · ${esc(i.s)}</span></div>`;
+  let d = 'Δ semana —';
+  if(typeof x.d === 'number'){ const up = x.d > 0, flat = x.d === 0; const good = x.sig === '+' ? up : x.sig === '-' ? !up : null;
+    const col = flat || good === null ? 'var(--muted)' : good ? 'var(--ok)' : 'var(--crit)';
+    d = `<span style="color:${col}">${flat ? '=' : up ? '▲' : '▼'} ${fmt(Math.abs(x.d), x.dd ?? 1)}${x.dt === 'pb' ? ' pb' : x.dt === 'pts' ? ' pts' : ' %'}</span> semana`; }
+  const src = x.url ? `<a href="${esc(x.url)}">${esc(x.f || i.s)}</a>` : esc(x.f || i.s);
+  return `<div class="kpi"><span class="l">${esc(i.l)}</span><span class="v${typeof x.v === 'string' && x.v.length > 5 ? ' tx' : ''}" style="color:var(--ink)">${fmt(x.v, x.dec)}<small>${esc(x.u ?? i.u)}</small></span><span class="d">${d} · ${src}${x.fecha ? ' · ' + fecha(x.fecha) : ''}</span>${x.nota ? `<span class="d">${esc(x.nota)}</span>` : ''}</div>`;
+}
+
+function worldDefs(){
+  const paths = MUNDO.paises.map(p => {
+    const cls = p.id === '032' ? 'c arg' : (PRIORIDAD[p.id] || UE.includes(p.id)) ? 'c pri' : 'c';
+    return `<path class="${cls}" d="${p.d}"><title>${esc(p.id === '032' ? 'Argentina' : PRIORIDAD[p.id] || p.n)}</title></path>`;
+  }).join('');
+  return `<svg width="0" height="0" style="position:absolute" aria-hidden="true"><defs><g id="world">${paths}</g></defs></svg>`;
+}
+function proj(lat, lon){ const l = lon * Math.PI / 180, f = lat * Math.PI / 180, f2 = f * f, f4 = f2 * f2;
+  const x = l * (0.8707 - 0.131979 * f2 + f4 * (-0.013791 + f4 * (0.003971 * f2 - 0.001529 * f4)));
+  const y = f * (1.007226 + f2 * (0.015085 + f4 * (-0.044475 + 0.028874 * f2 - 0.005916 * f4)));
+  return [480 + 176.1323809724316 * x, 270.7197145543765 - 176.1323809724316 * y]; }
+const capa = n => DATA.mapas && DATA.mapas[String(n)];
+function capaSVG(n){ const c = capa(n); if(!c || !MUNDO) return '';
+  const byId = {}; MUNDO.paises.forEach(p => byId[p.id] = p);
+  let s = '';
+  Object.entries(c.paises || {}).forEach(([id, col]) => { const p = byId[id]; if(p) s += `<path d="${p.d}" fill="${col}" stroke="#0C161D" stroke-width=".5"><title>${esc(p.n)}</title></path>`; });
+  if(byId['032'] && c.paises && c.paises['032'] === undefined) s += `<path d="${byId['032'].d}" class="c arg" style="fill:var(--accent)"/>`;
+  (c.lineas || []).forEach(l => { const [x1, y1] = proj(...l.de), [x2, y2] = proj(...l.a);
+    s += `<line x1="${x1}" y1="${y1}" x2="${x2}" y2="${y2}" stroke="${l.c}" stroke-width="2.2" ${l.dash ? 'stroke-dasharray="6 4"' : ''} marker-end="url(#ar${n})"><title>${esc(l.t || '')}</title></line>`; });
+  (c.puntos || []).forEach(pt => { const [x, y] = proj(pt.lat, pt.lon), r = pt.r || 6;
+    s += `<circle cx="${x}" cy="${y}" r="${r}" fill="${pt.c}" fill-opacity=".85" stroke="#0C161D" stroke-width="1.5"><title>${esc(pt.t)}</title></circle>`;
+    if(pt.lbl) s += `<text x="${x + r + 3}" y="${y + 4}" style="font:600 11px var(--f-data);fill:#E6EDF1;paint-order:stroke;stroke:#0C161D;stroke-width:3px">${esc(pt.lbl)}</text>`; });
+  return `<defs><marker id="ar${n}" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0,0L10,5L0,10z" fill="#E6EDF1"/></marker></defs>` + s; }
+const mapSVG = n => `<svg viewBox="0 0 960 470" role="img" aria-label="Mapa del mundo"><use href="#world"/>${n ? capaSVG(n) : ''}</svg>`;
+const mapEmpty = n => capa(n) ? (capa(n).nota ? `<span class="empty">${esc(capa(n).nota)}</span>` : '') : '<span class="empty">Capa sin datos</span>';
+function legend(m){
+  let h = '';
+  if(m.grad) h += `<span>${esc(m.grad[1])} <i class="grad" style="background:${G[m.grad[0]]}"></i> ${esc(m.grad[2])}</span>`;
+  (m.ley || []).forEach(([c, l]) => h += `<span><i style="background:${c}"></i>${esc(l)}</span>`);
+  if(m.nota) h += `<span>${esc(m.nota)}</span>`;
+  return `<div class="legend">${h}<span><i style="background:var(--accent)"></i>Argentina</span></div>`;
+}
+function ghost(kind, labels){
+  const W = 520, H = 210, L = 96, R = 12, T = 12, B = 26;
+  let s = `<defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><rect width="6" height="6" fill="#16232C"/><line x1="0" y1="0" x2="0" y2="6" stroke="#22333E" stroke-width="3"/></pattern></defs>`;
+  if(kind === 'trend'){
+    for(let i = 0; i < 4; i++){ const y = T + i * (H - T - B) / 3; s += `<line x1="16" x2="${W - R}" y1="${y}" y2="${y}" stroke="#22333E"/>`; }
+    const pts = [120,110,118,96,104,92,98,84,90,80,86,76].map((v, i) => `${16 + i * (W - R - 16) / 11},${v + 20}`).join(' ');
+    s += `<polyline points="${pts}" fill="none" stroke="#3A5363" stroke-width="2.5" stroke-dasharray="6 5"/>`;
+    s += `<text x="16" y="${H - 6}">semana 1</text><text x="${W - R}" y="${H - 6}" text-anchor="end">semana 12</text>`;
+  } else if(kind === 'pairs'){
+    const n = labels.length, bw = (W - L - R) / n;
+    labels.forEach((l, i) => { const x = L - 70 + i * ((W - 30) / n) + 14; const h1 = 50 + (i * 37 % 90), h2 = h1 + 18 - (i % 3) * 14;
+      s += `<rect x="${x}" y="${H - B - h1}" width="16" height="${h1}" fill="url(#hatch)"/><rect x="${x + 19}" y="${H - B - h2}" width="16" height="${h2}" fill="#20384A"/><text x="${x + 17}" y="${H - 8}" text-anchor="middle">${esc(l)}</text>`; });
+  } else if(kind === 'red'){
+    const nodes = [[90,60],[150,140],[60,170],[260,50],[300,150],[230,110],[400,70],[450,160],[380,190],[480,40]];
+    [[0,1],[0,2],[1,2],[3,5],[4,5],[3,4],[6,7],[7,8],[6,9],[5,6],[1,5]].forEach(([a,b]) => s += `<line x1="${nodes[a][0]}" y1="${nodes[a][1]}" x2="${nodes[b][0]}" y2="${nodes[b][1]}" stroke="#3A5363" stroke-dasharray="4 4"/>`);
+    nodes.forEach(([x,y]) => s += `<circle cx="${x}" cy="${y}" r="14" fill="url(#hatch)" stroke="#3A5363"/>`);
+  } else if(kind === 'hbars'){
+    const rh = (H - T - 8) / labels.length;
+    labels.forEach((l, i) => { const w = (W - L - R) * (0.9 - i * 0.14); s += `<text x="${L - 8}" y="${T + i * rh + rh / 2 + 4}" text-anchor="end">${esc(l)}</text><rect x="${L}" y="${T + i * rh + 5}" width="${Math.max(w, 30)}" height="${rh - 10}" fill="url(#hatch)" rx="2"/>`; });
+  } else {
+    const n = labels.length, gap = 6, bw = (W - 24 - gap * (n - 1)) / n;
+    s += `<line x1="12" x2="${W - 12}" y1="${H - B}" y2="${H - B}" stroke="#3A5363"/>`;
+    labels.forEach((l, i) => { const h = 40 + ((i * 53) % 110); const x = 12 + i * (bw + gap);
+      s += `<rect x="${x}" y="${H - B - h}" width="${bw}" height="${h}" fill="url(#hatch)" rx="2"/><text x="${x + bw / 2}" y="${H - 8}" text-anchor="middle">${esc(l.length > 8 && n > 6 ? l.slice(0, 7) + '.' : l)}</text>`; });
+  }
+  return `<div class="ghost"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Gráfico sin datos">${s}</svg></div>`;
+}
+
+function pairsSVG(sr){
+  const W = 520, H = 240, T = 24, B = 30, n = sr.labels.length, gw = (W - 24) / n, bw = Math.min(18, gw / 2 - 4), mx = Math.max(...sr.values, ...sr.values2), sc = (H - T - B) / mx;
+  let s = `<line x1="12" x2="${W - 12}" y1="${H - B}" y2="${H - B}" stroke="#3A5363"/>`;
+  sr.labels.forEach((l, i) => { const cx = 12 + i * gw + gw / 2, a = sr.values[i], b = sr.values2[i], ha = a * sc, hb = b * sc;
+    s += `<rect x="${cx - bw - 1}" y="${H - B - ha}" width="${bw}" height="${ha}" fill="#3A5363" rx="2"><title>${esc(l)} hoy: ${fmt(a, 0)}</title></rect>`;
+    s += `<rect x="${cx + 1}" y="${H - B - hb}" width="${bw}" height="${hb}" fill="${b >= a ? 'var(--ok)' : 'var(--crit)'}" rx="2"><title>${esc(l)} 2050: ${fmt(b, 0)}</title></rect>`;
+    s += `<text x="${cx}" y="${H - B - Math.max(ha, hb) - 5}" text-anchor="middle" style="fill:var(--ink)">${fmt(b, 0)}</text><text x="${cx}" y="${H - 9}" text-anchor="middle">${esc(l)}</text>`; });
+  return `<div class="ghost"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Población hoy y en 2050">${s}</svg></div><div class="legend"><span><i style="background:#3A5363"></i>Hoy</span><span><i style="background:var(--ok)"></i>2050 crece</span><span><i style="background:var(--crit)"></i>2050 cae</span></div>`;
+}
+function hbarsSVG(sr){
+  const W = 520, L = 130, R = 50, rh = 34, H = sr.labels.length * rh + 10, mx = Math.max(...sr.values);
+  let s = '';
+  sr.labels.forEach((l, i) => { const v = sr.values[i], w = (W - L - R) * v / mx, y = 6 + i * rh, c = (sr.colores && sr.colores[i]) || 'var(--accent)';
+    s += `<text x="${L - 8}" y="${y + rh / 2 + 2}" text-anchor="end">${esc(l)}</text><rect x="${L}" y="${y + 6}" width="${w}" height="${rh - 14}" fill="${c}" rx="2"/><text x="${L + w + 6}" y="${y + rh / 2 + 2}" style="fill:var(--ink)">${fmt(v, 0)} ${esc(sr.u || '')}</text>`; });
+  return `<div class="ghost"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Gráfico de barras horizontales">${s}</svg></div>`;
+}
+function barsSVG(sr){
+  const W = 520, H = 230, T = 22, B = 30, n = sr.labels.length, gap = 6, bw = (W - 24 - gap * (n - 1)) / n;
+  const mx = Math.max(...sr.values, 0), mn = Math.min(...sr.values, 0), sc = (H - T - B) / ((mx - mn) || 1), y0 = T + mx * sc;
+  let s = `<line x1="12" x2="${W - 12}" y1="${y0}" y2="${y0}" stroke="#3A5363"/>`;
+  sr.labels.forEach((l, i) => { const v = sr.values[i], x = 12 + i * (bw + gap), h = Math.abs(v) * sc, y = v >= 0 ? y0 - h : y0;
+    const c = (sr.colores && sr.colores[i]) || (v < 0 ? 'var(--crit)' : (sr.ref != null && v < sr.ref ? 'var(--warn)' : 'var(--ok)'));
+    s += `<rect x="${x}" y="${y}" width="${bw}" height="${Math.max(h, 1)}" fill="${c}" rx="2"><title>${esc(l)}: ${fmt(v, 1)} ${esc(sr.u || '')}</title></rect>`;
+    s += `<text x="${x + bw / 2}" y="${v >= 0 ? y - 4 : y + h + 12}" text-anchor="middle" style="fill:var(--ink)">${fmt(v, sr.dec ?? 1)}</text>`;
+    s += `<text x="${x + bw / 2}" y="${H - 8}" text-anchor="middle">${esc(l.length > 8 && n > 6 ? l.slice(0, 7) + '.' : l)}</text>`; });
+  return `<div class="ghost"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Gráfico de barras">${s}</svg></div>`;
+}
+
+function trendSVG(sr){
+  const W = 520, H = 230, T = 22, B = 30, L = 40, R = 16, n = sr.values.length;
+  const mx = Math.max(...sr.values), mn = Math.min(...sr.values), pad = (mx - mn) * 0.15 || 1, hi = mx + pad, lo = mn - pad;
+  const X = i => L + i * (W - L - R) / (n - 1), Y = v => T + (hi - v) * (H - T - B) / (hi - lo);
+  let s = '';
+  for(let k = 0; k < 4; k++){ const v = lo + (hi - lo) * k / 3, y = Y(v); s += `<line x1="${L}" x2="${W - R}" y1="${y}" y2="${y}" stroke="#22333E"/><text x="${L - 6}" y="${y + 4}" text-anchor="end">${fmt(v, 0)}</text>`; }
+  if(sr.ref != null && sr.ref > lo && sr.ref < hi) s += `<line x1="${L}" x2="${W - R}" y1="${Y(sr.ref)}" y2="${Y(sr.ref)}" stroke="#5E7180" stroke-dasharray="4 4"/>`;
+  const pts = sr.values.map((v, i) => `${X(i)},${Y(v)}`).join(' ');
+  const up = sr.values[n - 1] >= sr.values[0];
+  s += `<polyline points="${pts}" fill="none" stroke="${up ? 'var(--ok)' : 'var(--crit)'}" stroke-width="2.5"/>`;
+  sr.values.forEach((v, i) => s += `<circle cx="${X(i)}" cy="${Y(v)}" r="3" fill="${up ? 'var(--ok)' : 'var(--crit)'}"><title>${esc(sr.labels[i])}: ${fmt(v, 1)}</title></circle>`);
+  s += `<text x="${X(n - 1)}" y="${Y(sr.values[n - 1]) - 8}" text-anchor="end" style="fill:var(--ink)">${fmt(sr.values[n - 1], 1)}</text>`;
+  s += `<text x="${L}" y="${H - 8}">${esc(sr.labels[0])}</text><text x="${W - R}" y="${H - 8}" text-anchor="end">${esc(sr.labels[n - 1])}</text>`;
+  return `<div class="ghost"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Gráfico de línea">${s}</svg></div>`;
+}
+function stackSVG(sr){
+  const W = 520, H = 240, T = 14, B = 52, n = sr.labels.length, gap = 8, bw = (W - 24 - gap * (n - 1)) / n, cols = sr.colores || ['#5BA4E6','#5E7180','#F0675F'];
+  let s = '';
+  sr.labels.forEach((l, i) => { let y = H - B; const x = 12 + i * (bw + gap);
+    sr.series.forEach((se, j) => { const v = se.values[i], h = v * (H - T - B) / 100; y -= h;
+      s += `<rect x="${x}" y="${y}" width="${bw}" height="${h}" fill="${cols[j]}"><title>${esc(l)} · ${esc(se.name)}: ${v} %</title></rect>`;
+      if(h > 14) s += `<text x="${x + bw / 2}" y="${y + h / 2 + 4}" text-anchor="middle" style="fill:#0B1418">${v}</text>`; });
+    s += `<text x="${x + bw / 2}" y="${H - B + 16}" text-anchor="middle">${esc(l)}</text>`; });
+  let lx = 12; sr.series.forEach((se, j) => { s += `<rect x="${lx}" y="${H - 18}" width="10" height="10" fill="${cols[j]}"/><text x="${lx + 14}" y="${H - 9}">${esc(se.name)}</text>`; lx += 24 + se.name.length * 7; });
+  return `<div class="ghost"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Barras apiladas">${s}</svg></div>`;
+}
+function redSVG(sr){
+  const W = 520, H = 300; let s = '';
+  const N = Object.fromEntries(sr.nodos.map(n => [n.id, n]));
+  sr.enlaces.forEach(e => { const a = N[e.de], b = N[e.a]; s += `<line x1="${a.x}" y1="${a.y}" x2="${b.x}" y2="${b.y}" stroke="${e.c || '#3A5363'}" stroke-width="${e.w || 1.5}"${e.dash ? ' stroke-dasharray="4 4"' : ''}><title>${esc(e.t || '')}</title></line>`; });
+  sr.nodos.forEach(n => { const r = n.r || 16;
+    s += `<circle cx="${n.x}" cy="${n.y}" r="${r}" fill="${n.c}" fill-opacity=".25" stroke="${n.c}" stroke-width="${n.id === 'ARG' ? 3 : 1.5}"><title>${esc(n.lbl)}</title></circle><text x="${n.x}" y="${n.y + 4}" text-anchor="middle" style="fill:var(--ink);font-size:10px">${esc(n.id)}</text>`; });
+  return `<div class="ghost"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Red de alianzas">${s}</svg></div>`;
+}
+
+/* ---------- bloques ---------- */
+const R = {
+  resumen: () => { const r = DATA.resumen;
+    if(r) return `<div class="hero" style="padding:0"><div class="stripe"></div><div class="tx" style="padding:16px 18px 16px 0">
+     <span class="eyebrow">Lectura de la semana · corte del viernes ${esc(r.corte || '')}</span>
+     <h2>${esc(r.titular)}</h2>${r.texto.map(t => `<p style="margin:0">${esc(t)}</p>`).join('')}
+     <p class="muted" style="margin:0"><strong style="color:var(--ink)">Qué mirar:</strong> ${esc(r.mirar)}</p></div></div>`;
+    return `<div class="hero" style="padding:0"><div class="stripe"></div><div class="tx" style="padding:16px 18px 16px 0">
+     <span class="eyebrow">Lectura de la semana · corte del viernes</span>
+     <h2>Acá va el titular de la semana: el hecho externo que más afecta a la Argentina</h2>
+     <p class="muted">Tres o cuatro líneas con lo que cambió afuera, por qué canal llega y qué conviene mirar la semana próxima.</p></div></div>`; },
+  semaforos: b => { const sm = DATA.semaforos || {}; const col = {verde:'var(--ok)', amarillo:'var(--warn)', rojo:'var(--crit)'}; const ord = ['verde','amarillo','rojo'];
+    return head(b.t, DATA.semaforos ? 'lectura propia sobre los datos de la semana' : '') + `<div class="sems">${CANALES.map(c => { const x = sm[c];
+      return `<div class="sem"><span class="n">${esc(c)}</span><span class="lights">${ord.map(o => `<i${x && x.nivel === o ? ` style="background:${col[o]};border-color:${col[o]}"` : ''}></i>`).join('')}</span><span class="s">${x ? esc(x.delta) : 'sin dato · Δ sem. —'}</span>${x ? `<span style="font-size:.84rem;line-height:1.35">${esc(x.motivo)}</span>` : ''}</div>`; }).join('')}</div>`; },
+  kpis: b => head(b.t) + `<div class="kpis">${b.items.map(kpiHTML).join('')}</div>`,
+  mapa: b => { const m = MAPAS[b.n - 1];
+    return head(`Mapa ${m.n} · ${m.t}`, m.src) + `<p class="muted">${esc(m.q)}</p><div class="map">${mapSVG(m.n)}${mapEmpty(m.n)}</div>${legend(m)}`; },
+  explorer: () => `<div class="layers" role="group" aria-label="Capas del mapa">${MAPAS.map(m => `<button type="button" data-n="${m.n}" aria-pressed="${m.n === 1}">${m.n}. ${esc(m.t)}</button>`).join('')}</div>
+     <div class="layerinfo" id="li"></div><div class="map" id="bigmap">${mapSVG(1)}${mapEmpty(1)}</div><div id="lileg"></div>`,
+  alertas: b => { const dat = b.id && DATA.fichas[b.id];
+    if(dat) return head(b.t, b.src || 'CrisisWatch · prensa') + `<div class="alerts">${dat.map(x => `<div class="alert"><div class="stripe"></div><div class="c">
+     <div class="t"><span class="chip ${x.chipc || 'warn'}">Probabilidad ${esc(x.prob)}</span><span class="chip">Horizonte ${esc(x.horizonte)}</span><span class="chip">${esc(x.evol)}</span></div>
+     <h3>${esc(x.nombre)}</h3>${fields(['Dónde y quiénes','Señales','Impacto en Argentina'], x.campos)}${x.url ? `<span class="src"><a href="${esc(x.url)}">${esc(x.f || 'Fuente')}</a></span>` : ''}</div></div>`).join('')}</div>`;
+    return head(b.t, 'CrisisWatch · mercados de predicción') + `<div class="alerts">${Array.from({length: b.n}, (_, i) => `<div class="alert"><div class="stripe"></div><div class="c">
+     <div class="t"><span class="chip warn">Probabilidad —</span><span class="chip">Horizonte —</span><span class="chip">Evolución —</span></div>
+     <h3>Qué podría pasar: inicio de guerra, ataque, golpe, cierre de un paso…</h3>
+     ${fields(['Dónde y quiénes','Señales','Impacto en Argentina'])}</div></div>`).join('')}</div>`; },
+  vulner: () => { const vs = DATA.vulner || []; return head('Vulnerabilidades externas de Argentina', vs.length ? 'lectura propia' : '') + `<div class="scroll"><table><thead><tr><th>Vulnerabilidad</th><th>Qué la activa</th><th>Estado</th></tr></thead><tbody>${VULNER.map((v, k) => { const x = vs[k]; return `<tr><td>${esc(v[0])}${x && x.nota ? `<br><span class="muted" style="font-size:.8rem">${esc(x.nota)}</span>` : ''}</td><td class="muted">${esc(v[1])}</td><td class="st"><span class="chip${x ? ' ' + x.chipc : ''}">${x ? esc(x.estado) : '—'}</span></td></tr>`; }).join('')}</tbody></table></div>`; },
+  noticias: b => { const ns = b.id && DATA.noticias && DATA.noticias[b.id];
+    if(ns) return head(b.t) + `<div class="list">${ns.map((x, i) => `<div class="it"><span class="k">${String(i + 1).padStart(2, '0')}</span><div><strong>${esc(x.t)}</strong><br><span class="muted" style="font-size:.86rem">Por qué importa a Argentina: ${esc(x.por)}</span><span class="src"><a href="${esc(x.url)}">${esc(x.f)}</a></span></div></div>`).join('')}</div>`;
+    return head(b.t) + `<div class="list">${Array.from({length: b.n}, (_, i) => `<div class="it"><span class="k">${String(i + 1).padStart(2, '0')}</span><div><span class="ph" style="width:${78 - i * 7}%;height:14px"></span><span class="muted" style="font-size:.86rem">Por qué importa a Argentina: —</span><span class="src">Fuente: —</span></div></div>`).join('')}</div>`; },
+  chart: b => { const sr = b.id && DATA.series && DATA.series[b.id];
+    return head(b.t, sr && sr.src || b.src) + (sr ? (b.kind === 'hbars' ? hbarsSVG(sr) : b.kind === 'pairs' ? pairsSVG(sr) : b.kind === 'trend' ? trendSVG(sr) : b.kind === 'stack' ? stackSVG(sr) : b.kind === 'red' ? redSVG(sr) : barsSVG(sr)) + (sr.nota ? `<p class="muted" style="font-size:.82rem;margin-top:6px">${esc(sr.nota)}</p>` : '') + (sr.url ? `<span class="src"><a href="${esc(sr.url)}">${esc(sr.f || 'Fuente')}</a></span>` : '') : ghost(b.kind, b.labels || [])); },
+  fichas: b => { const dat = b.id && DATA.fichas[b.id]; const ns = b.nombres || (dat ? dat.map(x => x.nombre) : Array.from({length: b.n}, (_, i) => `Ficha ${i + 1}`));
+    return head(b.t, b.src) + `<div class="cards">${ns.map((n, k) => { const x = dat && (dat.find(y => y.nombre === n) || (!b.nombres && dat[k])); const chipc = x && x.chipc ? ' ' + x.chipc : '';
+      return `<div class="card"><div class="h"><h3>${esc(n)}</h3><span class="chip${chipc}">${x && x.chip ? esc(x.chip) : esc(b.chip || 'Estado') + ' —'}</span></div>${fields(b.campos, x && x.campos)}${x && x.url ? `<span class="src"><a href="${esc(x.url)}">${esc(x.f || 'Fuente')}</a></span>` : ''}</div>`; }).join('')}</div>`; },
+  nota: b => { const n = b.id && DATA.notas && DATA.notas[b.id];
+    return head(b.t, 'Cancillería · Armada · Prefectura · prensa') + (n ? n.parrafos.map(t => `<p style="max-width:80ch;margin:0 0 10px">${esc(t)}</p>`).join('') + (n.fuentes || []).map(f => `<span class="src" style="margin-right:12px"><a href="${esc(f[1])}">${esc(f[0])}</a></span>`).join('') : `<p class="muted" style="max-width:70ch">${esc(b.txt)}</p><span class="ph" style="width:92%"></span><span class="ph" style="width:84%"></span><span class="ph" style="width:60%"></span>`); },
+  calendario: b => { const cal = b.id && DATA.calendario && DATA.calendario[b.id];
+    if(cal){ const col = {si:'var(--ok)', no:'var(--crit)', incierto:'var(--warn)'};
+      return head(b.t, 'IFES ElectionGuide · encuestas · lectura propia') + `<div class="cal">${cal.map(m => `<div><b>${esc(m.mes)}</b>${m.items.length ? m.items.map(e => `<div class="ev"><span class="dot" style="background:${col[e.alineado] || 'var(--muted)'}"></span><span><strong>${esc(e.fecha)} · ${esc(e.pais)}</strong> — ${esc(e.tipo)}<br><span class="muted">${esc(e.favorito)}</span></span></div>`).join('') : '<span class="muted">Sin elecciones relevantes</span>'}</div>`).join('')}</div>
+        <div class="legend"><span><i style="background:var(--ok)"></i>Favorito afín al gobierno argentino</span><span><i style="background:var(--warn)"></i>Incierto</span><span><i style="background:var(--crit)"></i>Favorito no afín</span></div>`; }
+    const ms = ['Nov 2026','Dic 2026','Ene 2027','Feb 2027','Mar 2027','Abr 2027'];
+    return head(b.t, 'IFES ElectionGuide') + `<div class="cal">${ms.map(m => `<div><b>${m}</b><span class="ph" style="width:70%"></span></div>`).join('')}</div>`; },
+  matriz: b => { const mz = DATA.matriz; if(mz){ const cc = {aliado:'ok', competidor:'warn', riesgo:'crit'};
+    return head(b.t, 'lectura propia') + `<p class="muted">Cada celda: aliado posible, competidor o riesgo para los intereses argentinos.</p><div class="scroll"><table><thead><tr><th>Actor</th>${mz.sectores.map(s => `<th>${esc(s)}</th>`).join('')}</tr></thead><tbody>${mz.filas.map(f => `<tr><td>${esc(f.actor)}<br><span class="muted" style="font-size:.78rem">${esc(f.ej || '')}</span></td>${f.celdas.map(c => c ? `<td><span class="chip ${cc[c[0]] || ''}">${esc(c[0])}</span>${c[1] ? `<br><span class="muted" style="font-size:.76rem">${esc(c[1])}</span>` : ''}</td>` : '<td><span class="muted">—</span></td>').join('')}</tr>`).join('')}</tbody></table></div>` + (mz.nota ? `<p class="muted" style="font-size:.82rem;margin-top:6px">${esc(mz.nota)}</p>` : ''); }
+    const sec = ['Litio','Energía','Agro','Datos','Infraestructura']; const act = ['Tecnológicas e IA','Fondos de inversión','Mineras','Energéticas','Comercializadoras agrícolas','Navieras y puertos','Estatales de potencias'];
+    return head(b.t) + `<p class="muted">Cada celda: aliado posible, competidor o riesgo.</p><div class="scroll"><table><thead><tr><th>Actor</th>${sec.map(s => `<th>${s}</th>`).join('')}</tr></thead><tbody>${act.map(a => `<tr><td>${a}</td>${sec.map(() => `<td><span class="chip">—</span></td>`).join('')}</tr>`).join('')}</tbody></table></div>`; },
+  grupos: b => head(b.t) + `<div class="cards">${(b.g || GRUPOS).map(([g, os]) => `<div class="card"><h3>${esc(g)}</h3><div class="groups">${os.map(o => `<span class="chip acc">${esc(o)}</span>`).join('')}</div></div>`).join('')}</div>`
+};
+
+/* ---------- navegación ---------- */
+function renderAll(){
+  $('#main').innerHTML = `<div class="intro"><span class="boceto">Boceto: estructura definitiva, sin datos reales</span></div>` +
+    PAGES.map((pg, i) => `<section class="sec" id="${pg.id}"><div class="phead"><span class="eyebrow">${String(i + 1).padStart(2, '0')} de ${PAGES.length}</span><h1>${esc(pg.t)}</h1><p>${esc(pg.p)}</p></div>
+    <div class="grid">${pg.bl.map(b => `<div class="b ${b.w === 'full' ? '' : b.w}">${R[b.k](b)}</div>`).join('')}</div></section>`).join('');
+  setLayer(1);
+}
+function mark(id){
+  document.querySelectorAll('#nav a').forEach(a => { const on = a.dataset.id === id; a.classList.toggle('on', on); a.setAttribute('aria-current', on ? 'true' : 'false'); if(on){ const n = $('#nav'); n.scrollTo({left: a.offsetLeft - n.offsetLeft - n.clientWidth / 2 + a.clientWidth / 2, behavior:'smooth'}); } });
+}
+function setLayer(n){
+  const m = MAPAS[n - 1];
+  document.querySelectorAll('.layers button').forEach(b => b.setAttribute('aria-pressed', String(+b.dataset.n === n)));
+  $('#li').innerHTML = `<span class="eyebrow">Mapa ${m.n} de ${MAPAS.length} · Fuente: ${esc(m.src)}</span><h3>${esc(m.t)}</h3><p class="muted">${esc(m.q)}</p>`;
+  $('#lileg').innerHTML = legend(m);
+  $('#bigmap').innerHTML = mapSVG(n) + mapEmpty(n);
+}
+document.addEventListener('click', e => { const b = e.target.closest('.layers button'); if(b) setLayer(+b.dataset.n); });
+$('#nav').innerHTML = PAGES.map(p => `<a href="#${p.id}" data-id="${p.id}">${esc(p.nav)}</a>`).join('');
+let cur = '';
+const spy = () => {
+  const y = innerHeight * 0.3; let id = PAGES[0].id;
+  document.querySelectorAll('.sec').forEach(s => { if(s.getBoundingClientRect().top < y) id = s.id; });
+  if(innerHeight + scrollY >= document.body.scrollHeight - 4) id = PAGES.at(-1).id;
+  if(id !== cur){ cur = id; mark(id); }
+};
+addEventListener('scroll', spy, {passive:true}); spy();
+if(location.hash){ const t = document.getElementById(location.hash.slice(1)); if(t) t.scrollIntoView(); }
+const stamp = () => { if(DATA.corte){ const n = Object.keys(DATA.valores).length; $('#stamp').innerHTML = `<i></i>Corte: ${fecha(DATA.corte)} · ${n} datos · próxima actualización: sábado ${fecha(new Date(new Date(DATA.corte + 'T12:00:00').getTime() + 8 * 864e5).toISOString().slice(0, 10))}`; } };
+Promise.all([
+  fetch('datos/semana.json').then(r => r.json()).then(d => { DATA = Object.assign({valores:{}, fichas:{}}, d); }).catch(() => {}),
+  fetch('mundo.json').then(r => r.json()).then(d => { MUNDO = d; document.body.insertAdjacentHTML('afterbegin', worldDefs()); }).catch(() => {})
+]).finally(() => { renderAll(); stamp(); spy(); if(location.hash){ const t = document.getElementById(location.hash.slice(1)); if(t) t.scrollIntoView(); } });
+</script>
+</body>
+</html>

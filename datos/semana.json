@@ -1,0 +1,3895 @@
+{
+ "corte": "2026-10-23",
+ "publicado": "2026-10-24",
+ "estado": "publicado",
+ "valores": {
+  "soja-poroto": {
+   "v": 461.7,
+   "u": "USD/t",
+   "f": "CBOT nov. (Brownfield)",
+   "url": "https://brownfieldagnews.com/news/closing-grain-and-livestock-futures-october-23-2026/",
+   "fecha": "2026-10-23",
+   "d": -0.38,
+   "dt": "pct",
+   "sig": "+",
+   "dec": 0,
+   "nota": "12,565 USD/bu · conversión propia"
+  },
+  "harina-de-soja": {
+   "v": 381.5,
+   "u": "USD/t",
+   "f": "CBOT dic. (Brownfield)",
+   "url": "https://brownfieldagnews.com/news/closing-grain-and-livestock-futures-october-23-2026/",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "dec": 0,
+   "nota": "346,10 USD por tonelada corta; el 16/10 cerró en 357,10 (Farmbucks).",
+   "d": -3.1,
+   "dt": "pct"
+  },
+  "aceite-de-soja": {
+   "v": 1473.0,
+   "u": "USD/t",
+   "f": "CBOT dic. (Brownfield)",
+   "url": "https://brownfieldagnews.com/news/closing-grain-and-livestock-futures-october-23-2026/",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "dec": 0,
+   "nota": "66,83 ¢/lb, contrato de diciembre."
+  },
+  "maiz": {
+   "v": 179.5,
+   "u": "USD/t",
+   "f": "CBOT dic. (Teucrium)",
+   "url": "https://teucrium.substack.com/p/wheat-drops-5-on-peace-talks-but",
+   "fecha": "2026-10-23",
+   "d": -3.85,
+   "dt": "pct",
+   "sig": "+",
+   "dec": 0,
+   "nota": "4,56 USD/bu"
+  },
+  "trigo": {
+   "v": 229.6,
+   "u": "USD/t",
+   "f": "CBOT dic. (Teucrium)",
+   "url": "https://teucrium.substack.com/p/wheat-drops-5-on-peace-talks-but",
+   "fecha": "2026-10-23",
+   "d": -5.37,
+   "dt": "pct",
+   "sig": "+",
+   "dec": 0,
+   "nota": "6,25 USD/bu"
+  },
+  "oro": {
+   "v": 4008,
+   "u": "USD/oz",
+   "f": "Comex (Cappnotes · BabyPips)",
+   "url": "https://cappnotes.substack.com/p/closing-look-friday-october-23-2026",
+   "fecha": "2026-10-23",
+   "d": -4.0,
+   "dt": "pct",
+   "sig": "+",
+   "dec": 0,
+   "nota": "Δ semanal aproximado, precio spot"
+  },
+  "plata": {
+   "v": 53.92,
+   "u": "USD/oz",
+   "f": "Comex (Cappnotes)",
+   "url": "https://cappnotes.substack.com/p/closing-look-friday-october-23-2026",
+   "fecha": "2026-10-23",
+   "sig": "+"
+  },
+  "cobre": {
+   "v": 14334,
+   "u": "USD/t",
+   "f": "LME 3 meses (Discovery Alert)",
+   "url": "https://discoveryalert.com/news/copper-price-rebound-comex-stockpile-october-2026",
+   "fecha": "2026-10-23",
+   "sig": "+",
+   "dec": 0,
+   "nota": "Dato de las 16:15 GMT"
+  },
+  "brent": {
+   "v": 116.72,
+   "u": "USD/bbl",
+   "f": "ICE dic. (Rio Times · EnergyNow)",
+   "url": "https://www.riotimesonline.com/oil-markets-latam-friday-october-23-2026",
+   "fecha": "2026-10-23",
+   "d": 6.24,
+   "dt": "pct",
+   "sig": "+",
+   "nota": "Máximo desde abril"
+  },
+  "wti": {
+   "v": 103.27,
+   "u": "USD/bbl",
+   "f": "NYMEX dic. (Rio Times · EnergyNow)",
+   "url": "https://www.riotimesonline.com/oil-markets-latam-friday-october-23-2026",
+   "fecha": "2026-10-23",
+   "d": 1.83,
+   "dt": "pct",
+   "sig": "+"
+  },
+  "gas-henry-hub": {
+   "v": 2.64,
+   "u": "USD/MMBtu",
+   "f": "NYMEX nov. (Cappnotes · Cbonds)",
+   "url": "https://cappnotes.substack.com/p/closing-look-friday-october-23-2026",
+   "fecha": "2026-10-23",
+   "d": -15.28,
+   "dt": "pct",
+   "nota": "Mínimo de 2 meses"
+  },
+  "gas-ttf-europa": {
+   "v": 93.19,
+   "u": "EUR/MWh",
+   "f": "TTF (Trading Economics · Investing)",
+   "url": "https://tradingeconomics.com/commodity/eu-natural-gas",
+   "fecha": "2026-10-23",
+   "d": 6.45,
+   "dt": "pct",
+   "sig": "-"
+  },
+  "gnl-asia-jkm": {
+   "v": 30.63,
+   "u": "USD/MMBtu",
+   "f": "JKM (Trading Economics · Investing)",
+   "url": "https://tradingeconomics.com/commodity/liquefied-natural-gas-japan-korea",
+   "fecha": "2026-10-22",
+   "d": 2.36,
+   "dt": "pct",
+   "sig": "-",
+   "nota": "Último dato: jueves 22"
+  },
+  "tesoro-ee-uu-10-anos": {
+   "v": 5.0,
+   "u": "%",
+   "f": "Stocktwits · Trading Economics",
+   "url": "https://stocktwits.com/news-articles/markets/equity/stocktwits-weekly-spread-what-shaped-treasury-yields-and-the-dollar-this-week-2/cZUGd6zRBUa",
+   "fecha": "2026-10-23",
+   "d": -8,
+   "dt": "pb",
+   "sig": "-",
+   "dd": 0
+  },
+  "indice-dolar-dxy": {
+   "v": 101.75,
+   "u": "pts",
+   "f": "Stocktwits",
+   "url": "https://stocktwits.com/news-articles/markets/equity/stocktwits-weekly-spread-what-shaped-treasury-yields-and-the-dollar-this-week-2/cZUGd6zRBUa",
+   "fecha": "2026-10-23",
+   "d": -0.2,
+   "dt": "pct",
+   "sig": "-"
+  },
+  "volatilidad-vix": {
+   "v": 19.45,
+   "u": "pts",
+   "f": "Cboe (Cappnotes)",
+   "url": "https://cappnotes.substack.com/p/closing-look-friday-october-23-2026",
+   "fecha": "2026-10-23",
+   "sig": "-"
+  },
+  "real-por-dolar": {
+   "v": 4.993,
+   "u": "BRL",
+   "f": "Cappnotes",
+   "url": "https://cappnotes.substack.com/p/closing-look-friday-october-23-2026",
+   "fecha": "2026-10-23",
+   "sig": "-",
+   "dec": 3,
+   "nota": "−0,90 % en el día"
+  },
+  "pmi-china": {
+   "v": 50.1,
+   "u": "pts",
+   "f": "NBS China, septiembre",
+   "url": "https://www.stats.gov.cn/english/PressRelease/202610/t20261008_1965466.html",
+   "fecha": "2026-09-30",
+   "d": 0.3,
+   "dt": "pts",
+   "sig": "+",
+   "dec": 1,
+   "nota": "Vuelve a expansión"
+  },
+  "inflacion-ee-uu": {
+   "v": 3.7,
+   "u": "% anual",
+   "f": "BLS, septiembre",
+   "url": "https://tradingeconomics.com/united-states/inflation-cpi/news/591934",
+   "fecha": "2026-10-14",
+   "dec": 1,
+   "nota": "Agosto: 3,4 %"
+  },
+  "pmi-ee-uu": {
+   "v": 54.5,
+   "u": "pts",
+   "f": "ISM, septiembre",
+   "url": "https://www.ismworld.org/supply-management-news-and-reports/reports/ism-pmi-reports/pmi/september/",
+   "fecha": "2026-10-01",
+   "d": -0.1,
+   "dt": "pts",
+   "dec": 1
+  },
+  "inflacion-zona-euro": {
+   "v": 3.8,
+   "u": "% anual",
+   "f": "Eurostat, septiembre",
+   "url": "https://tradingeconomics.com/euro-area/inflation-cpi/news/592744",
+   "fecha": "2026-10-16",
+   "dec": 1,
+   "nota": "Agosto: 3,2 %"
+  },
+  "pmi-zona-euro": {
+   "v": 52.7,
+   "u": "pts",
+   "f": "HCOB flash, septiembre",
+   "url": "https://www.fxstreet.com/news/eurozone-flash-manufacturing-pmi-remains-steady-at-527-in-september-202609230804",
+   "fecha": "2026-09-23",
+   "dec": 1,
+   "nota": "Falta el flash de octubre"
+  },
+  "baltic-dry-index": {
+   "v": 2660,
+   "u": "pts",
+   "f": "Baltic Exchange (Baird Maritime)",
+   "url": "https://www.bairdmaritime.com/amp/story/shipping/dry-cargo/bulkers/baltic-dry-bulk-index-slides-but-locks-in-second-straight-weekly-gain",
+   "fecha": "2026-10-23",
+   "d": 5.9,
+   "dt": "pct",
+   "sig": "-",
+   "dec": 0
+  },
+  "litio-carbonato": {
+   "v": 15650,
+   "u": "USD/t",
+   "f": "GFEX vía Reuters (Farmonaut)",
+   "url": "https://farmonaut.com/?p=122581",
+   "fecha": "2026-10-12",
+   "dec": 0,
+   "sig": "+",
+   "nota": "104.740 CNY/t; la mitad del pico de mayo"
+  },
+  "urea": {
+   "v": 445,
+   "u": "USD/t",
+   "f": "FOB Medio Oriente (Discovery Alert)",
+   "url": "https://discoveryalert.com/news/algeria-urea-exports-france-halt-october-2026/",
+   "fecha": "2026-10-17",
+   "dec": 0,
+   "sig": "-",
+   "nota": "Rango 440–450; Egipto en Europa 520–527"
+  },
+  "abastecimiento": {
+   "v": "Tenso",
+   "u": "",
+   "f": "Discovery Alert · prensa",
+   "url": "https://discoveryalert.com/news/algeria-urea-exports-france-halt-october-2026/",
+   "fecha": "2026-10-17",
+   "nota": "Ormuz restringido; Argelia frena urea a Francia"
+  },
+  "actividad-brasil": {
+   "v": 0.3,
+   "u": "% mensual",
+   "f": "IBC-Br, agosto (Banco Central do Brasil)",
+   "url": "https://borainvestir.b3.com.br/noticias/ibc-br-atividade-economica-tem-alta-de-03-em-agosto/",
+   "fecha": "2026-10-16",
+   "dec": 1,
+   "sig": "+",
+   "nota": "+1,2 % interanual"
+  },
+  "fase-enso-actual": {
+   "v": "El Niño muy fuerte",
+   "u": "",
+   "f": "NOAA CPC (advertencia de El Niño)",
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/100926-el-nino-strengthens-in-pacific-may-persist-into-jan-march-2027-noaa",
+   "fecha": "2026-10-08",
+   "nota": "Ya es el evento más intenso registrado en el Pacífico"
+  },
+  "anomalia-pacifico-nino-3-4": {
+   "v": 3.3,
+   "u": "°C",
+   "f": "IRI · NOAA, semana del 14/10",
+   "url": "https://iri.columbia.edu/?p=31794",
+   "fecha": "2026-10-14",
+   "dec": 1,
+   "d": 0.0,
+   "dt": "pts",
+   "dd": 1,
+   "nota": "Quinta semana seguida sobre +3 °C"
+  },
+  "probabilidad-de-el-nino": {
+   "v": "83",
+   "u": "% muy fuerte",
+   "f": "NOAA CPC vía S&P Global",
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/100926-el-nino-strengthens-in-pacific-may-persist-into-jan-march-2027-noaa",
+   "fecha": "2026-10-08",
+   "nota": "Evento muy fuerte en oct–dic; podría seguir hasta ene–mar 2027"
+  },
+  "probabilidad-de-la-nina": {
+   "v": "≈0",
+   "u": "%",
+   "f": "NOAA CPC (lectura propia)",
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/100926-el-nino-strengthens-in-pacific-may-persist-into-jan-march-2027-noaa",
+   "fecha": "2026-10-08",
+   "nota": "El Niño persiste al menos hasta marzo 2027"
+  },
+  "monzon-de-india": {
+   "v": 87,
+   "u": "% de lo normal",
+   "f": "IMD, temporada jun–sep",
+   "url": "https://superkalam.com/current-affairs/01-10-2026/southwest-monsoon-ends-with-12-deficit-october-rain-also-likely-below-normal-imd-pg1-c0741b13-efac-431c-8afe-e6fcd2df8f02",
+   "fecha": "2026-09-30",
+   "dec": 0,
+   "nota": "El más bajo desde 2015; octubre también bajo lo normal"
+  },
+  "soja-produccion-competidores": {
+   "v": 186,
+   "u": "Mt Brasil",
+   "f": "USDA (vía Rio Times · Global Agriculture)",
+   "url": "https://www.global-agriculture.com/latam-agriculture/brazil-soybeans-7-3-planted-production-180-0-million-tons/",
+   "fecha": "2026-10-10",
+   "dec": 0,
+   "nota": "Rango privado 174–186 Mt; EE.UU. con rinde récord"
+  },
+  "maiz-produccion-competidores": {
+   "v": 407,
+   "u": "Mt EE.UU.",
+   "f": "USDA WASDE, 9/10",
+   "url": "https://www.global-agriculture.com/global-agriculture/usda-reports-record-soybean-yield-bigger-corn-crop-in-october-forecast/",
+   "fecha": "2026-10-09",
+   "dec": 0,
+   "nota": "16.034 M bu; +234 M bu vs. septiembre"
+  },
+  "trigo-produccion-competidores": {
+   "v": 29.9,
+   "u": "Mt Australia",
+   "f": "ABARES vía S&P Global",
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/100926-el-nino-strengthens-in-pacific-may-persist-into-jan-march-2027-noaa",
+   "fecha": "2026-09-15",
+   "dec": 1,
+   "d": -17,
+   "nota": "Variación interanual; El Niño seca el este australiano"
+  },
+  "huracanes-y-tifones": {
+   "v": 2,
+   "u": "activos",
+   "f": "JTWC · NHC (prensa)",
+   "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/21/super-typhoon-champi-on-path-to-impact-china-taiwan-within-days",
+   "fecha": "2026-10-21",
+   "dec": 0,
+   "nota": "Supertifón Champi (cat. 5) y huracán Trudy (México)"
+  },
+  "erupciones-volcanicas": {
+   "v": "Varias",
+   "u": "",
+   "f": "VAAC vía VolcanoDiscovery",
+   "url": "https://www.volcanodiscovery.com/vulkany.html",
+   "fecha": "2026-10-18",
+   "nota": "Ceniza en Krakatau, Ibu, Reventador y Santiaguito; sin daños graves reportados"
+  },
+  "sequias-activas-en-zonas-productoras": {
+   "v": 4,
+   "u": "regiones",
+   "f": "Fichas de esta semana",
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/100926-el-nino-strengthens-in-pacific-may-persist-into-jan-march-2027-noaa",
+   "fecha": "2026-10-23",
+   "dec": 0,
+   "nota": "India, Australia, centro de Brasil, Sudeste Asiático"
+  },
+  "conflictos-activos": {
+   "v": "70+",
+   "u": "seguidos",
+   "f": "CrisisWatch",
+   "url": "https://www.crisisgroup.org/crisiswatch/september-trends-and-october-alerts-2026",
+   "fecha": "2026-10-01",
+   "nota": "Situaciones que sigue Crisis Group cada mes."
+  },
+  "de-alta-intensidad": {
+   "v": 6,
+   "dec": 0,
+   "u": "guerras",
+   "f": "lectura propia",
+   "url": "https://www.crisisgroup.org/crisiswatch/september-trends-and-october-alerts-2026",
+   "fecha": "2026-10-23",
+   "nota": "Irán–EE.UU./Israel, Rusia–Ucrania, Yemen–Arabia Saudita, Etiopía–Tigray/Eritrea, Sudán, Pakistán–Afganistán."
+  },
+  "alertas-abiertas": {
+   "v": 7,
+   "dec": 0,
+   "u": "para octubre",
+   "f": "CrisisWatch",
+   "url": "https://www.crisisgroup.org/crisiswatch/september-trends-and-october-alerts-2026",
+   "fecha": "2026-10-01",
+   "nota": "Afganistán, Eritrea, Etiopía, Irán, Pakistán, Arabia Saudita, Yemen."
+  },
+  "pasos-maritimos-en-alerta": {
+   "v": 4,
+   "dec": 0,
+   "u": "de 6",
+   "f": "PortWatch · Lloyd's List",
+   "url": "https://straits.live/briefs/2026-10-20",
+   "fecha": "2026-10-23",
+   "nota": "Ormuz interrumpido; Bab el-Mandeb, Suez y Bósforo con demoras."
+  },
+  "militares": {
+   "v": 3,
+   "dec": 0,
+   "u": "hechos",
+   "f": "conteo propio",
+   "fecha": "2026-10-23",
+   "nota": "Bloqueo de EE.UU. a Irán, apoyo iraní a los hutíes, tropas eritreas en Tigray."
+  },
+  "de-inteligencia": {
+   "v": 0,
+   "dec": 0,
+   "u": "en la semana",
+   "f": "prensa",
+   "fecha": "2026-10-23",
+   "nota": "Sin casos nuevos del 17 al 23/10. El último relevante: el 6/10 detuvieron en Alemania al ex jefe del BND August Hanning, acusado de espiar para un servicio extranjero.",
+   "url": "https://www.onenewspage.com/story/former-german-spy-chief-arrested-espionage-631bc8f4/"
+  },
+  "economicos": {
+   "v": 2,
+   "dec": 0,
+   "u": "hechos",
+   "f": "conteo propio",
+   "fecha": "2026-10-23",
+   "nota": "Ley Graham de EE.UU. (suspendida) y nuevas sanciones de la UE a Rusia."
+  },
+  "en-argentina": {
+   "v": 2,
+   "dec": 0,
+   "u": "temas activos",
+   "f": "conteo propio",
+   "fecha": "2026-10-23",
+   "nota": "Sea Lion en Malvinas (Tribunal del Mar) y visita de Vance en noviembre."
+  },
+  "movimientos-de-la-semana": {
+   "v": 3,
+   "dec": 0,
+   "u": "movimientos",
+   "f": "prensa",
+   "fecha": "2026-10-23"
+  },
+  "protestas-de-la-semana": {
+   "v": 6,
+   "dec": 0,
+   "u": "países",
+   "f": "Dazed · Al Jazeera · APA",
+   "fecha": "2026-10-23",
+   "nota": "Francia, Albania, EE.UU., Chile, Italia y Bélgica, con protestas masivas o choques. La mayor, en Francia: unas 550.000 personas el 17/10.",
+   "url": "https://www.dazeddigital.com/life-culture/article/71193/1/gen-z-protests-paris-france-albania-belgium-italy-chile-riots"
+  },
+  "paros-y-huelgas-relevantes": {
+   "v": 0,
+   "dec": 0,
+   "u": "en la región",
+   "f": "prensa",
+   "fecha": "2026-10-23",
+   "nota": "Sin paros generales en Sudamérica esta semana."
+  },
+  "golpes-o-intentos": {
+   "v": 0,
+   "dec": 0,
+   "u": "esta semana",
+   "f": "CrisisWatch · prensa",
+   "fecha": "2026-10-23"
+  },
+  "paises-sudamericanos-en-foco": {
+   "v": 4,
+   "dec": 0,
+   "u": "de 8",
+   "f": "prensa",
+   "fecha": "2026-10-23",
+   "nota": "Brasil (balotaje), Bolivia, Venezuela, Ecuador."
+  },
+  "proxima-eleccion-relevante": {
+   "v": 1,
+   "dec": 0,
+   "u": "día",
+   "f": "TSE Brasil",
+   "fecha": "2026-10-24",
+   "nota": "Balotaje de Brasil, domingo 25/10. Israel vota el martes 27/10."
+  },
+  "elecciones-en-6-meses": {
+   "v": 5,
+   "dec": 0,
+   "u": "relevantes",
+   "f": "IFES · prensa",
+   "fecha": "2026-10-23",
+   "nota": "Brasil, Israel, EE.UU., España y Francia (fecha por confirmar)."
+  },
+  "gobiernos-inestables": {
+   "v": 3,
+   "dec": 0,
+   "u": "en seguimiento",
+   "f": "lectura propia",
+   "fecha": "2026-10-23",
+   "nota": "Israel, España y Reino Unido."
+  },
+  "vulnerabilidades-criticas-nuevas": {
+   "v": 4,
+   "dec": 0,
+   "u": "(14/10)",
+   "f": "CISA KEV",
+   "url": "https://www.neoteo.com/en/cisa-added-four-exploited-flaws-to-the-kev-catalog",
+   "fecha": "2026-10-14",
+   "nota": "Palo Alto PAN-OS, Cisco Secure Email Gateway y AhsayCBS. Último alta encontrada."
+  },
+  "ataques-relevantes": {
+   "v": 3,
+   "dec": 0,
+   "u": "seleccionados",
+   "f": "prensa especializada",
+   "fecha": "2026-10-23",
+   "nota": "La prensa habla de un \"octubre negro\" por la cantidad de incidentes."
+  },
+  "cortes-de-cables-o-gps": {
+   "v": 0,
+   "dec": 0,
+   "u": "confirmados",
+   "f": "prensa · Windward",
+   "fecha": "2026-10-23",
+   "url": "https://windward.ai/blog/gps-jamming-disrupts-1100-ships-in-the-middle-east-gulf/",
+   "nota": "Sin cortes nuevos confirmados. Sigue la interferencia de GPS crónica en el Golfo, y el 23/10 Irán amenazó con atacar los cables submarinos de la zona."
+  },
+  "emergencias-oms-vigentes": {
+   "v": 1,
+   "dec": 0,
+   "u": "emergencia internacional",
+   "f": "OMS",
+   "url": "https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026/outbreaks-under-monitoring-week-40-week-ending-4-october-2026",
+   "fecha": "2026-10-16",
+   "nota": "Ébola Bundibugyo (RDC), declarada el 17/5."
+  },
+  "brotes-humanos-activos": {
+   "v": 2,
+   "dec": 0,
+   "u": "de alto perfil",
+   "f": "OMS · ECDC · OPS",
+   "fecha": "2026-10-23",
+   "nota": "Ébola en África central y sarampión en las Américas."
+  },
+  "brotes-en-la-region": {
+   "v": 1,
+   "dec": 0,
+   "u": "en 17 países",
+   "f": "OPS",
+   "fecha": "2026-10-08",
+   "nota": "Sarampión: mayor cifra en más de dos décadas."
+  },
+  "brotes-animales-relevantes": {
+   "v": 1,
+   "dec": 0,
+   "u": "cerca de Argentina",
+   "f": "MAPA Brasil · OMSA",
+   "fecha": "2026-10-20",
+   "nota": "Newcastle en Santa Catarina, Brasil."
+  },
+  "atentados-de-la-semana": {
+   "v": 3,
+   "dec": 0,
+   "u": "relevantes",
+   "f": "prensa",
+   "fecha": "2026-10-23",
+   "nota": "Jordania, Francia y Cisjordania (23/10). No incluye ataques de guerra."
+  },
+  "muertos-en-atentados": {
+   "v": 10,
+   "dec": 0,
+   "u": "personas",
+   "f": "AFP · Al Jazeera · Times of Israel",
+   "fecha": "2026-10-23",
+   "nota": "7 en Jordania, 1 en Francia y 2 en Cisjordania."
+  },
+  "amenaza-sobre-argentina": {
+   "v": "Elevada",
+   "u": "",
+   "f": "lectura propia",
+   "fecha": "2026-10-23",
+   "nota": "Por la guerra con Irán y el alineamiento argentino con Israel y EE.UU."
+  },
+  "movimientos-actores": {
+   "v": 3,
+   "dec": 0,
+   "u": "relevantes",
+   "f": "prensa",
+   "fecha": "2026-10-23"
+  },
+  "monto-anunciado": {
+   "v": 55,
+   "dec": 0,
+   "u": "USD mil M",
+   "f": "comunicados · prensa",
+   "fecha": "2026-10-23",
+   "nota": "Anthropic–Nscale (45, en negociación) y TotalEnergies en Argentina (10, anunciado el 1/10)."
+  },
+  "con-cruce-directo-con-argentina": {
+   "v": 1,
+   "dec": 0,
+   "u": "de 3",
+   "f": "análisis",
+   "fecha": "2026-10-23",
+   "nota": "TotalEnergies en Vaca Muerta."
+  },
+  "desplazados-forzados-en-el-mundo": {
+   "v": 110.2,
+   "dec": 1,
+   "u": "millones",
+   "f": "ACNUR, Tendencias Globales",
+   "url": "https://www.acnur.org/es-es/tendencias-globales",
+   "fecha": "2025-12-31",
+   "nota": "41,6 M refugiados y 68,6 M desplazados internos (IDMC) a fines de 2025; 1 de cada 70 personas."
+  },
+  "crisis-migratorias-activas": {
+   "v": 2,
+   "dec": 0,
+   "u": "seguidas",
+   "f": "ACNUR · R4V",
+   "fecha": "2026-10-23",
+   "nota": "Sudán y Venezuela."
+  },
+  "remesas-a-la-region": {
+   "v": -3.6,
+   "dec": 1,
+   "u": "% anual (México, agosto)",
+   "f": "Banxico vía Crónica",
+   "fecha": "2026-08-31",
+   "url": "https://www.cronica.com.mx/nacional/2026/10/01/remesas-aumentan-22-entre-enero-y-agosto-de-2026/",
+   "nota": "México recibió 5.452 M USD en agosto (−3,6 % interanual); acumula +2,2 % en el año. Guatemala, Honduras y El Salvador: +7,1 % entre enero y julio."
+  },
+  "situaciones-abiertas": {
+   "v": 5,
+   "dec": 0,
+   "u": "en seguimiento",
+   "f": "sitios oficiales",
+   "fecha": "2026-10-23"
+  },
+  "nuevas-esta-semana": {
+   "v": 1,
+   "dec": 0,
+   "u": "",
+   "f": "sitios oficiales",
+   "fecha": "2026-10-23",
+   "nota": "Pedido argentino ante el Tribunal del Mar (13/10)."
+  },
+  "resueltas": {
+   "v": 0,
+   "dec": 0,
+   "u": "",
+   "f": "sitios oficiales",
+   "fecha": "2026-10-23"
+  },
+  "paises-en-occidente": {
+   "v": 42,
+   "dec": 0,
+   "u": "incl. Argentina",
+   "f": "lectura propia",
+   "fecha": "2026-10-23",
+   "nota": "EE.UU., Canadá, UE, Reino Unido, Japón, Corea del Sur, Australia, Israel, Chile, Paraguay, entre otros."
+  },
+  "paises-en-el-eje-euroasiatico": {
+   "v": 7,
+   "dec": 0,
+   "u": "países",
+   "f": "lectura propia",
+   "fecha": "2026-10-23",
+   "nota": "Rusia, China, Irán, Corea del Norte, Cuba, Nicaragua y Bielorrusia."
+  },
+  "no-alineados": {
+   "v": 10,
+   "dec": 0,
+   "u": "principales",
+   "f": "lectura propia",
+   "fecha": "2026-10-23",
+   "nota": "India, Brasil, Turquía, Arabia Saudita, Indonesia, Sudáfrica, México y otros."
+  },
+  "girasol": {
+   "v": 1450,
+   "dec": 0,
+   "u": "USD/t",
+   "f": "cbonds (aceite FOB Rotterdam)",
+   "url": "https://cbonds.com/indexes/183673/",
+   "fecha": "2026-10-16",
+   "sig": "+",
+   "nota": "Aceite de girasol crudo. El FOB oficial argentino es de 1.331 USD/t para oct–dic."
+  },
+  "cebada": {
+   "v": 200,
+   "dec": 0,
+   "u": "USD/t",
+   "f": "Commodity Board (FOB mar Negro)",
+   "url": "https://commodity-board.com/barley-market-pauses-after-asx-sell-off-while-black-sea-values-hold",
+   "fecha": "2026-10-20",
+   "sig": "+",
+   "nota": "Cebada forrajera, “apenas debajo de 200”; a comienzos de octubre estaba en 202,5. Es la referencia que compite con la argentina."
+  },
+  "carne-vacuna": {
+   "v": 6860,
+   "dec": 0,
+   "u": "USD/t",
+   "f": "Banco Mundial, Pink Sheet",
+   "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-October-2026.pdf",
+   "fecha": "2026-09-30",
+   "d": -5.8,
+   "dt": "%",
+   "sig": "+",
+   "nota": "Promedio de septiembre (agosto: 7.280). Novillo en pie en Chicago: 229,9 ¢/lb el 23/10, +4,9 % en el mes."
+  },
+  "fosfato-diamonico": {
+   "v": 800.6,
+   "dec": 0,
+   "u": "USD/t",
+   "f": "Banco Mundial, Pink Sheet",
+   "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-October-2026.pdf",
+   "fecha": "2026-09-30",
+   "d": 0.9,
+   "dt": "%",
+   "sig": "-",
+   "nota": "Promedio de septiembre; +0,9 % frente a agosto."
+  },
+  "potasa": {
+   "v": 367.5,
+   "dec": 0,
+   "u": "USD/t",
+   "f": "Banco Mundial, Pink Sheet",
+   "url": "https://thedocs.worldbank.org/en/doc/74e8be41ceb20fa0da750cda2f6b9e4e-0050012026/related/CMO-Pink-Sheet-October-2026.pdf",
+   "fecha": "2026-09-30",
+   "d": -5.0,
+   "dt": "%",
+   "sig": "-",
+   "nota": "Promedio de septiembre; −5,0 % frente a agosto."
+  },
+  "riesgo-emergentes-embi": {
+   "v": 173,
+   "dec": 0,
+   "u": "pb",
+   "f": "FRED (ICE BofA, bonos corporativos emergentes)",
+   "url": "https://fred.stlouisfed.org/data/BAMLEMCBPIOAS",
+   "fecha": "2026-10-22",
+   "d": 12,
+   "dt": "pb",
+   "sig": "-",
+   "nota": "Sustituto: el EMBI de JP Morgan no es gratuito. Este índice mide bonos de empresas emergentes; subió 10 pb solo el 22/10."
+  },
+  "yuan-por-dolar": {
+   "v": 6.6726,
+   "dec": 4,
+   "u": "CNY",
+   "f": "CurrencyBeacon",
+   "url": "https://currencybeacon.com/rates/USD/CNY",
+   "fecha": "2026-10-23",
+   "d": -0.22,
+   "dt": "%",
+   "nota": "El yuan se apreció 0,22 % en la semana."
+  },
+  "contenedor-asia-sudamerica": {
+   "v": 4585,
+   "dec": 0,
+   "u": "USD/FEU",
+   "f": "Drewry WCI (vía OilPriceAPI)",
+   "url": "https://www.oilpriceapi.com/live/drewry-world-container-index",
+   "fecha": "2026-10-22",
+   "d": 2.2,
+   "dt": "%",
+   "sig": "-",
+   "nota": "Índice compuesto mundial de Drewry: no hay un dato gratuito de la ruta Shanghái–Santos."
+  },
+  "indice-canasta-exportadora": {
+   "v": 96.7,
+   "dec": 1,
+   "u": "base 100",
+   "f": "cálculo propio (CBOT)",
+   "url": "https://www.investing.com/commodities/us-soybeans-historical-data",
+   "fecha": "2026-10-23",
+   "d": -1.7,
+   "dt": "pts",
+   "sig": "+",
+   "nota": "Base 21/8 = 100. Soja 60 %, maíz 25 %, trigo 15 %."
+  },
+  "terremotos-m6": {
+   "v": 1,
+   "dec": 0,
+   "u": "semana",
+   "f": "Xinhua vía CNN · VolcanoDiscovery",
+   "url": "https://localnews8.com/news/national-world/cnn-world/2026/10/22/7-magnitude-earthquake-hits-tibet-killing-16-and-injuring-dozens-chinese-state-media-reports/",
+   "fecha": "2026-10-23",
+   "nota": "M7,0 en Nagqu, Tíbet (22/10): al menos 16 muertos. El 18/10 no hubo ninguno de M6 o más (VolcanoDiscovery). El 24/10, fuera del corte, hubo M6,9 y M6,3 en Vanuatu."
+  },
+  "tsunamis": {
+   "v": 0,
+   "dec": 0,
+   "u": "alertas",
+   "f": "prensa · GDACS",
+   "url": "https://gdacs.org/xml/rss_eq_48h_low.xml",
+   "fecha": "2026-10-23",
+   "nota": "Sin alertas en la semana; el sismo del Tíbet fue continental."
+  },
+  "inundaciones-graves": {
+   "v": 0,
+   "dec": 0,
+   "u": "alertas naranja o roja",
+   "f": "GDACS",
+   "url": "https://gdacs.org/xml/rss_fl_7d.xml",
+   "fecha": "2026-10-21",
+   "nota": "Solo alertas verdes: España (1 muerto, 2.002 evacuados), Francia (1 muerto), Ecuador y México por lluvias que vienen de semanas atrás."
+  },
+  "incendios-grandes": {
+   "v": 1,
+   "dec": 0,
+   "u": "activos",
+   "f": "NBC Los Angeles",
+   "url": "https://www.nbclosangeles.com/news/local/fire-in-orange-county-prompts-evacuation-orders/3957302/",
+   "fecha": "2026-10-17",
+   "nota": "Incendio Norte en Orange County, California: 230 ha, unas 16.000 personas evacuadas, sin muertos."
+  }
+ },
+ "fichas": {
+  "bancos": [
+   {
+    "nombre": "Fed (EE.UU.)",
+    "chip": "Sesgo: suba",
+    "chipc": "warn",
+    "campos": {
+     "Tasa": "3,75–4,00 %",
+     "Última decisión": "+25 pb el 16/9",
+     "Próxima reunión": "27–28 oct",
+     "Sesgo": "Otra suba esperada en 2026"
+    },
+    "f": "Admiral Markets",
+    "url": "https://admiralmarkets.com/analytics/traders-blog/fed-raised-interest-rates"
+   },
+   {
+    "nombre": "BCE (zona euro)",
+    "chip": "Sesgo: suba",
+    "chipc": "warn",
+    "campos": {
+     "Tasa": "2,50 % (depósito)",
+     "Última decisión": "+25 pb el 10/9",
+     "Próxima reunión": "29 oct",
+     "Sesgo": "Mercado espera más subas"
+    },
+    "f": "Nation Thailand",
+    "url": "https://www.nationthailand.com/news/world/40070896"
+   },
+   {
+    "nombre": "Banco de Inglaterra",
+    "chip": "Sesgo: suba",
+    "chipc": "warn",
+    "campos": {
+     "Tasa": "3,75 %",
+     "Última decisión": "Mantuvo el 17/9 (6–3)",
+     "Próxima reunión": "5 nov",
+     "Sesgo": "3 votos por subir"
+    },
+    "f": "Cambridge Currencies",
+    "url": "https://cambridgecurrencies.com/next-bank-of-england-interest-rate-decision-date/"
+   },
+   {
+    "nombre": "Banco de Japón",
+    "chip": "Sesgo: suba",
+    "chipc": "warn",
+    "campos": {
+     "Tasa": "1,25 %",
+     "Última decisión": "+25 pb el 18/9",
+     "Próxima reunión": "29–30 oct",
+     "Sesgo": "Gradual, sin promesas"
+    },
+    "f": "BabyPips",
+    "url": "https://www.babypips.com/news/headline-boj-rate-hike-september-2026-yen-falls-dovish-ueda"
+   },
+   {
+    "nombre": "Banco Popular de China",
+    "chip": "Sesgo: neutral",
+    "campos": {
+     "Tasa": "3,0 % (LPR 1 año)",
+     "Última decisión": "Sin cambios el 20/10",
+     "Próxima reunión": "20 nov",
+     "Sesgo": "17 meses sin cambios"
+    },
+    "f": "Trading Economics",
+    "url": "https://tradingeconomics.com/china/interest-rate/news/593249"
+   },
+   {
+    "nombre": "Banco Central do Brasil",
+    "chip": "Sesgo: baja",
+    "chipc": "ok",
+    "campos": {
+     "Tasa": "13,75 % (Selic)",
+     "Última decisión": "−25 pb el 16/9",
+     "Próxima reunión": "3–4 nov",
+     "Sesgo": "Quinto recorte seguido"
+    },
+    "f": "Atlas Público",
+    "url": "https://atlaspublico.com.br/bcb/noticias/copom-reduz-selic-para-13-75pct-ao-ano-em-decisao-unanime-87748"
+   },
+   {
+    "nombre": "Banco Central de Chile",
+    "chip": "Sesgo: neutral",
+    "campos": {
+     "Tasa": "4,50 %",
+     "Última decisión": "Mantuvo el 8/9",
+     "Próxima reunión": "Fin de octubre (a confirmar)",
+     "Sesgo": "Estable hasta 2028 según operadores"
+    },
+    "f": "La Tercera · Emol",
+    "url": "https://www.latercera.com/etiqueta/tpm/"
+   },
+   {
+    "nombre": "Banco de Rusia",
+    "chip": "Sesgo: neutral",
+    "campos": {
+     "Tasa": "14,00 %",
+     "Última decisión": "Mantuvo el 23/10",
+     "Próxima reunión": "18 dic",
+     "Sesgo": "Pausa; subió su proyección de inflación"
+    },
+    "f": "Banco de Rusia",
+    "url": "https://www.cbr.ru/eng/press/pr/?file=23102026_133000key_e.htm"
+   },
+   {
+    "nombre": "Banco de la Reserva de India",
+    "chip": "Sesgo: suba",
+    "chipc": "warn",
+    "campos": {
+     "Tasa": "5,50 % (repo)",
+     "Última decisión": "+25 pb el 7/10",
+     "Próxima reunión": "2–4 dic",
+     "Sesgo": "\"Ajuste calibrado\""
+    },
+    "f": "Corp Law Updates",
+    "url": "https://www.corplawupdates.in/updates/rbi-repo-rate-hike-5-50-percent-october-2026"
+   }
+  ],
+  "enso": [
+   {
+    "nombre": "Escenario El Niño",
+    "chip": "Prob. 83 %",
+    "chipc": "warn",
+    "campos": {
+     "Probabilidad": "83 % de evento muy fuerte en el pico de oct–dic; podría durar hasta ene–mar 2027 (NOAA, 8/10)",
+     "Quién gana cosecha": "Sur de Sudamérica y sur de EE.UU. (más lluvia)",
+     "Quién pierde cosecha": "Australia (trigo −17 %), India (monzón −13 %), Sudeste Asiático (palma, arroz), centro de Brasil (lluvia irregular)",
+     "Efecto en precios": "Presión alcista en trigo, aceites vegetales y arroz",
+     "Efecto en Argentina": "Competidores con menos cosecha: más espacio para trigo y aceites argentinos"
+    },
+    "f": "NOAA · OMM vía S&P Global",
+    "url": "https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/100926-el-nino-strengthens-in-pacific-may-persist-into-jan-march-2027-noaa"
+   },
+   {
+    "nombre": "Escenario La Niña",
+    "chip": "Prob. ≈0 %",
+    "campos": {
+     "Probabilidad": "Prácticamente nula hasta marzo 2027",
+     "Quién gana cosecha": "Australia, India, Sudeste Asiático",
+     "Quién pierde cosecha": "Sur de Sudamérica y sur de EE.UU. (sequía)",
+     "Efecto en precios": "Alza de soja y maíz por menos oferta del Cono Sur",
+     "Efecto en Argentina": "A vigilar para 2027-28: tras un Niño fuerte suele venir La Niña (patrón histórico)"
+    },
+    "f": "NOAA CPC",
+    "url": "https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/100926-el-nino-strengthens-in-pacific-may-persist-into-jan-march-2027-noaa"
+   }
+  ],
+  "sequias": [
+   {
+    "nombre": "India",
+    "chip": "Severa",
+    "chipc": "crit",
+    "campos": {
+     "Región": "Este, noreste y sur",
+     "Cultivos afectados": "Arroz, legumbres, oleaginosas",
+     "Severidad": "Monzón 13 % bajo lo normal; sequía local en Karnataka y Maharashtra",
+     "Efecto en Argentina": "Más compra de aceites: demanda de aceite de soja argentino"
+    },
+    "f": "IMD",
+    "url": "https://superkalam.com/current-affairs/02-10-2026/season-s-end-pg10-b7948d3c-be6d-47a7-af6d-01da63cc0d80"
+   },
+   {
+    "nombre": "Australia",
+    "chip": "Severa",
+    "chipc": "crit",
+    "campos": {
+     "Región": "Este del cinturón triguero",
+     "Cultivos afectados": "Trigo, cebada",
+     "Severidad": "Trigo 29,9 Mt, −17 % interanual",
+     "Efecto en Argentina": "Menos competencia en trigo y cebada hacia Asia"
+    },
+    "f": "ABARES vía S&P Global",
+    "url": "https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/100926-el-nino-strengthens-in-pacific-may-persist-into-jan-march-2027-noaa"
+   },
+   {
+    "nombre": "Centro de Brasil",
+    "chip": "Moderada",
+    "chipc": "warn",
+    "campos": {
+     "Región": "Mato Grosso, Goiás, Minas Gerais",
+     "Cultivos afectados": "Soja en siembra; maíz de segunda",
+     "Severidad": "Lluvias escasas e irregulares en octubre; calor cercano a 40 °C",
+     "Efecto en Argentina": "Si se agrava, sube la soja"
+    },
+    "f": "DTN",
+    "url": "https://www.dtnpf.com/agriculture/web/ag/news/article/2026/10/16/south-america-calling-forecast"
+   },
+   {
+    "nombre": "Sudeste Asiático",
+    "chip": "Moderada",
+    "chipc": "warn",
+    "campos": {
+     "Región": "Indonesia, Malasia, Tailandia",
+     "Cultivos afectados": "Palma, arroz",
+     "Severidad": "Calor y lluvias bajo lo normal desde junio",
+     "Efecto en Argentina": "Palma más cara arrastra al aceite de soja"
+    },
+    "f": "Reuters vía IDN Financials",
+    "url": "https://www.idnfinancials.com/news/64419/el-ni%C3%B1o-is-fuelling-concerns-over-food-supplies-in-asia?page=all"
+   }
+  ],
+  "clima-claves": [
+   {
+    "nombre": "Monzón de India",
+    "chip": "Deficitario",
+    "chipc": "crit",
+    "campos": {
+     "Estado": "Cerró en 87 % de lo normal",
+     "Qué cambió": "IMD prevé octubre también bajo lo normal",
+     "Efecto en Argentina": "India importaría más aceites vegetales"
+    },
+    "f": "IMD",
+    "url": "https://www.newsbytesapp.com/news/india/india-meteorological-department-says-2026-monsoon-ends-13-below-normal/tldr"
+   },
+   {
+    "nombre": "Temporada de huracanes",
+    "chip": "Pacífico muy activo",
+    "chipc": "warn",
+    "campos": {
+     "Estado": "Pacífico con récord de energía ciclónica; Atlántico tranquilo por El Niño",
+     "Qué cambió": "Supertifón Champi, el más fuerte del año, pasa frente a Taiwán y llega a Japón el 25/10",
+     "Efecto en Argentina": "Demoras en puertos de China, Taiwán y Japón; presión en fletes"
+    },
+    "f": "The Star · Weathernews",
+    "url": "https://www.thestar.com.my/aseanplus/aseanplus-news/2026/10/21/super-typhoon-champi-on-path-to-impact-china-taiwan-within-days"
+   },
+   {
+    "nombre": "Bajantes: Panamá, Mississippi, Rin",
+    "chip": "Panamá normal",
+    "chipc": "ok",
+    "campos": {
+     "Estado": "Bajante en el Mississippi y el Rin; Panamá normalizado",
+     "Qué cambió": "Panamá: calado máximo de 49 pies y 33 cruces diarios desde el 15/10. Mississippi: restricciones de calado y de convoyes entre las millas 869 y 303, y Memphis cerca del umbral de bajante para el 5/11. Rin: 28 cm en Kaub el 23/10, demasiado bajo para cruceros.",
+     "Efecto en Argentina": "La bajante encarece las barcazas en EE.UU. (23,6 USD/t desde St. Louis): el grano estadounidense sale más caro y la soja y el maíz argentinos ganan competitividad."
+    },
+    "f": "ACP · DTN · Louisiana Trade & Commerce · River Cruise Watch",
+    "url": "https://www.louisianatradeandcommerce.com/post/mississippi-river-grain-barges-low-water"
+   }
+  ],
+  "pasos": [
+   {
+    "nombre": "Ormuz",
+    "chip": "Interrumpido",
+    "chipc": "crit",
+    "f": "straits.live / IMF PortWatch",
+    "url": "https://straits.live/briefs/2026-10-20",
+    "campos": {
+     "Tránsito": "4 buques el 18/10, contra 85 por día antes de la guerra (IMF PortWatch).",
+     "Qué cambió": "Récord de ataques en la primera mitad de octubre: dos buques hundidos. Esta semana bajó el ritmo; medios estatales iraníes dicen que dos petroleros chocaron con minas el 20/10, algo que el CENTCOM desmiente. Irán condiciona un plan de reapertura en siete días a que EE.UU. acepte sus términos.",
+     "Efecto en Argentina": "Petróleo y GNL caros; urea y fertilizantes del Golfo más caros y escasos para la siembra. Sube el valor del petróleo de Vaca Muerta."
+    }
+   },
+   {
+    "nombre": "Bab el-Mandeb",
+    "chip": "Con demoras",
+    "chipc": "warn",
+    "f": "Lloyd's List Intelligence",
+    "url": "https://www.lloydslistintelligence.com/resources/blog/red-sea-brief-15-october-2026",
+    "campos": {
+     "Tránsito": "1.215 pasos en septiembre (+4 % mensual), 47 % menos que antes de la crisis hutí.",
+     "Qué cambió": "Los hutíes mantienen el bloqueo a los puertos sauditas del mar Rojo. Los buques hacen fila para conseguir escolta naval europea.",
+     "Efecto en Argentina": "Fletes a Asia y Medio Oriente más caros; seguros marítimos altos."
+    }
+   },
+   {
+    "nombre": "Suez",
+    "chip": "Con demoras",
+    "chipc": "warn",
+    "f": "Lloyd's List Intelligence",
+    "url": "https://www.lloydslistintelligence.com/resources/blog/red-sea-brief-15-october-2026",
+    "campos": {
+     "Tránsito": "1.228 pasos en septiembre, el mejor mes desde diciembre de 2023, aún 39 % abajo del nivel previo.",
+     "Qué cambió": "Vuelven los portacontenedores; bajan los fletes Asia–Europa. Domina el crudo ruso hacia India.",
+     "Efecto en Argentina": "Leve alivio en fletes a Europa y Medio Oriente."
+    }
+   },
+   {
+    "nombre": "Panamá",
+    "chip": "Normal",
+    "chipc": "ok",
+    "f": "Autoridad del Canal de Panamá",
+    "url": "https://www.ajot.com/news/panama-canal-announces-increase-in-draft-and-daily-transit",
+    "campos": {
+     "Tránsito": "33 cupos diarios desde el 15/10; calado Neopanamax de vuelta a 49 pies.",
+     "Qué cambió": "Lluvias cerca de lo normal permitieron aflojar las restricciones del verano. Sigue el déficit de agua y la reserva de turno es obligatoria.",
+     "Efecto en Argentina": "Sin efecto directo hoy. Riesgo para 2027 si El Niño seca la cuenca."
+    }
+   },
+   {
+    "nombre": "Malaca",
+    "chip": "Normal",
+    "chipc": "ok",
+    "f": "Baird Maritime / S&P Global",
+    "url": "https://www.bairdmaritime.com/shipping/malaysia-vessel-restrictions-singapore-strait",
+    "campos": {
+     "Tránsito": "Fluido; más tráfico por desvíos desde Ormuz.",
+     "Qué cambió": "Malasia limita velocidad y fondeo en una zona sensible cerca de Singapur desde el 11/9. Indonesia, Malasia y Singapur reafirmaron el libre paso.",
+     "Efecto en Argentina": "Ruta clave para los granos y la harina de soja hacia el Sudeste Asiático: sin problemas."
+    }
+   },
+   {
+    "nombre": "Bósforo",
+    "chip": "Con demoras",
+    "chipc": "warn",
+    "f": "Ship & Bunker / Reuters",
+    "url": "https://shipandbunker.com/news/emea/112766-black-sea-attacks-linked-to-drop-in-turkish-bunker-operations-in-september-spotbarge",
+    "campos": {
+     "Tránsito": "Abierto, pero con menos graneleros: las operaciones de carga de combustible a graneleros en Turquía cayeron 57 % interanual en septiembre.",
+     "Qué cambió": "Siguen los ataques con drones en el mar Negro; el 5 y 6/10 alcanzaron aguas de Rumania y Bulgaria. Rusia rechaza reabrir el corredor de granos.",
+     "Efecto en Argentina": "Menos trigo y maíz de Ucrania y Rusia al mercado: más demanda para el grano argentino."
+    }
+   }
+  ],
+  "comercio": [
+   {
+    "nombre": "EE.UU. mantiene aranceles a China",
+    "chip": "Restricción",
+    "chipc": "crit",
+    "f": "National Law Review",
+    "url": "https://natlawreview.com/article/tariff-ied-week-international-trade-october-19-2026",
+    "campos": {
+     "País": "Estados Unidos → China",
+     "Medida": "El USTR continúa los aranceles de la Sección 301 del primer gobierno de Trump. China, a su vez, sigue cobrando 13 % a la soja de EE.UU. (3 % a la de Brasil).",
+     "Productos": "Bienes chinos en general; soja estadounidense del lado chino.",
+     "Efecto en Argentina": "Positivo: la soja sudamericana mantiene ventaja en China."
+    }
+   },
+   {
+    "nombre": "Filipinas investiga importaciones de cerdo",
+    "chip": "Restricción",
+    "chipc": "warn",
+    "f": "OMC",
+    "url": "https://www.wto.org/english/news_e/news26_e/safe_phl_21oct26_520_e.htm",
+    "campos": {
+     "País": "Filipinas",
+     "Medida": "Investigación de salvaguardia notificada a la OMC el 21/10; puede terminar en aranceles a todos los orígenes.",
+     "Productos": "Carne de cerdo",
+     "Efecto en Argentina": "Menor. Argentina exporta poco cerdo; señal de más proteccionismo cárnico en Asia."
+    }
+   },
+   {
+    "nombre": "EE.UU. evalúa salvaguardia a la carne ovina",
+    "chip": "Restricción",
+    "chipc": "warn",
+    "f": "National Law Review",
+    "url": "https://natlawreview.com/article/tariff-ied-week-international-trade-october-19-2026",
+    "campos": {
+     "País": "Estados Unidos",
+     "Medida": "Audiencia en la Comisión de Comercio Internacional (16/10) por aranceles globales de salvaguardia.",
+     "Productos": "Carne ovina (sobre todo de Australia y Nueva Zelanda)",
+     "Efecto en Argentina": "Menor y directo: Argentina exporta cordero patagónico; un arancel global también lo alcanzaría."
+    }
+   }
+  ],
+  "conflictos": [
+   {
+    "nombre": "Guerra EE.UU./Israel–Irán",
+    "chip": "Alta intensidad",
+    "chipc": "crit",
+    "f": "AFP · Reuters · CrisisWatch",
+    "url": "https://www.crisisgroup.org/middle-east-north-africa/gulf-and-arabian-peninsula/iran",
+    "campos": {
+     "Países": "Irán contra EE.UU. e Israel; frentes en el Golfo, Yemen y el mar Rojo",
+     "Estado": "Guerra desde el 28/2. Sin bombardeos de EE.UU. sobre Irán desde septiembre; sigue el bloqueo naval a los puertos iraníes.",
+     "Intensidad": "Alta en el mar: récord de ataques a buques en octubre.",
+     "Qué cambió": "Trump prometió no atacar Irán antes de las elecciones del 3/11 y habla de \"conversaciones productivas\" con Pakistán como mediador. Irán no cede en el enriquecimiento de uranio. Un tercer portaaviones de EE.UU. llega a fin de octubre.",
+     "Canal en Argentina": "Energía, fertilizantes, logística",
+     "Impacto": "Alto: petróleo a 117 USD, urea cara y fletes más caros."
+    }
+   },
+   {
+    "nombre": "Hutíes contra Arabia Saudita",
+    "chip": "En escalada",
+    "chipc": "crit",
+    "f": "The National · AFP",
+    "url": "https://www.thenationalnews.com/news/gulf/2026/10/12/timeline-houthis-escalate-attacks-on-saudi-airports/",
+    "campos": {
+     "Países": "Yemen (hutíes, apoyados por Irán) contra Arabia Saudita y el gobierno yemení",
+     "Estado": "Los hutíes tomaron la costa yemení del mar Rojo en septiembre y atacan aeropuertos y petroleras sauditas.",
+     "Intensidad": "Alta: el 10/10 un misil en el aeropuerto de Riad mató a 13 personas e hirió a más de 300.",
+     "Qué cambió": "Siguen los ataques con drones y misiles; bloqueo a los puertos sauditas del mar Rojo.",
+     "Canal en Argentina": "Energía, logística",
+     "Impacto": "Medio: presión sobre el petróleo y la ruta de Bab el-Mandeb."
+    }
+   },
+   {
+    "nombre": "Rusia–Ucrania",
+    "chip": "Alta intensidad",
+    "chipc": "crit",
+    "f": "Estado Mayor de Ucrania · Ship & Bunker",
+    "url": "https://www.pravda.com.ua/eng/news/2026/10/15/8058094/",
+    "campos": {
+     "Países": "Rusia contra Ucrania",
+     "Estado": "Guerra de desgaste; Ucrania recuperó terreno en 2026 y el avance ruso se frenó.",
+     "Intensidad": "Alta: unos 200 a 260 choques diarios, con foco en Pokrovsk y Kostiantynivka.",
+     "Qué cambió": "La guerra se extendió al mar Negro: drones contra buques, incluso en aguas de Rumania y Bulgaria. Sin negociación de paz activa.",
+     "Canal en Argentina": "Socios comerciales, logística",
+     "Impacto": "Positivo para el agro: sale menos grano del mar Negro."
+    }
+   },
+   {
+    "nombre": "Etiopía–Tigray y Eritrea",
+    "chip": "Riesgo de guerra",
+    "chipc": "warn",
+    "f": "Reuters · Critical Threats",
+    "url": "https://www.criticalthreats.org/briefs/ethiopia-war-security-review/october-13-2026",
+    "campos": {
+     "Países": "Etiopía contra el TPLF; Eritrea acusada de apoyar a los rebeldes",
+     "Estado": "El ejército etíope retomó Mekelle y llegó a la frontera eritrea el 13/10. Etiopía y Eritrea rompieron relaciones.",
+     "Intensidad": "Media, con riesgo de guerra entre Estados.",
+     "Qué cambió": "Abiy nombró un gobierno interino en Tigray y promete elecciones en seis meses. Eritrea pidió sanciones contra Etiopía en la ONU.",
+     "Canal en Argentina": "Seguridad, logística",
+     "Impacto": "Bajo y directo; alto si se suma al conflicto del mar Rojo."
+    }
+   }
+  ],
+  "alertas-geo": [
+   {
+    "nombre": "Ataque de EE.UU. a Irán después del 3 de noviembre",
+    "prob": "media",
+    "horizonte": "2–6 semanas",
+    "evol": "↑ sube",
+    "chipc": "crit",
+    "f": "Reuters · The Atlantic",
+    "url": "https://english.aawsat.com/world/5327600-trump-rules-out-new-iran-attack-us-midterm-elections",
+    "campos": {
+     "Dónde y quiénes": "EE.UU. contra Irán; posible respuesta iraní sobre bases y buques en el Golfo.",
+     "Señales": "Trump descartó atacar solo hasta las elecciones; el Pentágono preparó opciones; llega un tercer portaaviones.",
+     "Impacto en Argentina": "Petróleo y urea más caros; más volatilidad financiera para emergentes."
+    }
+   },
+   {
+    "nombre": "Guerra abierta Etiopía–Eritrea",
+    "prob": "media",
+    "horizonte": "1–3 meses",
+    "evol": "↑ sube",
+    "chipc": "warn",
+    "f": "CrisisWatch · Reuters",
+    "url": "https://militarnyi.com/en/news/ethiopian-army-reaches-eritrean-border-after-counteroffensive-raising-fears-of-war/",
+    "campos": {
+     "Dónde y quiénes": "Frontera norte de Tigray; Etiopía busca salida al mar Rojo (puerto de Assab).",
+     "Señales": "Ruptura diplomática, tropas etíopes en la frontera, cartas cruzadas ante el Consejo de Seguridad.",
+     "Impacto en Argentina": "Bajo; suma riesgo al tránsito por el mar Rojo."
+    }
+   }
+  ],
+  "sanciones": [
+   {
+    "nombre": "EE.UU. suspende la ley Graham",
+    "chip": "Alivio",
+    "chipc": "ok",
+    "f": "Covington",
+    "url": "https://www.cov.com/en/news-and-insights/insights/2026/10/recent-developments-in-eu-and-us-sanctions-relating-to-russia",
+    "campos": {
+     "Quién": "Estados Unidos",
+     "Contra quién": "Rusia, Irán y países que compran su energía",
+     "Medida": "La ley preveía aranceles de hasta 500 % a Rusia y de hasta 100 % a quienes compren su petróleo. El 16/10 Trump usó la dispensa y suspendió todas las sanciones y aranceles de la ley.",
+     "Efecto en Argentina": "Evita un shock de aranceles a India, China y Turquía, que son compradores de alimentos argentinos."
+    }
+   },
+   {
+    "nombre": "La UE amplía sanciones a Rusia",
+    "chip": "Restricción",
+    "chipc": "warn",
+    "f": "Covington",
+    "url": "https://www.cov.com/en/news-and-insights/insights/2026/10/recent-developments-in-eu-and-us-sanctions-relating-to-russia",
+    "campos": {
+     "Quién": "Unión Europea",
+     "Contra quién": "Proveedores de la industria militar rusa",
+     "Medida": "El 12/10 sumó empresas y personas a la lista de bienes congelados; en septiembre prorrogó el régimen tres años.",
+     "Efecto en Argentina": "Indirecto: sostiene las trabas a fertilizantes rusos."
+    }
+   }
+  ],
+  "injerencia": [
+   {
+    "nombre": "Bloqueo naval de EE.UU. a Irán",
+    "chip": "Militar",
+    "chipc": "crit",
+    "f": "AFP",
+    "url": "https://english.ahram.org.eg/News/578746.aspx",
+    "campos": {
+     "Actor externo": "Estados Unidos",
+     "País objetivo": "Irán",
+     "Qué hizo": "Mantiene el bloqueo de los puertos iraníes y escolta buques aliados por Ormuz.",
+     "Confirmación": "Confirmado (oficial)",
+     "Efecto en Argentina": "Petróleo caro: beneficia a Vaca Muerta y encarece fertilizantes."
+    }
+   },
+   {
+    "nombre": "Irán detrás de los hutíes",
+    "chip": "Militar",
+    "chipc": "warn",
+    "f": "AP · Reuters",
+    "url": "https://www.bostonglobe.com/2026/10/10/world/houthi-attack-riyadh-airport/",
+    "campos": {
+     "Actor externo": "Irán",
+     "País objetivo": "Yemen y Arabia Saudita",
+     "Qué hizo": "Respalda a los hutíes, que bombardean aeropuertos sauditas.",
+     "Confirmación": "Atribuido por Riad y Washington; Irán lo niega",
+     "Efecto en Argentina": "Riesgo para el petróleo y la ruta del mar Rojo."
+    }
+   },
+   {
+    "nombre": "Tropas eritreas en Tigray",
+    "chip": "Militar",
+    "chipc": "warn",
+    "f": "AFP",
+    "url": "https://tribune.com.pk/story/2633644/eritrean-troops-deployed-in-ethiopias-tigray-region",
+    "campos": {
+     "Actor externo": "Eritrea",
+     "País objetivo": "Etiopía",
+     "Qué hizo": "Desplegó tropas en Tigray en apoyo de los rebeldes; luego se replegó ante el avance etíope.",
+     "Confirmación": "Múltiples fuentes; Asmara no lo niega",
+     "Efecto en Argentina": "Bajo."
+    }
+   }
+  ],
+  "injerencia-arg": [
+   {
+    "nombre": "Estación espacial china en Neuquén",
+    "chip": "Sin novedad",
+    "campos": {
+     "Novedades de la semana": "Sin hechos nuevos. La estación de Bajada del Agrio sigue operando bajo el acuerdo de 2014, con cláusula de uso pacífico.",
+     "Fuente": "prensa"
+    }
+   },
+   {
+    "nombre": "Presencia militar británica en Malvinas",
+    "chip": "Activo",
+    "chipc": "warn",
+    "f": "El Economista",
+    "url": "https://eleconomista.com.ar/energia/malvinas-milei-lleva-pelea-petroleo-tribunal-mar-busca-frenar-us-2200-millones-n98823",
+    "campos": {
+     "Novedades de la semana": "Argentina pidió al Tribunal Internacional del Derecho del Mar (13/10) medidas para frenar el proyecto petrolero Sea Lion, con licencia británica. Navitas y Rockhopper siguen adelante.",
+     "Fuente": "El Economista"
+    }
+   },
+   {
+    "nombre": "Cooperación con el Comando Sur de EE.UU.",
+    "chip": "Activo",
+    "chipc": "warn",
+    "f": "Forbes Argentina",
+    "url": "https://www.forbesargentina.com/money/el-vicepresidente-estados-unidos-jd-vance-visitara-argentina-noviembre-a-viene-n99226",
+    "campos": {
+     "Novedades de la semana": "Se prepara la visita del vicepresidente JD Vance en noviembre (seguridad, energía, acuerdo comercial). Sigue vigente el programa de seguridad marítima en el Atlántico Sur anunciado en mayo.",
+     "Fuente": "Forbes Argentina · LPO"
+    }
+   },
+   {
+    "nombre": "Swap con China",
+    "chip": "Sin novedad",
+    "f": "Buenos Aires Times",
+    "url": "https://www.batimes.com.ar/news/economy/argentina-renews-us19-billion-china-swap-for-another-five-years.phtml",
+    "campos": {
+     "Novedades de la semana": "Sin cambios. Renovado en agosto por cinco años (unos 19.000 millones de USD); el tramo usado se redujo a unos 680 millones.",
+     "Fuente": "BCRA"
+    }
+   },
+   {
+    "nombre": "Interés extranjero en la Hidrovía",
+    "chip": "Sin novedad",
+    "f": "La Nación",
+    "url": "https://www.lanacion.com.ar/economia/confirman-que-jan-de-nul-y-operara-la-hidrovia-por-los-proximos-25-anos-nid18062026/",
+    "campos": {
+     "Novedades de la semana": "Sin cambios. Concesión adjudicada en junio a la belga Jan de Nul con Servimagnus por 25 años.",
+     "Fuente": "Boletín Oficial"
+    }
+   },
+   {
+    "nombre": "Pesca extranjera en la milla 201",
+    "chip": "Temporada baja",
+    "f": "Prefectura · iProfesional",
+    "url": "https://www.iprofesional.com/negocios/448592-pesca-ilegal-con-china-y-espana-a-la-cabeza-500-buques-extranjeros-depredan-en-el-sur",
+    "campos": {
+     "Novedades de la semana": "Sin datos nuevos. La flota (80 % china) vuelve a crecer desde diciembre, cuando empieza la temporada de calamar.",
+     "Fuente": "Prefectura"
+    }
+   }
+  ],
+  "arg-bloque": [
+   {
+    "nombre": "Argentina",
+    "chip": "Occidente",
+    "chipc": "ok",
+    "f": "Perfil · El Economista",
+    "url": "https://www.perfil.com/noticias/politica/vance-llegara-a-la-argentina-en-noviembre-con-el-pct-y-el-acuerdo-comercial-pendientes.phtml",
+    "campos": {
+     "Bloque": "Alineada con EE.UU. e Israel; vínculo comercial pragmático con China (swap renovado).",
+     "Qué cambió": "Visita de Vance confirmada para noviembre; el acuerdo comercial con EE.UU. firmado en febrero aún no pasó por el Congreso. Choque con el Reino Unido por Sea Lion.",
+     "Votos recientes en la ONU": "Sin votaciones clave esta semana."
+    }
+   }
+  ],
+  "movimientos": [
+   {
+    "nombre": "Etiopía y Eritrea",
+    "chip": "Ruptura",
+    "chipc": "crit",
+    "f": "Al Jazeera · Daily Maverick",
+    "url": "https://www.aljazeera.com/amp/news/2026/10/13/ethiopias-tigray-war-where-do-the-uae-and-saudi-arabia-stand",
+    "campos": {
+     "País": "Etiopía / Eritrea",
+     "Se acerca a": "Etiopía: Emiratos Árabes. Eritrea: Egipto y, con más discreción, Arabia Saudita.",
+     "Se aleja de": "Entre sí: rompieron relaciones diplomáticas",
+     "Hecho": "Eritrea acusa a Etiopía de querer su costa; Etiopía acusa a Eritrea de armar al TPLF."
+    }
+   },
+   {
+    "nombre": "Pakistán, mediador con Irán",
+    "chip": "Se acerca",
+    "chipc": "ok",
+    "f": "CrisisWatch · Asia News Network",
+    "url": "https://crisisgroup.org/asia-pacific/south-asia/pakistan",
+    "campos": {
+     "País": "Pakistán",
+     "Se acerca a": "EE.UU. e Irán a la vez, como mediador principal",
+     "Se aleja de": "Afganistán talibán (choques en la frontera)",
+     "Hecho": "El jefe del ejército paquistaní fue recibido en Teherán el 20/10."
+    }
+   },
+   {
+    "nombre": "Rusia ofrece ayuda a Irán",
+    "chip": "Se acerca",
+    "chipc": "warn",
+    "f": "Al Jazeera",
+    "url": "https://www.aljazeera.com/news/2026/10/8/putin-pledges-russias-support-to-end-us-led-war-on-iran",
+    "campos": {
+     "País": "Rusia",
+     "Se acerca a": "Irán (ofrece mediar para terminar la guerra)",
+     "Se aleja de": "Sin cambios reportados",
+     "Hecho": "Putin le dijo a Pezeshkian (8/10) que Rusia hará \"todo\" lo posible para terminar la guerra, y ofreció mediar."
+    }
+   }
+  ],
+  "sudamerica": [
+   {
+    "nombre": "Brasil",
+    "chip": "Balotaje 25/10",
+    "chipc": "warn",
+    "f": "Datafolha vía CNN Brasil",
+    "url": "https://www.cnnbrasil.com.br/eleicoes/datafolha-flavio-e-lula-empatam-em-50-de-votos-validos-no-2o-turno/",
+    "campos": {
+     "Estado": "Elección muy polarizada; empate técnico.",
+     "Qué pasó": "Este domingo se vota la segunda vuelta entre Flávio Bolsonaro (47 % en primera vuelta) y Lula (45 %). El último Datafolha (22/10) los da empatados en 50 % de votos válidos.",
+     "Impacto en Argentina": "Alto: define el rumbo de nuestro principal socio comercial y del Mercosur. Riesgo de protestas si el resultado es muy ajustado."
+    }
+   },
+   {
+    "nombre": "Chile",
+    "chip": "Tensión",
+    "chipc": "warn",
+    "f": "Perfil · Emol",
+    "url": "https://www.emol.com/noticias/Internacional/2026/10/14/1214099/argentina-relaciones-chile-malvinas.html",
+    "campos": {
+     "Estado": "Protestas contra los ajustes de Kast, sin crisis de gobierno.",
+     "Qué pasó": "La marcha por los siete años del estallido (18/10) terminó con 29 detenidos. Fricción con Argentina por la ruta Punta Arenas–Malvinas: el buque Danstar zarparía en noviembre.",
+     "Impacto en Argentina": "Medio: la ruta podría dar apoyo logístico al petróleo de Malvinas."
+    }
+   },
+   {
+    "nombre": "Bolivia",
+    "chip": "Estado de excepción",
+    "chipc": "warn",
+    "f": "Wikipedia · La Razón",
+    "url": "https://larazon.bo/nacional/2026/10/12/defensa-advierte-acciones-legales-ante-bloqueos-durante-el-estado-de-excepcion/",
+    "campos": {
+     "Estado": "Calma tensa. Rige el estado de excepción (ampliado a 180 días) tras los bloqueos de mayo y junio, que dejaron 24 muertos.",
+     "Qué pasó": "El gobierno de Rodrigo Paz advirtió el 12/10 que actuará contra nuevos bloqueos. Siguen la escasez de combustible y de dólares; Evo Morales presiona por elecciones anticipadas.",
+     "Impacto en Argentina": "Medio: comercio fronterizo, gas y migración. Riesgo de nuevos cortes de rutas."
+    }
+   },
+   {
+    "nombre": "Paraguay",
+    "chip": "Estable",
+    "chipc": "ok",
+    "f": "Última Hora",
+    "url": "https://www.ultimahora.com/protestas-contra-gobierno-de-pena",
+    "campos": {
+     "Estado": "Estable; protestas periódicas contra el gobierno de Peña.",
+     "Qué pasó": "Sin hechos graves esta semana. La economía crece fuerte (FMI: 4,5 %).",
+     "Impacto en Argentina": "Bajo: Hidrovía y Yacyretá sin cambios."
+    }
+   },
+   {
+    "nombre": "Uruguay",
+    "chip": "Estable",
+    "chipc": "ok",
+    "f": "La Política Online",
+    "url": "https://www.lapoliticaonline.com/internacionales/orsi-sufre-el-cuarto-paro-general-y-el-sindicalismo-reclama-la-salida-del-ministro-de-economia/",
+    "campos": {
+     "Estado": "Estable; conflicto sindical de baja intensidad con el gobierno de Orsi.",
+     "Qué pasó": "Sin paros generales esta semana.",
+     "Impacto en Argentina": "Bajo."
+    }
+   },
+   {
+    "nombre": "Perú",
+    "chip": "Estable",
+    "chipc": "ok",
+    "f": "AP",
+    "url": "https://www.the-messenger.com/news/world/article_4d498b98-b78d-5a06-8b8e-5162a69dd55d.html",
+    "campos": {
+     "Estado": "Keiko Fujimori gobierna desde el 28/7 con un Congreso sin mayoría.",
+     "Qué pasó": "Sin hechos graves esta semana. Desafíos: inseguridad y El Niño en la costa norte.",
+     "Impacto en Argentina": "Bajo."
+    }
+   },
+   {
+    "nombre": "Venezuela",
+    "chip": "Transición",
+    "chipc": "warn",
+    "f": "La Tribuna · Excelsior",
+    "url": "https://www.latribuna.hn/2026/10/14/capriles-dice-que-delcy-rodriguez-busca-vias-para-extender-su-gobierno-interino-hasta-2030/",
+    "campos": {
+     "Estado": "Gobierno interino de Delcy Rodríguez bajo supervisión de EE.UU., tras la captura de Maduro en enero.",
+     "Qué pasó": "Avanza lento el diálogo con la oposición; sin fecha de elecciones. La oposición acusa a Rodríguez de querer quedarse hasta 2030. El país sigue golpeado por el terremoto de junio.",
+     "Impacto en Argentina": "Medio: más petróleo venezolano al mercado y posible retorno de migrantes."
+    }
+   },
+   {
+    "nombre": "Ecuador",
+    "chip": "Violencia",
+    "chipc": "crit",
+    "f": "Teleamazonas · The Cuenca Dispatch",
+    "url": "https://www.teleamazonas.com/actualidad/noticias/seguridad/10-provincias-ecuador-golpeadas-crimen-organizado-127400/",
+    "campos": {
+     "Estado": "Estado de excepción en 10 provincias por el crimen organizado.",
+     "Qué pasó": "La policía reporta menos muertes violentas en 2026, pero el narcotráfico y la extorsión siguen dominando.",
+     "Impacto en Argentina": "Bajo y directo; ruta de cocaína hacia los puertos del Pacífico y del Atlántico."
+    }
+   }
+  ],
+  "estabilidad": [
+   {
+    "nombre": "Israel",
+    "chip": "Elección 27/10",
+    "chipc": "warn",
+    "f": "Times of Israel · Globes",
+    "url": "https://www.timesofisrael.com/liveblog_entry/toi-poll-eisenkot-opens-up-big-lead-on-netanyahu-but-both-blocs-short-of-majority/",
+    "campos": {
+     "País": "Israel",
+     "Situación": "Netanyahu llega a la elección en plena guerra. Las encuestas no dan mayoría a ningún bloque.",
+     "Riesgo": "Alto: posible bloqueo y gobierno de transición.",
+     "Efecto en Argentina": "Un cambio de gobierno no alteraría la alianza, pero sí el vínculo personal Milei–Netanyahu."
+    }
+   },
+   {
+    "nombre": "España",
+    "chip": "Elección 29/11",
+    "chipc": "warn",
+    "f": "Euronews · Sigma Dos",
+    "url": "https://es.euronews.com/2026/10/09/encuesta-preve-cambio-gobierno-espana-pp-vox-consolidarian-mayoria-frente-psoe",
+    "campos": {
+     "País": "España",
+     "Situación": "Sánchez adelantó las elecciones tras perder votaciones en el Congreso.",
+     "Riesgo": "Medio: probable cambio de gobierno hacia PP y Vox.",
+     "Efecto en Argentina": "Un gobierno PP–Vox sería más cercano a Milei; España es un inversor clave en Argentina."
+    }
+   },
+   {
+    "nombre": "Reino Unido",
+    "chip": "Gobierno nuevo",
+    "chipc": "warn",
+    "f": "NPR · Fortune",
+    "url": "https://www.wvtf.org/2026-07-20/andy-burnham-takes-over-as-uk-prime-minister",
+    "campos": {
+     "País": "Reino Unido",
+     "Situación": "Andy Burnham es primer ministro desde el 20/7 tras la caída de Starmer. Reform UK crece.",
+     "Riesgo": "Medio.",
+     "Efecto en Argentina": "Sin cambio en Malvinas; tensión por Sea Lion."
+    }
+   }
+  ],
+  "paises": [
+   {
+    "nombre": "Estados Unidos",
+    "chip": "Alta",
+    "chipc": "ok",
+    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "campos": {
+     "Gobierno": "Donald Trump (republicano)",
+     "Afinidad": "Alta: alianza política, acuerdo comercial (aún sin ratificar) y swap de 2025. Vance visita Buenos Aires en noviembre.",
+     "Hechos de la semana": "Trump prometió no atacar Irán antes del 3/11; suspendió la ley Graham.",
+     "Próxima elección": "Legislativas, 3/11/2026"
+    }
+   },
+   {
+    "nombre": "China",
+    "chip": "Media",
+    "chipc": "warn",
+    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "campos": {
+     "Gobierno": "Xi Jinping",
+     "Afinidad": "Media: vínculo comercial pragmático; swap renovado hasta 2031.",
+     "Hechos de la semana": "Mantiene arancel de 13 % a la soja de EE.UU. (favorece a Sudamérica).",
+     "Próxima elección": "Sin elecciones; Congreso del Partido en 2027"
+    }
+   },
+   {
+    "nombre": "Rusia",
+    "chip": "Baja",
+    "chipc": "crit",
+    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "campos": {
+     "Gobierno": "Vladimir Putin",
+     "Afinidad": "Baja: Argentina alineada con Occidente en Ucrania.",
+     "Hechos de la semana": "Ofreció mediar en la guerra de Irán; EE.UU. suspendió nuevas sanciones.",
+     "Próxima elección": "Presidencial 2030"
+    }
+   },
+   {
+    "nombre": "Unión Europea",
+    "chip": "Media",
+    "chipc": "warn",
+    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "campos": {
+     "Gobierno": "Comisión von der Leyen",
+     "Afinidad": "Media: acuerdo Mercosur–UE vigente desde mayo de 2026.",
+     "Hechos de la semana": "Nuevas sanciones a Rusia (12/10).",
+     "Próxima elección": "España 29/11; Francia abril 2027"
+    }
+   },
+   {
+    "nombre": "Reino Unido",
+    "chip": "Baja",
+    "chipc": "crit",
+    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "campos": {
+     "Gobierno": "Andy Burnham (laborista)",
+     "Afinidad": "Baja: disputa por Malvinas y el petróleo de Sea Lion.",
+     "Hechos de la semana": "Argentina llevó Sea Lion al Tribunal del Mar (13/10).",
+     "Próxima elección": "General, a más tardar 2029"
+    }
+   },
+   {
+    "nombre": "Israel",
+    "chip": "Alta",
+    "chipc": "ok",
+    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "campos": {
+     "Gobierno": "Benjamín Netanyahu (Likud)",
+     "Afinidad": "Alta: alianza explícita del gobierno argentino.",
+     "Hechos de la semana": "Campaña final; Eisenkot lidera varias encuestas.",
+     "Próxima elección": "Knéset, 27/10/2026"
+    }
+   },
+   {
+    "nombre": "Irán",
+    "chip": "Hostil",
+    "chipc": "crit",
+    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "campos": {
+     "Gobierno": "Mojtaba Jamenei (líder supremo); Masoud Pezeshkian (presidente)",
+     "Afinidad": "Hostil: causa AMIA y alineamiento argentino con Israel y EE.UU.",
+     "Hechos de la semana": "Guerra con EE.UU. e Israel; ataques a buques en Ormuz.",
+     "Próxima elección": "Sin elecciones previstas"
+    }
+   },
+   {
+    "nombre": "India",
+    "chip": "Media",
+    "chipc": "warn",
+    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "campos": {
+     "Gobierno": "Narendra Modi",
+     "Afinidad": "Media: comprador clave de aceite de soja; relación sin fricciones.",
+     "Hechos de la semana": "Monzón débil; FMI prevé 7 % de crecimiento.",
+     "Próxima elección": "General 2029"
+    }
+   },
+   {
+    "nombre": "Brasil",
+    "chip": "Baja",
+    "chipc": "crit",
+    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "campos": {
+     "Gobierno": "Lula da Silva (PT)",
+     "Afinidad": "Baja: relación fría entre Lula y Milei.",
+     "Hechos de la semana": "Balotaje el domingo 25/10 contra Flávio Bolsonaro.",
+     "Próxima elección": "Balotaje, 25/10/2026"
+    }
+   },
+   {
+    "nombre": "Chile",
+    "chip": "Alta",
+    "chipc": "ok",
+    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "campos": {
+     "Gobierno": "José Antonio Kast",
+     "Afinidad": "Alta, con roce: apoyo a Argentina en Malvinas pero habilita la ruta Punta Arenas–islas.",
+     "Hechos de la semana": "Marcha del 18/10 con 29 detenidos; polémica por el buque Danstar.",
+     "Próxima elección": "Presidencial 2029"
+    }
+   },
+   {
+    "nombre": "Bolivia",
+    "chip": "Alta",
+    "chipc": "ok",
+    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "campos": {
+     "Gobierno": "Rodrigo Paz",
+     "Afinidad": "Alta: gobierno de centroderecha cercano a Buenos Aires.",
+     "Hechos de la semana": "Estado de excepción; escasez de combustible.",
+     "Próxima elección": "General 2030"
+    }
+   },
+   {
+    "nombre": "Paraguay",
+    "chip": "Alta",
+    "chipc": "ok",
+    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "campos": {
+     "Gobierno": "Santiago Peña (Partido Colorado)",
+     "Afinidad": "Alta: sintonía política e integración en la Hidrovía.",
+     "Hechos de la semana": "Sin hechos relevantes.",
+     "Próxima elección": "General, abril 2028"
+    }
+   },
+   {
+    "nombre": "Uruguay",
+    "chip": "Media",
+    "chipc": "warn",
+    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "campos": {
+     "Gobierno": "Yamandú Orsi (Frente Amplio)",
+     "Afinidad": "Media: centroizquierda pragmática; buena relación de vecindad.",
+     "Hechos de la semana": "Sin hechos relevantes.",
+     "Próxima elección": "General 2029"
+    }
+   }
+  ],
+  "ataques": [
+   {
+    "nombre": "Intrusiones masivas con agentes de IA",
+    "chip": "Crimen",
+    "chipc": "crit",
+    "f": "Secucenter · Born City",
+    "url": "https://www.secucenter.com/blog/black-october-2026-biggest-cyberattacks-list/",
+    "campos": {
+     "Víctima": "Más de 100 sitios web de empresas",
+     "Sector": "Varios",
+     "Actor atribuido": "Grupo criminal que usó agentes de IA para automatizar ataques (19/10)",
+     "Efecto en Argentina": "Indirecto: los ataques automatizados abaratan el delito y alcanzan a pymes de cualquier país."
+    }
+   },
+   {
+    "nombre": "Filtración en el State Bank of India",
+    "chip": "Datos",
+    "chipc": "warn",
+    "f": "Cybernexora",
+    "url": "https://blog.cybernexora.com/black-october-2026-cybersecurity-incidents/",
+    "campos": {
+     "Víctima": "State Bank of India (mayor banco de India)",
+     "Sector": "Banca",
+     "Actor atribuido": "Sin atribuir; datos hallados en la dark web",
+     "Efecto en Argentina": "Bajo; señal de riesgo para bancos con datos de clientes expuestos."
+    }
+   },
+   {
+    "nombre": "Ataques a plataformas en la nube",
+    "chip": "Cadena de suministro",
+    "chipc": "warn",
+    "f": "Tech.co · KonBriefing",
+    "url": "https://tech.co/news/data-breaches-updated-list",
+    "campos": {
+     "Víctima": "Railway (21/10), ConnectWise Cloud Backup y otros proveedores",
+     "Sector": "Infraestructura digital",
+     "Actor atribuido": "Sin atribuir",
+     "Efecto en Argentina": "Medio: empresas argentinas que usan estos servicios deben rotar contraseñas y claves."
+    }
+   }
+  ],
+  "ia": [
+   {
+    "nombre": "Modelos y avances",
+    "chip": "Activo",
+    "chipc": "warn",
+    "f": "CNBC · Anthropic",
+    "url": "https://www.cnbc.com/amp/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html",
+    "campos": {
+     "Qué pasó": "Los modelos de OpenAI (familia GPT-6) llegan a la nube de Google; Anthropic lanzó Claude Duet, un agente que trabaja en segundo plano; Google amplía Gemini 4 Argon. OpenAI compró Orchestra Bio para desarrollo de fármacos.",
+     "Canal en Argentina": "Exportación de servicios basados en conocimiento: más productividad, pero más competencia."
+    }
+   },
+   {
+    "nombre": "Regulación (EE.UU., UE, China)",
+    "chip": "Activo",
+    "chipc": "warn",
+    "f": "donvitocodes · The Neuron",
+    "url": "https://www.theneuron.ai/digest/everything-that-happened-in-ai-today-wednesday-october-21-2026/",
+    "campos": {
+     "Qué pasó": "La FTC citó a OpenAI y Anthropic por incidentes de seguridad de usuarios (15/10). EE.UU. ordenó quitar DeepSeek de los sistemas federales (20/10). Anthropic propuso una ley federal de seguridad de IA.",
+     "Canal en Argentina": "Las reglas de EE.UU. marcan qué modelos y condiciones llegan al país."
+    }
+   },
+   {
+    "nombre": "Controles de chips",
+    "chip": "Sin novedad",
+    "f": "Mayer Brown",
+    "url": "https://www.mayerbrown.com/zh-hans/insights/publications/2026/06/commerce-department-extends-export-controls-to-advanced-ai-models-authorizes-release-to-specific-trusted-partners",
+    "campos": {
+     "Qué pasó": "Sin cambios esta semana. Desde junio EE.UU. extiende controles de exportación a modelos de IA de frontera, además de chips.",
+     "Canal en Argentina": "Acceso a cómputo y modelos avanzados depende de licencias de EE.UU."
+    }
+   },
+   {
+    "nombre": "Centros de datos y recursos",
+    "chip": "Activo",
+    "chipc": "warn",
+    "f": "LLM Daily · The Neuron",
+    "url": "https://buttondown.com/agent-k/archive/llm-daily-october-21-2026/",
+    "campos": {
+     "Qué pasó": "Anthropic negocia 45.000 millones de USD de cómputo con Nscale; suben los costos de cómputo de frontera y la limitante es la electricidad.",
+     "Canal en Argentina": "Oportunidad para energía barata y clima frío (Patagonia); más demanda de cobre y litio."
+    }
+   },
+   {
+    "nombre": "IA y empleo en servicios",
+    "chip": "Lectura propia",
+    "f": "lectura propia",
+    "campos": {
+     "Qué pasó": "Los agentes de IA ya automatizan tareas de entrada en programación y atención al cliente.",
+     "Canal en Argentina": "Riesgo para empleos junior en servicios exportados (software, centros de contacto)."
+    }
+   }
+  ],
+  "brotes": [
+   {
+    "nombre": "Ébola Bundibugyo",
+    "chip": "Emergencia OMS",
+    "chipc": "crit",
+    "f": "ECDC, semana 42",
+    "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf",
+    "campos": {
+     "Enfermedad": "Ébola (virus Bundibugyo), sin vacuna aprobada",
+     "País": "R. D. del Congo (8 provincias); 2 casos en Kenia",
+     "Casos y tendencia": "9.552 confirmados (19/10) y 4.602 muertes (18/10). Sigue creciendo, unos 500 casos por semana.",
+     "Riesgo para Argentina": "Bajo: riesgo global bajo según la OMS; vigilancia en aeropuertos."
+    }
+   },
+   {
+    "nombre": "Sarampión en las Américas",
+    "chip": "Alerta OPS",
+    "chipc": "warn",
+    "f": "OPS, informe 12",
+    "url": "https://www.paho.org/sites/default/files/2026/09/pahomeaslessitrep12esp.pdf",
+    "campos": {
+     "Enfermedad": "Sarampión",
+     "País": "17 países y territorios, sobre todo México, Canadá, EE.UU. y Guatemala; también Bolivia",
+     "Casos y tendencia": "53.957 casos y 68 muertes en 2026 (hasta el 19/9); la cifra más alta en más de 20 años, aunque los casos nuevos bajan.",
+     "Riesgo para Argentina": "Medio: importación de casos por viajeros; depende de la cobertura de vacunación."
+    }
+   },
+   {
+    "nombre": "Newcastle en Brasil",
+    "chip": "Sanidad animal",
+    "chipc": "warn",
+    "f": "Bichos de Campo",
+    "url": "https://bichosdecampo.com/brasil-padece-un-brote-de-newcastle-en-una-granja-avicola-cercana-a-misiones-y-sufre-un-traspie-en-sus-exportaciones/",
+    "campos": {
+     "Enfermedad": "Enfermedad de Newcastle (aves)",
+     "País": "Brasil: granja de pollos en Nova Itaberaba, Santa Catarina, cerca de Misiones",
+     "Casos y tendencia": "Un foco confirmado (20/10); granja cerrada y movimientos suspendidos. Primer caso en dos años.",
+     "Riesgo para Argentina": "Medio: cercanía a Misiones. Puede abrir mercados al pollo argentino mientras Brasil está suspendido."
+    }
+   }
+  ],
+  "restricciones": [
+   {
+    "nombre": "México suspende pollo de Brasil",
+    "chip": "Comercio",
+    "chipc": "warn",
+    "f": "Bichos de Campo",
+    "url": "https://bichosdecampo.com/brasil-padece-un-brote-de-newcastle-en-una-granja-avicola-cercana-a-misiones-y-sufre-un-traspie-en-sus-exportaciones/",
+    "campos": {
+     "País": "México y otros compradores",
+     "Medida": "Suspensión preventiva de importaciones de pollo brasileño",
+     "Motivo": "Foco de Newcastle en Santa Catarina",
+     "Efecto en Argentina": "Oportunidad temporal para exportadores argentinos de pollo."
+    }
+   },
+   {
+    "nombre": "Controles por ébola",
+    "chip": "Viajes",
+    "f": "ECDC",
+    "url": "https://www.ecdc.europa.eu/sites/default/files/documents/communicable-disease-threats-report-week-42-2026.pdf",
+    "campos": {
+     "País": "África central y oriental",
+     "Medida": "Vigilancia de viajeros y rastreo de contactos; la OMS no recomienda cerrar fronteras",
+     "Motivo": "Emergencia por ébola Bundibugyo",
+     "Efecto en Argentina": "Bajo."
+    }
+   }
+  ],
+  "atentados": [
+   {
+    "nombre": "Ataque a una iglesia en Jordania",
+    "chip": "Yihadista",
+    "chipc": "crit",
+    "f": "NPR (AP) · CNN",
+    "url": "https://www.npr.org/2026/10/24/nx-s1-6015414/shooting-church-jordan",
+    "campos": {
+     "Lugar y fecha": "Iglesia ortodoxa griega en Karak, Jordania; 23/10, durante un funeral",
+     "Autor o reivindicación": "Tres hombres armados; las autoridades hablan de un grupo extremista. Siguen prófugos.",
+     "Víctimas": "7 muertos y 40 heridos según AP; CNN ya informa 9 muertos",
+     "Efecto en Argentina": "Indirecto: señal de expansión del extremismo en un país aliado de Occidente en plena guerra regional."
+    }
+   },
+   {
+    "nombre": "Tiroteo en Trappes, Francia",
+    "chip": "Racista",
+    "chipc": "warn",
+    "f": "Al Jazeera · Dawn (AFP)",
+    "url": "https://www.aljazeera.com/news/2026/10/23/one-person-killed-in-suspected-islamophobic-shooting-near-paris",
+    "campos": {
+     "Lugar y fecha": "Trappes, afueras de París; 23/10",
+     "Autor o reivindicación": "Un hombre que disparó desde su auto, detenido. La presidencia lo calificó de ataque racista y terrorista (posible islamofobia).",
+     "Víctimas": "1 muerto y 5 heridos, entre ellos una nena de 12 años",
+     "Efecto en Argentina": "Bajo; refleja la tensión social en Francia antes de la presidencial de 2027."
+    }
+   },
+   {
+    "nombre": "Ataque en Cisjordania",
+    "chip": "Conflicto",
+    "chipc": "warn",
+    "f": "Times of Israel (AP)",
+    "url": "https://www.timesofisrael.com/liveblog-october-23-2026/",
+    "campos": {
+     "Lugar y fecha": "Cruce cerca de Hebrón, Cisjordania; 23/10",
+     "Autor o reivindicación": "Dos atacantes palestinos",
+     "Víctimas": "2 soldados israelíes muertos",
+     "Efecto en Argentina": "Bajo y directo; tensión a días de la elección israelí."
+    }
+   }
+  ],
+  "amenaza-arg": [
+   {
+    "nombre": "Argentina",
+    "chip": "Elevada",
+    "chipc": "warn",
+    "f": "UPI · MercoPress",
+    "url": "https://www.upi.com/amp/Top_News/World-News/2026/03/04/latam-paraguay/5991772643474/",
+    "campos": {
+     "Nivel": "Elevado (lectura propia). No hay amenaza concreta conocida esta semana.",
+     "Señales de la semana": "Sigue la guerra con Irán y el bloqueo de EE.UU.; Trump no descarta atacar después del 3/11. Argentina mantiene su alineamiento con Israel y EE.UU.",
+     "Antecedentes": "Atentados a la Embajada de Israel (1992) y a la AMIA (1994), atribuidos a Hezbolá e Irán. Desde marzo de 2026, Argentina y Paraguay reforzaron la vigilancia en la Triple Frontera.",
+     "Qué vigilar": "Una reanudación de los ataques a Irán, alertas en la Triple Frontera y en la frontera con Bolivia, y la seguridad de sedes judías e israelíes."
+    }
+   }
+  ],
+  "actores": [
+   {
+    "nombre": "Anthropic negocia cómputo con Nscale",
+    "chip": "Indirecto",
+    "chipc": "warn",
+    "f": "LLM Daily (TechCrunch)",
+    "url": "https://buttondown.com/agent-k/archive/llm-daily-october-21-2026/",
+    "campos": {
+     "Actor": "Anthropic (IA) y Nscale (centros de datos)",
+     "Qué hizo": "Negocia un contrato de cómputo por unos 45.000 millones de USD, antes de su salida a bolsa prevista para noviembre.",
+     "Dónde": "Centros de datos en EE.UU. y Europa",
+     "Interés detrás": "Asegurar capacidad de cómputo y energía para entrenar modelos.",
+     "Cruce con Argentina": "Indirecto: más demanda mundial de energía, cobre y litio; oportunidad para centros de datos en la Patagonia."
+    }
+   },
+   {
+    "nombre": "OpenAI se expande a Google Cloud y a la biotecnología",
+    "chip": "Indirecto",
+    "chipc": "warn",
+    "f": "CNBC · The Neuron",
+    "url": "https://www.cnbc.com/amp/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html",
+    "campos": {
+     "Actor": "OpenAI",
+     "Qué hizo": "Llevó sus modelos a la nube de Google (21/10) y compró Orchestra Bio, plataforma de desarrollo de fármacos.",
+     "Dónde": "EE.UU.",
+     "Interés detrás": "Reducir la dependencia de Microsoft y entrar en la industria farmacéutica.",
+     "Cruce con Argentina": "Bajo: más acceso a modelos para empresas argentinas que usan Google Cloud."
+    }
+   },
+   {
+    "nombre": "TotalEnergies invertirá en Argentina",
+    "chip": "Directo",
+    "chipc": "ok",
+    "f": "GBM (Reuters)",
+    "url": "https://gbm.com/media/noticia/totalenergies-invertira-10-000-millones-de-dolares-en-argentina-dice-ceo-pouyanne-2/",
+    "campos": {
+     "Actor": "TotalEnergies (Francia)",
+     "Qué hizo": "Anunció 10.000 millones de USD de inversión en Argentina (1/10, Argentina Week en París).",
+     "Dónde": "Vaca Muerta y energía",
+     "Interés detrás": "Gas y petróleo fuera de Medio Oriente, con precios altos por la guerra.",
+     "Cruce con Argentina": "Directo: más producción y exportación de energía."
+    }
+   }
+  ],
+  "migraciones": [
+   {
+    "nombre": "Venezuela",
+    "chip": "Retorno incierto",
+    "chipc": "warn",
+    "f": "Bloomberg Línea (R4V)",
+    "url": "https://www.bloomberglinea.com/latinoamerica/venezuela/la-diaspora-venezolana-suena-con-regresar-a-su-pais-pero-su-retorno-aun-es-una-incognita/",
+    "campos": {
+     "Origen": "Venezuela",
+     "Destinos": "Colombia (2,8 M), Perú (1,6 M), Brasil, Chile, Ecuador, Argentina (unos 175.000)",
+     "Personas": "Más de 7 millones",
+     "Efecto en Argentina": "La caída de Maduro abre la puerta a retornos, pero sin elecciones ni economía estable el regreso es lento."
+    }
+   },
+   {
+    "nombre": "Sudán",
+    "chip": "La mayor del mundo",
+    "chipc": "crit",
+    "f": "Prensa Latina (ACNUR)",
+    "url": "https://www.prensa-latina.cu/?p=1456138",
+    "campos": {
+     "Origen": "Sudán",
+     "Destinos": "Chad, Egipto, Sudán del Sur y desplazamiento interno",
+     "Personas": "Más de 12 millones desde 2023",
+     "Efecto en Argentina": "Bajo y directo; presión sobre la ayuda internacional."
+    }
+   }
+  ],
+  "demografia": [
+   {
+    "nombre": "Estados Unidos",
+    "chip": "Crece",
+    "chipc": "ok",
+    "f": "ONU WPP 2024 vía Worldometer",
+    "url": "https://www.worldometers.info/world-population/us-population/",
+    "campos": {
+     "Población": "349 millones",
+     "Edad mediana": "38,7 años",
+     "Hijos por mujer": "1,6",
+     "2050": "381 millones"
+    }
+   },
+   {
+    "nombre": "China",
+    "chip": "Cae",
+    "chipc": "crit",
+    "f": "ONU WPP 2024 vía Worldometer",
+    "url": "https://population.un.org/wpp/",
+    "campos": {
+     "Población": "1.416 millones",
+     "Edad mediana": "40 años",
+     "Hijos por mujer": "1,0",
+     "2050": "1.260 millones"
+    }
+   },
+   {
+    "nombre": "Rusia",
+    "chip": "Cae",
+    "chipc": "crit",
+    "f": "ONU WPP 2024 vía Worldometer",
+    "url": "https://population.un.org/wpp/",
+    "campos": {
+     "Población": "144 millones",
+     "Edad mediana": "40 años",
+     "Hijos por mujer": "1,4",
+     "2050": "133 millones"
+    }
+   },
+   {
+    "nombre": "Unión Europea",
+    "chip": "Cae",
+    "chipc": "crit",
+    "f": "Eurostat (EUROPOP2023)",
+    "url": "https://ec.europa.eu/eurostat/web/interactive-publications/demography-2026",
+    "campos": {
+     "Población": "452 millones",
+     "Edad mediana": "44,9 años",
+     "Hijos por mujer": "1,4",
+     "2050": "448 millones"
+    }
+   },
+   {
+    "nombre": "Reino Unido",
+    "chip": "Crece",
+    "chipc": "ok",
+    "f": "ONU WPP 2024 vía Worldometer",
+    "url": "https://population.un.org/wpp/",
+    "campos": {
+     "Población": "69,5 millones",
+     "Edad mediana": "40,5 años",
+     "Hijos por mujer": "1,5",
+     "2050": "75,5 millones"
+    }
+   },
+   {
+    "nombre": "Israel",
+    "chip": "Crece",
+    "chipc": "ok",
+    "f": "ONU WPP 2024 vía Worldometer",
+    "url": "https://population.un.org/wpp/",
+    "campos": {
+     "Población": "9,5 millones",
+     "Edad mediana": "30 años",
+     "Hijos por mujer": "2,8",
+     "2050": "13,1 millones"
+    }
+   },
+   {
+    "nombre": "Irán",
+    "chip": "Crece",
+    "chipc": "ok",
+    "f": "ONU WPP 2024 vía Worldometer",
+    "url": "https://population.un.org/wpp/",
+    "campos": {
+     "Población": "92,0 millones",
+     "Edad mediana": "33 años",
+     "Hijos por mujer": "1,7",
+     "2050": "99,0 millones"
+    }
+   },
+   {
+    "nombre": "India",
+    "chip": "Crece",
+    "chipc": "ok",
+    "f": "ONU WPP 2024 vía Worldometer",
+    "url": "https://www.worldometers.info/world-population/india-population/",
+    "campos": {
+     "Población": "1.477 millones",
+     "Edad mediana": "29 años",
+     "Hijos por mujer": "1,9",
+     "2050": "1.680 millones"
+    }
+   },
+   {
+    "nombre": "Brasil",
+    "chip": "Crece",
+    "chipc": "ok",
+    "f": "ONU WPP 2024 vía Worldometer",
+    "url": "https://www.worldometers.info/world-population/brazil-population/",
+    "campos": {
+     "Población": "214 millones",
+     "Edad mediana": "35,3 años",
+     "Hijos por mujer": "1,6",
+     "2050": "217 millones"
+    }
+   },
+   {
+    "nombre": "Chile",
+    "chip": "Estable",
+    "chipc": "warn",
+    "f": "ONU WPP 2024 vía Worldometer",
+    "url": "https://population.un.org/wpp/",
+    "campos": {
+     "Población": "20,0 millones",
+     "Edad mediana": "36,5 años",
+     "Hijos por mujer": "1,1",
+     "2050": "20,0 millones"
+    }
+   },
+   {
+    "nombre": "Bolivia",
+    "chip": "Crece",
+    "chipc": "ok",
+    "f": "ONU WPP 2024 vía Worldometer",
+    "url": "https://www.worldometers.info/world-population/bolivia-population/",
+    "campos": {
+     "Población": "12,7 millones",
+     "Edad mediana": "25,5 años",
+     "Hijos por mujer": "2,5",
+     "2050": "16,1 millones"
+    }
+   },
+   {
+    "nombre": "Paraguay",
+    "chip": "Crece",
+    "chipc": "ok",
+    "f": "ONU WPP 2024 vía Worldometer",
+    "url": "https://population.un.org/wpp/",
+    "campos": {
+     "Población": "7,0 millones",
+     "Edad mediana": "27 años",
+     "Hijos por mujer": "2,4",
+     "2050": "8,6 millones"
+    }
+   },
+   {
+    "nombre": "Uruguay",
+    "chip": "Cae",
+    "chipc": "crit",
+    "f": "ONU WPP 2024 vía Worldometer",
+    "url": "https://population.un.org/wpp/",
+    "campos": {
+     "Población": "3,4 millones",
+     "Edad mediana": "36 años",
+     "Hijos por mujer": "1,4",
+     "2050": "3,2 millones"
+    }
+   }
+  ],
+  "organismos": [
+   {
+    "nombre": "FMI: reuniones anuales y programa argentino",
+    "chip": "Abierto",
+    "chipc": "warn",
+    "f": "Perfil",
+    "url": "https://www.perfil.com/noticias/amp/economia/luis-caputo-llego-a-bangkok-para-reunirse-con-el-fmi-y-el-banco-mundial-dolares-y-financiamiento-en-la-agenda.phtml",
+    "campos": {
+     "Organismo": "FMI y Banco Mundial (Bangkok, octubre)",
+     "Qué pasó": "El FMI prevé 3,1 % de crecimiento mundial en 2026 y bajó el de Argentina a 2,1 %. Caputo se reunió con Georgieva, Banga (Banco Mundial) y Goldfajn (BID).",
+     "Por qué importa al mundo": "La guerra con Irán y la energía cara son el principal riesgo global.",
+     "Cómo afecta a Argentina": "Sigue pendiente la revisión del acuerdo de 20.000 millones de USD, con un posible perdón por no cumplir la meta de reservas."
+    }
+   },
+   {
+    "nombre": "Tribunal del Mar: Argentina contra Sea Lion",
+    "chip": "Nuevo",
+    "chipc": "warn",
+    "f": "El Economista",
+    "url": "https://eleconomista.com.ar/energia/malvinas-milei-lleva-pelea-petroleo-tribunal-mar-busca-frenar-us-2200-millones-n98823",
+    "campos": {
+     "Organismo": "Tribunal Internacional del Derecho del Mar (Hamburgo)",
+     "Qué pasó": "Argentina pidió el 13/10 medidas provisionales para frenar la explotación petrolera en la cuenca norte de Malvinas.",
+     "Por qué importa al mundo": "Prueba el uso del derecho del mar en disputas de soberanía.",
+     "Cómo afecta a Argentina": "Directo: define si el Reino Unido avanza con el petróleo en aguas reclamadas."
+    }
+   },
+   {
+    "nombre": "Consejo de Seguridad: Etiopía y Eritrea",
+    "chip": "Abierto",
+    "chipc": "warn",
+    "f": "Militarnyi (Reuters)",
+    "url": "https://militarnyi.com/en/news/ethiopian-army-reaches-eritrean-border-after-counteroffensive-raising-fears-of-war/",
+    "campos": {
+     "Organismo": "Consejo de Seguridad de la ONU",
+     "Qué pasó": "Consultas cerradas el 13/10; Eritrea pide sanciones contra Etiopía bajo el capítulo VII.",
+     "Por qué importa al mundo": "Riesgo de una nueva guerra entre Estados junto al mar Rojo.",
+     "Cómo afecta a Argentina": "Indirecto: rutas marítimas."
+    }
+   },
+   {
+    "nombre": "OMS: emergencia por ébola",
+    "chip": "Abierto",
+    "chipc": "crit",
+    "f": "Gobierno del Reino Unido (OMS)",
+    "url": "https://www.gov.uk/government/publications/outbreaks-under-monitoring-in-2026/outbreaks-under-monitoring-week-40-week-ending-4-october-2026",
+    "campos": {
+     "Organismo": "Organización Mundial de la Salud",
+     "Qué pasó": "Mantiene la emergencia de salud pública de importancia internacional por el ébola Bundibugyo desde el 17/5.",
+     "Por qué importa al mundo": "Brote récord sin vacuna aprobada.",
+     "Cómo afecta a Argentina": "Bajo; vigilancia sanitaria."
+    }
+   },
+   {
+    "nombre": "GAFI: listas de riesgo",
+    "chip": "Sin novedad",
+    "f": "GAFI",
+    "url": "https://www.fatf-gafi.org/en/publications/Fatfgeneral/outcomes-fatf-plenary-june-2026.html",
+    "campos": {
+     "Organismo": "Grupo de Acción Financiera Internacional",
+     "Qué pasó": "Último resultado publicado: junio (sumó a Irak y Bosnia a la lista gris; la lista negra sigue con Irán, Corea del Norte y Myanmar). El Reino Unido preside desde julio.",
+     "Por qué importa al mundo": "Define qué países tienen costos extra para mover dinero.",
+     "Cómo afecta a Argentina": "Argentina no está en la lista gris."
+    }
+   }
+  ],
+  "protestas": [
+   {
+    "nombre": "Francia",
+    "chip": "Masiva",
+    "chipc": "crit",
+    "f": "Dazed · APA",
+    "url": "https://en.apa.az/europe/french-police-clash-with-protesters-as-tens-of-thousands-rally-over-cost-of-living-530711",
+    "campos": {
+     "Motivo": "Empezó por la falta de docentes y se amplió al costo de vida y la desigualdad.",
+     "Tamaño": "Unas 550.000 personas según el gobierno; 272 detenidos el 17/10."
+    }
+   },
+   {
+    "nombre": "Albania",
+    "chip": "Choques",
+    "chipc": "crit",
+    "f": "Al Jazeera",
+    "url": "https://www.aljazeera.com/gallery/2026/10/18/photos-antigovernment-protesters-clash-with-police-in-albanias-capital",
+    "campos": {
+     "Motivo": "Estudiantes piden la renuncia de Rama por aranceles universitarios y corrupción.",
+     "Tamaño": "Miles a decenas de miles; seis días seguidos al 18/10."
+    }
+   },
+   {
+    "nombre": "EE.UU.",
+    "chip": "Nacional",
+    "chipc": "warn",
+    "f": "Outlook India",
+    "url": "https://www.outlookindia.com/international/in-photos-no-kings-protesters-rally-across-us-ahead-of-midterms",
+    "campos": {
+     "Motivo": "Marchas \"No Kings\" contra Trump antes de las elecciones de medio término.",
+     "Tamaño": "En todo el país el 17/10; sin cifra total."
+    }
+   },
+   {
+    "nombre": "Chile",
+    "chip": "Moderada",
+    "chipc": "warn",
+    "f": "Dazed",
+    "url": "https://www.dazeddigital.com/life-culture/article/71193/1/gen-z-protests-paris-france-albania-belgium-italy-chile-riots",
+    "campos": {
+     "Motivo": "Contra los recortes de gasto de Kast, en el aniversario del estallido de 2019.",
+     "Tamaño": "Miles en Santiago el 18/10."
+    }
+   },
+   {
+    "nombre": "Italia y Bélgica",
+    "chip": "Moderada",
+    "chipc": "warn",
+    "f": "Dazed",
+    "url": "https://www.dazeddigital.com/life-culture/article/71193/1/gen-z-protests-paris-france-albania-belgium-italy-chile-riots",
+    "campos": {
+     "Motivo": "Costo de vida y de la educación.",
+     "Tamaño": "Decenas de detenidos en Milán el 17/10; cientos en Bruselas y Lieja."
+    }
+   }
+  ]
+ },
+ "pendientes": [],
+ "series": {
+  "pib": {
+   "labels": [
+    "EE.UU.",
+    "China",
+    "Rusia",
+    "Z. euro",
+    "R.U.",
+    "Israel",
+    "Irán",
+    "India",
+    "Brasil",
+    "Chile",
+    "Bolivia",
+    "Parag.",
+    "Urug."
+   ],
+   "values": [
+    2.3,
+    4.5,
+    0.9,
+    1.1,
+    1.3,
+    4.5,
+    -7.6,
+    7.0,
+    2.2,
+    0.6,
+    -3.0,
+    4.5,
+    1.3
+   ],
+   "u": "%",
+   "ref": 1.0,
+   "nota": "Perspectivas de la Economía Mundial del FMI, octubre de 2026. Mundo: 3,1 %. Verde: crece más de 1 %; ámbar: menos de 1 %; rojo: se contrae. Se actualiza cuando el FMI publica (abril, julio, octubre, enero).",
+   "f": "FMI, WEO oct. 2026",
+   "url": "https://www.imf.org/en/Publications/WEO"
+  },
+  "encuestas": {
+   "labels": [
+    "Flávio Bolsonaro",
+    "Lula"
+   ],
+   "values": [
+    50,
+    50
+   ],
+   "u": "%",
+   "colores": [
+    "var(--ok)",
+    "var(--crit)"
+   ],
+   "src": "Datafolha, 20–22/10 (votos válidos)",
+   "nota": "Balotaje de Brasil del 25/10. Empate exacto en votos válidos (margen ±2 puntos); la semana anterior era 51 % a 49 % para Flávio. Verde: candidato afín al gobierno argentino.",
+   "f": "CNN Brasil",
+   "url": "https://www.cnnbrasil.com.br/eleicoes/datafolha-flavio-e-lula-empatam-em-50-de-votos-validos-no-2o-turno/"
+  },
+  "brotes": {
+   "labels": [
+    "Sarampión Américas",
+    "Ébola RDC"
+   ],
+   "values": [
+    53957,
+    9552
+   ],
+   "u": "casos",
+   "src": "OPS · ECDC",
+   "nota": "Casos confirmados en 2026: sarampión hasta el 19/9; ébola hasta el 19/10.",
+   "f": "OPS",
+   "url": "https://www.paho.org/sites/default/files/2026/09/pahomeaslessitrep12esp.pdf"
+  },
+  "montos": {
+   "labels": [
+    "Centros de datos",
+    "Energía"
+   ],
+   "values": [
+    45,
+    10
+   ],
+   "u": "mil M USD",
+   "src": "comunicados",
+   "nota": "Anuncios relevantes de octubre. Centros de datos: en negociación.",
+   "f": "LLM Daily · Reuters",
+   "url": "https://buttondown.com/agent-k/archive/llm-daily-october-21-2026/"
+  },
+  "poblacion": {
+   "labels": [
+    "India",
+    "China",
+    "EE.UU.",
+    "UE",
+    "Brasil",
+    "Rusia",
+    "Irán"
+   ],
+   "values": [
+    1477,
+    1416,
+    349,
+    452,
+    214,
+    144,
+    92
+   ],
+   "values2": [
+    1680,
+    1260,
+    381,
+    448,
+    217,
+    133,
+    99
+   ],
+   "src": "ONU WPP 2024 · Eurostat",
+   "nota": "Escenario medio de la ONU (UE: Eurostat). China y Rusia pierden población, la UE apenas baja e India sigue creciendo.",
+   "f": "ONU",
+   "url": "https://population.un.org/wpp/"
+  },
+  "red": {
+   "nodos": [
+    {
+     "id": "EE.UU.",
+     "x": 110,
+     "y": 120,
+     "c": "#5BA4E6",
+     "lbl": "Estados Unidos",
+     "r": 22
+    },
+    {
+     "id": "UE",
+     "x": 60,
+     "y": 50,
+     "c": "#5BA4E6",
+     "lbl": "Unión Europea"
+    },
+    {
+     "id": "R.U.",
+     "x": 170,
+     "y": 40,
+     "c": "#5BA4E6",
+     "lbl": "Reino Unido"
+    },
+    {
+     "id": "ISR",
+     "x": 40,
+     "y": 170,
+     "c": "#5BA4E6",
+     "lbl": "Israel"
+    },
+    {
+     "id": "JPN",
+     "x": 200,
+     "y": 110,
+     "c": "#5BA4E6",
+     "lbl": "Japón"
+    },
+    {
+     "id": "ARG",
+     "x": 150,
+     "y": 230,
+     "c": "#7FD3F7",
+     "lbl": "Argentina",
+     "r": 20
+    },
+    {
+     "id": "BRA",
+     "x": 260,
+     "y": 250,
+     "c": "#9AA9B3",
+     "lbl": "Brasil"
+    },
+    {
+     "id": "IND",
+     "x": 280,
+     "y": 170,
+     "c": "#9AA9B3",
+     "lbl": "India"
+    },
+    {
+     "id": "TUR",
+     "x": 260,
+     "y": 60,
+     "c": "#9AA9B3",
+     "lbl": "Turquía"
+    },
+    {
+     "id": "SAU",
+     "x": 320,
+     "y": 110,
+     "c": "#9AA9B3",
+     "lbl": "Arabia Saudita"
+    },
+    {
+     "id": "CHN",
+     "x": 420,
+     "y": 200,
+     "c": "#F0675F",
+     "lbl": "China",
+     "r": 22
+    },
+    {
+     "id": "RUS",
+     "x": 420,
+     "y": 80,
+     "c": "#F0675F",
+     "lbl": "Rusia",
+     "r": 20
+    },
+    {
+     "id": "IRN",
+     "x": 480,
+     "y": 140,
+     "c": "#F0675F",
+     "lbl": "Irán"
+    },
+    {
+     "id": "PRK",
+     "x": 490,
+     "y": 40,
+     "c": "#F0675F",
+     "lbl": "Corea del Norte"
+    },
+    {
+     "id": "VEN",
+     "x": 350,
+     "y": 270,
+     "c": "#F0675F",
+     "lbl": "Venezuela"
+    }
+   ],
+   "enlaces": [
+    {
+     "de": "EE.UU.",
+     "a": "UE",
+     "c": "#5BA4E6",
+     "t": "OTAN",
+     "dash": false,
+     "w": 2
+    },
+    {
+     "de": "EE.UU.",
+     "a": "R.U.",
+     "c": "#5BA4E6",
+     "t": "OTAN · AUKUS",
+     "dash": false,
+     "w": 2
+    },
+    {
+     "de": "UE",
+     "a": "R.U.",
+     "c": "#5BA4E6",
+     "t": "OTAN",
+     "dash": false,
+     "w": 2
+    },
+    {
+     "de": "EE.UU.",
+     "a": "JPN",
+     "c": "#5BA4E6",
+     "t": "Tratado de seguridad",
+     "dash": false,
+     "w": 2
+    },
+    {
+     "de": "EE.UU.",
+     "a": "ISR",
+     "c": "#5BA4E6",
+     "t": "Alianza militar; guerra conjunta contra Irán",
+     "dash": false,
+     "w": 3
+    },
+    {
+     "de": "EE.UU.",
+     "a": "ARG",
+     "c": "#5BA4E6",
+     "t": "Alineamiento político y acuerdos con el gobierno argentino",
+     "dash": false,
+     "w": 3
+    },
+    {
+     "de": "ARG",
+     "a": "ISR",
+     "c": "#5BA4E6",
+     "t": "Alineamiento político",
+     "dash": true,
+     "w": 2
+    },
+    {
+     "de": "UE",
+     "a": "ARG",
+     "c": "#9AA9B3",
+     "t": "Acuerdo UE–Mercosur",
+     "dash": true,
+     "w": 2
+    },
+    {
+     "de": "ARG",
+     "a": "BRA",
+     "c": "#9AA9B3",
+     "t": "Mercosur",
+     "dash": false,
+     "w": 2.5
+    },
+    {
+     "de": "EE.UU.",
+     "a": "TUR",
+     "c": "#5BA4E6",
+     "t": "OTAN",
+     "dash": true,
+     "w": 2
+    },
+    {
+     "de": "EE.UU.",
+     "a": "SAU",
+     "c": "#5BA4E6",
+     "t": "Socio de seguridad",
+     "dash": true,
+     "w": 2
+    },
+    {
+     "de": "EE.UU.",
+     "a": "IND",
+     "c": "#5BA4E6",
+     "t": "Quad",
+     "dash": true,
+     "w": 2
+    },
+    {
+     "de": "CHN",
+     "a": "RUS",
+     "c": "#F0675F",
+     "t": "Asociación “sin límites”",
+     "dash": false,
+     "w": 3
+    },
+    {
+     "de": "RUS",
+     "a": "IRN",
+     "c": "#F0675F",
+     "t": "Tratado de asociación estratégica",
+     "dash": false,
+     "w": 2
+    },
+    {
+     "de": "RUS",
+     "a": "PRK",
+     "c": "#F0675F",
+     "t": "Tratado de defensa mutua",
+     "dash": false,
+     "w": 2
+    },
+    {
+     "de": "CHN",
+     "a": "IRN",
+     "c": "#F0675F",
+     "t": "Petróleo y acuerdo de 25 años",
+     "dash": true,
+     "w": 2
+    },
+    {
+     "de": "CHN",
+     "a": "VEN",
+     "c": "#F0675F",
+     "t": "Créditos y petróleo",
+     "dash": true,
+     "w": 2
+    },
+    {
+     "de": "RUS",
+     "a": "VEN",
+     "c": "#F0675F",
+     "t": "Cooperación militar",
+     "dash": true,
+     "w": 2
+    },
+    {
+     "de": "BRA",
+     "a": "CHN",
+     "c": "#9AA9B3",
+     "t": "BRICS",
+     "dash": false,
+     "w": 2
+    },
+    {
+     "de": "IND",
+     "a": "RUS",
+     "c": "#9AA9B3",
+     "t": "BRICS · energía y armas",
+     "dash": false,
+     "w": 2
+    },
+    {
+     "de": "BRA",
+     "a": "IND",
+     "c": "#9AA9B3",
+     "t": "BRICS",
+     "dash": false,
+     "w": 2
+    },
+    {
+     "de": "IND",
+     "a": "CHN",
+     "c": "#9AA9B3",
+     "t": "BRICS (con rivalidad)",
+     "dash": true,
+     "w": 2
+    },
+    {
+     "de": "SAU",
+     "a": "CHN",
+     "c": "#9AA9B3",
+     "t": "Petróleo",
+     "dash": true,
+     "w": 2
+    },
+    {
+     "de": "TUR",
+     "a": "RUS",
+     "c": "#9AA9B3",
+     "t": "Energía y defensa",
+     "dash": true,
+     "w": 2
+    },
+    {
+     "de": "ARG",
+     "a": "CHN",
+     "c": "#E3BE55",
+     "t": "Swap y principal comprador de soja (sin novedades)",
+     "dash": true,
+     "w": 2
+    }
+   ],
+   "src": "tratados y acuerdos · lectura propia",
+   "nota": "Azul: Occidente · rojo: eje euroasiático · gris: no alineados · celeste: Argentina. Línea llena: alianza formal; punteada: acuerdo o vínculo económico. Pasá el cursor sobre cada línea para ver el vínculo.",
+   "f": "Lectura propia sobre tratados vigentes",
+   "url": "https://www.nato.int/cps/en/natohq/topics_52044.htm"
+  },
+  "intensidad": {
+   "labels": [
+    "Rusia–Ucrania",
+    "EE.UU./Israel–Irán",
+    "Sudán",
+    "Etiopía–Tigray",
+    "Gaza"
+   ],
+   "values": [
+    5,
+    4,
+    4,
+    3,
+    2
+   ],
+   "u": "/ 5",
+   "colores": [
+    "var(--crit)",
+    "var(--crit)",
+    "var(--crit)",
+    "var(--warn)",
+    "var(--warn)"
+   ],
+   "src": "Kyiv Independent · Sudan Tribune · Al Jazeera · lectura propia",
+   "nota": "Nivel de 1 a 5, lectura propia: no hay un conteo semanal gratuito y comparable. Ucrania: 186 drones y misiles la noche del 20/10, 9 muertos en un día. Irán: sin bombardeos de EE.UU. hasta el 3/11, pero guerra naval en Ormuz. Sudán: la RSF mató a 11 desplazados el 17/10. Tigray: el ejército etíope llegó a la frontera con Eritrea. Gaza: goteo de muertes pese al alto el fuego.",
+   "f": "Kyiv Independent",
+   "url": "https://kyivindependent.com/russian-attacks-kill-at-least-9-wound-45-across-ukraine-as-yet-another-deadly-drone-attack-strikes-kyiv/"
+  },
+  "canasta": {
+   "labels": [
+    "21/8",
+    "28/8",
+    "4/9",
+    "11/9",
+    "18/9",
+    "25/9",
+    "2/10",
+    "9/10",
+    "16/10",
+    "23/10"
+   ],
+   "values": [
+    100.0,
+    105.5,
+    105.5,
+    104.6,
+    104.2,
+    105.0,
+    100.9,
+    100.5,
+    98.4,
+    96.7
+   ],
+   "ref": 100,
+   "u": "",
+   "src": "cálculo propio con CBOT",
+   "f": "Investing.com · Biznesradar",
+   "url": "https://www.investing.com/commodities/us-soybeans-historical-data",
+   "nota": "Base 100 = 21/8. Ponderación: soja 60 %, maíz 25 %, trigo 15 %, según el peso aproximado de cada uno en las exportaciones argentinas. Precios de cierre de los viernes en Chicago."
+  },
+  "enso-trim": {
+   "labels": [
+    "OND",
+    "NDE",
+    "DEF",
+    "EFM",
+    "FMA",
+    "MAM",
+    "AMJ",
+    "MJJ",
+    "JJA"
+   ],
+   "values": [
+    100,
+    100,
+    100,
+    100,
+    100,
+    100,
+    92,
+    60,
+    37
+   ],
+   "u": "%",
+   "colores": [
+    "#F0675F",
+    "#F0675F",
+    "#F0675F",
+    "#F0675F",
+    "#F0675F",
+    "#F0675F",
+    "#E3BE55",
+    "#E3BE55",
+    "#9AA9B3"
+   ],
+   "src": "IRI, pronóstico de modelos del 19/10",
+   "f": "IRI Columbia",
+   "url": "https://iri.columbia.edu/our-expertise/climate/forecasts/enso/current/",
+   "nota": "Probabilidad de El Niño por trimestre; La Niña, 0 % en todos. Los 27 modelos dan un evento muy fuerte (+2 °C o más) hasta el verano. NOAA (8/10): 83 % de un evento histórico en oct–dic. En jun–ago 2027 lo más probable ya es neutral (51 %).",
+   "dec": 0
+  }
+ },
+ "notas": {
+  "atlantico": {
+   "parrafos": [
+    "Malvinas: el 13 de octubre Argentina pidió al Tribunal Internacional del Derecho del Mar medidas provisionales para frenar Sea Lion, el primer yacimiento petrolero de las islas (Navitas 65 %, Rockhopper 35 %, producción prevista para 2028). Es el paso judicial que sigue a las sanciones de septiembre (Decreto 868/2026), que prohíben operar en el continente a las empresas que trabajen allí sin permiso argentino. Las petroleras dicen que siguen adelante; proveedores como Tenaris tomaron distancia.",
+    "Chile: el buque chileno Danstar zarparía en noviembre de Punta Arenas a las islas para reabrir una ruta comercial cerrada desde 2011. Chile dice que es un asunto privado y que mantiene su apoyo al reclamo argentino; Argentina teme que sirva de apoyo logístico a Sea Lion. El canciller Quirno descartó cualquier acción contra el barco.",
+    "Pesca: la flota extranjera en la milla 201 está en su temporada baja. Vuelve a crecer desde diciembre con el calamar; en 2026 llegó a unos 500 a 600 buques, la mayoría chinos.",
+    "Cooperación con EE.UU.: sigue vigente el programa de seguridad marítima en el Atlántico Sur con el Comando Sur. JD Vance visitará Buenos Aires en noviembre."
+   ],
+   "fuentes": [
+    [
+     "El Economista",
+     "https://eleconomista.com.ar/energia/malvinas-milei-lleva-pelea-petroleo-tribunal-mar-busca-frenar-us-2200-millones-n98823"
+    ],
+    [
+     "Canal 26",
+     "https://www.canal26.com/economia/2026/09/04/petroleras-desafian-las-sanciones-de-argentina-y-confirman-que-avanzaran-con-el-proyecto-sea-lion-en-malvinas/"
+    ],
+    [
+     "iProfesional",
+     "https://www.iprofesional.com/negocios/448592-pesca-ilegal-con-china-y-espana-a-la-cabeza-500-buques-extranjeros-depredan-en-el-sur"
+    ],
+    [
+     "Emol",
+     "https://www.emol.com/noticias/Internacional/2026/10/14/1214099/argentina-relaciones-chile-malvinas.html"
+    ]
+   ]
+  }
+ },
+ "calendario": {
+  "elecciones": [
+   {
+    "mes": "Oct 2026",
+    "items": [
+     {
+      "fecha": "25/10",
+      "pais": "Brasil",
+      "tipo": "Presidencial, 2ª vuelta",
+      "favorito": "Empate: Flávio Bolsonaro (afín) 50 % – Lula (no afín) 50 % de votos válidos (Datafolha 22/10)",
+      "alineado": "incierto"
+     },
+     {
+      "fecha": "27/10",
+      "pais": "Israel",
+      "tipo": "Parlamento (Knéset)",
+      "favorito": "Ningún bloque llega a 61 bancas; Eisenkot supera a Netanyahu en varias encuestas",
+      "alineado": "incierto"
+     }
+    ]
+   },
+   {
+    "mes": "Nov 2026",
+    "items": [
+     {
+      "fecha": "3/11",
+      "pais": "EE.UU.",
+      "tipo": "Legislativas de medio término",
+      "favorito": "Demócratas favoritos en Diputados (~85–90 %); Senado parejo",
+      "alineado": "no"
+     },
+     {
+      "fecha": "29/11",
+      "pais": "España",
+      "tipo": "Generales anticipadas",
+      "favorito": "PP primero; PP + Vox rozan los 200 escaños",
+      "alineado": "si"
+     }
+    ]
+   },
+   {
+    "mes": "Dic 2026",
+    "items": []
+   },
+   {
+    "mes": "Ene 2027",
+    "items": []
+   },
+   {
+    "mes": "Feb 2027",
+    "items": []
+   },
+   {
+    "mes": "Mar 2027",
+    "items": []
+   },
+   {
+    "mes": "Abr 2027",
+    "items": [
+     {
+      "fecha": "por confirmar",
+      "pais": "Francia",
+      "tipo": "Presidencial, 1ª vuelta",
+      "favorito": "Le Pen (RN) primera con 35–36 %; RN se opone al acuerdo Mercosur–UE",
+      "alineado": "incierto"
+     }
+    ]
+   }
+  ]
+ },
+ "noticias": {
+  "actores": [
+   {
+    "t": "Anthropic negocia 45.000 millones de USD en cómputo con Nscale y prepara su salida a bolsa",
+    "por": "La IA dispara la demanda de energía y minerales.",
+    "f": "LLM Daily",
+    "url": "https://buttondown.com/agent-k/archive/llm-daily-october-21-2026/"
+   },
+   {
+    "t": "OpenAI lleva sus modelos a Google Cloud y compra Orchestra Bio",
+    "por": "Más competencia y acceso a IA para empresas locales.",
+    "f": "CNBC",
+    "url": "https://www.cnbc.com/amp/2026/10/21/openai-bring-its-ai-models-to-googles-cloud-expands-beyond-microsoft.html"
+   },
+   {
+    "t": "TotalEnergies anuncia 10.000 millones de USD en Argentina",
+    "por": "Inversión directa en Vaca Muerta.",
+    "f": "Reuters vía GBM",
+    "url": "https://gbm.com/media/noticia/totalenergies-invertira-10-000-millones-de-dolares-en-argentina-dice-ceo-pouyanne-2/"
+   },
+   {
+    "t": "La inversión extranjera en minería argentina llegó a un récord de 24.849 millones de USD (stock, marzo)",
+    "por": "Rio Tinto, BHP, Lundin y Glencore aceleran litio y cobre.",
+    "f": "Bloomberg Línea",
+    "url": "https://www.bloomberglinea.com/latinoamerica/argentina/inversion-extranjera-record-en-mineria-las-grandes-companias-detras-de-la-nueva-ola-de-capitales/"
+   },
+   {
+    "t": "Navitas y Rockhopper siguen con Sea Lion pese a las sanciones argentinas",
+    "por": "Choque entre inversión petrolera extranjera y el reclamo por Malvinas.",
+    "f": "Canal 26",
+    "url": "https://www.canal26.com/economia/2026/09/04/petroleras-desafian-las-sanciones-de-argentina-y-confirman-que-avanzaran-con-el-proyecto-sea-lion-en-malvinas/"
+   }
+  ],
+  "portada": [
+   {
+    "t": "Brasil vota el balotaje empatado: 50 % a 50 % en votos válidos (Datafolha)",
+    "por": "Define el rumbo del principal socio comercial y del Mercosur.",
+    "f": "CNN Brasil (Datafolha)",
+    "url": "https://www.cnnbrasil.com.br/eleicoes/datafolha-flavio-e-lula-empatam-em-50-de-votos-validos-no-2o-turno/"
+   },
+   {
+    "t": "Récord de ataques a buques en Ormuz; el Brent cierra la semana en 116,7 USD",
+    "por": "Energía más cara para el mundo y fertilizantes escasos para la siembra.",
+    "f": "straits.live · Seatrade",
+    "url": "https://straits.live/briefs/2026-10-20"
+   },
+   {
+    "t": "Argentina lleva el petróleo de Malvinas al Tribunal del Mar",
+    "por": "Disputa directa con el Reino Unido por Sea Lion.",
+    "f": "El Economista",
+    "url": "https://eleconomista.com.ar/energia/malvinas-milei-lleva-pelea-petroleo-tribunal-mar-busca-frenar-us-2200-millones-n98823"
+   }
+  ]
+ },
+ "resumen": {
+  "corte": "23/10",
+  "titular": "Brasil vota con final abierto y Ormuz sigue cerrado: petróleo caro, fertilizantes escasos y riesgo político en el principal socio",
+  "texto": [
+   "El Brent subió 6 % en la semana, a 116,7 USD, por el récord de ataques a buques en Ormuz. A la Argentina le conviene como exportador de energía, pero encarece la urea justo en plena siembra.",
+   "Brasil define el domingo su balotaje en empate técnico entre Flávio Bolsonaro, afín a Milei, y Lula. Israel vota el martes y EE.UU. el 3/11: tres elecciones que tocan aliados clave del gobierno.",
+   "En el frente propio, Argentina llevó el petróleo de Malvinas al Tribunal del Mar y un barco chileno prepara la ruta Punta Arenas–islas."
+  ],
+  "mirar": "resultado del balotaje en Brasil (25/10), elección en Israel (27/10), legislativas de EE.UU. (3/11) y si Trump retoma los ataques a Irán después."
+ },
+ "semaforos": {
+  "Dólares comerciales": {
+   "nivel": "amarillo",
+   "delta": "= sin cambios",
+   "motivo": "Soja estable (462 USD/t); trigo y maíz bajan 4–5 %. La sequía en India, Australia y el centro de Brasil abre espacio a la oferta argentina."
+  },
+  "Energía": {
+   "nivel": "verde",
+   "delta": "↑ mejora",
+   "motivo": "Brent 116,7 USD (+6 %): sube el valor de lo que exporta Vaca Muerta. Fuera de temporada de importación de GNL."
+  },
+  "Financiamiento": {
+   "nivel": "amarillo",
+   "delta": "↓ alivio leve",
+   "motivo": "Tesoro de EE.UU. a 5,00 % (−8 pb) y dólar algo más débil, pero la Fed sigue subiendo tasas y la revisión del FMI está pendiente."
+  },
+  "Logística": {
+   "nivel": "rojo",
+   "delta": "= sin cambios",
+   "motivo": "Ormuz cerrado, Bab el-Mandeb y el mar Negro con demoras; fletes secos +5,9 %. Urea a 445 USD/t con abastecimiento tenso."
+  },
+  "Socios comerciales": {
+   "nivel": "amarillo",
+   "delta": "↑ más incertidumbre",
+   "motivo": "Balotaje en Brasil sin favorito; China crece 4,5 % con demanda débil; brote de Newcastle en Brasil."
+  },
+  "Seguridad y soberanía": {
+   "nivel": "amarillo",
+   "delta": "↑ empeora",
+   "motivo": "Disputa por Sea Lion y la ruta chilena a Malvinas; amenaza terrorista elevada por la guerra con Irán."
+  }
+ },
+ "vulner": [
+  {
+   "estado": "Media",
+   "chipc": "warn",
+   "nota": "Soja estable; China mantiene el arancel a la soja de EE.UU."
+  },
+  {
+   "estado": "Alta",
+   "chipc": "crit",
+   "nota": "Balotaje sin favorito; Selic en 13,75 %."
+  },
+  {
+   "estado": "Alta",
+   "chipc": "crit",
+   "nota": "Urea 445 USD/t; Ormuz cerrado en plena siembra."
+  },
+  {
+   "estado": "Baja",
+   "chipc": "ok",
+   "nota": "Fuera de temporada; el GNL asiático sigue caro."
+  },
+  {
+   "estado": "Media",
+   "chipc": "warn",
+   "nota": "Tasas altas en EE.UU.; revisión del FMI pendiente."
+  },
+  {
+   "estado": "Baja",
+   "chipc": "ok",
+   "nota": "Acuerdo Mercosur–UE vigente; riesgo político en Francia para 2027."
+  },
+  {
+   "estado": "Media",
+   "chipc": "warn",
+   "nota": "Malaca normal; Suez y Bab el-Mandeb con demoras."
+  },
+  {
+   "estado": "Alta",
+   "chipc": "crit",
+   "nota": "Sea Lion y ruta Punta Arenas–Malvinas."
+  },
+  {
+   "estado": "Media",
+   "chipc": "warn",
+   "nota": "\"Octubre negro\": ataques automatizados con IA."
+  },
+  {
+   "estado": "Media",
+   "chipc": "warn",
+   "nota": "Newcastle en Santa Catarina; sarampión en Bolivia."
+  }
+ ],
+ "mapas": {
+  "1": {
+   "paises": {
+    "364": "#F0675F",
+    "376": "#F0675F",
+    "643": "#F0675F",
+    "804": "#F0675F",
+    "682": "#F0675F",
+    "887": "#F0A93A",
+    "231": "#F0A93A",
+    "232": "#F0675F",
+    "586": "#F0675F",
+    "004": "#F0675F",
+    "729": "#F0A93A",
+    "104": "#F0A93A",
+    "180": "#F0A93A",
+    "466": "#B48CE8",
+    "854": "#B48CE8",
+    "562": "#B48CE8",
+    "566": "#B48CE8",
+    "706": "#B48CE8",
+    "218": "#B48CE8"
+   },
+   "puntos": [
+    {
+     "lat": 31.18,
+     "lon": 35.7,
+     "c": "#E6EDF1",
+     "r": 7,
+     "t": "Atentado en iglesia de Karak, Jordania (23/10): al menos 7 muertos"
+    },
+    {
+     "lat": 48.78,
+     "lon": 2.0,
+     "c": "#E6EDF1",
+     "r": 4,
+     "t": "Tiroteo en Trappes, Francia (23/10): 1 muerto"
+    },
+    {
+     "lat": 31.53,
+     "lon": 35.1,
+     "c": "#E6EDF1",
+     "r": 5,
+     "t": "Ataque cerca de Hebrón (23/10): 2 muertos"
+    }
+   ],
+   "nota": "Rojo: guerra entre Estados · naranja: guerra civil · violeta: insurgencia · blanco: atentados de la semana"
+  },
+  "2": {
+   "paises": {
+    "364": "#F0675F",
+    "682": "#F0675F",
+    "887": "#F0675F",
+    "231": "#F0A93A",
+    "232": "#F0A93A",
+    "586": "#F0A93A",
+    "004": "#F0A93A"
+   },
+   "nota": "Alertas de CrisisWatch para octubre"
+  },
+  "3": {
+   "paises": {
+    "076": "#5E7180",
+    "376": "#5E7180",
+    "840": "#D9534F",
+    "724": "#3B82C4",
+    "250": "#5E7180"
+   },
+   "puntos": [
+    {
+     "lat": -15,
+     "lon": -50,
+     "c": "#5E7180",
+     "r": 0.1,
+     "t": "Brasil 25/10",
+     "lbl": "Brasil 25/10"
+    },
+    {
+     "lat": 31.5,
+     "lon": 35,
+     "c": "#5E7180",
+     "r": 0.1,
+     "t": "Israel 27/10",
+     "lbl": "Israel 27/10"
+    },
+    {
+     "lat": 39,
+     "lon": -98,
+     "c": "#5E7180",
+     "r": 0.1,
+     "t": "EE.UU. 3/11",
+     "lbl": "EE.UU. 3/11"
+    },
+    {
+     "lat": 40,
+     "lon": -4,
+     "c": "#5E7180",
+     "r": 0.1,
+     "t": "España 29/11",
+     "lbl": "España 29/11"
+    },
+    {
+     "lat": 46.5,
+     "lon": 2.5,
+     "c": "#5E7180",
+     "r": 0.1,
+     "t": "Francia abr. 2027",
+     "lbl": "Francia abr. 27"
+    }
+   ]
+  },
+  "4": {
+   "paises": {
+    "840": "#2E7DBF",
+    "156": "#5E7180",
+    "643": "#D98A5F",
+    "040": "#5E7180",
+    "056": "#5E7180",
+    "100": "#5E7180",
+    "191": "#5E7180",
+    "196": "#5E7180",
+    "203": "#5E7180",
+    "208": "#5E7180",
+    "233": "#5E7180",
+    "246": "#5E7180",
+    "250": "#5E7180",
+    "276": "#5E7180",
+    "300": "#5E7180",
+    "348": "#5E7180",
+    "372": "#5E7180",
+    "380": "#5E7180",
+    "428": "#5E7180",
+    "440": "#5E7180",
+    "442": "#5E7180",
+    "470": "#5E7180",
+    "528": "#5E7180",
+    "616": "#5E7180",
+    "620": "#5E7180",
+    "642": "#5E7180",
+    "703": "#5E7180",
+    "705": "#5E7180",
+    "724": "#5E7180",
+    "752": "#5E7180",
+    "826": "#D98A5F",
+    "376": "#2E7DBF",
+    "364": "#C7362F",
+    "356": "#5E7180",
+    "076": "#D98A5F",
+    "152": "#2E7DBF",
+    "068": "#2E7DBF",
+    "600": "#2E7DBF",
+    "858": "#5E7180"
+   },
+   "nota": "Solo países prioritarios · lectura propia"
+  },
+  "5": {
+   "paises": {
+    "152": "#2E86AB",
+    "068": "#2E86AB",
+    "600": "#3A6A80",
+    "858": "#3A4A55"
+   },
+   "nota": "Protestas en Sudamérica esta semana (cualitativo)"
+  },
+  "6": {
+   "puntos": [
+    {
+     "lat": 26.6,
+     "lon": 56.3,
+     "c": "#F0675F",
+     "r": 8,
+     "t": "Ormuz: interrumpido",
+     "lbl": "Ormuz"
+    },
+    {
+     "lat": 12.6,
+     "lon": 43.3,
+     "c": "#F0A93A",
+     "r": 7,
+     "t": "Bab el-Mandeb: con demoras",
+     "lbl": "Bab el-Mandeb"
+    },
+    {
+     "lat": 30.5,
+     "lon": 32.3,
+     "c": "#F0A93A",
+     "r": 7,
+     "t": "Suez: con demoras",
+     "lbl": "Suez"
+    },
+    {
+     "lat": 9.1,
+     "lon": -79.7,
+     "c": "#5BC08A",
+     "r": 7,
+     "t": "Panamá: normal",
+     "lbl": "Panamá"
+    },
+    {
+     "lat": 2.5,
+     "lon": 101.5,
+     "c": "#5BC08A",
+     "r": 7,
+     "t": "Malaca: normal",
+     "lbl": "Malaca"
+    },
+    {
+     "lat": 41.1,
+     "lon": 29.0,
+     "c": "#F0A93A",
+     "r": 7,
+     "t": "Bósforo: con demoras",
+     "lbl": "Bósforo"
+    }
+   ]
+  },
+  "7": {
+   "paises": {
+    "356": "#B5651D",
+    "036": "#B5651D",
+    "076": "#9A6A3A",
+    "360": "#9A6A3A",
+    "458": "#9A6A3A",
+    "764": "#9A6A3A"
+   },
+   "puntos": [
+    {
+     "lat": -5,
+     "lon": -140,
+     "c": "#F0675F",
+     "r": 12,
+     "t": "Pacífico ecuatorial: El Niño muy fuerte, +3,3 °C",
+     "lbl": "El Niño +3,3 °C"
+    }
+   ],
+   "nota": "Marrón: sequía en competidores · escenario actual: El Niño"
+  },
+  "8": {
+   "puntos": [
+    {
+     "lat": 30,
+     "lon": 135,
+     "c": "#F0675F",
+     "r": 9,
+     "t": "Supertifón Champi (cat. 5) hacia Japón",
+     "lbl": "Tifón Champi"
+    },
+    {
+     "lat": 19,
+     "lon": -105,
+     "c": "#F0A93A",
+     "r": 7,
+     "t": "Huracán Trudy, México",
+     "lbl": "Huracán Trudy"
+    }
+   ]
+  },
+  "9": {
+   "puntos": [
+    {
+     "lat": 1.5,
+     "lon": 29.5,
+     "c": "#F0675F",
+     "r": 11,
+     "t": "Ébola Bundibugyo, RDC: 9.552 casos",
+     "lbl": "Ébola"
+    },
+    {
+     "lat": -1.3,
+     "lon": 36.8,
+     "c": "#F0675F",
+     "r": 4,
+     "t": "Ébola: 2 casos en Kenia"
+    },
+    {
+     "lat": 23,
+     "lon": -102,
+     "c": "#F0675F",
+     "r": 9,
+     "t": "Sarampión: mayor foco en México",
+     "lbl": "Sarampión"
+    },
+    {
+     "lat": -17,
+     "lon": -65,
+     "c": "#F0675F",
+     "r": 5,
+     "t": "Sarampión en Bolivia"
+    },
+    {
+     "lat": -27.2,
+     "lon": -52.0,
+     "c": "#B48CE8",
+     "r": 6,
+     "t": "Newcastle en aves, Santa Catarina (Brasil)",
+     "lbl": "Newcastle"
+    }
+   ]
+  },
+  "10": {
+   "paises": {
+    "840": "#F0675F",
+    "156": "#F0A93A",
+    "608": "#F0A93A",
+    "484": "#F0A93A"
+   },
+   "nota": "Rojo: restricciones nuevas o mantenidas · naranja: medidas puntuales"
+  },
+  "11": {
+   "puntos": [
+    {
+     "lat": 37.8,
+     "lon": -122.4,
+     "c": "#F0675F",
+     "r": 6,
+     "t": "Ataque a Railway (nube)",
+     "lbl": "Railway"
+    },
+    {
+     "lat": 19,
+     "lon": 72.8,
+     "c": "#F0675F",
+     "r": 6,
+     "t": "Filtración en el State Bank of India",
+     "lbl": "SBI"
+    },
+    {
+     "lat": 40,
+     "lon": -90,
+     "c": "#F0A93A",
+     "r": 6,
+     "t": "Intrusiones con IA en más de 100 sitios"
+    },
+    {
+     "lat": 26.5,
+     "lon": 52,
+     "c": "#74B9EA",
+     "r": 7,
+     "t": "Amenaza iraní a cables submarinos del Golfo",
+     "lbl": "Cables (amenaza)"
+    }
+   ]
+  },
+  "12": {
+   "puntos": [
+    {
+     "lat": -38.5,
+     "lon": -69,
+     "c": "#F0A93A",
+     "r": 8,
+     "t": "TotalEnergies: 10.000 M USD en Argentina",
+     "lbl": "TotalEnergies"
+    },
+    {
+     "lat": 53,
+     "lon": -1.5,
+     "c": "#74B9EA",
+     "r": 14,
+     "t": "Anthropic–Nscale: 45.000 M USD de cómputo (en negociación)",
+     "lbl": "Nscale"
+    },
+    {
+     "lat": -26,
+     "lon": -67,
+     "c": "#E3BE55",
+     "r": 8,
+     "t": "Minería: stock récord de inversión extranjera",
+     "lbl": "Litio y cobre"
+    }
+   ]
+  },
+  "13": {
+   "paises": {
+    "840": "#979E9A",
+    "156": "#8D9AA2",
+    "643": "#8D9AA2",
+    "826": "#8A99A5",
+    "376": "#D0B46A",
+    "364": "#BCAC7B",
+    "356": "#D7B664",
+    "076": "#B2A883",
+    "152": "#A4A38E",
+    "068": "#EEBF50",
+    "600": "#E4BB59",
+    "858": "#A8A48C",
+    "040": "#6F8FBC",
+    "056": "#6F8FBC",
+    "100": "#6F8FBC",
+    "191": "#6F8FBC",
+    "196": "#6F8FBC",
+    "203": "#6F8FBC",
+    "208": "#6F8FBC",
+    "233": "#6F8FBC",
+    "246": "#6F8FBC",
+    "250": "#6F8FBC",
+    "276": "#6F8FBC",
+    "300": "#6F8FBC",
+    "348": "#6F8FBC",
+    "372": "#6F8FBC",
+    "380": "#6F8FBC",
+    "428": "#6F8FBC",
+    "440": "#6F8FBC",
+    "442": "#6F8FBC",
+    "470": "#6F8FBC",
+    "528": "#6F8FBC",
+    "616": "#6F8FBC",
+    "620": "#6F8FBC",
+    "642": "#6F8FBC",
+    "703": "#6F8FBC",
+    "705": "#6F8FBC",
+    "724": "#6F8FBC",
+    "752": "#6F8FBC"
+   },
+   "lineas": [
+    {
+     "de": [
+      7,
+      -66
+     ],
+     "a": [
+      4.5,
+      -74
+     ],
+     "c": "#E3BE55",
+     "t": "Venezuela → Colombia (2,8 M)"
+    },
+    {
+     "de": [
+      7,
+      -66
+     ],
+     "a": [
+      -10,
+      -76
+     ],
+     "c": "#E3BE55",
+     "t": "Venezuela → Perú (1,6 M)"
+    },
+    {
+     "de": [
+      15,
+      30
+     ],
+     "a": [
+      14,
+      19
+     ],
+     "c": "#E3BE55",
+     "t": "Sudán → Chad"
+    },
+    {
+     "de": [
+      15,
+      30
+     ],
+     "a": [
+      27,
+      30
+     ],
+     "c": "#E3BE55",
+     "t": "Sudán → Egipto"
+    }
+   ],
+   "nota": "Color = edad mediana (países prioritarios) · flechas = crisis migratorias"
+  },
+  "14": {
+   "lineas": [
+    {
+     "de": [
+      38,
+      -97
+     ],
+     "a": [
+      29,
+      53
+     ],
+     "c": "#F0675F",
+     "t": "EE.UU. → Irán: bloqueo naval (confirmado)"
+    },
+    {
+     "de": [
+      32,
+      53
+     ],
+     "a": [
+      16,
+      44
+     ],
+     "c": "#F0675F",
+     "dash": true,
+     "t": "Irán → hutíes en Yemen (atribuido)"
+    },
+    {
+     "de": [
+      15.3,
+      39
+     ],
+     "a": [
+      13.5,
+      39.5
+     ],
+     "c": "#F0675F",
+     "t": "Eritrea → Tigray (confirmado)"
+    },
+    {
+     "de": [
+      52,
+      -1
+     ],
+     "a": [
+      -51.7,
+      -59
+     ],
+     "c": "#E3BE55",
+     "t": "Reino Unido → Malvinas: petróleo de Sea Lion"
+    },
+    {
+     "de": [
+      35,
+      105
+     ],
+     "a": [
+      -36,
+      -64
+     ],
+     "c": "#E3BE55",
+     "dash": true,
+     "t": "China → Argentina: swap y estación de Neuquén (sin novedades)"
+    }
+   ],
+   "nota": "Flecha llena = confirmado · punteada = atribuido o sin novedad"
+  },
+  "15": {
+   "paises": {
+    "840": "#3B82C4",
+    "124": "#3B82C4",
+    "826": "#3B82C4",
+    "392": "#3B82C4",
+    "410": "#3B82C4",
+    "036": "#3B82C4",
+    "554": "#3B82C4",
+    "376": "#3B82C4",
+    "152": "#3B82C4",
+    "600": "#3B82C4",
+    "218": "#3B82C4",
+    "578": "#3B82C4",
+    "352": "#3B82C4",
+    "756": "#3B82C4",
+    "040": "#3B82C4",
+    "056": "#3B82C4",
+    "100": "#3B82C4",
+    "191": "#3B82C4",
+    "196": "#3B82C4",
+    "203": "#3B82C4",
+    "208": "#3B82C4",
+    "233": "#3B82C4",
+    "246": "#3B82C4",
+    "250": "#3B82C4",
+    "276": "#3B82C4",
+    "300": "#3B82C4",
+    "348": "#3B82C4",
+    "372": "#3B82C4",
+    "380": "#3B82C4",
+    "428": "#3B82C4",
+    "440": "#3B82C4",
+    "442": "#3B82C4",
+    "470": "#3B82C4",
+    "528": "#3B82C4",
+    "616": "#3B82C4",
+    "620": "#3B82C4",
+    "642": "#3B82C4",
+    "703": "#3B82C4",
+    "705": "#3B82C4",
+    "724": "#3B82C4",
+    "752": "#3B82C4",
+    "643": "#D9534F",
+    "156": "#D9534F",
+    "364": "#D9534F",
+    "408": "#D9534F",
+    "192": "#D9534F",
+    "558": "#D9534F",
+    "112": "#D9534F",
+    "356": "#E3BE55",
+    "076": "#E3BE55",
+    "792": "#E3BE55",
+    "682": "#E3BE55",
+    "360": "#E3BE55",
+    "710": "#E3BE55",
+    "484": "#E3BE55",
+    "818": "#E3BE55",
+    "586": "#E3BE55",
+    "784": "#E3BE55"
+   },
+   "nota": "Lectura propia · Argentina en celeste (alineada con Occidente)"
+  }
+ },
+ "matriz": {
+  "sectores": [
+   "Litio",
+   "Energía",
+   "Agro",
+   "Datos",
+   "Infraestructura"
+  ],
+  "filas": [
+   {
+    "actor": "Tecnológicas e IA",
+    "ej": "Microsoft, Google, Amazon, OpenAI",
+    "celdas": [
+     [
+      "aliado",
+      "Demanda de baterías"
+     ],
+     [
+      "aliado",
+      "Compran energía limpia"
+     ],
+     [
+      "aliado",
+      "Agro digital"
+     ],
+     [
+      "aliado",
+      "Centros de datos en la Patagonia"
+     ],
+     [
+      "aliado",
+      "Cables y nube"
+     ]
+    ]
+   },
+   {
+    "actor": "Fondos de inversión",
+    "ej": "BlackRock, Blackstone, fondos soberanos del Golfo",
+    "celdas": [
+     [
+      "aliado",
+      "Financian proyectos"
+     ],
+     [
+      "aliado",
+      "Vaca Muerta"
+     ],
+     [
+      "competidor",
+      "Compran tierras y cosechas"
+     ],
+     [
+      "aliado",
+      null
+     ],
+     [
+      "aliado",
+      "Concesiones y puertos"
+     ]
+    ]
+   },
+   {
+    "actor": "Mineras",
+    "ej": "Rio Tinto, Glencore, BHP, POSCO",
+    "celdas": [
+     [
+      "aliado",
+      "Proyectos bajo el RIGI"
+     ],
+     [
+      "aliado",
+      "Consumen energía"
+     ],
+     null,
+     null,
+     [
+      "aliado",
+      "Rutas y trenes al Pacífico"
+     ]
+    ]
+   },
+   {
+    "actor": "Energéticas",
+    "ej": "Chevron, Shell, Petronas, TotalEnergies",
+    "celdas": [
+     null,
+     [
+      "aliado",
+      "Inversión en Vaca Muerta y GNL"
+     ],
+     null,
+     [
+      "aliado",
+      "Energía para centros de datos"
+     ],
+     [
+      "aliado",
+      "Gasoductos"
+     ]
+    ]
+   },
+   {
+    "actor": "Comercializadoras agrícolas",
+    "ej": "Cargill, Bunge, COFCO, Viterra",
+    "celdas": [
+     null,
+     null,
+     [
+      "competidor",
+      "Fijan precios y concentran exportación"
+     ],
+     null,
+     [
+      "aliado",
+      "Puertos del Paraná"
+     ]
+    ]
+   },
+   {
+    "actor": "Navieras y puertos",
+    "ej": "MSC, Maersk, COSCO, DP World",
+    "celdas": [
+     null,
+     null,
+     [
+      "competidor",
+      "Fletes caros por Ormuz y el mar Rojo"
+     ],
+     null,
+     [
+      "competidor",
+      "Hidrovía y terminales"
+     ]
+    ]
+   },
+   {
+    "actor": "Estatales de potencias",
+    "ej": "COFCO, PowerChina, CNNC, Ganfeng",
+    "celdas": [
+     [
+      "riesgo",
+      "Control chino de litio y refinado"
+     ],
+     [
+      "riesgo",
+      "Represas y nuclear con condiciones"
+     ],
+     [
+      "competidor",
+      "Compran soja y presionan precios"
+     ],
+     [
+      "riesgo",
+      "Estación espacial de Neuquén"
+     ],
+     [
+      "riesgo",
+      "Obras con deuda y condiciones"
+     ]
+    ]
+   }
+  ],
+  "nota": "Lectura propia sobre el comportamiento de cada tipo de actor; se revisa cuando hay anuncios relevantes."
+ }
+}
