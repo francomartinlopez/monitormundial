@@ -567,7 +567,7 @@ addEventListener('scroll', spy, {passive:true}); spy();
 if(location.hash){ const t = document.getElementById(location.hash.slice(1)); if(t) t.scrollIntoView(); }
 const stamp = () => { if(DATA.corte){ const n = Object.keys(DATA.valores).length; $('#stamp').innerHTML = `<i></i>Corte: ${fecha(DATA.corte)} · ${n} datos · próxima actualización: sábado ${fecha(new Date(new Date(DATA.corte + 'T12:00:00').getTime() + 8 * 864e5).toISOString().slice(0, 10))}`; } };
 Promise.all([
-  fetch('datos/semana.json').then(r => r.json()).then(d => { DATA = Object.assign({valores:{}, fichas:{}}, d); }).catch(() => {}),
+  fetch('datos/semana.json', {cache: 'no-store'}).then(r => r.json()).then(d => { DATA = Object.assign({valores:{}, fichas:{}}, d); }).catch(() => {}),
   fetch('mundo.json').then(r => r.json()).then(d => { MUNDO = d; document.body.insertAdjacentHTML('afterbegin', worldDefs()); }).catch(() => {})
 ]).finally(() => { renderAll(); stamp(); spy(); if(location.hash){ const t = document.getElementById(location.hash.slice(1)); if(t) t.scrollIntoView(); } });
 </script>
