@@ -50,6 +50,22 @@ nav.idx a{flex:none;font:600 1.02rem/1 var(--f-body);color:var(--muted);text-dec
 nav.idx a:hover{color:var(--ink)}
 nav.idx a.on{color:var(--ink);border-bottom-color:var(--accent)}
 
+.onu-sel{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:12px;margin:6px 0 14px}
+.onu-sel label{display:flex;flex-direction:column;gap:6px;font:600 .8rem/1.2 var(--f-data);color:var(--muted);text-transform:uppercase;letter-spacing:.04em}
+.onu-sel select{font:500 .95rem/1.3 var(--f-body);color:var(--ink);background:var(--bg);border:1px solid var(--line);border-radius:8px;padding:10px;text-transform:none;letter-spacing:0}
+.onu-sel select.on{border-color:var(--accent);box-shadow:0 0 0 1px var(--accent)}
+.onu-cnt{display:flex;flex-wrap:wrap;gap:8px 18px;margin:8px 0}
+.onu-cnt span{font:600 .9rem/1 var(--f-data)}.onu-cnt i{display:inline-block;width:11px;height:11px;border-radius:50%;margin-right:6px;vertical-align:-1px}
+.onu-key{display:grid;grid-template-columns:repeat(auto-fill,minmax(150px,1fr));gap:6px;margin:10px 0}
+.onu-key div{border:1px solid var(--line);border-radius:8px;padding:7px 9px;font-size:.86rem;display:flex;justify-content:space-between;gap:6px}
+.onu-key div.arg{border-color:var(--accent)}
+.onu-list{font-size:.86rem;color:var(--muted);margin:4px 0}.onu-list b{color:var(--ink)}
+
+.rel{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
+.rel h3{display:flex;align-items:center;gap:8px;margin:0 0 6px;font-size:1rem}.rel h3 i{width:12px;height:12px;border-radius:50%;display:inline-block}
+.rel details{border-top:1px solid var(--line);padding:6px 0}.rel summary{cursor:pointer;font-weight:600}
+.rel details p{margin:4px 0 2px;font-size:.86rem;color:var(--muted)}
+
 /* página */
 main{padding-block:12px 48px}
 .sec{padding-top:36px;scroll-margin-top:calc(env(safe-area-inset-top,0px) + 116px)}
@@ -178,7 +194,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
 </header>
 <main class="wrap" id="main"></main>
 <footer><div class="wrap">
-  <p>Monitor Mundial / Monitor Global · Actualización semanal: corte el viernes al cierre de Wall Street, publicación el sábado.</p>
+  <p>Monitor Mundial · Actualización semanal: corte el viernes al cierre de Wall Street, publicación el viernes a la noche.</p>
   <p>Solo hechos fuera de Argentina y su impacto sobre el país. Fuentes públicas y gratuitas, citadas en cada bloque.</p>
 </div></footer>
 
@@ -195,7 +211,7 @@ const MAPAS = [
   {n:1,t:'Conflictos activos',q:'Dónde hay guerras y conflictos internos hoy.',ley:[['#F0675F','Guerra entre Estados'],['#F0A93A','Guerra civil'],['#B48CE8','Insurgencia'],['#E6EDF1','Atentado terrorista']],nota:'Tamaño del punto = víctimas de la semana',src:'UCDP · CrisisWatch · prensa'},
   {n:2,t:'Alertas de riesgo',q:'Dónde puede empezar o escalar algo pronto.',ley:[['#E3BE55','Probabilidad baja'],['#F0A93A','Media'],['#F0675F','Alta']],src:'CrisisWatch · mercados de predicción'},
   {n:3,t:'Elecciones relevantes',q:'Qué países votan en los próximos 6 meses y quién puede ganar.',grad:['azulrojo','Gana fuerza afín','Gana fuerza distante'],ley:[['#5E7180','Incierto']],nota:'Intensidad = probabilidad del resultado',src:'Encuestas · Polymarket · Metaculus · IFES'},
-  {n:4,t:'Afinidad con Argentina',q:'Quién apoya y quién se aleja de Argentina hoy.',grad:['afin','Muy alineado','Hostil'],src:'Análisis de medidas, votos, acuerdos y declaraciones'},
+  {n:4,t:'Relación del gobierno argentino con cada gobierno',q:'Con quién se alía y con quién se enfrenta el gobierno de Milei, según hechos documentados.',ley:[['#2F80ED','Aliado'],['#56C2A6','Afín'],['#8A9AA5','Pragmático'],['#E3BE55','Tensión'],['#F0675F','Enfrentado'],['#1E2A33','Sin clasificar']],src:'declaraciones, visitas, acuerdos e incidentes diplomáticos'},
   {n:5,t:'Protestas y disturbios',q:'Dónde hay estallidos sociales, paros y disturbios.',grad:['seco','Pocas','Muchas'],src:'prensa internacional'},
   {n:6,t:'Rutas y pasos marítimos',q:'Si el comercio fluye: Ormuz, Bab el-Mandeb, Suez, Panamá, Malaca, Bósforo.',ley:[['#5BC08A','Normal'],['#F0A93A','Con demoras'],['#F0675F','Interrumpido']],src:'IMF PortWatch'},
   {n:7,t:'Clima, sequías y ENSO',q:'Dónde la sequía, el exceso de agua o el ENSO cambian la oferta mundial. Selector de escenario Niño / Niña.',grad:['seco','Seco','Húmedo'],src:'NOAA · Copernicus · US Drought Monitor · IMD'},
@@ -307,8 +323,9 @@ const PAGES = [
  ]},
  {id:'politica',nav:'Política y elecciones',t:'Política y elecciones',p:'Quién vota, quién puede ganar y quién está cerca o lejos de Argentina.',bl:[
    {k:'kpis',w:'full',t:'Resumen',items:[K('Próxima elección relevante','días','IFES'),K('Elecciones en 6 meses','total','IFES'),K('Gobiernos inestables','total','prensa')]},
-   {k:'mapa',w:'half',n:3},
-   {k:'mapa',w:'half',n:4},
+   {k:'mapa',w:'full',n:4},
+   {k:'relaciones',w:'full',t:'Relación con cada gobierno: los hechos'},
+   {k:'mapa',w:'full',n:3},
    {k:'calendario',id:'elecciones',w:'full',t:'Calendario electoral, próximos 6 meses'},
    {k:'chart',id:'encuestas',w:'half',t:'Encuestas de la próxima elección',kind:'hbars',labels:['Candidato A','Candidato B','Candidato C','Otros'],src:'encuestadoras'},
    {k:'fichas',id:'estabilidad',w:'half',t:'Estabilidad de gobiernos',n:3,campos:['País','Situación','Riesgo','Efecto en Argentina'],src:'prensa'},
@@ -345,6 +362,7 @@ const PAGES = [
  ]},
  {id:'organismos',nav:'Organismos',t:'Organismos internacionales y regulación',p:'Situaciones importantes en organismos multilaterales que afectan al mundo o a Argentina.',bl:[
    {k:'kpis',w:'full',t:'Resumen',items:[K('Situaciones abiertas','total','sitios oficiales'),K('Nuevas esta semana','total','sitios oficiales'),K('Resueltas','total','sitios oficiales')]},
+   {k:'onu',w:'full',t:'Votaciones en la ONU'},
    {k:'fichas',id:'organismos',w:'full',t:'Situaciones importantes',n:3,campos:['Organismo','Qué pasó','Por qué importa al mundo','Cómo afecta a Argentina'],chip:'Estado',src:'sitios oficiales'},
    {k:'grupos',w:'full',t:'Organismos que se siguen'}
  ]}
@@ -386,7 +404,7 @@ function proj(lat, lon){ const l = lon * Math.PI / 180, f = lat * Math.PI / 180,
 const capa = n => DATA.mapas && DATA.mapas[String(n)];
 function capaSVG(n){ const c = capa(n); if(!c || !MUNDO) return '';
   const byId = {}; MUNDO.paises.forEach(p => byId[p.id] = p);
-  let s = '';
+  let s = c.fondo ? MUNDO.paises.filter(p => p.id !== '032' && !(c.paises || {})[p.id]).map(p => `<path d="${p.d}" fill="${c.fondo}" stroke="#0C161D" stroke-width=".5"><title>${esc(p.n)}: sin clasificar</title></path>`).join('') : '';
   Object.entries(c.paises || {}).forEach(([id, col]) => { const p = byId[id]; if(p) s += `<path d="${p.d}" fill="${col}" stroke="#0C161D" stroke-width=".5"><title>${esc(p.n)}</title></path>`; });
   if(byId['032'] && c.paises && c.paises['032'] === undefined) s += `<path d="${byId['032'].d}" class="c arg" style="fill:var(--accent)"/>`;
   (c.lineas || []).forEach(l => { const [x1, y1] = proj(...l.de), [x2, y2] = proj(...l.a);
@@ -495,6 +513,55 @@ function redSVG(sr){
   return `<div class="ghost"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Red de alianzas">${s}</svg></div>`;
 }
 
+const ONU_COL = {Y:'var(--ok)', N:'var(--crit)', A:'var(--warn)', X:'#3A4A55'};
+const ONU_TXT = {Y:'Sí', N:'No', A:'Abstención', X:'No votó'};
+const ONU_KEY = ['Argentina','Estados Unidos','Brasil','China','Rusia','Israel','Reino Unido','Francia','India','Chile','Uruguay','Paraguay'];
+function hemiciclo(votos, grupos){
+  const names = Object.keys(votos), n = names.length, W = 560, H = n > 30 ? 300 : 210, cx = W / 2, cy = H - 14;
+  const rows = n > 120 ? 9 : n > 40 ? 6 : 2, r1 = n > 30 ? 265 : 175, r0 = n > 30 ? 95 : 90;
+  const radii = Array.from({length: rows}, (_, i) => r0 + (r1 - r0) * (rows === 1 ? 1 : i / (rows - 1)));
+  const tot = radii.reduce((a, b) => a + b, 0); let per = radii.map(r => Math.round(n * r / tot)); per[rows - 1] += n - per.reduce((a, b) => a + b, 0);
+  const seats = []; radii.forEach((r, i) => { const k = per[i]; for(let j = 0; j < k; j++){ const a = Math.PI * (k === 1 ? .5 : 1 - j / (k - 1)); seats.push({x: cx + r * Math.cos(a), y: cy - r * Math.sin(a), a}); } });
+  seats.sort((p, q) => q.a - p.a);
+  const ord = {Y:0, A:1, X:2, N:3}, gord = {};
+  ['América Latina y Caribe','Europa Occidental y otros','Europa del Este','Asia-Pacífico','África'].forEach((g, i) => gord[g] = i);
+  names.sort((a, b) => (ord[votos[a]] - ord[votos[b]]) || ((gord[grupos[a]] ?? 9) - (gord[grupos[b]] ?? 9)) || a.localeCompare(b));
+  const rr = n > 30 ? 7.2 : 14;
+  let s = '';
+  names.forEach((nm, i) => { const p = seats[i], arg = nm === 'Argentina';
+    s += `<circle cx="${p.x.toFixed(1)}" cy="${p.y.toFixed(1)}" r="${rr}" fill="${ONU_COL[votos[nm]]}" ${arg ? 'stroke="#7FD3F7" stroke-width="3"' : 'stroke="#0B1418" stroke-width="1"'}><title>${esc(nm)}: ${ONU_TXT[votos[nm]]}</title></circle>`;
+    if(arg) s += `<text x="${p.x.toFixed(1)}" y="${(p.y - rr - 5).toFixed(1)}" text-anchor="middle" style="fill:#7FD3F7;font:700 11px var(--f-data)">ARG</text>`;
+    if(n <= 30) s += `<text x="${p.x.toFixed(1)}" y="${(p.y + 4).toFixed(1)}" text-anchor="middle" style="fill:#0B1418;font:700 8px var(--f-data)">${esc(nm.slice(0, 3).toUpperCase())}</text>`; });
+  return `<div class="ghost"><svg viewBox="0 0 ${W} ${H}" role="img" aria-label="Hemiciclo de votación">${s}</svg></div>`;
+}
+function onuPanel(id){
+  const O = DATA.onu; if(!O) return '';
+  const v = O.votos.find(x => x.id === id) || O.votos[0]; const c = {Y:0, N:0, A:0, X:0}; Object.values(v.votos).forEach(x => c[x]++);
+  const by = k => Object.keys(v.votos).filter(nm => v.votos[nm] === k).sort((a, b) => a.localeCompare(b));
+  const ag = v.votos['Argentina'];
+  const keys = ONU_KEY.filter(k => v.votos[k]).map(k => `<div class="${k === 'Argentina' ? 'arg' : ''}"><span>${esc(k)}</span><b style="color:${ONU_COL[v.votos[k]]}">${ONU_TXT[v.votos[k]]}</b></div>`).join('');
+  return `<h3 style="margin:4px 0 2px">${esc(v.corto || v.titulo)}</h3>${v.corto ? `<p class="muted" style="margin:0 0 2px;font-size:.8rem">Título oficial: ${esc(v.titulo)}</p>` : ''}
+   <p class="muted" style="margin:0">${esc(v.cuerpo)} · ${esc(fecha(v.fecha))}/${v.fecha.slice(0, 4)} · ${esc(v.simbolo)} · ${esc(v.resultado || '')}</p>
+   <div class="onu-cnt"><span><i style="background:var(--ok)"></i>Sí ${c.Y}</span><span><i style="background:var(--crit)"></i>No ${c.N}</span><span><i style="background:var(--warn)"></i>Abstención ${c.A}</span><span><i style="background:#3A4A55"></i>No votó ${c.X}</span>${ag ? `<span style="color:#7FD3F7">Argentina: ${ONU_TXT[ag]}</span>` : `<span class="muted">Argentina no es miembro de este órgano</span>`}</div>
+   ${hemiciclo(v.votos, O.grupos)}
+   <div class="onu-key">${keys}</div>
+   ${c.N ? `<p class="onu-list"><b>Votaron no (${c.N}):</b> ${by('N').map(esc).join(', ')}</p>` : ''}
+   ${c.A && c.A <= 40 ? `<p class="onu-list"><b>Se abstuvieron (${c.A}):</b> ${by('A').map(esc).join(', ')}</p>` : ''}
+   ${v.porque ? `<p style="margin:10px 0 4px"><strong>Por qué importa a Argentina:</strong> ${esc(v.porque)}</p>` : ''}
+   <span class="src"><a href="${esc(v.url)}">Registro oficial de la ONU</a></span>`;
+}
+function onuTabla(){
+  const O = DATA.onu; if(!O) return ''; const ref = ['Estados Unidos','Brasil','Israel','China','Rusia'];
+  const rows = O.votos.filter(v => v.votos['Argentina']).map(v => { const c = {Y:0, N:0, A:0}; Object.values(v.votos).forEach(x => { if(c[x] !== undefined) c[x]++; }); const may = c.Y >= c.N ? 'Y' : 'N'; const ag = v.votos['Argentina'];
+    return `<tr><td>${esc(v.corto || v.titulo)}<br><span class="muted" style="font-size:.78rem">${esc(v.cuerpo)} · ${v.fecha.slice(0, 4)}</span></td><td style="color:${ONU_COL[ag]};font-weight:700">${ONU_TXT[ag]}</td><td>${ag === may ? 'Sí' : '<b style="color:var(--warn)">No</b>'}</td>${ref.map(k => `<td style="color:${ONU_COL[v.votos[k]] || 'var(--muted)'}">${v.votos[k] ? (v.votos[k] === ag ? '=' : ONU_TXT[v.votos[k]]) : '—'}</td>`).join('')}</tr>`; }).join('');
+  const coinc = k => { const vs = O.votos.filter(v => v.votos['Argentina'] && v.votos[k]); const m = vs.filter(v => v.votos[k] === v.votos['Argentina']).length; return `${k}: ${m} de ${vs.length}`; };
+  return `<h3 style="margin:18px 0 4px">Cómo votó Argentina en todas estas votaciones</h3><p class="muted" style="margin:0 0 8px">Coincidencias: ${ref.map(coinc).join(' · ')}. "=" significa que votó igual que Argentina.</p>
+   <div class="scroll"><table><thead><tr><th>Votación</th><th>Argentina</th><th>¿Con la mayoría?</th>${ref.map(k => `<th>${esc(k)}</th>`).join('')}</tr></thead><tbody>${rows}</tbody></table></div>`;
+}
+document.addEventListener('change', e => { if(!e.target.matches('.onu-sel select')) return; const id = e.target.value; if(!id) return;
+  document.querySelectorAll('.onu-sel select').forEach(s => { if(s !== e.target) s.value = ''; s.classList.toggle('on', s === e.target); });
+  const p = document.getElementById('onu-panel'); if(p) p.innerHTML = onuPanel(id); });
+
 /* ---------- bloques ---------- */
 const R = {
   resumen: () => { const r = DATA.resumen;
@@ -543,6 +610,17 @@ const R = {
     return head(b.t, 'lectura propia') + `<p class="muted">Cada celda: aliado posible, competidor o riesgo para los intereses argentinos.</p><div class="scroll"><table><thead><tr><th>Actor</th>${mz.sectores.map(s => `<th>${esc(s)}</th>`).join('')}</tr></thead><tbody>${mz.filas.map(f => `<tr><td>${esc(f.actor)}<br><span class="muted" style="font-size:.78rem">${esc(f.ej || '')}</span></td>${f.celdas.map(c => c ? `<td><span class="chip ${cc[c[0]] || ''}">${esc(c[0])}</span>${c[1] ? `<br><span class="muted" style="font-size:.76rem">${esc(c[1])}</span>` : ''}</td>` : '<td><span class="muted">—</span></td>').join('')}</tr>`).join('')}</tbody></table></div>` + (mz.nota ? `<p class="muted" style="font-size:.82rem;margin-top:6px">${esc(mz.nota)}</p>` : ''); }
     const sec = ['Litio','Energía','Agro','Datos','Infraestructura']; const act = ['Tecnológicas e IA','Fondos de inversión','Mineras','Energéticas','Comercializadoras agrícolas','Navieras y puertos','Estatales de potencias'];
     return head(b.t) + `<p class="muted">Cada celda: aliado posible, competidor o riesgo.</p><div class="scroll"><table><thead><tr><th>Actor</th>${sec.map(s => `<th>${s}</th>`).join('')}</tr></thead><tbody>${act.map(a => `<tr><td>${a}</td>${sec.map(() => `<td><span class="chip">—</span></td>`).join('')}</tr>`).join('')}</tbody></table></div>`; },
+  onu: b => { const O = DATA.onu; if(!O) return head(b.t) + '<p class="muted">Sin datos.</p>';
+    const first = O.votos.find(v => v.tema.includes('arg')) || O.votos[0];
+    const opt = t => O.votos.filter(v => v.tema.includes(t)).map(v => `<option value="${esc(v.id)}"${t === 'arg' && v.id === first.id ? ' selected' : ''}>${esc(v.corto || v.titulo)} (${v.fecha.slice(0, 4)})</option>`).join('');
+    return head(b.t, 'ONU, Biblioteca Digital · registros oficiales de votación') + `<p class="muted" style="margin:0">Cada punto es un país (193 en la Asamblea General, 15 en el Consejo de Seguridad), agrupados por voto y región. Pasá el cursor o tocá un punto para ver el país.</p>
+     <div class="onu-sel"><label>Cómo vota el mundo en temas que importan a Argentina<select class="on"><option value="">Elegí un tema…</option>${opt('arg')}</select></label>
+     <label>Cómo vota Argentina en los grandes temas mundiales<select><option value="">Elegí un tema…</option>${opt('mundo')}</select></label></div>
+     <div id="onu-panel">${onuPanel(first.id)}</div>${onuTabla()}`; },
+  relaciones: b => { const rl = DATA.relaciones; if(!rl) return head(b.t) + '<p class="muted">Sin datos.</p>';
+    const cats = [['aliado','Aliados','#2F80ED'],['afin','Afines','#56C2A6'],['pragmatico','Pragmáticos','#8A9AA5'],['tension','Con tensión','#E3BE55'],['enfrentado','Enfrentados','#F0675F']];
+    return head(b.t, 'prensa · comunicados oficiales · lectura propia') + `<p class="muted" style="margin:0 0 10px">Tocá un país para ver el hecho que justifica su color. La relación es entre gobiernos, no entre pueblos, y cambia cuando cambia el gobierno de cualquiera de los dos países.</p><div class="rel">${cats.map(([k, t, c]) => { const ps = rl.filter(x => x.cat === k);
+      return `<div><h3><i style="background:${c}"></i>${t} (${ps.length})</h3>${ps.map(x => `<details><summary>${esc(x.pais)}</summary><p>${esc(x.lider)}. ${esc(x.hecho)}</p><span class="src"><a href="${esc(x.url)}">${esc(x.f || 'Fuente')}</a></span></details>`).join('')}</div>`; }).join('')}</div>`; },
   grupos: b => head(b.t) + `<div class="cards">${(b.g || GRUPOS).map(([g, os]) => `<div class="card"><h3>${esc(g)}</h3><div class="groups">${os.map(o => `<span class="chip acc">${esc(o)}</span>`).join('')}</div></div>`).join('')}</div>`
 };
 
@@ -574,7 +652,7 @@ const spy = () => {
 };
 addEventListener('scroll', spy, {passive:true}); spy();
 if(location.hash){ const t = document.getElementById(location.hash.slice(1)); if(t) t.scrollIntoView(); }
-const stamp = () => { if(DATA.corte){ const n = Object.keys(DATA.valores).length; $('#stamp').innerHTML = `<i></i>Corte: ${fecha(DATA.corte)} · ${n} datos · próxima actualización: sábado ${fecha(new Date(new Date(DATA.corte + 'T12:00:00').getTime() + 8 * 864e5).toISOString().slice(0, 10))}`; } };
+const stamp = () => { if(DATA.corte){ const n = Object.keys(DATA.valores).length; $('#stamp').innerHTML = `<i></i>Corte: ${fecha(DATA.corte)} · ${n} datos · próxima actualización: viernes ${fecha(new Date(new Date(DATA.corte + 'T12:00:00').getTime() + 7 * 864e5).toISOString().slice(0, 10))}`; } };
 Promise.all([
   fetch('datos/semana.json', {cache: 'no-store'}).then(r => r.json()).then(d => { DATA = Object.assign({valores:{}, fichas:{}}, d); }).catch(() => {}),
   fetch('mundo.json').then(r => r.json()).then(d => { MUNDO = d; document.body.insertAdjacentHTML('afterbegin', worldDefs()); }).catch(() => {})

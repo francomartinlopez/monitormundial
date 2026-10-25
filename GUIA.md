@@ -1,13 +1,13 @@
 # Guía de actualización semanal — Monitor Mundial
 
-Esta guía la sigue Claude cada sábado. El sitio es estático: `index.html` (estructura y gráficos), `mundo.json` (mapa base, no se toca) y `datos/semana.json` (todos los datos de la semana). **Cada semana se cambia solo `datos/semana.json`**, salvo que haga falta un bloque nuevo.
+Esta guía la sigue Claude cada viernes a la noche. El sitio es estático: `index.html` (estructura y gráficos), `mundo.json` (mapa base, no se toca) y `datos/semana.json` (todos los datos de la semana). **Cada semana se cambia solo `datos/semana.json`**, salvo que haga falta un bloque nuevo.
 
 ## Reglas editoriales
 
 - **Qué cubre:** solo lo que pasa fuera de Argentina y cómo afecta a Argentina. La única excepción es la injerencia extranjera dentro de Argentina. Nada de política o hechos internos argentinos.
 - **Sin relación** con el proyecto de El Niño en Argentina (alertahidrica / datosargentina).
 - **Idioma:** español rioplatense, claro y sin jerga.
-- **Corte:** el viernes, al cierre de Wall Street. **Publicación:** el sábado. Solo valores actuales; no hay alertas entre semanas.
+- **Corte:** el viernes, al cierre de Wall Street. **Publicación:** el mismo viernes a la noche (la tarea corre a las 21:50, hora argentina). Solo valores actuales; no hay alertas entre semanas.
 - **Fuentes:** solo gratuitas. ACLED no se usa.
 - **Datos con fuente:** cada dato lleva fuente (`f`), enlace (`url`) y fecha (`fecha`). No se inventa ni se completa de memoria: si no hay fuente, el dato queda en "—" con una nota.
 - **Juicios propios:** se marcan como "lectura propia".
@@ -20,7 +20,7 @@ Esta guía la sigue Claude cada sábado. El sitio es estático: `index.html` (es
 ## Paso a paso
 
 1. **Clonar el repositorio** `francomartinlopez/monitormundial` y leer `datos/semana.json`.
-2. **Fechas:** actualizar `corte` (el viernes, AAAA-MM-DD) y `publicado` (el sábado).
+2. **Fechas:** actualizar `corte` (el viernes, AAAA-MM-DD) y `publicado` (el mismo viernes).
 3. **Valores** (`valores`): actualizar cada uno con `v`, `d` (variación semanal) y `dt`.
    - `dt`: `"pct"` para %, `"pb"` para puntos básicos, `"pts"` para puntos.
    - `sig`: `"+"` si subir es bueno para Argentina, `"-"` si es malo.
@@ -85,3 +85,17 @@ Esta guía la sigue Claude cada sábado. El sitio es estático: `index.html` (es
 - Remesas de México (Banxico): primeros días del mes.
 - FMI WEO: abril, julio, octubre y enero.
 - ONU WPP: población; revisión cada dos años.
+
+
+## Votaciones en la ONU (bloque `onu`)
+
+- Datos en `semana.json` → `onu`: `grupos` (país → grupo regional) y `votos` (lista). Cada votación: `id, titulo, corto, cuerpo` (AG / CS / comisión), `fecha, simbolo, url, resultado, tema` (lista con `"arg"` = tema que importa a Argentina, `"mundo"` = gran tema mundial; puede tener los dos), `porque` (una frase sobre por qué importa) y `votos` (nombre del país en español → `Y` a favor, `N` en contra, `A` abstención, `X` no votó).
+- Fuentes: registro de votación de la Biblioteca Digital de la ONU (digitallibrary.un.org, "Voting data") y comunicados de prensa de la ONU (press.un.org). Usar los 193 países en la Asamblea y los 15 miembros en el Consejo. Si algún voto se completa por descarte o por una fuente secundaria, aclararlo en `porque` o en la nota.
+- Agregar una votación nueva cuando haya una votación relevante en la semana (en especial si Argentina vota distinto que su bloque habitual o en temas de Malvinas, Medio Oriente, Ucrania, Cuba, Agenda 2030, género o desarme). No borrar las anteriores; dejar como máximo unas 20, quitando las menos relevantes.
+
+## Relación con cada gobierno (mapa 4 y bloque `relaciones`)
+
+- `semana.json` → `relaciones`: lista de `{pais, iso, lider, cat, hecho, url, f}`; `cat` ∈ `aliado, afin, pragmatico, tension, enfrentado`.
+- `mapas["4"].paises`: código ISO numérico → color de la categoría (aliado `#2F80ED`, afín `#56C2A6`, pragmático `#8A9AA5`, tensión `#E3BE55`, enfrentado `#F0675F`). Mantener ambos en sincronía.
+- Cada país necesita un hecho documentado con fecha y fuente (visita, acuerdo, declaración, incidente diplomático, voto). Sin hecho verificado de los últimos dos años, el país no se colorea.
+- Revisar cada semana: cambios de gobierno (la relación es entre gobiernos), insultos o elogios públicos, llamados de embajadores, acuerdos firmados y votos en la ONU. Si cambia la categoría, actualizar el hecho y la fecha.
