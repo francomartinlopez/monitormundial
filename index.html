@@ -39,20 +39,20 @@ p{margin:0}
 header.top{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:var(--panel);border-bottom:1px solid var(--line)}
 .top .wrap{display:flex;flex-direction:column;gap:4px;padding-top:10px}
 .brand{display:flex;align-items:baseline;justify-content:space-between;gap:8px 16px;flex-wrap:wrap}
-.brand b{font:800 1.2rem/1 var(--f-display);font-stretch:70%;letter-spacing:.04em;text-transform:uppercase}
+.brand b{font:800 1.75rem/1 var(--f-display);font-stretch:70%;letter-spacing:.04em;text-transform:uppercase}
 .brand b span{color:var(--accent)}
-.brand .sub{font-size:.9rem;color:var(--muted)}
-.stamp{font:500 .76rem/1.2 var(--f-data);color:var(--muted)}
-.stamp i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--warn);margin-right:6px;vertical-align:1px}
+.brand .sub{font-size:1.05rem;color:var(--muted)}
+.stamp{font:500 .85rem/1.2 var(--f-data);color:var(--muted)}
+.stamp i{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--ok);margin-right:6px;vertical-align:1px}
 nav.idx{display:flex;gap:2px;overflow-x:auto;scrollbar-width:none;margin:0 -6px}
 nav.idx::-webkit-scrollbar{display:none}
-nav.idx a{flex:none;font:600 .86rem/1 var(--f-body);color:var(--muted);text-decoration:none;padding:10px 8px 11px;border-bottom:3px solid transparent;white-space:nowrap}
+nav.idx a{flex:none;font:600 1.02rem/1 var(--f-body);color:var(--muted);text-decoration:none;padding:12px 10px 13px;border-bottom:3px solid transparent;white-space:nowrap}
 nav.idx a:hover{color:var(--ink)}
 nav.idx a.on{color:var(--ink);border-bottom-color:var(--accent)}
 
 /* página */
 main{padding-block:12px 48px}
-.sec{padding-top:36px;scroll-margin-top:calc(env(safe-area-inset-top,0px) + 96px)}
+.sec{padding-top:36px;scroll-margin-top:calc(env(safe-area-inset-top,0px) + 116px)}
 .sec+.sec{margin-top:40px;border-top:1px solid var(--line)}
 .intro{padding-top:20px}
 .phead{display:flex;flex-direction:column;gap:8px;margin-bottom:20px;max-width:76ch}
@@ -171,7 +171,7 @@ footer .wrap{display:flex;flex-direction:column;gap:6px}
   <div class="wrap">
     <div class="brand">
       <div><b>Monitor <span>Mundial</span></b> <span class="sub">El mundo, mirado desde Argentina</span></div>
-      <span class="stamp" id="stamp"><i></i>Boceto · sin datos reales · corte semanal: viernes</span>
+      <span class="stamp" id="stamp"><i></i>Corte semanal: viernes</span>
     </div>
     <nav class="idx" id="nav" aria-label="Secciones"></nav>
   </div>
@@ -546,7 +546,7 @@ const R = {
 
 /* ---------- navegación ---------- */
 function renderAll(){
-  $('#main').innerHTML = `<div class="intro"><span class="boceto">Boceto: estructura definitiva, sin datos reales</span></div>` +
+  $('#main').innerHTML = (DATA.corte ? '' : `<div class="intro"><span class="boceto">Cargando datos…</span></div>`) +
     PAGES.map((pg, i) => `<section class="sec" id="${pg.id}"><div class="phead"><span class="eyebrow">${String(i + 1).padStart(2, '0')} de ${PAGES.length}</span><h1>${esc(pg.t)}</h1><p>${esc(pg.p)}</p></div>
     <div class="grid">${pg.bl.map(b => `<div class="b ${b.w === 'full' ? '' : b.w}">${R[b.k](b)}</div>`).join('')}</div></section>`).join('');
   setLayer(1);
