@@ -1,4 +1,4 @@
-# Guía de actualización semanal — Monitor Global
+# Guía de actualización semanal — Monitor Mundial
 
 Esta guía la sigue Claude cada sábado. El sitio es estático: `index.html` (estructura y gráficos), `mundo.json` (mapa base, no se toca) y `datos/semana.json` (todos los datos de la semana). **Cada semana se cambia solo `datos/semana.json`**, salvo que haga falta un bloque nuevo.
 

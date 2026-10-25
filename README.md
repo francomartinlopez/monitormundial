@@ -1,4 +1,4 @@
-# Monitor Global
+# Monitor Mundial
 
 El mundo, mirado desde Argentina. Un tablero semanal y gratuito con economía, clima, guerras, conflictos, elecciones, tecnología, salud, actores privados, migración, organismos internacionales, injerencia extranjera y bloques, siempre con foco en cómo afecta a la Argentina.
 
