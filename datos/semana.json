@@ -1185,6 +1185,68 @@
    "fecha": "2026-06-08",
    "sig": "-",
    "nota": "Suba prevista del ingreso por pasaje en 2026. Las aerolíneas ganarán la mitad que en 2025 (23.000 M USD); las de Medio Oriente, con pérdidas."
+  },
+  "cocaina-produccion": {
+   "v": 4100,
+   "dec": 0,
+   "u": "toneladas",
+   "f": "UNODC, Informe Mundial sobre Drogas 2026",
+   "url": "https://www.mappr.co/drug-use-by-country/",
+   "fecha": "2024-12-31",
+   "sig": "-",
+   "nota": "Récord: se multiplicó por más de cuatro en diez años, con cultivos récord en Colombia, Perú y Bolivia."
+  },
+  "drogas-usuarios": {
+   "v": 331,
+   "dec": 0,
+   "u": "millones",
+   "f": "UNODC 2026",
+   "url": "https://www.mappr.co/drug-use-by-country/",
+   "fecha": "2024-12-31",
+   "sig": "-",
+   "nota": "6,2 % de los adultos del mundo usó alguna droga en 2024 (uno de cada 16), 34 % más que hace diez años."
+  },
+  "narcolanchas": {
+   "v": 71,
+   "dec": 0,
+   "u": "operaciones",
+   "f": "Comando Sur vía prensa",
+   "url": "https://www.noticiaimpacto.com/nuevo-ataque-de-ee-uu-contra-una-lancha-deja-cuatro-muertos-en-el-caribe/",
+   "fecha": "2026-10-04",
+   "sig": "-",
+   "nota": "Desde septiembre de 2025, en el Caribe y el Pacífico oriental. EE.UU. no muestra pruebas públicas de que llevaran droga; hay cuestionamientos legales."
+  },
+  "narcolanchas-muertos": {
+   "v": 235,
+   "dec": 0,
+   "u": "personas",
+   "f": "Comando Sur vía prensa",
+   "url": "https://www.noticiaimpacto.com/nuevo-ataque-de-ee-uu-contra-una-lancha-deja-cuatro-muertos-en-el-caribe/",
+   "fecha": "2026-10-04",
+   "sig": "-",
+   "nota": "Al menos 235 (238 según un conteo independiente) y 26 sobrevivientes."
+  },
+  "homicidios-ecuador": {
+   "v": 3485,
+   "dec": 0,
+   "u": "ene–may 2026",
+   "f": "Expreso (Ministerio del Interior)",
+   "url": "https://www.expreso.ec/ecuador/homicidios-bajan-ecuador-violencia-desplaza-zonas-288153.html",
+   "fecha": "2026-05-31",
+   "d": -15,
+   "dt": "pct",
+   "sig": "-",
+   "nota": "15 % menos que en 2025, el año récord (más de 9.200), pero 82 cantones empeoraron: la violencia se desplaza."
+  },
+  "opio-myanmar": {
+   "v": 1010,
+   "dec": 0,
+   "u": "toneladas",
+   "f": "UNODC 2026",
+   "url": "https://www.mappr.co/drug-use-by-country/",
+   "fecha": "2025-12-31",
+   "sig": "-",
+   "nota": "Myanmar pasó a ser el mayor productor de opio del mundo tras la prohibición talibán en Afganistán."
   }
  },
  "fichas": {
@@ -3031,6 +3093,104 @@
      "Proveedores de Argentina": "China, mayormente.",
      "Principales productores del mundo": "China fabrica cerca del 63 % de los celulares del mundo e India el 18 %; con Vietnam superan el 90 %.",
      "Riesgo hoy": "Bajo en abastecimiento. Uno de cada tres celulares entraría de contrabando."
+    }
+   }
+  ],
+  "crimen": [
+   {
+    "nombre": "México",
+    "chip": "Alto",
+    "chipc": "crit",
+    "f": "InSight Crime",
+    "url": "https://insightcrime.org/es/noticias-crimen-organizado-mexico/cartel-jalisco-nueva-generacion-cjng/",
+    "campos": {
+     "Grupos": "Cartel Jalisco Nueva Generación (CJNG) y las facciones del Cartel de Sinaloa (Chapitos y Mayiza).",
+     "Qué pasó": "Tras la muerte de \"El Mencho\" (22/2) el CJNG se reacomoda: el 5/10 cayó \"El Tanque\", otro alto mando. Coche bomba en Zacatecas (30/8) por la disputa con Sinaloa.",
+     "Efecto en Argentina": "Indirecto: los carteles mexicanos compran cocaína y precursores en Sudamérica y operan con socios locales."
+    }
+   },
+   {
+    "nombre": "Andes (Colombia, Perú, Bolivia)",
+    "chip": "Alto",
+    "chipc": "crit",
+    "f": "UNODC vía Mappr",
+    "url": "https://www.mappr.co/drug-use-by-country/",
+    "campos": {
+     "Grupos": "Clan del Golfo, disidencias de las FARC, ELN y redes peruanas y bolivianas.",
+     "Qué pasó": "Cultivos de coca y producción de cocaína en máximos históricos: unas 4.100 toneladas en 2024 (UNODC).",
+     "Efecto en Argentina": "Alto: Bolivia es el origen de buena parte de la cocaína que entra por el norte argentino."
+    }
+   },
+   {
+    "nombre": "Ecuador",
+    "chip": "Alto",
+    "chipc": "crit",
+    "f": "Expreso",
+    "url": "https://www.expreso.ec/ecuador/homicidios-bajan-ecuador-violencia-desplaza-zonas-288153.html",
+    "campos": {
+     "Grupos": "Los Choneros, Los Lobos y bandas fragmentadas.",
+     "Qué pasó": "Conflicto armado interno desde enero de 2024. Los homicidios bajaron 15 % en 2026, pero la violencia se expande a 82 cantones nuevos.",
+     "Efecto en Argentina": "Ruta del Pacífico hacia Europa; modelo de \"guerra\" que se discute en la región."
+    }
+   },
+   {
+    "nombre": "Brasil",
+    "chip": "Alto",
+    "chipc": "crit",
+    "f": "El Comercio · Los Tiempos",
+    "url": "https://elcomercio.pe/noticias/comando-vermelho/",
+    "campos": {
+     "Grupos": "Primeiro Comando da Capital (PCC) y Comando Vermelho (CV).",
+     "Qué pasó": "EE.UU. los declaró organizaciones terroristas en mayo. Pelean un corredor de droga en la frontera con Bolivia (agosto). En 2025, el operativo más letal de la historia en Río dejó 121 muertos.",
+     "Efecto en Argentina": "Alto: el PCC opera en Paraguay y la Triple Frontera; Argentina reforzó sus fronteras este y noroeste."
+    }
+   },
+   {
+    "nombre": "Paraguay y Triple Frontera",
+    "chip": "Alto",
+    "chipc": "crit",
+    "f": "La Política Online · Última Hora",
+    "url": "https://www.lapoliticaonline.com/paraguay/seguridad-py/pena-y-lula-cierran-el-cerco-al-pcc-caen-dos-presuntos-miembros-en-alto-parana-y-advierten-sobre-mas-celulas-activas-5108/",
+    "campos": {
+     "Grupos": "PCC, contrabandistas y redes de lavado.",
+     "Qué pasó": "Brasil y Paraguay \"cierran el cerco\" al PCC: detenidos en Alto Paraná que entraron desde Argentina. Investigación por lavado de 18 M USD con un posible nexo con Al Qaeda.",
+     "Efecto en Argentina": "Directo: frontera compartida; la marihuana paraguaya y la cocaína boliviana cruzan hacia y por Argentina."
+    }
+   },
+   {
+    "nombre": "Caribe y Venezuela",
+    "chip": "Alto",
+    "chipc": "crit",
+    "f": "Noticia Impacto · CNN",
+    "url": "https://cnnespanol.cnn.com/2026/10/05/eeuu/caribe-ataque-embarcacion-narcotrafico-trax",
+    "campos": {
+     "Grupos": "Tren de Aragua, Cartel de los Soles y redes del Caribe, según EE.UU.",
+     "Qué pasó": "EE.UU. ataca lanchas desde septiembre de 2025: 71 operaciones y al menos 235 muertos al 4/10, sin pruebas públicas de que llevaran droga.",
+     "Efecto en Argentina": "Precedente de uso de fuerza militar contra el narcotráfico en la región, en plena cooperación de seguridad entre Argentina y EE.UU."
+    }
+   },
+   {
+    "nombre": "Europa (Amberes y Rotterdam)",
+    "chip": "Medio",
+    "chipc": "warn",
+    "f": "VRT · Brussels Times",
+    "url": "https://www.vrt.be/vrtnws/en/2026/07/14/big-drop-in-cocaine-seizures-at-port-of-antwerp-in-the-first-hal.consumer/",
+    "campos": {
+     "Grupos": "\"Mocro Maffia\", la 'Ndrangheta italiana y redes balcánicas.",
+     "Qué pasó": "Por esos dos puertos entra más del 70 % de la cocaína a Europa. En Amberes se incautaron 5,4 t en el primer semestre, contra 16,7 t en 2025; los narcos dividen los envíos. Rotterdam secuestró casi 4 t el 8/7.",
+     "Efecto en Argentina": "Destino de cocaína que sale por puertos sudamericanos, incluidos los argentinos."
+    }
+   },
+   {
+    "nombre": "Asia (Triángulo Dorado)",
+    "chip": "Medio",
+    "chipc": "warn",
+    "f": "UNODC vía Mappr",
+    "url": "https://www.mappr.co/drug-use-by-country/",
+    "campos": {
+     "Grupos": "Grupos armados de Myanmar y redes chinas de lavado y estafas.",
+     "Qué pasó": "Myanmar es el mayor productor de opio (1.010 t en 2025) y el centro de la metanfetamina sintética.",
+     "Efecto en Argentina": "Bajo: las drogas sintéticas y los precursores chinos llegan cada vez más a Sudamérica."
     }
    }
   ]
