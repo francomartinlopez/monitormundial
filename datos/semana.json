@@ -484,23 +484,23 @@
    "u": "de 8",
    "f": "prensa",
    "fecha": "2026-10-23",
-   "nota": "Brasil (balotaje), Bolivia, Venezuela, Ecuador."
+   "nota": "Brasil (Lula reelecto), Bolivia, Venezuela, Ecuador."
   },
   "proxima-eleccion-relevante": {
    "v": 1,
    "dec": 0,
    "u": "día",
-   "f": "TSE Brasil",
-   "fecha": "2026-10-24",
-   "nota": "Balotaje de Brasil, domingo 25/10. Israel vota el martes 27/10."
+   "f": "prensa",
+   "fecha": "2026-10-26",
+   "nota": "Israel vota el martes 27/10. Brasil ya votó: Lula reelecto el 25/10."
   },
   "elecciones-en-6-meses": {
-   "v": 5,
+   "v": 4,
    "dec": 0,
    "u": "relevantes",
    "f": "IFES · prensa",
-   "fecha": "2026-10-23",
-   "nota": "Brasil, Israel, EE.UU., España y Francia (fecha por confirmar)."
+   "fecha": "2026-10-26",
+   "nota": "Israel, EE.UU., España y Francia (fecha por confirmar)."
   },
   "gobiernos-inestables": {
    "v": 3,
@@ -1886,15 +1886,16 @@
   "sudamerica": [
    {
     "nombre": "Brasil",
-    "chip": "Balotaje 25/10",
+    "chip": "Lula reelecto",
     "chipc": "warn",
-    "f": "Datafolha vía CNN Brasil",
-    "url": "https://www.cnnbrasil.com.br/eleicoes/datafolha-flavio-e-lula-empatam-em-50-de-votos-validos-no-2o-turno/",
+    "f": "TSE vía Bloomberg Línea y Metrópoles; mercados: Bloomberg Línea",
+    "url": "https://www.bloomberglinea.com.br/brasil/ao-vivo-brasil-vota-no-2-turno-para-escolher-entre-lula-e-flavio-bolsonaro-como-presidente/",
     "campos": {
-     "Estado": "Elección muy polarizada; empate técnico.",
-     "Qué pasó": "Este domingo se vota la segunda vuelta entre Flávio Bolsonaro (47 % en primera vuelta) y Lula (45 %). El último Datafolha (22/10) los da empatados en 50 % de votos válidos.",
-     "Impacto en Argentina": "Alto: define el rumbo de nuestro principal socio comercial y del Mercosur. Riesgo de protestas si el resultado es muy ajustado."
-    }
+     "Estado": "Lula ganó el balotaje; escrutinio al 99,9 %. País partido casi a la mitad.",
+     "Qué pasó": "Lula 51,77 % (64.171.319 votos) contra Flávio Bolsonaro 48,23 % (59.790.152): 4,38 millones de votos de diferencia, con el 99,9 % de las secciones escrutadas (TSE, 21:38 de Brasilia del 25/10; escrutinio parcial). Flávio siguió el conteo con aliados como Tarcísio de Freitas y no se había pronunciado al cierre (Bahia Notícias). Hubo cuestionamientos de su campaña a la prórroga de la votación hasta las 19 h que ordenó el juez Zanin del STF (\"decisión vergonzosa\", Rogério Marinho), pero no se reportaron protestas: sus seguidores dejaron la Explanada de Brasilia en silencio (Metrópoles). Mercados: el dólar futuro en Chicago saltó cerca de 10 %, a unos 5,52 reales, y el fondo de acciones brasileñas en Tokio cayó entre 11 % y 13 % el lunes (Bloomberg Línea).",
+     "Impacto en Argentina": "Alto (lectura propia): sigue cuatro años más un gobierno enfrentado con Milei en el principal socio comercial y en el Mercosur. Un real más débil abarata lo brasileño (autos, insumos) y encarece lo argentino en Brasil. Hasta la carga no hubo mensaje público de Milei ni de la Cancillería; Santiago Peña (Paraguay) sí felicitó a Lula."
+    },
+    "fecha": "2026-10-25"
    },
    {
     "nombre": "Chile",
@@ -2123,13 +2124,15 @@
     "nombre": "Brasil",
     "chip": "Baja",
     "chipc": "crit",
-    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "f": "TSE vía Bloomberg Línea y Metrópoles · lectura propia (afinidad)",
     "campos": {
-     "Gobierno": "Lula da Silva (PT)",
-     "Afinidad": "Baja: relación fría entre Lula y Milei.",
-     "Hechos de la semana": "Balotaje el domingo 25/10 contra Flávio Bolsonaro.",
-     "Próxima elección": "Balotaje, 25/10/2026"
-    }
+     "Gobierno": "Lula da Silva (PT), reelecto el 25/10 para un cuarto mandato (2027–2030).",
+     "Afinidad": "Baja: relación fría y enfrentada entre Lula y Milei; Milei había hecho campaña por Flávio Bolsonaro.",
+     "Hechos de la semana": "Balotaje: Lula 51,77 % (64.171.319 votos) contra Flávio Bolsonaro 48,23 % (59.790.152): 4,38 millones de votos de diferencia, con el 99,9 % de las secciones escrutadas (TSE, 21:38 de Brasilia del 25/10; escrutinio parcial). Lula dio vuelta la primera vuelta, que había perdido 47 % a 45 %. Flávio no había reconocido públicamente la derrota al cierre de esta carga.",
+     "Mandato": "Lula sigue en funciones y empieza el nuevo período el 1/1/2027."
+    },
+    "url": "https://www.bloomberglinea.com.br/brasil/ao-vivo-brasil-vota-no-2-turno-para-escolher-entre-lula-e-flavio-bolsonaro-como-presidente/",
+    "fecha": "2026-10-25"
    },
    {
     "nombre": "Chile",
@@ -3236,22 +3239,24 @@
   },
   "encuestas": {
    "labels": [
-    "Flávio Bolsonaro",
-    "Lula"
+    "Lula (reelecto)",
+    "Flávio Bolsonaro"
    ],
    "values": [
-    50,
-    50
+    51.77,
+    48.23
    ],
    "u": "%",
    "colores": [
-    "var(--ok)",
-    "var(--crit)"
+    "var(--crit)",
+    "var(--ok)"
    ],
-   "src": "Datafolha, 20–22/10 (votos válidos)",
-   "nota": "Balotaje de Brasil del 25/10. Empate exacto en votos válidos (margen ±2 puntos); la semana anterior era 51 % a 49 % para Flávio. Verde: candidato afín al gobierno argentino.",
-   "f": "CNN Brasil",
-   "url": "https://www.cnnbrasil.com.br/eleicoes/datafolha-flavio-e-lula-empatam-em-50-de-votos-validos-no-2o-turno/"
+   "src": "Resultado del balotaje, TSE (99,9 % escrutado, 21:38 del 25/10)",
+   "nota": "Resultado del balotaje, TSE: Brasil, 25/10, votos válidos con el 99,9 % de las secciones escrutadas (parcial, 21:38 de Brasilia). Lula 64.171.319 votos; Flávio 59.790.152. Verde: candidato afín al gobierno argentino. Próxima elección relevante: Israel, 27/10.",
+   "f": "TSE vía Bloomberg Línea",
+   "url": "https://www.bloomberglinea.com.br/brasil/ao-vivo-brasil-vota-no-2-turno-para-escolher-entre-lula-e-flavio-bolsonaro-como-presidente/",
+   "title": "Resultado del balotaje, TSE",
+   "fecha": "2026-10-25"
   },
   "brotes": {
    "labels": [
@@ -3829,13 +3834,6 @@
     "mes": "Oct 2026",
     "items": [
      {
-      "fecha": "25/10",
-      "pais": "Brasil",
-      "tipo": "Presidencial, 2ª vuelta",
-      "favorito": "Empate: Flávio Bolsonaro (afín) 50 % – Lula (no afín) 50 % de votos válidos (Datafolha 22/10)",
-      "alineado": "incierto"
-     },
-     {
       "fecha": "27/10",
       "pais": "Israel",
       "tipo": "Parlamento (Knéset)",
@@ -3928,10 +3926,11 @@
   ],
   "portada": [
    {
-    "t": "Brasil vota el balotaje empatado: 50 % a 50 % en votos válidos (Datafolha)",
-    "por": "Define el rumbo del principal socio comercial y del Mercosur.",
-    "f": "CNN Brasil (Datafolha)",
-    "url": "https://www.cnnbrasil.com.br/eleicoes/datafolha-flavio-e-lula-empatam-em-50-de-votos-validos-no-2o-turno/"
+    "t": "Lula gana el balotaje en Brasil con 51,77 % y el real se desploma en los mercados",
+    "por": "El principal socio comercial y del Mercosur sigue cuatro años más con un gobierno enfrentado con Milei, y un real más débil le quita competitividad a lo que Argentina vende a Brasil.",
+    "f": "TSE vía Bloomberg Línea · Metrópoles",
+    "url": "https://www.bloomberglinea.com.br/brasil/ao-vivo-brasil-vota-no-2-turno-para-escolher-entre-lula-e-flavio-bolsonaro-como-presidente/",
+    "fecha": "2026-10-25"
    },
    {
     "t": "Récord de ataques a buques en Ormuz; el Brent cierra la semana en 116,7 USD",
@@ -3949,13 +3948,13 @@
  },
  "resumen": {
   "corte": "23/10",
-  "titular": "Brasil vota con final abierto y Ormuz sigue cerrado: petróleo caro, fertilizantes escasos y riesgo político en el principal socio",
+  "titular": "Lula gana en Brasil y Ormuz sigue cerrado: el principal socio queda enfrentado con Milei, con petróleo caro y fertilizantes escasos",
   "texto": [
    "El Brent subió 6 % en la semana, a 116,7 USD, por el récord de ataques a buques en Ormuz. A la Argentina le conviene como exportador de energía, pero encarece la urea justo en plena siembra.",
-   "Brasil define el domingo su balotaje en empate técnico entre Flávio Bolsonaro, afín a Milei, y Lula. Israel vota el martes y EE.UU. el 3/11: tres elecciones que tocan aliados clave del gobierno.",
+   "Lula ganó el balotaje de Brasil el domingo con 51,77 % contra 48,23 % de Flávio Bolsonaro, el candidato afín a Milei (TSE, 99,9 % escrutado). El real cayó fuerte en los mercados de la noche y el vínculo con Brasilia sigue frío. Israel vota el martes y EE.UU. el 3/11.",
    "En el frente propio, Argentina llevó el petróleo de Malvinas al Tribunal del Mar y un barco chileno prepara la ruta Punta Arenas–islas."
   ],
-  "mirar": "resultado del balotaje en Brasil (25/10), elección en Israel (27/10), legislativas de EE.UU. (3/11) y si Trump retoma los ataques a Irán después."
+  "mirar": "si Flávio Bolsonaro reconoce la derrota, cómo reaccionan el real y la bolsa de San Pablo, la elección en Israel (27/10), las legislativas de EE.UU. (3/11) y si Trump retoma los ataques a Irán."
  },
  "semaforos": {
   "Dólares comerciales": {
@@ -3980,8 +3979,8 @@
   },
   "Socios comerciales": {
    "nivel": "amarillo",
-   "delta": "↑ más incertidumbre",
-   "motivo": "Balotaje en Brasil sin favorito; China crece 4,5 % con demanda débil; brote de Newcastle en Brasil."
+   "delta": "↑ empeora",
+   "motivo": "Lula reelecto en Brasil: sigue la relación fría con Milei y el dólar sube cerca de 10 % contra el real en el mercado de futuros; China crece 4,5 % con demanda débil; brote de Newcastle en Brasil."
   },
   "Seguridad y soberanía": {
    "nivel": "amarillo",
@@ -3998,7 +3997,7 @@
   {
    "estado": "Alta",
    "chipc": "crit",
-   "nota": "Balotaje sin favorito; Selic en 13,75 %."
+   "nota": "Lula reelecto el 25/10 y el real en baja en los mercados de futuros; Selic en 13,75 %."
   },
   {
    "estado": "Alta",
@@ -4103,21 +4102,12 @@
   },
   "3": {
    "paises": {
-    "076": "#5E7180",
     "376": "#5E7180",
     "840": "#D9534F",
     "724": "#3B82C4",
     "250": "#5E7180"
    },
    "puntos": [
-    {
-     "lat": -15,
-     "lon": -50,
-     "c": "#5E7180",
-     "r": 0.1,
-     "t": "Brasil 25/10",
-     "lbl": "Brasil 25/10"
-    },
     {
      "lat": 31.5,
      "lon": 35,
@@ -4190,7 +4180,7 @@
     "192": "#F0675F",
     "558": "#F0675F"
    },
-   "nota": "Lectura propia sobre hechos con fecha y fuente. Sin color: sin hecho bilateral verificado en 2025-26. Brasil vota el balotaje el 25/10; Lula sigue hasta el 1/1.",
+   "nota": "Lectura propia sobre hechos con fecha y fuente. Sin color: sin hecho bilateral verificado en 2025-26. Brasil: Lula fue reelecto el 25/10 y sigue enfrentado con el gobierno argentino.",
    "fondo": "#1E2A33"
   },
   "5": {
@@ -7018,9 +7008,9 @@
    "iso": "076",
    "lider": "Lula da Silva",
    "cat": "enfrentado",
-   "hecho": "Embajador llamado a consultas tras el insulto \"presidiario\" (26 de julio de 2026); \"LULA LADRÓN\" (7 de octubre); el 20 de octubre Itamaraty denunció una \"inaceptable tentativa de injerencia\" en el balotaje del 25 de octubre.",
-   "url": "https://www.todojujuy.com/brasil-acuso-javier-milei-interferir-el-balotaje-ofensas-y-mentiras-n297728",
-   "f": "2026-10-20"
+   "hecho": "Embajador llamado a consultas tras el insulto \"presidiario\" (26 de julio de 2026); \"LULA LADRÓN\" (7 de octubre); el 20 de octubre Itamaraty denunció una \"inaceptable tentativa de injerencia\" en el balotaje. El 25 de octubre Lula fue reelecto (51,77 %, TSE al 99,9 %) contra Flávio Bolsonaro, apoyado por Milei; Milei no había felicitado ni se había pronunciado públicamente al cierre de esta carga (26/10).",
+   "url": "https://www.bloomberglinea.com.br/brasil/ao-vivo-brasil-vota-no-2-turno-para-escolher-entre-lula-e-flavio-bolsonaro-como-presidente/",
+   "f": "2026-10-25"
   },
   {
    "pais": "España",
