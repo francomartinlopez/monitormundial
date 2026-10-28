@@ -487,20 +487,20 @@
    "nota": "Brasil (Lula reelecto), Bolivia, Venezuela, Ecuador."
   },
   "proxima-eleccion-relevante": {
-   "v": 1,
+   "v": 6,
    "dec": 0,
-   "u": "día",
+   "u": "días",
    "f": "prensa",
-   "fecha": "2026-10-26",
-   "nota": "Israel vota el martes 27/10. Brasil ya votó: Lula reelecto el 25/10."
+   "fecha": "2026-10-28",
+   "nota": "EE.UU. vota el 3/11 (legislativas). Israel ya votó el 27/10: escrutinio parcial, sin mayoría de 61."
   },
   "elecciones-en-6-meses": {
-   "v": 4,
+   "v": 3,
    "dec": 0,
    "u": "relevantes",
    "f": "IFES · prensa",
-   "fecha": "2026-10-26",
-   "nota": "Israel, EE.UU., España y Francia (fecha por confirmar)."
+   "fecha": "2026-10-28",
+   "nota": "EE.UU., España y Francia (fecha por confirmar). Israel ya votó."
   },
   "gobiernos-inestables": {
    "v": 3,
@@ -1985,15 +1985,15 @@
   "estabilidad": [
    {
     "nombre": "Israel",
-    "chip": "Elección 27/10",
-    "chipc": "warn",
-    "f": "Times of Israel · Globes",
-    "url": "https://www.timesofisrael.com/liveblog_entry/toi-poll-eisenkot-opens-up-big-lead-on-netanyahu-but-both-blocs-short-of-majority/",
+    "chip": "Sin mayoría",
+    "chipc": "crit",
+    "f": "Ynet · The Jewish Chronicle · Infobae",
+    "url": "https://www.ynetnews.com/article/hjnatbkaml",
     "campos": {
      "País": "Israel",
-     "Situación": "Netanyahu llega a la elección en plena guerra. Las encuestas no dan mayoría a ningún bloque.",
-     "Riesgo": "Alto: posible bloqueo y gobierno de transición.",
-     "Efecto en Argentina": "Un cambio de gobierno no alteraría la alianza, pero sí el vínculo personal Milei–Netanyahu."
+     "Situación": "Escrutinio parcial (84 % de los votos, 28/10): bloque de Netanyahu 54 bancas, bloque de Eisenkot 49, partidos árabes 17; ninguno llega a 61. Likud 27, Yashar! (Eisenkot) 22, Beyachad (Bennett) 12, Lista Conjunta 11. Participación 77,7 % a las 22 h, la más alta desde 1999. Resultado parcial al 28/10; el final puede cambiar.",
+     "Riesgo": "Alto: sin mayoría clara, Netanyahu o Eisenkot necesitan sumar fuera de su bloque (los partidos árabes quedan como llave) o hay otra elección. Lectura propia: nadie queda claramente mejor ubicado; Netanyahu aventaja en bancas pero está a 7 de las 61.",
+     "Efecto en Argentina": "Un cambio de gobierno no alteraría la alianza, pero sí el vínculo personal Milei–Netanyahu. Hoy Netanyahu sigue en funciones."
     }
    },
    {
@@ -2088,13 +2088,14 @@
     "nombre": "Israel",
     "chip": "Alta",
     "chipc": "ok",
-    "f": "lectura propia (votos, acuerdos, declaraciones)",
+    "f": "Ynet · The Jewish Chronicle · Infobae",
     "campos": {
-     "Gobierno": "Benjamín Netanyahu (Likud)",
+     "Gobierno": "Benjamín Netanyahu (Likud), en funciones hasta que se forme gobierno nuevo",
      "Afinidad": "Alta: alianza explícita del gobierno argentino.",
-     "Hechos de la semana": "Campaña final; Eisenkot lidera varias encuestas.",
-     "Próxima elección": "Knéset, 27/10/2026"
-    }
+     "Hechos de la semana": "Escrutinio parcial (84 % de los votos, 28/10): bloque de Netanyahu 54 bancas, bloque de Eisenkot 49, partidos árabes 17; ninguno llega a 61. Likud 27, Yashar! (Eisenkot) 22, Beyachad (Bennett) 12, Lista Conjunta 11. Participación 77,7 % a las 22 h, la más alta desde 1999. (parcial; cifras sujetas a cambio).",
+     "Próxima elección": "Ya votó el 27/10; resultado final y negociación de coalición pendientes"
+    },
+    "url": "https://www.ynetnews.com/article/hjnatbkaml"
    },
    {
     "nombre": "Irán",
@@ -3239,24 +3240,27 @@
   },
   "encuestas": {
    "labels": [
-    "Lula (reelecto)",
-    "Flávio Bolsonaro"
+    "Bloque Netanyahu",
+    "Bloque Eisenkot",
+    "Partidos árabes"
    ],
    "values": [
-    51.77,
-    48.23
+    54,
+    49,
+    17
    ],
-   "u": "%",
+   "u": " bancas",
    "colores": [
-    "var(--crit)",
-    "var(--ok)"
+    "var(--ok)",
+    "var(--warn)",
+    "#5E7180"
    ],
-   "src": "Resultado del balotaje, TSE (99,9 % escrutado, 21:38 del 25/10)",
-   "nota": "Resultado del balotaje, TSE: Brasil, 25/10, votos válidos con el 99,9 % de las secciones escrutadas (parcial, 21:38 de Brasilia). Lula 64.171.319 votos; Flávio 59.790.152. Verde: candidato afín al gobierno argentino. Próxima elección relevante: Israel, 27/10.",
-   "f": "TSE vía Bloomberg Línea",
-   "url": "https://www.bloomberglinea.com.br/brasil/ao-vivo-brasil-vota-no-2-turno-para-escolher-entre-lula-e-flavio-bolsonaro-como-presidente/",
-   "title": "Resultado del balotaje, TSE",
-   "fecha": "2026-10-25"
+   "src": "Escrutinio parcial de la Knéset (84 %), Ynet y The Jewish Chronicle, 28/10",
+   "nota": "Israel, 27/10: escrutinio parcial con ~84 % de los votos (28/10), sujeto a cambio; 120 bancas, mayoría 61. Verde: bloque de Netanyahu, aliado del gobierno argentino. Próxima elección relevante: EE.UU. (3/11).",
+   "f": "Ynet · The Jewish Chronicle",
+   "url": "https://www.ynetnews.com/article/hjnatbkaml",
+   "title": "Knéset 2026: bancas por bloque (parcial)",
+   "fecha": "2026-10-28"
   },
   "brotes": {
    "labels": [
@@ -3832,15 +3836,7 @@
   "elecciones": [
    {
     "mes": "Oct 2026",
-    "items": [
-     {
-      "fecha": "27/10",
-      "pais": "Israel",
-      "tipo": "Parlamento (Knéset)",
-      "favorito": "Ningún bloque llega a 61 bancas; Eisenkot supera a Netanyahu en varias encuestas",
-      "alineado": "incierto"
-     }
-    ]
+    "items": []
    },
    {
     "mes": "Nov 2026",
@@ -3939,10 +3935,11 @@
     "url": "https://straits.live/briefs/2026-10-20"
    },
    {
-    "t": "Argentina lleva el petróleo de Malvinas al Tribunal del Mar",
-    "por": "Disputa directa con el Reino Unido por Sea Lion.",
-    "f": "El Economista",
-    "url": "https://eleconomista.com.ar/energia/malvinas-milei-lleva-pelea-petroleo-tribunal-mar-busca-frenar-us-2200-millones-n98823"
+    "t": "Israel vota y ningún bloque llega a 61 bancas: Netanyahu 54, Eisenkot 49 (escrutinio parcial)",
+    "por": "Argentina es aliada de Netanyahu; sin mayoría clara, el interlocutor de Milei puede cambiar o Israel ir a otra elección.",
+    "f": "Ynet · The Jewish Chronicle",
+    "url": "https://www.ynetnews.com/article/hjnatbkaml",
+    "fecha": "2026-10-28"
    }
   ]
  },
@@ -3951,10 +3948,10 @@
   "titular": "Lula gana en Brasil y Ormuz sigue cerrado: el principal socio queda enfrentado con Milei, con petróleo caro y fertilizantes escasos",
   "texto": [
    "El Brent subió 6 % en la semana, a 116,7 USD, por el récord de ataques a buques en Ormuz. A la Argentina le conviene como exportador de energía, pero encarece la urea justo en plena siembra.",
-   "Lula ganó el balotaje de Brasil el domingo con 51,77 % contra 48,23 % de Flávio Bolsonaro, el candidato afín a Milei (TSE, 99,9 % escrutado). El real cayó fuerte en los mercados de la noche y el vínculo con Brasilia sigue frío. Israel vota el martes y EE.UU. el 3/11.",
+   "Lula ganó el balotaje de Brasil el domingo con 51,77 % contra 48,23 % de Flávio Bolsonaro, el candidato afín a Milei (TSE, 99,9 % escrutado). El real cayó fuerte en los mercados de la noche y el vínculo con Brasilia sigue frío. EE.UU. vota el 3/11. Israel votó el martes: con 84 % escrutado, el bloque de Netanyahu tiene 54 bancas y el de Eisenkot 49, ninguno llega a 61 (Ynet, The Jewish Chronicle).",
    "En el frente propio, Argentina llevó el petróleo de Malvinas al Tribunal del Mar y un barco chileno prepara la ruta Punta Arenas–islas."
   ],
-  "mirar": "si Flávio Bolsonaro reconoce la derrota, cómo reaccionan el real y la bolsa de San Pablo, la elección en Israel (27/10), las legislativas de EE.UU. (3/11) y si Trump retoma los ataques a Irán."
+  "mirar": "si Flávio Bolsonaro reconoce la derrota, cómo reaccionan el real y la bolsa de San Pablo, la formación de gobierno en Israel, las legislativas de EE.UU. (3/11) y si Trump retoma los ataques a Irán."
  },
  "semaforos": {
   "Dólares comerciales": {
@@ -4113,8 +4110,8 @@
      "lon": 35,
      "c": "#5E7180",
      "r": 0.1,
-     "t": "Israel 27/10",
-     "lbl": "Israel 27/10"
+     "t": "Israel: votó el 27/10, sin mayoría",
+     "lbl": "Israel (votó)"
     },
     {
      "lat": 39,
@@ -6747,9 +6744,9 @@
    "iso": "376",
    "lider": "Benjamín Netanyahu",
    "cat": "aliado",
-   "hecho": "Visita de Estado del 19 al 22 de abril de 2026: lanzamiento de los \"Acuerdos de Isaac\" y tres memorandos firmados. Argentina respaldó la guerra de EE.UU. e Israel contra Irán.",
-   "url": "https://en.wikipedia.org/wiki/2026_state_visit_by_Javier_Milei_to_Israel",
-   "f": "2026-04-22"
+   "hecho": "Visita de Estado del 19 al 22 de abril de 2026: lanzamiento de los \"Acuerdos de Isaac\" y tres memorandos firmados. Argentina respaldó la guerra de EE.UU. e Israel contra Irán. Elección del 27/10 (parcial, 84 %): bloque de Netanyahu 54 bancas, bloque de Eisenkot 49, partidos árabes 17; ninguno llega a 61, así que no hay gobierno nuevo definido y Netanyahu sigue en funciones (categoría sin cambios).",
+   "url": "https://www.ynetnews.com/article/hjnatbkaml",
+   "f": "2026-10-28"
   },
   {
    "pais": "Chile",
