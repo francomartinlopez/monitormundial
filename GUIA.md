@@ -99,3 +99,7 @@ Esta guía la sigue Claude cada viernes a la noche. El sitio es estático: `inde
 - `mapas["4"].paises`: código ISO numérico → color de la categoría (aliado `#2F80ED`, afín `#56C2A6`, pragmático `#8A9AA5`, tensión `#E3BE55`, enfrentado `#F0675F`). Mantener ambos en sincronía.
 - Cada país necesita un hecho documentado con fecha y fuente (visita, acuerdo, declaración, incidente diplomático, voto). Sin hecho verificado de los últimos dos años, el país no se colorea.
 - Revisar cada semana: cambios de gobierno (la relación es entre gobiernos), insultos o elogios públicos, llamados de embajadores, acuerdos firmados y votos en la ONU. Si cambia la categoría, actualizar el hecho y la fecha.
+
+## Actualizaciones de mitad de semana (elecciones)
+
+Cuando una tarea carga un resultado electoral entre dos cortes semanales, además de la ficha del país, el calendario y los mapas, reescribí la **Lectura de la semana** (`resumen`): el `titular` tiene que nombrar la elección si es relevante para Argentina, y el resultado va en su propio párrafo de `texto` (qué pasó, cifras con fuente y por qué importa a Argentina). Actualizá también `mirar`. No cambies `corte`.
