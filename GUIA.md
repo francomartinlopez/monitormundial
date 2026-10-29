@@ -103,3 +103,25 @@ Esta guía la sigue Claude cada viernes a la noche. El sitio es estático: `inde
 ## Actualizaciones de mitad de semana (elecciones)
 
 Cuando una tarea carga un resultado electoral entre dos cortes semanales, además de la ficha del país, el calendario y los mapas, reescribí la **Lectura de la semana** (`resumen`): el `titular` tiene que nombrar la elección si es relevante para Argentina, y el resultado va en su propio párrafo de `texto` (qué pasó, cifras con fuente y por qué importa a Argentina). Actualizá también `mirar`. No cambies `corte`.
+
+## Sección "Eventos y libertades"
+
+### Mapa de eventos (`semana.json` → `eventos`), se actualiza cada viernes
+- Estructura: `{"desde":"AAAA-MM-DD","lista":[{f, cat, geo, pais, iso, lat, lon, r, t, d, fuente, url}]}`.
+- `desde`: el día siguiente al corte anterior. Los eventos con `f >= desde` se ven fuertes; los de las tres semanas anteriores, en tono claro. Cada viernes: poné el nuevo `desde`, agregá los eventos de la semana y borrá los de más de 4 semanas.
+- `cat`: `excepcion` (emergencia nacional, toque de queda, ley marcial, estado de sitio), `natural` (terremotos de magnitud 6,5 o más o con muertos, tsunamis, erupciones, inundaciones y huracanes graves), `infraestructura` (trenes, barcos, aviones, represas, puentes, plantas nucleares, laboratorios, explosiones industriales con 10 o más muertos o impacto estratégico), `ambiental` (derrames, fugas químicas o radiactivas), `muerte` (muerte natural de figura relevante), `asesinato` (asesinato político), `renuncia` (renuncias y destituciones), `otro` (golpes, apagones masivos, cortes nacionales de internet, ciberataques a infraestructura, disolución del parlamento o juicio político, corralito o default, cierre de fronteras).
+- Figuras relevantes: jefes de Estado y de gobierno, ministros, jueces de cortes supremas, jueces y fiscales de casos relevantes (causas contra gobernantes, corrupción a gran escala, repercusión internacional o vínculo con Argentina), presidentes de bancos centrales, jefes militares, líderes de organismos internacionales, de partidos principales y religiosos.
+- `geo`: `pais` (pinta todo el país; usa `iso`), `zona` (círculo con `lat`, `lon` y radio `r` en km), `punto` (`lat`, `lon`).
+- No van guerras, protestas, brotes ni atentados (tienen sus mapas); sí un asesinato político puntual.
+- Fuentes: USGS (sismos), GDACS, ReliefWeb, NASA EONET, NetBlocks (internet) y prensa con fecha verificada.
+
+### Mapas de índices (`datos/indices.json`), se actualizan una vez por año
+Cada índice: `{fuente, url, edicion, proxima, cats, paises:{ISO numérico: {cat, v, rk, ...}}}`. Las claves son códigos ISO 3166-1 numéricos de 3 dígitos, como en `mundo.json`. `nombres` tiene el nombre en español de cada país del mapa.
+- `regimen`: EIU Democracy Index (democracia plena, democracia no plena, autocracia = régimen híbrido, dictadura = autoritario). Monarquías: `mon` = `absoluta` (cat "monarquía absoluta"), `compartida` (cat "monarquía con poder compartido") o `decorativa` (se pinta según la EIU y `aclara` lo explica). `fallido: true` según el Fragile States Index (se ve rayado).
+- `prensa`: RSF (buena, satisfactoria, problemática, difícil, muy grave). Sale entre abril y mayo.
+- `economica`: Heritage Foundation (libre, mayormente libre, moderadamente libre, mayormente no libre, reprimida). Sale entre febrero y marzo. Aclarar que Heritage es un centro de estudios conservador.
+- `internet`: Freedom House "Freedom on the Net" (`src:"FH"`) y, para los países que no evalúa, V-Dem (`src:"VDem"`, tono claro) con cortes calibrados; el texto del empalme va en `empalme`.
+- `pena`: Amnistía Internacional (abolicionista, abolicionista salvo delitos excepcionales, abolicionista en la práctica, la mantiene; `ejecuto:true` y `ej` para los que ejecutaron el último año).
+- `visas`: requisitos para pasaporte argentino (sin visa, visa al llegar o electrónica, visa previa, no admitido). Revisar una vez por mes en la actualización semanal del primer viernes del mes.
+- `corrupcion`: Índice de Percepción de la Corrupción de Transparencia Internacional, tramos de 20 puntos. Sale en febrero.
+Cuando sale una edición nueva, la actualización semanal de esa semana reemplaza el índice completo, cambia `edicion` y `proxima`, y lo menciona en la portada si Argentina cambió de categoría.

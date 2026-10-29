@@ -76,6 +76,27 @@ nav.idx a.on{color:var(--ink);border-bottom-color:var(--accent)}
 .onu-key div.arg{border-color:var(--accent)}
 .onu-list{font-size:.86rem;color:var(--muted);margin:4px 0}.onu-list b{color:var(--ink)}
 
+.idxmap .det{margin-top:8px;padding:10px 12px;border:1px solid var(--line);border-radius:4px;background:var(--panel2);font-size:.9rem;min-height:44px}
+.idxmap .det b{color:var(--ink)}.idxmap .det .muted{font-size:.84rem}
+.idxmap svg path.k{stroke:#0C161D;stroke-width:.5;cursor:pointer}.idxmap svg path.k:hover{stroke:#E6EDF1;stroke-width:1}
+.idxmap svg path.k.arg{stroke:#7FD3F7;stroke-width:1.4}
+.idxlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;margin-top:10px}
+.idxlist details{border-top:1px solid var(--line);padding:6px 0}.idxlist summary{cursor:pointer;font-weight:600;display:flex;align-items:center;gap:8px}
+.idxlist summary i{width:11px;height:11px;border-radius:3px;display:inline-block;flex:none}
+.idxlist p{margin:4px 0 0;font-size:.84rem;color:var(--muted);line-height:1.5}
+.evfil{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 8px}
+.evfil button{font:600 .8rem var(--f-body,inherit);background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:5px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
+.evfil button i{width:10px;height:10px;border-radius:50%;display:inline-block}
+.evfil button[aria-pressed="false"]{opacity:.4}
+.evlist{margin-top:10px;display:grid;gap:0}
+.evlist .ev{display:grid;grid-template-columns:62px 1fr;gap:10px;padding:8px 0;border-top:1px solid var(--line)}
+.evlist .ev.old{opacity:.6}
+.evlist .ev .f{font:500 .78rem var(--f-data);color:var(--muted)}
+.evlist .ev h4{margin:0 0 2px;font-size:.95rem;display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+.evlist .ev h4 i{width:10px;height:10px;border-radius:50%;display:inline-block;flex:none}
+.evlist .ev p{margin:0;font-size:.86rem;color:var(--muted)}
+.evlist .evold>summary{cursor:pointer;font-weight:600;padding:8px 0;border-top:1px solid var(--line)}
+.evlist .ev.hl{background:#7FD3F714}
 .rel{display:grid;grid-template-columns:repeat(auto-fit,minmax(190px,1fr));gap:12px}
 .rel h3{display:flex;align-items:center;gap:8px;margin:0 0 6px;font-size:1rem}.rel h3 i{width:12px;height:12px;border-radius:50%;display:inline-block}
 .rel details{border-top:1px solid var(--line);padding:6px 0}.rel summary{cursor:pointer;font-weight:600}
@@ -345,6 +366,19 @@ const PAGES = [
    {k:'chart',id:'encuestas',w:'half',t:'Encuestas de la próxima elección',kind:'hbars',labels:['Candidato A','Candidato B','Candidato C','Otros'],src:'encuestadoras'},
    {k:'fichas',id:'estabilidad',w:'half',t:'Estabilidad de gobiernos',n:3,campos:['País','Situación','Riesgo','Efecto en Argentina'],src:'prensa'},
    {k:'fichas',id:'paises',w:'full',t:'Países prioritarios',nombres:PAISES13,campos:['Gobierno','Afinidad','Hechos de la semana','Próxima elección'],chip:'Afinidad',src:'votos ONU/OEA · acuerdos · declaraciones'}
+ ]},
+ {id:'libertades',nav:'Eventos y libertades',t:'Eventos y libertades',p:'Qué pasó en el mundo esta semana, y cómo está cada país en libertades, régimen e instituciones.',bl:[
+   {k:'eventos',w:'full',t:'Eventos de la semana en el mundo'},
+   {k:'indice',w:'full',id:'regimen'},
+   {k:'indice',w:'full',id:'prensa'},
+   {k:'indice',w:'full',id:'economica'},
+   {k:'indice',w:'full',id:'internet'},
+   {k:'indice',w:'full',id:'religion'},
+   {k:'indice',w:'full',id:'mujeres'},
+   {k:'indice',w:'full',id:'lgbt'},
+   {k:'indice',w:'full',id:'corrupcion'},
+   {k:'indice',w:'full',id:'pena'},
+   {k:'indice',w:'full',id:'visas'}
  ]},
  {id:'tecnologia',nav:'Tecnología y ciber',t:'Tecnología y ciberseguridad',p:'Ataques digitales, infraestructura crítica e inteligencia artificial.',bl:[
    {k:'kpis',w:'full',t:'Resumen',items:[K('Vulnerabilidades críticas nuevas','semana','CISA KEV'),K('Ataques relevantes','semana','CISA · ENISA'),K('Cortes de cables o GPS','semana','prensa')]},
@@ -636,8 +670,109 @@ const R = {
     const cats = [['aliado','Aliados','#2F80ED'],['afin','Afines','#56C2A6'],['pragmatico','Pragmáticos','#8A9AA5'],['tension','Con tensión','#E3BE55'],['enfrentado','Enfrentados','#F0675F']];
     return head(b.t, 'prensa · comunicados oficiales · lectura propia') + `<p class="muted" style="margin:0 0 10px">Tocá un país para ver el hecho que justifica su color. La relación es entre gobiernos, no entre pueblos, y cambia cuando cambia el gobierno de cualquiera de los dos países.</p><div class="rel">${cats.map(([k, t, c]) => { const ps = rl.filter(x => x.cat === k);
       return `<div><h3><i style="background:${c}"></i>${t} (${ps.length})</h3>${ps.map(x => `<details><summary>${esc(x.pais)}</summary><p>${esc(x.lider)}. ${esc(x.hecho)}</p><span class="src"><a href="${esc(x.url)}">${esc(x.f || 'Fuente')}</a></span></details>`).join('')}</div>`; }).join('')}</div>`; },
+  indice: b => { const def = IDX_DEF[b.id], d = IDX && IDX[b.id];
+    if(!d) return head(def.t) + '<p class="muted">Sin datos.</p>';
+    const argx = d.paises['032'];
+    return head(def.t, d.fuente) + `<p class="muted" style="margin:0 0 8px">${esc(def.q)}</p>
+     <div class="idxmap" data-id="${b.id}"><div class="map">${idxSVG(b.id)}</div>
+     <div class="legend" style="margin-top:8px">${Object.entries(def.col).filter(([c]) => c !== 'Argentina' && Object.values(d.paises).some(x => idxCat(b.id, x) === c)).map(([c, col]) => `<span><i style="background:${col}"></i>${esc(c)}</span>`).join('')}<span><i style="background:#1E2A33"></i>sin dato</span>${def.hatch ? `<span><i style="background:repeating-linear-gradient(45deg,#8A9AA5 0 3px,#0A1116 3px 6px)"></i>${def.hatchT || 'Estado fallido'}</span>` : ''}${def.light ? '<span><i style="background:#E3BE5580"></i>tono apagado: estimado con V-Dem</span>' : ''}</div>
+     <div class="det">${argx && argx.cat !== 'Argentina' ? idxDetalle(b.id, '032') : '<span class="muted">Tocá un país para ver su dato.</span>'}</div></div>
+     ${idxLista(b.id)}
+     <p class="muted" style="font-size:.8rem;margin:8px 0 0">${d.nota ? esc(d.nota) + ' ' : ''}${d.empalme ? esc(d.empalme) + ' ' : ''}Edición: ${esc(d.edicion || '—')}. Próxima: ${esc(d.proxima || '—')}.</p>
+     <span class="src">${d.url ? `<a href="${esc(d.url)}">Fuente</a>` : ''}${d.url2 ? ` · <a href="${esc(d.url2)}">Fuente complementaria</a>` : ''}${d.url_mon ? ` · <a href="${esc(d.url_mon)}">Monarquías</a>` : ''}${d.url_fsi ? ` · <a href="${esc(d.url_fsi)}">Estados frágiles</a>` : ''}</span>`; },
+  eventos: b => { const E = DATA.eventos; if(!E) return head(b.t) + '<p class="muted">Sin datos.</p>';
+    const n = (E.lista || []).filter(evActual).length;
+    return head(b.t, 'USGS · GDACS · ReliefWeb · NetBlocks · prensa') + `<p class="muted" style="margin:0 0 4px">${n} eventos desde el ${esc(fecha(E.desde))}; en tono claro, las tres semanas anteriores. País pintado: medida que abarca todo el país. Círculo punteado: zona afectada. Punto: lugar del hecho. Tocá un punto para ver el detalle.</p>
+     <div id="evbox"><div class="evfil">${Object.entries(EV_CAT).map(([k, [t, c]]) => `<button type="button" data-c="${k}" aria-pressed="true"><i style="background:${c}"></i>${esc(t)}</button>`).join('')}</div>
+     <div class="map">${evSVG()}</div><div class="evlist">${evLista()}</div></div>`; },
   grupos: b => head(b.t) + `<div class="cards">${(b.g || GRUPOS).map(([g, os]) => `<div class="card"><h3>${esc(g)}</h3><div class="groups">${os.map(o => `<span class="chip acc">${esc(o)}</span>`).join('')}</div></div>`).join('')}</div>`
 };
+
+
+/* ---------- índices por país (datos/indices.json) y eventos ---------- */
+let IDX = null;
+const IDX_DEF = {
+  prensa:{t:'Libertad de prensa',q:'Cómo trabaja el periodismo en cada país, según Reporteros sin Fronteras.',col:{'buena':'#2E9E6B','satisfactoria':'#9ACD60','problemática':'#E3BE55','difícil':'#F2994A','muy grave':'#D9534F'},val:'Puntaje',rk:'Puesto (de 180)'},
+  economica:{t:'Libertad económica',q:'Propiedad, Estado, regulación y apertura, según el Índice de Libertad Económica de la Heritage Foundation.',col:{'libre':'#2E9E6B','mayormente libre':'#9ACD60','moderadamente libre':'#E3BE55','mayormente no libre':'#F2994A','reprimida':'#D9534F','sin calificar':'#3A4A55'},val:'Puntaje',rk:'Puesto'},
+  regimen:{t:'Tipo de régimen',q:'Democracias, autocracias, dictaduras y monarquías con poder. Rayado: Estado fallido (no controla su territorio).',col:{'democracia plena':'#2E9E6B','democracia no plena':'#9ACD60','autocracia':'#F2994A','dictadura':'#D9534F','monarquía con poder compartido':'#B07CC6','monarquía absoluta':'#6A3D9A','sin evaluar':'#3A4A55'},val:'Puntaje EIU (0 a 10)',rk:'Puesto EIU',hatch:'fallido'},
+  pena:{t:'Pena de muerte',q:'Qué países la abolieron, cuáles la mantienen y cuáles ejecutaron el último año, según Amnistía Internacional.',col:{'abolicionista':'#2E9E6B','abolicionista salvo delitos excepcionales':'#9ACD60','abolicionista en la práctica':'#E3BE55','la mantiene':'#F2994A','la mantiene y ejecutó':'#B3261E'}},
+  internet:{t:'Libertad en internet',q:'Censura, bloqueos y vigilancia en la red. Tono apagado: países que Freedom House no evalúa, estimados con V-Dem.',col:{'libre':'#2E9E6B','parcialmente libre':'#E3BE55','no libre':'#D9534F'},val:'Puntaje',light:'VDem'},
+  visas:{t:'Visas con pasaporte argentino',q:'Qué necesita un argentino para entrar como turista a cada país.',col:{'sin visa':'#2E9E6B','visa al llegar o electrónica':'#56C2A6','visa previa':'#F2994A','no admitido':'#D9534F','Argentina':'#7FD3F7'}},
+  corrupcion:{t:'Corrupción',q:'Percepción de la corrupción en el sector público (0 = muy corrupto, 100 = muy limpio), según Transparencia Internacional.',col:{'80–100':'#2E9E6B','60–79':'#9ACD60','40–59':'#E3BE55','20–39':'#F2994A','0–19':'#D9534F'},val:'Puntaje (0 a 100)',rk:'Puesto'},
+  religion:{t:'Libertad religiosa',q:'Cuánto restringe el Estado la práctica religiosa, según el Pew Research Center. Rayado: países de especial preocupación para la comisión de libertad religiosa de EE.UU.',col:{'restricciones bajas':'#2E9E6B','restricciones moderadas':'#E3BE55','restricciones altas':'#F2994A','restricciones muy altas':'#D9534F','sin puntaje':'#3A4A55'},val:'Índice de restricciones del gobierno (0 a 10)',hatch:'cpc',hatchT:'país de especial preocupación (USCIRF)'},
+  mujeres:{t:'Derechos de las mujeres',q:'Inclusión, justicia y seguridad de las mujeres, según el índice Mujeres, Paz y Seguridad de Georgetown. Rayado: persecución legal sistemática documentada por la ONU o Human Rights Watch.',col:{'muy alto':'#2E9E6B','alto':'#9ACD60','medio':'#E3BE55','bajo':'#F2994A','muy bajo':'#D9534F'},val:'Puntaje (0 a 1)',rk:'Puesto',hatch:'persecucion',hatchT:'persecución legal'},
+  lgbt:{t:'Derechos LGBT',q:'Situación legal de las personas homosexuales y trans: de la pena de muerte al matrimonio igualitario.',col:{'matrimonio igualitario':'#2E9E6B','protección parcial':'#9ACD60','sin criminalizar ni proteger':'#E3BE55','cárcel':'#F2994A','pena de muerte':'#B3261E'}}
+};
+const idxCat = (id, x) => id === 'pena' && x.cat === 'la mantiene' && x.ejecuto ? 'la mantiene y ejecutó' : x.cat;
+const nombreEs = id => (IDX && IDX.nombres && IDX.nombres[id]) || ((MUNDO && MUNDO.paises.find(p => p.id === id)) || {}).n || id;
+function idxDetalle(id, iso){
+  const d = IDX && IDX[id], def = IDX_DEF[id]; if(!d) return '';
+  const x = d.paises[iso]; const nm = nombreEs(iso);
+  if(!x) return `<b>${esc(nm)}</b> <span class="muted">· sin dato en esta fuente</span>`;
+  const c = idxCat(id, x), bits = [];
+  if(x.v !== undefined && x.v !== null && def.val) bits.push(`${def.val}: ${x.v}`);
+  if(x.rk && def.rk) bits.push(`${def.rk}: ${x.rk}`);
+  if(x.dias) bits.push(`Estadía: ${x.dias}`);
+  if(x.shi !== undefined && x.shi !== null) bits.push(`Hostilidad social hacia la religión: ${x.shi}`);
+  if(x.uscirf) bits.push(x.uscirf === 'CPC' ? 'EE.UU. (USCIRF): país de especial preocupación' : 'EE.UU. (USCIRF): lista de vigilancia');
+  if(x.trans) bits.push(`Personas trans: ${x.trans}`);
+  if(x.ej) bits.push(`Ejecuciones el último año: ${x.ej}`);
+  if(x.src) bits.push(x.src === 'VDem' ? 'Estimado con V-Dem (Freedom House no lo evalúa)' : 'Freedom House');
+  if(x.fsi !== undefined) bits.push(`Fragilidad del Estado (FSI): ${x.fsi}${x.fsi_cat ? ' · ' + x.fsi_cat : ''}`);
+  return `<b>${esc(nm)}</b> · <span style="color:${def.col[c] || 'var(--ink)'};font-weight:700">${esc(c)}</span>${x.fallido ? ' · <b style="color:var(--crit)">Estado fallido</b>' : ''}${x.persecucion ? ' · <b style="color:var(--crit)">Persecución legal</b>' : ''}
+   ${bits.length ? `<div class="muted">${esc(bits.join(' · '))}</div>` : ''}${x.aclara ? `<div class="muted">${esc(x.aclara)}</div>` : ''}${x.nota_mon ? `<div class="muted">${esc(x.nota_mon)}</div>` : ''}${x.nota ? `<div class="muted">${esc(x.nota)}</div>` : ''}`;
+}
+function idxSVG(id){
+  const d = IDX && IDX[id], def = IDX_DEF[id]; if(!d || !MUNDO) return '<svg viewBox="0 0 960 470"><use href="#world"/></svg>';
+  let s = '', over = '';
+  MUNDO.paises.forEach(p => { const x = d.paises[p.id]; const col = x ? (def.col[idxCat(id, x)] || '#3A4A55') : '#1E2A33';
+    const op = x && def.light && x.src === def.light ? ' fill-opacity=".5"' : '';
+    s += `<path class="k${p.id === '032' ? ' arg' : ''}" data-iso="${p.id}" d="${p.d}" fill="${col}"${op}><title>${esc(nombreEs(p.id))}${x ? ': ' + esc(idxCat(id, x)) : ': sin dato'}</title></path>`;
+    if(def.hatch && x && x[def.hatch]) over += `<path d="${p.d}" fill="url(#hatch)" pointer-events="none"/>`; });
+  return `<svg viewBox="0 0 960 470" role="img" aria-label="Mapa: ${esc(def.t)}"><defs><pattern id="hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><line x1="0" y1="0" x2="0" y2="6" stroke="#0A1116" stroke-width="2.4"/></pattern></defs>${s}${over}</svg>`;
+}
+function idxLista(id){
+  const d = IDX[id], def = IDX_DEF[id];
+  const grupos = Object.keys(def.col).filter(c => c !== 'Argentina').map(c => [c, Object.keys(d.paises).filter(k => idxCat(id, d.paises[k]) === c).sort((a, b) => nombreEs(a).localeCompare(nombreEs(b), 'es'))]).filter(g => g[1].length);
+  return `<div class="idxlist">${grupos.map(([c, ks]) => `<details><summary><i style="background:${def.col[c]}"></i>${esc(c[0].toUpperCase() + c.slice(1))} (${ks.length})</summary><p>${ks.map(k => esc(nombreEs(k)) + (d.paises[k].fallido ? ' (fallido)' : '') + (d.paises[k].persecucion ? ' (persecución)' : '') + (d.paises[k].src === 'VDem' ? '*' : '')).join(', ')}</p></details>`).join('')}</div>`;
+}
+document.addEventListener('click', e => {
+  const p = e.target.closest && e.target.closest('.idxmap path.k'); if(!p) return;
+  const box = p.closest('.idxmap'); box.querySelector('.det').innerHTML = idxDetalle(box.dataset.id, p.dataset.iso);
+});
+const EV_CAT = {excepcion:['Excepción','#F0675F'],natural:['Desastre natural','#E3BE55'],infraestructura:['Accidente de infraestructura','#F2994A'],ambiental:['Accidente ambiental','#56C2A6'],muerte:['Muerte natural','#C9D3DA'],asesinato:['Asesinato político','#B3261E'],renuncia:['Renuncia o destitución','#9B8CE8'],otro:['Otros (golpes, apagones, internet…)','#2F80ED']};
+const EV_OFF = new Set();
+function evActual(x){ const E = DATA.eventos || {}; return !E.desde || x.f >= E.desde; }
+function evSVG(){
+  const E = DATA.eventos; if(!E || !MUNDO) return '<svg viewBox="0 0 960 470"><use href="#world"/></svg>';
+  const L = (E.lista || []).filter(x => !EV_OFF.has(x.cat)); const byId = {}; MUNDO.paises.forEach(p => byId[p.id] = p);
+  let paises = '', zonas = '', puntos = '';
+  L.slice().reverse().forEach((x, i) => { const col = (EV_CAT[x.cat] || ['', '#8A9AA5'])[1], op = evActual(x) ? 1 : .4, idx = E.lista.indexOf(x);
+    const tt = `<title>${esc(fecha(x.f))} · ${esc(x.pais)}: ${esc(x.t)}</title>`;
+    if(x.geo === 'pais' && byId[x.iso]) paises += `<path class="evk" data-ev="${idx}" d="${byId[x.iso].d}" fill="${col}" fill-opacity="${.55 * op}" stroke="${col}" stroke-width="1">${tt}</path>`;
+    else if(x.lat !== undefined && x.lat !== null){ const [cx, cy] = proj(x.lat, x.lon);
+      if(x.geo === 'zona') zonas += `<circle class="evk" data-ev="${idx}" cx="${cx}" cy="${cy}" r="${Math.max(6, (x.r || 200) / 111 * 2.67)}" fill="${col}" fill-opacity="${.25 * op}" stroke="${col}" stroke-opacity="${op}" stroke-dasharray="3 2">${tt}</circle>`;
+      else puntos += `<circle class="evk" data-ev="${idx}" cx="${cx}" cy="${cy}" r="${evActual(x) ? 5.5 : 4}" fill="${col}" fill-opacity="${op}" stroke="#0C161D" stroke-width="1.5">${tt}</circle>`; } });
+  const base = MUNDO.paises.map(p => `<path d="${p.d}" fill="${p.id === '032' ? '#7FD3F7' : '#1A2832'}" stroke="#0C161D" stroke-width=".5"/>`).join('');
+  return `<svg viewBox="0 0 960 470" role="img" aria-label="Mapa de eventos">${base}${paises}${zonas}${puntos}</svg>`;
+}
+function evLista(){
+  const E = DATA.eventos; const L = (E.lista || []).filter(x => !EV_OFF.has(x.cat));
+  const item = x => { const c = EV_CAT[x.cat] || ['Evento', '#8A9AA5'];
+    return `<div class="ev${evActual(x) ? '' : ' old'}" id="ev${E.lista.indexOf(x)}"><span class="f">${esc(fecha(x.f))}</span><div><h4><i style="background:${c[1]}"></i>${esc(x.pais)} · ${esc(x.t)}</h4><p>${esc(x.d || '')} ${x.url ? `<a href="${esc(x.url)}">${esc(x.fuente || 'Fuente')}</a>` : ''}</p></div></div>`; };
+  const nu = L.filter(evActual), ol = L.filter(x => !evActual(x));
+  if(!L.length) return '<p class="muted">Sin eventos en las categorías elegidas.</p>';
+  return nu.map(item).join('') + (ol.length ? `<details class="evold"><summary>Semanas anteriores (${ol.length})</summary>${ol.map(item).join('')}</details>` : '');
+}
+function evRefresh(){ const b = document.getElementById('evbox'); if(!b) return;
+  b.querySelector('.map').innerHTML = evSVG(); b.querySelector('.evlist').innerHTML = evLista();
+  b.querySelectorAll('.evfil button').forEach(x => x.setAttribute('aria-pressed', !EV_OFF.has(x.dataset.c))); }
+document.addEventListener('click', e => {
+  const f = e.target.closest && e.target.closest('.evfil button');
+  if(f){ const c = f.dataset.c; EV_OFF.has(c) ? EV_OFF.delete(c) : EV_OFF.add(c); evRefresh(); return; }
+  const k = e.target.closest && e.target.closest('#evbox .evk');
+  if(k){ const el = document.getElementById('ev' + k.dataset.ev); if(el){ const dd = el.closest('details'); if(dd) dd.open = true; document.querySelectorAll('.evlist .ev.hl').forEach(x => x.classList.remove('hl')); el.classList.add('hl'); el.scrollIntoView({block:'nearest', behavior:'smooth'}); } }
+});
 
 /* ---------- navegación ---------- */
 function renderAll(){
@@ -670,6 +805,7 @@ if(location.hash){ const t = document.getElementById(location.hash.slice(1)); if
 const stamp = () => { if(DATA.corte){ const n = Object.keys(DATA.valores).length; $('#stamp').innerHTML = `<i></i>Corte: ${fecha(DATA.corte)} · ${n} datos · próxima actualización: viernes ${fecha(new Date(new Date(DATA.corte + 'T12:00:00').getTime() + 7 * 864e5).toISOString().slice(0, 10))}`; } };
 Promise.all([
   fetch('datos/semana.json', {cache: 'no-store'}).then(r => r.json()).then(d => { DATA = Object.assign({valores:{}, fichas:{}}, d); }).catch(() => {}),
+  fetch('datos/indices.json').then(r => r.json()).then(d => { IDX = d; }).catch(() => {}),
   fetch('mundo.json').then(r => r.json()).then(d => { MUNDO = d; document.body.insertAdjacentHTML('afterbegin', worldDefs()); }).catch(() => {})
 ]).finally(() => { renderAll(); stamp(); spy(); if(location.hash){ const t = document.getElementById(location.hash.slice(1)); if(t) t.scrollIntoView(); } });
 </script>
