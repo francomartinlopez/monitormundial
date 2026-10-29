@@ -84,6 +84,10 @@ nav.idx a.on{color:var(--ink);border-bottom-color:var(--accent)}
 .idxlist details{border-top:1px solid var(--line);padding:6px 0}.idxlist summary{cursor:pointer;font-weight:600;display:flex;align-items:center;gap:8px}
 .idxlist summary i{width:11px;height:11px;border-radius:3px;display:inline-block;flex:none}
 .idxlist p{margin:4px 0 0;font-size:.84rem;color:var(--muted);line-height:1.5}
+.relbars div{display:grid;grid-template-columns:150px 1fr 60px;gap:8px;align-items:center;font-size:.85rem;margin-top:4px}
+.relbars .sub span{padding-left:14px;color:var(--muted)}
+.relbars i{display:block;height:10px;border-radius:2px}
+.relbars b{text-align:right;font:500 .8rem var(--f-data)}
 .evfil{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 8px}
 .evfil button{font:600 .8rem var(--f-body,inherit);background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:5px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 .evfil button i{width:10px;height:10px;border-radius:50%;display:inline-block}
@@ -374,6 +378,7 @@ const PAGES = [
    {k:'indice',w:'full',id:'economica'},
    {k:'indice',w:'full',id:'internet'},
    {k:'indice',w:'full',id:'religion'},
+   {k:'religiones',w:'full',t:'Religiones del mundo'},
    {k:'indice',w:'full',id:'mujeres'},
    {k:'indice',w:'full',id:'lgbt'},
    {k:'indice',w:'full',id:'corrupcion'},
@@ -680,6 +685,13 @@ const R = {
      ${idxLista(b.id)}
      <p class="muted" style="font-size:.8rem;margin:8px 0 0">${d.nota ? esc(d.nota) + ' ' : ''}${d.empalme ? esc(d.empalme) + ' ' : ''}Edición: ${esc(d.edicion || '—')}. Próxima: ${esc(d.proxima || '—')}.</p>
      <span class="src">${d.url ? `<a href="${esc(d.url)}">Fuente</a>` : ''}${d.url2 ? ` · <a href="${esc(d.url2)}">Fuente complementaria</a>` : ''}${d.url_mon ? ` · <a href="${esc(d.url_mon)}">Monarquías</a>` : ''}${d.url_fsi ? ` · <a href="${esc(d.url_fsi)}">Estados frágiles</a>` : ''}</span>`; },
+  religiones: b => { const d = IDX && IDX.religiones; if(!d) return head(b.t) + '<p class="muted">Sin datos.</p>';
+    return head(b.t, d.fuente) + `<p class="muted" style="margin:0 0 4px">Elegí una religión para ver qué porcentaje de la población de cada país la profesa, o "Mayoritaria" para ver la religión principal de cada país. Tocá un país para ver su composición completa.</p>
+     <div id="relbox"><div class="evfil"><button type="button" data-r="mayoritaria" aria-pressed="true">Mayoritaria</button>${Object.entries(REL_COL).filter(([r]) => Object.values(d.paises).some(x => x[r] !== undefined)).map(([r, c]) => `<button type="button" data-r="${r}" aria-pressed="false"><i style="background:${c}"></i>${esc(r[0].toUpperCase() + r.slice(1))}</button>`).join('')}</div>
+     ${Object.entries(REL_RAMAS).filter(([g, rs]) => Object.keys(rs).some(k => Object.values(d.paises).some(x => x[k] !== undefined))).map(([g, rs]) => `<div class="evfil"><span class="muted" style="font-size:.8rem;align-self:center">Ramas (${esc(g)}):</span>${Object.entries(rs).filter(([k]) => Object.values(d.paises).some(x => x[k] !== undefined)).map(([k, c]) => `<button type="button" data-r="${k}" aria-pressed="false"><i style="background:${c}"></i>${esc(k[0].toUpperCase() + k.slice(1))}</button>`).join('')}</div>`).join('')}
+     <div class="map">${relSVG()}</div><div class="legend" style="margin-top:8px">${relLeyenda()}</div>
+     <div class="det" style="margin-top:8px;padding:10px 12px;border:1px solid var(--line);border-radius:4px;background:var(--panel2)">${d.paises['032'] ? relDet('032') : ''}</div><div class="reltop" style="margin-top:8px"></div></div>
+     <p class="muted" style="font-size:.8rem;margin:8px 0 0">${d.nota ? esc(d.nota) + ' ' : ''}${d.nota_ramas ? esc(d.nota_ramas) + ' ' : ''}${d.fuente_ramas ? 'Ramas: ' + esc(d.fuente_ramas.replace(/\.$/, '')) + '. ' : ''}Edición: ${esc(d.edicion || '—')}. Próxima: ${esc(d.proxima || '—')}.</p><span class="src">${d.url ? `<a href="${esc(d.url)}">Fuente</a>` : ''}</span>`; },
   eventos: b => { const E = DATA.eventos; if(!E) return head(b.t) + '<p class="muted">Sin datos.</p>';
     const n = (E.lista || []).filter(evActual).length;
     return head(b.t, 'USGS · GDACS · ReliefWeb · NetBlocks · prensa') + `<p class="muted" style="margin:0 0 4px">${n} eventos desde el ${esc(fecha(E.desde))}; en tono claro, las tres semanas anteriores. País pintado: medida que abarca todo el país. Círculo punteado: zona afectada. Punto: lugar del hecho. Tocá un punto para ver el detalle.</p>
@@ -700,7 +712,7 @@ const IDX_DEF = {
   visas:{t:'Visas con pasaporte argentino',q:'Qué necesita un argentino para entrar como turista a cada país.',col:{'sin visa':'#2E9E6B','visa al llegar o electrónica':'#56C2A6','visa previa':'#F2994A','no admitido':'#D9534F','Argentina':'#7FD3F7'}},
   corrupcion:{t:'Corrupción',q:'Percepción de la corrupción en el sector público (0 = muy corrupto, 100 = muy limpio), según Transparencia Internacional.',col:{'80–100':'#2E9E6B','60–79':'#9ACD60','40–59':'#E3BE55','20–39':'#F2994A','0–19':'#D9534F'},val:'Puntaje (0 a 100)',rk:'Puesto'},
   religion:{t:'Libertad religiosa',q:'Cuánto restringe el Estado la práctica religiosa, según el Pew Research Center. Rayado: países de especial preocupación para la comisión de libertad religiosa de EE.UU.',col:{'restricciones bajas':'#2E9E6B','restricciones moderadas':'#E3BE55','restricciones altas':'#F2994A','restricciones muy altas':'#D9534F','sin puntaje':'#3A4A55'},val:'Índice de restricciones del gobierno (0 a 10)',hatch:'cpc',hatchT:'país de especial preocupación (USCIRF)'},
-  mujeres:{t:'Derechos de las mujeres',q:'Inclusión, justicia y seguridad de las mujeres, según el índice Mujeres, Paz y Seguridad de Georgetown. Rayado: persecución legal sistemática documentada por la ONU o Human Rights Watch.',col:{'muy alto':'#2E9E6B','alto':'#9ACD60','medio':'#E3BE55','bajo':'#F2994A','muy bajo':'#D9534F'},val:'Puntaje (0 a 1)',rk:'Puesto',hatch:'persecucion',hatchT:'persecución legal'},
+  mujeres:{t:'Derechos de las mujeres',q:'Discriminación contra las mujeres en leyes, normas y prácticas (familia, integridad física, acceso a recursos y libertades civiles), según el índice SIGI de la OCDE. Rayado: persecución legal sistemática documentada por la ONU o Human Rights Watch.',col:{'discriminación muy baja':'#2E9E6B','discriminación baja':'#9ACD60','discriminación media':'#E3BE55','discriminación alta':'#F2994A','discriminación muy alta':'#D9534F','sin puntaje SIGI':'#3A4A55'},val:'SIGI (0 = sin discriminación, 100 = máxima)',hatch:'persecucion',hatchT:'persecución legal'},
   lgbt:{t:'Derechos LGBT',q:'Situación legal de las personas homosexuales y trans: de la pena de muerte al matrimonio igualitario.',col:{'matrimonio igualitario':'#2E9E6B','protección parcial':'#9ACD60','sin criminalizar ni proteger':'#E3BE55','cárcel':'#F2994A','pena de muerte':'#B3261E'}}
 };
 const idxCat = (id, x) => id === 'pena' && x.cat === 'la mantiene' && x.ejecuto ? 'la mantiene y ejecutó' : x.cat;
@@ -716,6 +728,8 @@ function idxDetalle(id, iso){
   if(x.shi !== undefined && x.shi !== null) bits.push(`Hostilidad social hacia la religión: ${x.shi}`);
   if(x.uscirf) bits.push(x.uscirf === 'CPC' ? 'EE.UU. (USCIRF): país de especial preocupación' : 'EE.UU. (USCIRF): lista de vigilancia');
   if(x.trans) bits.push(`Personas trans: ${x.trans}`);
+  if(x.familia !== undefined) bits.push(`Familia: ${x.familia} · Integridad física: ${x.integridad} · Recursos: ${x.recursos} · Libertades civiles: ${x.libertades}`);
+  if(x.wps_rk) bits.push(`Índice Mujeres, Paz y Seguridad (Georgetown): puesto ${x.wps_rk} de 181`);
   if(x.ej) bits.push(`Ejecuciones el último año: ${x.ej}`);
   if(x.src) bits.push(x.src === 'VDem' ? 'Estimado con V-Dem (Freedom House no lo evalúa)' : 'Freedom House');
   if(x.fsi !== undefined) bits.push(`Fragilidad del Estado (FSI): ${x.fsi}${x.fsi_cat ? ' · ' + x.fsi_cat : ''}`);
@@ -772,6 +786,45 @@ document.addEventListener('click', e => {
   if(f){ const c = f.dataset.c; EV_OFF.has(c) ? EV_OFF.delete(c) : EV_OFF.add(c); evRefresh(); return; }
   const k = e.target.closest && e.target.closest('#evbox .evk');
   if(k){ const el = document.getElementById('ev' + k.dataset.ev); if(el){ const dd = el.closest('details'); if(dd) dd.open = true; document.querySelectorAll('.evlist .ev.hl').forEach(x => x.classList.remove('hl')); el.classList.add('hl'); el.scrollIntoView({block:'nearest', behavior:'smooth'}); } }
+});
+
+
+/* ---------- religiones por país ---------- */
+const REL_COL = {'cristianos':'#5B8DEF','musulmanes':'#2E9E6B','sin religión':'#9AA8B2','hindúes':'#F2994A','budistas':'#E3BE55','judíos':'#7FB3E8','religiones populares':'#B07CC6','otras':'#D98A5F'};
+const REL_RAMAS = {'cristianos':{'católicos':'#3D6FD9','protestantes (incl. evangélicos)':'#8FB0F5','evangélicos':'#4FC3E8','ortodoxos':'#6C5BD9','otros cristianos':'#A9B8E8'},'musulmanes':{'suníes':'#2E9E6B','chiíes':'#7CCB9C','otros musulmanes':'#A8D9BC'},'budistas':{'theravada':'#E3BE55','mahayana':'#F0D58A','vajrayana':'#C99A2E'}};
+const REL_ALL = Object.assign({}, REL_COL, ...Object.values(REL_RAMAS));
+let REL_SEL = 'mayoritaria';
+const hex2rgb = h => [1, 3, 5].map(i => parseInt(h.slice(i, i + 2), 16));
+const mix = (h, t) => { const [r, g, b] = hex2rgb(h), [r0, g0, b0] = [26, 40, 50]; return `rgb(${Math.round(r0 + (r - r0) * t)},${Math.round(g0 + (g - g0) * t)},${Math.round(b0 + (b - b0) * t)})`; };
+function relMay(x){ let best = null; Object.keys(REL_COL).forEach(r => { if(x[r] !== undefined && (best === null || x[r] > x[best])) best = r; }); return best; }
+function relSVG(){
+  const d = IDX && IDX.religiones; if(!d || !MUNDO) return '<svg viewBox="0 0 960 470"><use href="#world"/></svg>';
+  return `<svg viewBox="0 0 960 470" role="img" aria-label="Mapa de religiones">${MUNDO.paises.map(p => { const x = d.paises[p.id]; let col = '#1E2A33', tt = 'sin dato';
+    if(x){ if(REL_SEL === 'mayoritaria'){ const m = relMay(x); col = mix(REL_COL[m], .35 + .65 * Math.min(1, x[m] / 100)); tt = `${m} ${x[m]} %`; }
+      else { const v = x[REL_SEL]; if(v === undefined || v === null){ col = '#1E2A33'; tt = 'sin dato de esta rama'; } else col = mix(REL_ALL[REL_SEL], Math.sqrt(Math.min(100, v) / 100)), tt = `${REL_SEL} ${v} %`; } }
+    return `<path class="k${p.id === '032' ? ' arg' : ''}" data-iso="${p.id}" d="${p.d}" fill="${col}"><title>${esc(nombreEs(p.id))}: ${esc(tt)}</title></path>`; }).join('')}</svg>`;
+}
+function relDet(iso){
+  const d = IDX.religiones, x = d.paises[iso]; if(!x) return `<b>${esc(nombreEs(iso))}</b> <span class="muted">· sin dato</span>`;
+  const rs = Object.keys(REL_COL).filter(r => x[r] !== undefined).sort((a, b) => x[b] - x[a]);
+  const bar = (r, c, sub) => `<div${sub ? ' class="sub"' : ''}><span>${esc(r)}</span><i style="width:${Math.max(.5, x[r])}%;background:${c}"></i><b>${x[r] < .1 ? '<0,1' : String(x[r]).replace('.', ',')} %</b></div>`;
+  return `<b>${esc(nombreEs(iso))}</b><div class="relbars">${rs.map(r => bar(r, REL_COL[r]) + (REL_RAMAS[r] ? Object.entries(REL_RAMAS[r]).filter(([k]) => x[k] !== undefined && x[k] !== null).map(([k, c]) => bar(k, c, 1)).join('') : '')).join('')}</div>${x.nota ? `<div class="muted">${esc(x.nota)}</div>` : ''}`;
+}
+function relLeyenda(){
+  if(REL_SEL === 'mayoritaria') return Object.entries(REL_COL).filter(([r]) => Object.values(IDX.religiones.paises).some(x => x[r] !== undefined)).map(([r, c]) => `<span><i style="background:${c}"></i>${esc(r)}</span>`).join('') + '<span class="muted">· color más intenso = mayoría más amplia</span>';
+  return `<span><i class="grad" style="background:linear-gradient(90deg,${mix(REL_ALL[REL_SEL], 0)},${REL_ALL[REL_SEL]})"></i>${esc(REL_SEL)}: de 0 % a 100 % de la población</span><span><i style="background:#1E2A33"></i>sin dato</span>`;
+}
+function relTop(){
+  if(REL_SEL === 'mayoritaria') return '';
+  const d = IDX.religiones; const ks = Object.keys(d.paises).filter(k => (d.paises[k][REL_SEL] || 0) >= 1).sort((a, b) => d.paises[b][REL_SEL] - d.paises[a][REL_SEL]);
+  return `<details><summary>Países donde son al menos el 1 % (${ks.length})</summary><p class="muted" style="font-size:.85rem">${ks.map(k => `${esc(nombreEs(k))} ${String(d.paises[k][REL_SEL]).replace('.', ',')} %`).join(' · ')}</p></details>`;
+}
+function relRefresh(){ const b = document.getElementById('relbox'); if(!b) return;
+  b.querySelector('.map').innerHTML = relSVG(); b.querySelector('.legend').innerHTML = relLeyenda(); b.querySelector('.reltop').innerHTML = relTop();
+  b.querySelectorAll('.evfil button').forEach(x => x.setAttribute('aria-pressed', x.dataset.r === REL_SEL)); }
+document.addEventListener('click', e => {
+  const f = e.target.closest && e.target.closest('#relbox .evfil button'); if(f){ REL_SEL = f.dataset.r; relRefresh(); return; }
+  const p = e.target.closest && e.target.closest('#relbox path.k'); if(p) document.querySelector('#relbox .det').innerHTML = relDet(p.dataset.iso);
 });
 
 /* ---------- navegación ---------- */
