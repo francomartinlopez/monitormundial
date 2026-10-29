@@ -118,6 +118,7 @@ Cuando una tarea carga un resultado electoral entre dos cortes semanales, ademá
 ### Mapas de índices (`datos/indices.json`), se actualizan una vez por año
 Cada índice: `{fuente, url, edicion, proxima, cats, paises:{ISO numérico: {cat, v, rk, ...}}}`. Las claves son códigos ISO 3166-1 numéricos de 3 dígitos, como en `mundo.json`. `nombres` tiene el nombre en español de cada país del mapa.
 - `regimen`: EIU Democracy Index (democracia plena, democracia no plena, autocracia = régimen híbrido, dictadura = autoritario). Monarquías: `mon` = `absoluta` (cat "monarquía absoluta"), `compartida` (cat "monarquía con poder compartido") o `decorativa` (se pinta según la EIU y `aclara` lo explica). `fallido: true` según el Fragile States Index (se ve rayado).
+- `mujeres`: OCDE SIGI 2023 (discriminación muy baja a muy alta; subíndices familia, integridad, recursos, libertades; `wps_rk` = puesto en Georgetown como referencia; `persecucion:true` rayado). Datos: CSV del dataset DSD_SIGI@DF_SIGI_2023 (sdmx.oecd.org).
 - `prensa`: RSF (buena, satisfactoria, problemática, difícil, muy grave). Sale entre abril y mayo.
 - `economica`: Heritage Foundation (libre, mayormente libre, moderadamente libre, mayormente no libre, reprimida). Sale entre febrero y marzo. Aclarar que Heritage es un centro de estudios conservador.
 - `internet`: Freedom House "Freedom on the Net" (`src:"FH"`) y, para los países que no evalúa, V-Dem (`src:"VDem"`, tono claro) con cortes calibrados; el texto del empalme va en `empalme`.
