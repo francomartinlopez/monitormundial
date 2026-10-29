@@ -382,6 +382,7 @@ const PAGES = [
    {k:'indice',w:'full',id:'internet'},
    {k:'indice',w:'full',id:'religion'},
    {k:'religiones',w:'full',t:'Religiones del mundo'},
+   {k:'indice',w:'full',id:'estado_religion'},
    {k:'indice',w:'full',id:'mujeres'},
    {k:'indice',w:'full',id:'lgbt'},
    {k:'indice',w:'full',id:'corrupcion'},
@@ -686,7 +687,7 @@ const R = {
      <div class="legend" style="margin-top:8px">${Object.entries(def.col).filter(([c]) => c !== 'Argentina' && Object.values(d.paises).some(x => idxCat(b.id, x) === c)).map(([c, col]) => `<span><i style="background:${col}"></i>${esc(c)}</span>`).join('')}<span><i style="background:#1E2A33"></i>sin dato</span>${def.hatch ? `<span><i style="background:repeating-linear-gradient(45deg,#8A9AA5 0 3px,#0A1116 3px 6px)"></i>${def.hatchT || 'Estado fallido'}</span>` : ''}${def.light ? '<span><i style="background:#E3BE5580"></i>tono apagado: estimado con V-Dem</span>' : ''}</div>
      <div class="det">${argx && argx.cat !== 'Argentina' ? idxDetalle(b.id, '032') : '<span class="muted">Tocá un país para ver su dato.</span>'}</div></div>
      ${idxLista(b.id)}
-     <p class="muted" style="font-size:.8rem;margin:8px 0 0">${d.nota ? esc(d.nota) + ' ' : ''}${d.empalme ? esc(d.empalme) + ' ' : ''}Edición: ${esc(d.edicion || '—')}. Próxima: ${esc(d.proxima || '—')}.</p>
+     <p class="muted" style="font-size:.8rem;margin:8px 0 0">${d.nota ? esc(d.nota) + ' ' : ''}${d.empalme ? esc(d.empalme) + ' ' : ''}Edición: ${esc((d.edicion || '—').replace(/\.$/, ''))}. Próxima: ${esc((d.proxima || '—').replace(/\.$/, ''))}.</p>
      <span class="src">${d.url ? `<a href="${esc(d.url)}">Fuente</a>` : ''}${d.url2 ? ` · <a href="${esc(d.url2)}">Fuente complementaria</a>` : ''}${d.url_mon ? ` · <a href="${esc(d.url_mon)}">Monarquías</a>` : ''}${d.url_fsi ? ` · <a href="${esc(d.url_fsi)}">Estados frágiles</a>` : ''}</span>`; },
   religiones: b => { const d = IDX && IDX.religiones; if(!d) return head(b.t) + '<p class="muted">Sin datos.</p>';
     return head(b.t, d.fuente) + `<p class="muted" style="margin:0 0 4px">Elegí una religión para ver qué porcentaje de la población de cada país la profesa, o "Mayoritaria" para ver la religión principal de cada país. Tocá un país para ver su composición completa.</p>
@@ -694,7 +695,7 @@ const R = {
      ${Object.entries(REL_RAMAS).filter(([g, rs]) => Object.keys(rs).some(k => Object.values(d.paises).some(x => x[k] !== undefined))).map(([g, rs]) => `<div class="evfil"><span class="muted" style="font-size:.8rem;align-self:center">Ramas (${esc(g)}):</span>${Object.entries(rs).filter(([k]) => Object.values(d.paises).some(x => x[k] !== undefined)).map(([k, c]) => `<button type="button" data-r="${k}" aria-pressed="false"><i style="background:${c}"></i>${esc(k[0].toUpperCase() + k.slice(1))}</button>`).join('')}</div>`).join('')}
      <div class="map">${relSVG()}</div><div class="legend" style="margin-top:8px">${relLeyenda()}</div>
      <div class="det" style="margin-top:8px;padding:10px 12px;border:1px solid var(--line);border-radius:4px;background:var(--panel2)">${d.paises['032'] ? relDet('032') : ''}</div><div class="reltop" style="margin-top:8px"></div></div>
-     <p class="muted" style="font-size:.8rem;margin:8px 0 0">${d.nota ? esc(d.nota) + ' ' : ''}${d.nota_ramas ? esc(d.nota_ramas) + ' ' : ''}${d.fuente_ramas ? 'Ramas: ' + esc(d.fuente_ramas.replace(/\.$/, '')) + '. ' : ''}Edición: ${esc(d.edicion || '—')}. Próxima: ${esc(d.proxima || '—')}.</p><span class="src">${d.url ? `<a href="${esc(d.url)}">Fuente</a>` : ''}</span>`; },
+     <p class="muted" style="font-size:.8rem;margin:8px 0 0">${d.nota ? esc(d.nota) + ' ' : ''}${d.nota_ramas ? esc(d.nota_ramas) + ' ' : ''}${d.fuente_ramas ? 'Ramas: ' + esc(d.fuente_ramas.replace(/\.$/, '')) + '. ' : ''}Edición: ${esc((d.edicion || '—').replace(/\.$/, ''))}. Próxima: ${esc((d.proxima || '—').replace(/\.$/, ''))}.</p><span class="src">${d.url ? `<a href="${esc(d.url)}">Fuente</a>` : ''}</span>`; },
   adr: b => { const A = DATA.adr; if(!A || !A.acciones) return head(b.t) + '<p class="muted">Sin datos.</p>';
     const pct = v => v === null || v === undefined ? '—' : `<b style="color:${v >= 0 ? 'var(--ok)' : 'var(--crit)'}">${v >= 0 ? '+' : ''}${String(v.toFixed(1)).replace('.', ',')} %</b>`;
     const num = v => v === null || v === undefined ? '—' : v.toLocaleString('es-AR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
@@ -728,6 +729,7 @@ const IDX_DEF = {
   corrupcion:{t:'Corrupción',q:'Percepción de la corrupción en el sector público (0 = muy corrupto, 100 = muy limpio), según Transparencia Internacional.',col:{'80–100':'#2E9E6B','60–79':'#9ACD60','40–59':'#E3BE55','20–39':'#F2994A','0–19':'#D9534F'},val:'Puntaje (0 a 100)',rk:'Puesto'},
   religion:{t:'Libertad religiosa',q:'Cuánto restringe el Estado la práctica religiosa, según el Pew Research Center. Rayado: países de especial preocupación para la comisión de libertad religiosa de EE.UU.',col:{'restricciones bajas':'#2E9E6B','restricciones moderadas':'#E3BE55','restricciones altas':'#F2994A','restricciones muy altas':'#D9534F','sin puntaje':'#3A4A55'},val:'Índice de restricciones del gobierno (0 a 10)',hatch:'cpc',hatchT:'país de especial preocupación (USCIRF)'},
   mujeres:{t:'Derechos de las mujeres',q:'Discriminación contra las mujeres en leyes, normas y prácticas (familia, integridad física, acceso a recursos y libertades civiles), según el índice SIGI de la OCDE. Rayado: persecución legal sistemática documentada por la ONU o Human Rights Watch.',col:{'discriminación muy baja':'#2E9E6B','discriminación baja':'#9ACD60','discriminación media':'#E3BE55','discriminación alta':'#F2994A','discriminación muy alta':'#D9534F','sin puntaje SIGI':'#3A4A55'},val:'SIGI (0 = sin discriminación, 100 = máxima)',hatch:'persecucion',hatchT:'persecución legal'},
+  estado_religion:{t:'Estado y religión',q:'Si el Estado es laico, favorece a una religión, la declara oficial, se gobierna por ella o es hostil a toda religión. Tocá un país para ver cuál religión y el detalle. Rayado: la ley islámica es fuente de la legislación.',col:{'laico o neutral':'#2E9E6B','religión preferida':'#E3BE55','religión oficial':'#F2994A','teocracia':'#B3261E','hostil a la religión':'#6A3D9A'},hatch:'sharia',hatchT:'ley islámica como fuente de legislación'},
   lgbt:{t:'Derechos LGBT',q:'Situación legal de las personas homosexuales y trans: de la pena de muerte al matrimonio igualitario.',col:{'matrimonio igualitario':'#2E9E6B','protección parcial':'#9ACD60','sin criminalizar ni proteger':'#E3BE55','cárcel':'#F2994A','pena de muerte':'#B3261E'}}
 };
 const idxCat = (id, x) => id === 'pena' && x.cat === 'la mantiene' && x.ejecuto ? 'la mantiene y ejecutó' : x.cat;
@@ -743,6 +745,7 @@ function idxDetalle(id, iso){
   if(x.shi !== undefined && x.shi !== null) bits.push(`Hostilidad social hacia la religión: ${x.shi}`);
   if(x.uscirf) bits.push(x.uscirf === 'CPC' ? 'EE.UU. (USCIRF): país de especial preocupación' : 'EE.UU. (USCIRF): lista de vigilancia');
   if(x.trans) bits.push(`Personas trans: ${x.trans}`);
+  if(x.religion) bits.push(`Religión: ${x.religion}`);
   if(x.familia !== undefined) bits.push(`Familia: ${x.familia} · Integridad física: ${x.integridad} · Recursos: ${x.recursos} · Libertades civiles: ${x.libertades}`);
   if(x.wps_rk) bits.push(`Índice Mujeres, Paz y Seguridad (Georgetown): puesto ${x.wps_rk} de 181`);
   if(x.ej) bits.push(`Ejecuciones el último año: ${x.ej}`);
