@@ -126,3 +126,8 @@ Cada índice: `{fuente, url, edicion, proxima, cats, paises:{ISO numérico: {cat
 - `visas`: requisitos para pasaporte argentino (sin visa, visa al llegar o electrónica, visa previa, no admitido). Revisar una vez por mes en la actualización semanal del primer viernes del mes.
 - `corrupcion`: Índice de Percepción de la Corrupción de Transparencia Internacional, tramos de 20 puntos. Sale en febrero.
 Cuando sale una edición nueva, la actualización semanal de esa semana reemplaza el índice completo, cambia `edicion` y `proxima`, y lo menciona en la portada si Argentina cambió de categoría.
+
+## Empresas argentinas en Wall Street (`semana.json` → `adr`)
+- Cada viernes: cierre en dólares de YPF, PAM, VIST, TGS, CEPU, EDN, GGAL, BMA, BBAR, SUPV, TEO, LOMA, CAAP, MELI y GLOB (campos `cierre`, `cierre_prev` = viernes anterior, `cierre_2025` = 31/12/2025, `var_sem`, `var_anio` redondeados a 1 decimal; `sector`, `f`, `url`) y `corte`.
+- `merval_usd.var_sem`: variación semanal del Merval en dólares CCL (Rava, merval-usd). Se muestra solo la variación porque el índice cambió de base en octubre de 2026.
+- Fuentes: stockanalysis.com/stocks/<ticker>/history/, stockscan.io, marketbeat.com, rava.com. Verificar al menos dos fuentes en los papeles con grandes movimientos.

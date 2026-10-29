@@ -7737,5 +7737,279 @@
     "url": "https://www.cronica.com.mx/mundo/2026/10/02/fiscalia-de-bolivia-designa-a-un-interino-tras-arresto-del-fiscal-general-por-proteger-al-narco/"
    }
   ]
+ },
+ "adr": {
+  "corte": "2026-10-23",
+  "acciones": [
+   {
+    "ticker": "YPF",
+    "nombre": "YPF",
+    "sector": "Energía",
+    "cierre": 50.68,
+    "cierre_prev": 52.1,
+    "cierre_2025": 36.16,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 49.34
+    },
+    "f": "Stock Analysis (cierres 16/10 y 23/10); Macrotrends, Stockscan y Digrin (cierre 2025: 36,16); Stockscan y Digrin (último 28/10)",
+    "url": "https://stockanalysis.com/stocks/ypf/history/",
+    "url_2025": "https://www.macrotrends.net/stocks/charts/YPF/ypf-sociedad-anonima/stock-price-history",
+    "var_sem": -2.7,
+    "var_anio": 40.1,
+    "url_ultimo": "https://stockscan.io/stocks/YPF/price-history"
+   },
+   {
+    "ticker": "PAM",
+    "nombre": "Pampa Energía",
+    "sector": "Energía",
+    "cierre": 79.5,
+    "cierre_prev": 81.1,
+    "cierre_2025": 88.51,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 75.47
+    },
+    "f": "Stock Analysis (cierres 16/10 y 23/10); Stockscan (cierre 2025 y último 28/10; variación diaria 26/10 coincide)",
+    "url": "https://stockanalysis.com/stocks/pam/history/",
+    "var_sem": -2.0,
+    "var_anio": -10.2,
+    "url_2": "https://stockscan.io/stocks/PAM/price-history"
+   },
+   {
+    "ticker": "VIST",
+    "nombre": "Vista Energy",
+    "sector": "Energía",
+    "cierre": 74.84,
+    "cierre_prev": 71.95,
+    "cierre_2025": 48.66,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 72.27
+    },
+    "f": "Stock Analysis (cierres 16/10 y 23/10); Stockscan (cierre 2025 y último 28/10; variaciones diarias coinciden)",
+    "url": "https://stockanalysis.com/stocks/vist/history/",
+    "var_sem": 4.0,
+    "var_anio": 53.8,
+    "url_2": "https://stockscan.io/stocks/VIST/price-history"
+   },
+   {
+    "ticker": "TGS",
+    "nombre": "Transportadora de Gas del Sur",
+    "sector": "Energía",
+    "cierre": 27.21,
+    "cierre_prev": 26.14,
+    "cierre_2025": 31.09,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 25.3
+    },
+    "f": "MarketBeat (cierres 16/10 y 23/10); Stockscan (cierre 2025); Stock Analysis (último 28/10: 25,30; MarketBeat da 25,27)",
+    "url": "https://www.marketbeat.com/stocks/NYSE/TGS/price-history/",
+    "var_sem": 4.1,
+    "var_anio": -12.5,
+    "url_2": "https://stockscan.io/stocks/TGS/price-history",
+    "url_ultimo": "https://www.stockanalysis.com/stocks/tgs/",
+    "nota": "Último: Stock Analysis 25,30 vs MarketBeat 25,27 (28/10)"
+   },
+   {
+    "ticker": "CEPU",
+    "nombre": "Central Puerto",
+    "sector": "Energía",
+    "cierre": 12.1,
+    "cierre_prev": 12.93,
+    "cierre_2025": 17.5,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 11.3
+    },
+    "f": "Stock Analysis (cierres 16/10 y 23/10); Stockscan y Macrotrends (cierre 2025: 17,50); Stockscan (último 28/10)",
+    "url": "https://stockanalysis.com/stocks/cepu/history",
+    "var_sem": -6.4,
+    "var_anio": -30.9,
+    "url_2": "https://stockscan.io/stocks/CEPU/price-history",
+    "nota": "Pagó dividendo en sept. 2026; variación anual es solo precio"
+   },
+   {
+    "ticker": "EDN",
+    "nombre": "Edenor",
+    "sector": "Energía",
+    "cierre": 18.91,
+    "cierre_prev": 20.41,
+    "cierre_2025": 29.96,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 17.03
+    },
+    "f": "Stock Analysis (cierre 16/10 en tabla histórica; cierre 23/10 como \"previous close\" en la cotización del 26/10); Macrotrends, Digrin y Stockscan (cierre 2025: 29,96); Stockscan (último 28/10; variaciones diarias consistentes)",
+    "url": "https://stockanalysis.com/stocks/edn/history/",
+    "var_sem": -7.3,
+    "var_anio": -36.9,
+    "url_2025": "https://www.digrin.com/stocks/detail/EDN/price",
+    "url_2": "https://stockscan.io/stocks/EDN/price-history"
+   },
+   {
+    "ticker": "GGAL",
+    "nombre": "Grupo Financiero Galicia",
+    "sector": "Bancos",
+    "cierre": 37.91,
+    "cierre_prev": 36.02,
+    "cierre_2025": 53.94,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 33.84
+    },
+    "f": "Stock Analysis y MarketBeat (16/10 y 23/10 coinciden); Stockscan y Digrin (cierre 2025: 53,94); MarketBeat y Stockscan (último 28/10: 33,84)",
+    "url": "https://stockanalysis.com/stocks/ggal/history",
+    "url_2": "https://www.marketbeat.com/stocks/NASDAQ/GGAL/price-history/",
+    "var_sem": 5.2,
+    "var_anio": -29.7,
+    "url_2025": "https://stockscan.io/stocks/GGAL/price-history"
+   },
+   {
+    "ticker": "BMA",
+    "nombre": "Banco Macro",
+    "sector": "Bancos",
+    "cierre": 65.96,
+    "cierre_prev": 63.86,
+    "cierre_2025": 90.16,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 60.14
+    },
+    "f": "MarketBeat (cierres 16/10, 23/10 y 28/10); Stockscan (cierre 2025)",
+    "url": "https://www.marketbeat.com/stocks/NYSE/BMA/price-history/",
+    "url_2": "https://stockscan.io/stocks/BMA/price-history",
+    "var_sem": 3.3,
+    "var_anio": -26.8,
+    "nota": "Stockscan sugiere ~66,04 para el 23/10 (derivado de variaciones diarias) vs 65,96 de MarketBeat; diferencia 0,1%"
+   },
+   {
+    "ticker": "BBAR",
+    "nombre": "BBVA Argentina",
+    "sector": "Bancos",
+    "cierre": 13.17,
+    "cierre_prev": 12.78,
+    "cierre_2025": 18.07,
+    "ultimo": {
+     "fecha": "2026-10-26",
+     "cierre": 12.12
+    },
+    "f": "TipRanks (cierres 16/10, 23/10 y 26/10); Stockscan (cierre 2025; variación diaria 26/10 -7,97% coincide)",
+    "url": "https://www.tipranks.com/stocks/bbar/historical-prices",
+    "url_2": "https://stockscan.io/stocks/BBAR/price-history",
+    "nota": "Stockscan informa 11,80 al 28/10 con volumen bajo (posible dato intradiario); no se usó",
+    "var_sem": 3.0,
+    "var_anio": -27.1
+   },
+   {
+    "ticker": "SUPV",
+    "nombre": "Grupo Supervielle",
+    "sector": "Bancos",
+    "cierre": 7.73,
+    "cierre_prev": 7.22,
+    "cierre_2025": 11.82,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 6.7
+    },
+    "f": "MarketBeat (cierres 16/10, 23/10 y 28/10); Stock Analysis confirma 16/10 (7,22); Stockscan y FinancialContent (cierre 2025: 11,82); Stockscan último 28/10: 6,71",
+    "url": "https://www.marketbeat.com/stocks/NYSE/SUPV/price-history/",
+    "url_2": "https://stockscan.io/stocks/SUPV/price-history",
+    "var_sem": 7.1,
+    "var_anio": -34.6
+   },
+   {
+    "ticker": "TEO",
+    "nombre": "Telecom Argentina",
+    "sector": "Otras",
+    "cierre": 12.9,
+    "cierre_prev": 12.47,
+    "cierre_2025": 11.61,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 11.09
+    },
+    "f": "FinancialContent (cierres 16/10, 23/10 y 28/10); Stockscan (cierre 2025; último 28/10: 11,09 coincide; variaciones diarias coinciden)",
+    "url": "https://www.financialcontent.com/quote/NY:TEO/historical",
+    "var_sem": 3.5,
+    "var_anio": 11.1,
+    "url_2": "https://stockscan.io/stocks/TEO/price-history"
+   },
+   {
+    "ticker": "LOMA",
+    "nombre": "Loma Negra",
+    "sector": "Otras",
+    "cierre": 9.81,
+    "cierre_prev": 10.03,
+    "cierre_2025": 12.95,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 9.11
+    },
+    "f": "MarketBeat (cierres 16/10, 23/10, 28/10); Stock Analysis confirma 16/10 (10,03); Stockscan (cierre 2025; último 28/10: 9,12)",
+    "url": "https://www.marketbeat.com/stocks/NYSE/LOMA/price-history/",
+    "url_2": "https://stockscan.io/stocks/LOMA/price-history",
+    "var_sem": -2.2,
+    "var_anio": -24.2,
+    "nota": "Variaciones diarias de Stockscan sugieren ~9,78 para el 23/10 vs 9,81 de MarketBeat"
+   },
+   {
+    "ticker": "CAAP",
+    "nombre": "Corporación América Airports",
+    "sector": "Otras",
+    "cierre": 24.18,
+    "cierre_prev": 25.09,
+    "cierre_2025": 26.0,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 23.61
+    },
+    "f": "Stock Analysis (cierre 16/10 en tabla histórica; cierre 23/10 como \"previous close\" en la cotización del 26/10); Stockscan (cierre 2025 y último 28/10; variaciones diarias consistentes)",
+    "url": "https://stockanalysis.com/stocks/caap/history/",
+    "var_sem": -3.6,
+    "var_anio": -7.0,
+    "url_2": "https://stockscan.io/stocks/CAAP/price-history"
+   },
+   {
+    "ticker": "MELI",
+    "nombre": "Mercado Libre",
+    "sector": "Fundadas en Argentina",
+    "cierre": 1810.15,
+    "cierre_prev": 1834.0,
+    "cierre_2025": 2014.26,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 1673.09
+    },
+    "f": "Stock Analysis (cierres 16/10 y 23/10); Stockscan (cierre 2025 y último 28/10; variación diaria 26/10 -7,81% coincide)",
+    "url": "https://stockanalysis.com/stocks/meli/history/",
+    "url_2": "https://stockscan.io/stocks/MELI/price-history",
+    "var_sem": -1.3,
+    "var_anio": -10.1
+   },
+   {
+    "ticker": "GLOB",
+    "nombre": "Globant",
+    "sector": "Fundadas en Argentina",
+    "cierre": 45.03,
+    "cierre_prev": 39.56,
+    "cierre_2025": 65.37,
+    "ultimo": {
+     "fecha": "2026-10-28",
+     "cierre": 43.28
+    },
+    "f": "Rava Bursátil, perfil GLOB_US (cierres 16/10 y 23/10); Stockscan y Digrin (cierre 2025: 65,37); Stockscan (último 28/10). MarketBeat da 39,55 / 45,07 / 43,34",
+    "url": "https://www.rava.com/perfil/GLOB_US",
+    "url_2": "https://stockscan.io/stocks/GLOB/price-history",
+    "var_sem": 13.8,
+    "var_anio": -31.1
+   }
+  ],
+  "merval_usd": {
+   "var_sem": 0.1
+  },
+  "f": "Stock Analysis · Stockscan · MarketBeat · Rava",
+  "nota": "Cierres en dólares del viernes 23/10 contra el 16/10 y contra el último cierre de 2025; variación solo de precio, sin dividendos. Mercado Libre y Globant tienen hoy sede fuera de Argentina; se incluyen como referencia."
  }
 }

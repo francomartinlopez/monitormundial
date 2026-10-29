@@ -88,6 +88,8 @@ nav.idx a.on{color:var(--ink);border-bottom-color:var(--accent)}
 .relbars .sub span{padding-left:14px;color:var(--muted)}
 .relbars i{display:block;height:10px;border-radius:2px}
 .relbars b{text-align:right;font:500 .8rem var(--f-data)}
+.adrgrid{display:grid;grid-template-columns:minmax(0,3fr) minmax(0,2fr);gap:18px}@media(max-width:820px){.adrgrid{grid-template-columns:1fr}}
+.adrb{display:grid;grid-template-columns:48px 1fr 64px;gap:8px;align-items:center;font-size:.82rem;margin:3px 0}.adrb>span{font:500 .78rem var(--f-data)}.adrb div{position:relative;height:12px;background:#16232C;border-radius:2px}.adrb i{position:absolute;top:0;bottom:0;border-radius:2px}.adrb b{text-align:right;font:500 .78rem var(--f-data)}
 .evfil{display:flex;flex-wrap:wrap;gap:6px;margin:6px 0 8px}
 .evfil button{font:600 .8rem var(--f-body,inherit);background:var(--panel2);color:var(--ink);border:1px solid var(--line);border-radius:999px;padding:5px 10px;cursor:pointer;display:inline-flex;align-items:center;gap:6px}
 .evfil button i{width:10px;height:10px;border-radius:50%;display:inline-block}
@@ -301,6 +303,7 @@ const PAGES = [
    {k:'fichas',id:'bancos',w:'full',t:'Política monetaria de bancos centrales',nombres:['Fed (EE.UU.)','BCE (zona euro)','Banco de Inglaterra','Banco de Japón','Banco Popular de China','Banco Central do Brasil','Banco Central de Chile','Banco de Rusia','Banco de la Reserva de India'],campos:['Tasa','Última decisión','Próxima reunión','Sesgo'],src:'sitios oficiales'},
    {k:'kpis',w:'half',t:'Finanzas globales',items:[K('Tesoro EE.UU. 10 años','%','FRED'),K('Índice dólar (DXY)','pts','ICE'),K('Riesgo emergentes (EMBI)','pb','JP Morgan'),K('Volatilidad (VIX)','pts','CBOE')]},
    {k:'kpis',w:'full',t:'Bolsas del mundo',items:[K('S&P 500','pts','S&P Dow Jones','sp500'),K('Nasdaq Composite','pts','Nasdaq','nasdaq'),K('Dow Jones','pts','S&P Dow Jones','dow-jones'),K('Euro Stoxx 50','pts','STOXX','euro-stoxx-50'),K('Nikkei 225','pts','Nikkei','nikkei-225'),K('Shanghai Composite','pts','SSE','shanghai'),K('Hang Seng','pts','HSI','hang-seng'),K('Ibovespa (Brasil)','pts','B3','ibovespa'),K('FTSE 100 (Londres)','pts','LSE','ftse-100'),K('DAX (Alemania)','pts','Deutsche Börse','dax'),K('Kospi (Corea)','pts','KRX','kospi'),K('Sensex (India)','pts','BSE','sensex')]},
+   {k:'adr',w:'full',t:'Empresas argentinas en Wall Street'},
    {k:'kpis',w:'full',t:'Alimentos, cripto y viajes',items:[K('Precios de alimentos (FAO)','pts','FAO','fao-alimentos'),K('Cereales (FAO)','pts','FAO','fao-cereales'),K('Aceites vegetales (FAO)','pts','FAO','fao-aceites'),K('Bitcoin','USD','mercado','bitcoin'),K('Combustible de aviones','USD/bbl','IATA','jet-fuel'),K('Pasajes aéreos 2026','% anual','IATA','pasajes')]},
    {k:'chart',id:'pib',w:'half',t:'Crecimiento esperado del PIB 2026, países prioritarios (%)',kind:'bars',labels:['EE.UU.','China','Rusia','UE','R. Unido','Israel','Irán','India','Brasil','Chile','Bolivia','Paraguay','Uruguay'],src:'FMI · OCDE'},
    {k:'kpis',w:'full',t:'Socios comerciales',items:[K('Real por dólar','BRL','BCB'),K('Actividad Brasil','var. %','IBGE'),K('Yuan por dólar','CNY','PBoC'),K('PMI China','pts','NBS'),K('Inflación EE.UU.','% anual','BLS'),K('PMI EE.UU.','pts','ISM'),K('Inflación zona euro','% anual','Eurostat'),K('PMI zona euro','pts','HCOB')]},
@@ -692,6 +695,18 @@ const R = {
      <div class="map">${relSVG()}</div><div class="legend" style="margin-top:8px">${relLeyenda()}</div>
      <div class="det" style="margin-top:8px;padding:10px 12px;border:1px solid var(--line);border-radius:4px;background:var(--panel2)">${d.paises['032'] ? relDet('032') : ''}</div><div class="reltop" style="margin-top:8px"></div></div>
      <p class="muted" style="font-size:.8rem;margin:8px 0 0">${d.nota ? esc(d.nota) + ' ' : ''}${d.nota_ramas ? esc(d.nota_ramas) + ' ' : ''}${d.fuente_ramas ? 'Ramas: ' + esc(d.fuente_ramas.replace(/\.$/, '')) + '. ' : ''}Edición: ${esc(d.edicion || '—')}. Próxima: ${esc(d.proxima || '—')}.</p><span class="src">${d.url ? `<a href="${esc(d.url)}">Fuente</a>` : ''}</span>`; },
+  adr: b => { const A = DATA.adr; if(!A || !A.acciones) return head(b.t) + '<p class="muted">Sin datos.</p>';
+    const pct = v => v === null || v === undefined ? '—' : `<b style="color:${v >= 0 ? 'var(--ok)' : 'var(--crit)'}">${v >= 0 ? '+' : ''}${String(v.toFixed(1)).replace('.', ',')} %</b>`;
+    const num = v => v === null || v === undefined ? '—' : v.toLocaleString('es-AR', {minimumFractionDigits: 2, maximumFractionDigits: 2});
+    const L = A.acciones.filter(x => x.var_sem !== null && x.var_sem !== undefined).slice().sort((a, b) => b.var_sem - a.var_sem);
+    const mx = Math.max(1, ...L.map(x => Math.abs(x.var_sem)));
+    const bars = L.map(x => `<div class="adrb"><span>${esc(x.ticker)}</span><div><i style="${x.var_sem >= 0 ? 'left:50%' : 'right:50%'};width:${Math.abs(x.var_sem) / mx * 50}%;background:${x.var_sem >= 0 ? 'var(--ok)' : 'var(--crit)'}"></i></div>${pct(x.var_sem)}</div>`).join('');
+    const secs = [...new Set(A.acciones.map(x => x.sector))];
+    const M = A.merval_usd;
+    return head(b.t, 'NYSE · Nasdaq · ' + (A.f || 'prensa')) + `<p class="muted" style="margin:0 0 8px">Acciones de empresas argentinas que cotizan en Wall Street, en dólares: cómo las valúan los inversores del mundo, sin el efecto del tipo de cambio. Cierre del ${esc(fecha(A.corte))}.${M && M.var_sem !== undefined ? ` Merval en dólares (CCL): ${M.var_sem >= 0 ? '+' : ''}${String(M.var_sem).replace('.', ',')} % en la semana.` : ''}</p>
+     <div class="adrgrid"><div class="scroll"><table><thead><tr><th>Empresa</th><th>Ticker</th><th>Cierre (USD)</th><th>Semana</th><th>En 2026</th></tr></thead><tbody>${secs.map(sc => `<tr><td colspan="5" class="muted" style="font-size:.78rem;padding-top:10px">${esc(sc)}</td></tr>` + A.acciones.filter(x => x.sector === sc).map(x => `<tr><td>${x.url ? `<a href="${esc(x.url)}">${esc(x.nombre)}</a>` : esc(x.nombre)}</td><td>${esc(x.ticker)}</td><td>${num(x.cierre)}</td><td>${pct(x.var_sem)}</td><td>${pct(x.var_anio)}</td></tr>`).join('')).join('')}</tbody></table></div>
+     <div><h3 style="margin:0 0 6px;font-size:.95rem">Variación de la semana</h3>${bars}</div></div>
+     ${A.nota ? `<p class="muted" style="font-size:.8rem;margin:8px 0 0">${esc(A.nota)}</p>` : ''}`; },
   eventos: b => { const E = DATA.eventos; if(!E) return head(b.t) + '<p class="muted">Sin datos.</p>';
     const n = (E.lista || []).filter(evActual).length;
     return head(b.t, 'USGS · GDACS · ReliefWeb · NetBlocks · prensa') + `<p class="muted" style="margin:0 0 4px">${n} eventos desde el ${esc(fecha(E.desde))}; en tono claro, las tres semanas anteriores. País pintado: medida que abarca todo el país. Círculo punteado: zona afectada. Punto: lugar del hecho. Tocá un punto para ver el detalle.</p>
