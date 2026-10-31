@@ -1,13 +1,13 @@
 # Guía de actualización semanal — Monitor Mundial
 
-Esta guía la sigue Claude cada viernes a la noche. El sitio es estático: `index.html` (estructura y gráficos), `mundo.json` (mapa base, no se toca) y `datos/semana.json` (todos los datos de la semana). **Cada semana se cambia solo `datos/semana.json`**, salvo que haga falta un bloque nuevo.
+Esta guía la sigue Claude cada sábado a la mañana. El sitio es estático: `index.html` (estructura y gráficos), `mundo.json` (mapa base, no se toca) y `datos/semana.json` (todos los datos de la semana). **Cada semana se cambia solo `datos/semana.json`**, salvo que haga falta un bloque nuevo.
 
 ## Reglas editoriales
 
 - **Qué cubre:** solo lo que pasa fuera de Argentina y cómo afecta a Argentina. La única excepción es la injerencia extranjera dentro de Argentina. Nada de política o hechos internos argentinos.
 - **Sin relación** con el proyecto de El Niño en Argentina (alertahidrica / datosargentina).
 - **Idioma:** español rioplatense, claro y sin jerga.
-- **Corte:** el viernes, al cierre de Wall Street. **Publicación:** el mismo viernes a la noche (la tarea corre a las 21:50, hora argentina). Solo valores actuales; no hay alertas entre semanas.
+- **Corte:** el viernes, al cierre de Wall Street. **Publicación:** el sábado a la mañana (la tarea corre a las 9:30, hora argentina), cuando los cierres del viernes ya están en los buscadores. Solo valores actuales; no hay alertas entre semanas.
 - **Fuentes:** solo gratuitas. ACLED no se usa.
 - **Datos con fuente:** cada dato lleva fuente (`f`), enlace (`url`) y fecha (`fecha`). No se inventa ni se completa de memoria: si no hay fuente, el dato queda en "—" con una nota.
 - **Juicios propios:** se marcan como "lectura propia".
@@ -17,10 +17,16 @@ Esta guía la sigue Claude cada viernes a la noche. El sitio es estático: `inde
   - Intensidad de conflictos → nivel de 1 a 5 de lectura propia.
 - **Cifras sensibles:** muertos, encuestas y resultados se verifican en al menos dos medios.
 
+## Cómo trabajar (importante)
+
+- El cupo de búsquedas web por turno es limitado: no hagas todo en serie. Lanzá 6 o 7 subagentes en paralelo, cada uno con un área y su propio archivo de salida (no editan `semana.json`): materias primas y fletes; finanzas, bolsas, bancos centrales y ADR; clima y eventos de la semana; conflictos y crimen; injerencia y relaciones; política, elecciones y ONU; tecnología y salud. Después juntá los archivos, escribí la portada (resumen, noticias, semáforos, vulnerabilidades) y publicá.
+- Si un subagente se queda sin búsquedas, retomalo en otro turno para que complete lo que falta.
+- Si después de eso algo sigue sin dato, dejá el valor anterior con la nota "Sin dato nuevo al DD/MM" y anotalo en `pendientes`. No dejes de publicar por unos pocos datos faltantes: publicá y avisá en el mail.
+
 ## Paso a paso
 
 1. **Clonar el repositorio** `francomartinlopez/monitormundial` y leer `datos/semana.json`.
-2. **Fechas:** actualizar `corte` (el viernes, AAAA-MM-DD) y `publicado` (el mismo viernes).
+2. **Fechas:** actualizar `corte` (el viernes, AAAA-MM-DD) y `publicado` (el sábado).
 3. **Valores** (`valores`): actualizar cada uno con `v`, `d` (variación semanal) y `dt`.
    - `dt`: `"pct"` para %, `"pb"` para puntos básicos, `"pts"` para puntos.
    - `sig`: `"+"` si subir es bueno para Argentina, `"-"` si es malo.
