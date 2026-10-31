@@ -19,7 +19,7 @@ Esta guía la sigue Claude cada sábado a la mañana. El sitio es estático: `in
 
 ## Cómo trabajar (importante)
 
-- El cupo de búsquedas web por turno es limitado: no hagas todo en serie. Lanzá 6 o 7 subagentes en paralelo, cada uno con un área y su propio archivo de salida (no editan `semana.json`): materias primas y fletes; finanzas, bolsas, bancos centrales y ADR; clima y eventos de la semana; conflictos y crimen; injerencia y relaciones; política, elecciones y ONU; tecnología y salud. Después juntá los archivos, escribí la portada (resumen, noticias, semáforos, vulnerabilidades) y publicá.
+- El cupo de búsquedas web por turno es limitado: no hagas todo en serie. Lanzá 6 o 7 subagentes en paralelo, cada uno con un área y su propio archivo de salida (no editan `semana.json`): materias primas y fletes; finanzas, bolsas, bancos centrales y ADR; clima, vórtice polar y eventos de la semana; conflictos y crimen; injerencia y relaciones; política, elecciones y ONU; tecnología y salud. Después juntá los archivos, escribí la portada (resumen, noticias, semáforos, vulnerabilidades) y publicá.
 - Si un subagente se queda sin búsquedas, retomalo en otro turno para que complete lo que falta.
 - Si después de eso algo sigue sin dato, dejá el valor anterior con la nota "Sin dato nuevo al DD/MM" y anotalo en `pendientes`. No dejes de publicar por unos pocos datos faltantes: publicá y avisá en el mail.
 
@@ -84,10 +84,22 @@ Esta guía la sigue Claude cada sábado a la mañana. El sitio es estático: `in
     - el enlace al sitio;
     - la lista de datos que quedaron sin fuente.
 
+## Vórtice polar y energía para el invierno del norte (página Clima)
+
+Se sigue igual que el ENSO: cada semana, aunque no haya novedades. Vale de octubre a abril (invierno del hemisferio norte); de mayo a septiembre las fichas quedan con "Fuera de temporada" y solo se actualizan los precios.
+
+- Valores: `estado-del-vortice-polar` (texto corto: normal, fuerte, debilitado, debilitamiento récord, inversión en curso, recuperándose), `probabilidad-de-inversion-del-viento` (% de corridas del ECMWF que muestran viento bajo cero en las próximas 2 semanas; si ya se invirtió, poner la fecha observada en la nota), `fecha-prevista-de-la-inversion` (o "Ocurrió el DD/MM" si ya pasó; "Sin señal" si los modelos no la muestran) y `almacenamiento-de-gas-ue` (% lleno según GIE AGSI+, con la comparación contra un año atrás). Los precios del gas (TTF, JKM, Henry Hub) se toman de los mismos valores de la sección de materias primas.
+- Gráfico `vortice`: viento zonal a 10 hPa y 60° N del viernes de corte contra el promedio y el mínimo registrado para esa fecha (NASA Ozone Watch, producto MERRA-2 del Ártico). Si no hay dato observado, usar el pronóstico más reciente y decirlo en `src`. Valores negativos = inversión.
+- Fichas `vortice` (Estado del vórtice, Norteamérica, Europa, Asia oriental): qué muestran los modelos, qué cambió en la semana, cuándo se esperan los efectos (en superficie suelen llegar 2 a 4 semanas después de la perturbación) y el efecto en Argentina. Cada ola de frío real (temperaturas récord, muertos, cortes de luz o gas, emergencias) va también al mapa de eventos, categoría `natural`.
+- Fichas `energia-invierno` (Europa, EE.UU., Asia): almacenamiento, precios, cortes o racionamientos, demanda récord de electricidad o gas, y qué pasaría con frío extremo según analistas con nombre. Efecto en Argentina: precio del GNL que se importa en junio–agosto, urea y fertilizantes, trigo (daño al trigo de invierno de EE.UU., Europa, Rusia y Ucrania) y precio del gas y el petróleo que exporta Argentina.
+- Si el frío extremo o la falta de energía en el norte pasa a ser de las noticias más importantes de la semana, va a la portada y a los semáforos.
+- Fuentes: NASA Ozone Watch (https://ozonewatch.gsfc.nasa.gov/meteorology/NH.html), blog del vórtice polar de NOAA en climate.gov, blog de Judah Cohen (AER/MIT), Severe Weather Europe (seguimiento diario), Polar Vortex Earth, Met Office, ECMWF; NOAA CPC y Copernicus para las anomalías de temperatura; GIE AGSI+ (https://agsi.gie.eu/), informe semanal de almacenamiento de la EIA (jueves), ENTSOG, ACER; para Asia, Platts/JKM, JMA y el Centro Meteorológico de China. Un pronóstico se escribe como pronóstico, con la fecha del modelo; nunca como hecho.
+
 ## Calendario de fuentes que no son semanales
 
 - Pink Sheet del Banco Mundial (fertilizantes, carne): primeros días hábiles del mes.
 - NOAA CPC, discusión ENSO: segundo jueves del mes. IRI: alrededor del 19 de cada mes.
+- EIA, almacenamiento de gas de EE.UU.: todos los jueves. GIE AGSI+: diario, con dos días de demora.
 - Remesas de México (Banxico): primeros días del mes.
 - FMI WEO: abril, julio, octubre y enero.
 - ONU WPP: población; revisión cada dos años.

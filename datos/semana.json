@@ -1336,6 +1336,41 @@
    "fecha": "2025-12-31",
    "sig": "-",
    "nota": "Myanmar pasó a ser el mayor productor de opio del mundo tras la prohibición talibán en Afganistán."
+  },
+  "estado-del-vortice-polar": {
+   "v": "Debilitamiento récord",
+   "u": "",
+   "f": "NASA Ozone Watch · ECMWF (Severe Weather Europe)",
+   "url": "https://www.severe-weather.eu/global-weather/polar-vortex-split-record-early-stratospheric-warming-event-november-2026-united-states-canada-europe-fa/",
+   "fecha": "2026-10-29",
+   "nota": "El viento que sostiene el vórtice cae a niveles nunca vistos para principios de noviembre y los modelos prevén que se invierta y el vórtice se parta en dos núcleos (Canadá y Siberia)."
+  },
+  "probabilidad-de-inversion-del-viento": {
+   "v": 96,
+   "u": "% de modelos",
+   "f": "ECMWF, conjunto de 50 corridas (Severe Weather Europe)",
+   "url": "https://www.severe-weather.eu/global-weather/polar-vortex-split-record-early-stratospheric-warming-event-november-2026-united-states-canada-europe-fa/",
+   "fecha": "2026-10-28",
+   "dec": 0,
+   "nota": "Miembros del ECMWF que muestran inversión antes del 11/11. El modelo estadounidense (GEFS) da 71 % y el de inteligencia artificial del ECMWF (AIFS), 37 %."
+  },
+  "fecha-prevista-de-la-inversion": {
+   "v": "4–5 nov",
+   "u": "",
+   "f": "ECMWF (Severe Weather Europe · Gizmodo)",
+   "url": "https://www.severe-weather.eu/global-weather/polar-vortex-split-record-early-stratospheric-warming-event-november-2026-united-states-canada-europe-fa/",
+   "fecha": "2026-10-28",
+   "nota": "Sería el calentamiento estratosférico súbito más temprano registrado: el récord anterior es el 28/11 (1968 y 2025). Todavía es un pronóstico, no un hecho observado."
+  },
+  "almacenamiento-de-gas-ue": {
+   "v": 74.93,
+   "u": "% lleno",
+   "f": "GIE AGSI+ (cálculo de TASS)",
+   "url": "https://tass.com/economy/2209235",
+   "fecha": "2026-10-26",
+   "dec": 1,
+   "sig": "+",
+   "nota": "82,1 bcm, el volumen más bajo para la fecha desde 2013; hace un año estaba en 82,9 %. La meta de la UE (90 % entre el 1/10 y el 1/12) admite un margen de 10 puntos."
   }
  },
  "fichas": {
@@ -3542,6 +3577,98 @@
      "Efecto en Argentina": "Bajo: las drogas sintéticas y los precursores chinos llegan cada vez más a Sudamérica."
     }
    }
+  ],
+  "vortice": [
+   {
+    "nombre": "Estado del vórtice",
+    "chip": "Debilitamiento récord",
+    "chipc": "crit",
+    "campos": {
+     "Estado": "El viento del vórtice a 10 hPa y 60° N, que normalmente se fortalece en noviembre, cae muy por debajo del mínimo registrado: NASA pronostica 4,15 m/s para el 3/11, contra 25,97 de promedio y 14,35 de mínimo histórico para la fecha.",
+     "Qué cambió": "Los modelos pasaron de un debilitamiento a una inversión del viento alrededor del 4–5/11, con el vórtice partido en dos núcleos (sobre Canadá y Siberia) y temperaturas en la estratosfera hasta 22 °C sobre lo normal. El 96 % de las corridas del ECMWF muestra la inversión antes del 11/11; el récord anterior es el 28/11.",
+     "Cuándo": "El efecto en superficie suele llegar 2 a 4 semanas después de la perturbación: segunda mitad de noviembre y diciembre. Los pronósticos estacionales también marcan otra perturbación a mitad del invierno (enero–febrero).",
+     "Efecto en Argentina": "Indirecto, por precios: más frío en el norte sube la demanda de gas y electricidad, y con ella el precio del GNL y de la urea. Ver la ficha de energía."
+    },
+    "f": "Severe Weather Europe · NASA Ozone Watch · Gizmodo (Judah Cohen, MIT)",
+    "url": "https://www.severe-weather.eu/global-weather/polar-vortex-split-record-early-stratospheric-warming-event-november-2026-united-states-canada-europe-fa/"
+   },
+   {
+    "nombre": "Norteamérica",
+    "chip": "Frío posible",
+    "chipc": "warn",
+    "campos": {
+     "Estado": "El pronóstico del ECMWF para el 7/11 muestra frío por debajo de lo normal en el centro y el este de EE.UU. y un este de Canadá muy templado. El Niño muy fuerte empuja el sur hacia un invierno húmedo y templado.",
+     "Qué cambió": "Las salidas de octubre del ECMWF giraron a un invierno más frío y con más nieve en el centro-sur y el este de EE.UU. Judah Cohen (MIT): si el vórtice desvía el chorro polar, el frío puede ser mucho mayor que con El Niño solo.",
+     "Cuándo": "Segunda mitad de noviembre en adelante; la NOAA no mostraba aire ártico sobre la mayor parte de EE.UU. hasta el 5/11.",
+     "Efecto en Argentina": "Una ola de frío en EE.UU. sube el Henry Hub y puede dañar el trigo de invierno de las planicies, lo que sostiene el precio del trigo que Argentina cosecha en diciembre."
+    },
+    "f": "Severe Weather Europe · Boston Globe",
+    "url": "https://www.bostonglobe.com/2026/10/28/metro/polar-vortex-new-england-winter-weather/"
+   },
+   {
+    "nombre": "Europa",
+    "chip": "Frío con poco gas",
+    "chipc": "crit",
+    "campos": {
+     "Estado": "El ECMWF prevé temperaturas por debajo de lo normal en el oeste, el centro y el sur de Europa hacia el 8/11. El pronóstico estacional, en cambio, daba un invierno templado por alta presión sobre el continente.",
+     "Qué cambió": "La perturbación del vórtice suele favorecer la fase negativa de la Oscilación del Atlántico Norte, asociada a irrupciones de frío en el norte y el centro de Europa.",
+     "Cuándo": "Primeros efectos desde la segunda semana de noviembre; mayor riesgo en diciembre y en la perturbación prevista para mitad del invierno.",
+     "Efecto en Argentina": "Es la región más expuesta: el frío llega con el almacenamiento de gas más bajo en más de una década y el TTF sobre 100 EUR/MWh."
+    },
+    "f": "Severe Weather Europe · The Watchers (ECCC)",
+    "url": "https://www.severe-weather.eu/global-weather/polar-vortex-split-record-early-stratospheric-warming-event-november-2026-united-states-canada-europe-fa/"
+   },
+   {
+    "nombre": "Asia oriental",
+    "chip": "Vigilar",
+    "chipc": "warn",
+    "campos": {
+     "Estado": "Con El Niño, Japón y Corea del Sur esperan un invierno 1 a 2 °C más cálido de lo normal, y China desde enero. Uno de los núcleos del vórtice partido quedaría sobre Siberia.",
+     "Qué cambió": "Los pronosticadores advierten que, aun con un invierno templado, puede haber olas de frío breves si el vórtice se altera.",
+     "Cuándo": "Noviembre a febrero.",
+     "Efecto en Argentina": "Un frío fuerte en China, Japón y Corea, los mayores compradores de GNL, encarece los cargamentos que Argentina compra para su invierno."
+    },
+    "f": "NewsBytes · Severe Weather Europe",
+    "url": "https://www.newsbytesapp.com/news/world/el-nino-eases-asian-winter-demand-frees-lng-for-europe/tldr"
+   }
+  ],
+  "energia-invierno": [
+   {
+    "nombre": "Europa: gas y almacenamiento",
+    "chip": "Crítico",
+    "chipc": "crit",
+    "campos": {
+     "Situación": "Almacenamiento de la UE en 74,93 % al 26/10 (82,9 % hace un año), el volumen más bajo desde 2013. El TTF cerró el 30/10 en 103,95 EUR/MWh, por primera vez sobre 100 desde fines de 2022, con menos GNL de Qatar por la crisis de Ormuz.",
+     "Riesgo con frío extremo": "Morgan Stanley espera un promedio de 85 EUR/MWh en el invierno y más de 100 con frío y nuevos cortes de Qatar. A medida que los depósitos se vacían baja la capacidad diaria de extracción, lo que deja a Europa expuesta a un frío tardío.",
+     "Efecto en Argentina": "GNL más caro para el invierno argentino de 2027 y urea más cara para la campaña. Del otro lado, mejores precios para el gas y el GNL que exporte Argentina."
+    },
+    "f": "GIE AGSI+ (TASS) · GMK Center · Trading Economics",
+    "url": "https://tass.com/economy/2209235"
+   },
+   {
+    "nombre": "Estados Unidos: gas y electricidad",
+    "chip": "Holgado",
+    "chipc": "ok",
+    "campos": {
+     "Situación": "Almacenamiento alto (la EIA preveía 3.850 bcf a fin de octubre), producción récord y exportaciones de GNL en máximos. Henry Hub, contrato de diciembre, 2,90 USD/MMBtu al 30/10.",
+     "Riesgo con frío extremo": "La tormenta de enero de 2026 llevó el contrato más cercano cerca de 7 USD pese al almacenamiento alto. Un frío fuerte en EE.UU. también reduce el GNL disponible para Europa y Asia.",
+     "Efecto en Argentina": "El Henry Hub es la referencia de muchos contratos de GNL; un salto encarece las compras argentinas."
+    },
+    "f": "EIA (FX Empire) · WisdomTree · NYMEX",
+    "url": "https://www.fxempire.com/forecasts/article/premium-natural-gas-eyes-3-25-even-as-the-storage-cushion-shrinks-1637948"
+   },
+   {
+    "nombre": "Asia: GNL (Japón, Corea, China)",
+    "chip": "Caro",
+    "chipc": "warn",
+    "campos": {
+     "Situación": "JKM en 32,84 USD/MMBtu al 30/10; superó los 30 USD el 19/10 por primera vez desde diciembre de 2022. La guerra entre EE.UU. e Irán recortó la oferta de GNL del Golfo.",
+     "Riesgo con frío extremo": "El Niño modera la demanda prevista de calefacción; una ola de frío fuera de pronóstico en el norte de China, Japón o Corea dispararía las compras al contado.",
+     "Efecto en Argentina": "Más competencia y precios más altos por los cargamentos de GNL que Argentina contrata para junio–agosto."
+    },
+    "f": "Trading Economics · NewsBytes",
+    "url": "https://tradingeconomics.com/commodity/liquefied-natural-gas-japan-korea"
+   }
   ]
  },
  "pendientes": [
@@ -4211,6 +4338,28 @@
    "f": "FMI DataMapper",
    "url": "https://www.imf.org/external/datamapper/GGXWDG_NGDP",
    "nota": "Deuda bruta del gobierno general, proyección 2026. Rojo: 100 % o más; ámbar: 60 a 100 %; verde: menos de 60 %; celeste: Argentina, como referencia. EE.UU. y Reino Unido: FMI, sin confirmar si es la edición de octubre. Rusia: edición de abril. *Zona euro: Eurostat, primer trimestre. Paraguay (31 %) y Uruguay (61 %) solo tienen datos de CEPAL, que mide distinto."
+  },
+  "vortice": {
+   "labels": [
+    "Normal",
+    "Mínimo registrado",
+    "Actual o pronóstico"
+   ],
+   "values": [
+    25.97,
+    14.35,
+    4.15
+   ],
+   "u": "m/s",
+   "colores": [
+    "#9AA9B3",
+    "#E3BE55",
+    "#F0675F"
+   ],
+   "src": "NASA Ozone Watch (MERRA-2), pronóstico del 26/10",
+   "f": "NASA Ozone Watch vía The Watchers",
+   "url": "https://watchers.news/2026/10/26/arctic-stratospheric-polar-vortex-forecast-to-weaken-sharply-in-early-november/",
+   "nota": "Valores para el 3/11: promedio 1978/79–2025/26 (normal), el más bajo registrado para esa fecha y el pronóstico de NASA. Un valor bajo cero es la inversión del viento (calentamiento estratosférico súbito). Cada semana se reemplaza la última barra por el dato observado del viernes."
   }
  },
  "notas": {
