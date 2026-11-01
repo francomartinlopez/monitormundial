@@ -4366,6 +4366,58 @@
      "https://www.emol.com/noticias/Internacional/2026/10/14/1214099/argentina-relaciones-chile-malvinas.html"
     ]
    ]
+  },
+  "nino-arg": {
+   "parrafos": [
+    "Lluvias: el SMN asocia El Niño con más lluvias de lo normal en primavera y verano en el Litoral, el noreste, Buenos Aires y buena parte de la región pampeana; en el oeste de la región pampeana, en cambio, suelen predominar lluvias por debajo de lo normal. Para esta primavera da 100 % de probabilidad de que siga, con intensidad fuerte a muy fuerte, y las mayores chances de lluvias sobre lo normal en el norte del Litoral y el oeste de Cuyo.",
+    "Campo: con los suelos recargados, la campaña 2026/27 de soja y maíz arranca mejor que en un año seco. El riesgo es el exceso: anegamientos, siembras demoradas, granizo y enfermedades; el trigo que se cosecha en diciembre puede sufrir por lluvias en la recolección. Más cosecha significa más dólares por exportaciones, aunque una buena cosecha sudamericana también pesa sobre los precios internacionales.",
+    "Ríos y ciudades: crecidas del Paraná, el Uruguay y el Paraguay, evacuados en el Litoral, pérdidas en la ganadería de islas, rutas cortadas y más casos de dengue y leptospirosis. Más agua en las cuencas también sube la generación de Yacyretá y Salto Grande.",
+    "Afuera: El Niño suele traer sequía en Australia (gran competidor en trigo), en India y en Indonesia y Malasia (aceite de palma) y en el sur de África; eso tiende a sostener los precios del trigo y de los aceites que vende Argentina. En Brasil suele llover más en el sur y faltar agua en el norte y el nordeste.",
+    "Energía: El Niño suele dar inviernos más templados en el norte de EE.UU., Canadá, Japón y Corea, lo que modera la demanda de gas. Este año el vórtice polar debilitado empuja en sentido contrario (ver más abajo).",
+    "Lectura propia, basada en los informes del SMN y en el comportamiento de Niños anteriores; no es un pronóstico."
+   ],
+   "fuentes": [
+    [
+     "SMN vía Forbes Argentina (pronóstico de primavera)",
+     "https://www.forbesargentina.com/today/el-nino-entra-su-etapa-mas-fuerte-zonas-argentina-pueden-recibir-mas-lluvias-durante-primavera-n97336"
+    ],
+    [
+     "Agrofy: El Niño y el campo",
+     "https://news.agrofy.com.ar/noticia/216844/es-nino-pasa-lluvias-argentina-puede-impactar-campo"
+    ],
+    [
+     "SMN: impacto por región (Noticias NQN)",
+     "https://www.noticiasnqn.com.ar/noticias/2023/09/03/282193-llego-el-fenomeno-de-el-nino-a-la-argentina-como-estara-el-clima"
+    ]
+   ]
+  },
+  "vortice-arg": {
+   "parrafos": [
+    "Qué pasa: el debilitamiento récord del vórtice aumenta la probabilidad de olas de frío en EE.UU., Europa y Asia desde mediados de noviembre y durante el invierno del norte. Más frío significa más gas y electricidad para calefacción justo cuando el mercado está corto: Europa entra al invierno con el gas almacenado más bajo para la fecha desde 2013 y la guerra en el Golfo recortó el GNL de Qatar.",
+    "Precios: el gas europeo (TTF) ya superó los 100 EUR/MWh y el GNL asiático (JKM) los 30 USD/MMBtu, máximos desde 2022. Morgan Stanley estima que un invierno frío con nuevos cortes de Qatar dejaría el TTF por encima de 100. Esos precios son la referencia del GNL que compra Argentina.",
+    "Argentina compradora: todavía importa GNL en su invierno (junio a agosto) porque falta capacidad de transporte desde Vaca Muerta. En 2026 Enarsa previó unos 28 cargamentos y un gasto que podía superar los US$ 1.100 millones, contra unos US$ 700 millones en 2025. Si el frío vacía los depósitos europeos, Europa tendrá que reponerlos en 2027 compitiendo por los mismos barcos que Argentina necesita en su invierno: GNL más caro, más subsidios o tarifas más altas.",
+    "Fertilizantes: el gas es el principal costo de la urea; gas caro y el bloqueo de Ormuz encarecen el fertilizante para la campaña de maíz.",
+    "Argentina vendedora: mejora el precio del petróleo y el gas que exporta. El primer buque de exportación de GNL (Hilli Episeyo, de Southern Energy, 2,45 millones de toneladas por año) empezaría a fines de 2027 con contrato con la alemana SEFE; un mercado europeo ajustado favorece nuevos contratos. Además, un frío extremo puede dañar el trigo de invierno de EE.UU., Europa, Rusia y Ucrania y sostener el precio del trigo argentino que se cosecha en diciembre.",
+    "Balance: en el corto plazo pesa más el costo (GNL para el invierno de 2027 y urea) que el beneficio, porque la exportación de GNL recién empieza a fines de 2027. Lectura propia."
+   ],
+   "fuentes": [
+    [
+     "El Economista: GNL del invierno 2026",
+     "https://eleconomista.com.ar/energia/a-contrarreloj-frio-argentina-suma-barcos-gnl-prepara-una-millonaria-compra-gas-n96251"
+    ],
+    [
+     "GIE AGSI+ vía TASS: almacenamiento UE",
+     "https://tass.com/economy/2209235"
+    ],
+    [
+     "GMK Center: Morgan Stanley y el TTF",
+     "https://gmk.center/en/news/european-gas-prices-exceeded-e80-mwh-in-september/"
+    ],
+    [
+     "EconoJournal: Southern Energy y SEFE",
+     "https://econojournal.com.ar/oilgas/southern-energy-y-sefe-firmaron-en-berlin-el-contrato-para-la-venta-de-gnl-por-8-anos/"
+    ]
+   ]
   }
  },
  "calendario": {

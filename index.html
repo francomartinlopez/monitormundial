@@ -320,6 +320,8 @@ const PAGES = [
  {id:'clima',nav:'Clima',t:'Clima en el mundo',p:'Sequías, el ENSO y sus dos escenarios, el vórtice polar y el frío extremo con su efecto en la energía, cosechas de los competidores, desastres y rutas. Todo fuera de Argentina.',bl:[
    {k:'kpis',w:'two3',t:'Estado del clima global',items:[K('Fase ENSO actual','fase','NOAA CPC'),K('Anomalía Pacífico (Niño 3.4)','°C','NOAA CPC'),K('Probabilidad de El Niño','%','NOAA · IRI'),K('Probabilidad de La Niña','%','NOAA · IRI'),K('Sequías activas en zonas productoras','total','Copernicus'),K('Monzón de India','vs. normal','IMD'),K('Soja: producción competidores','Mt','USDA · CONAB'),K('Maíz: producción competidores','Mt','USDA · CONAB'),K('Trigo: producción competidores','Mt','USDA')]},
    {k:'chart',id:'enso-trim',w:'third',t:'Probabilidad de El Niño por trimestre (%)',kind:'bars',labels:['NDE Niña','NDE Niño','DEF Niña','DEF Niño','EFM Niña','EFM Niño'],src:'NOAA CPC · IRI'},
+   {k:'ninoserie',w:'full',t:'El Niño 2026 contra todos los años desde 1982: temperatura del Pacífico central'},
+   {k:'nota',id:'nino-arg',w:'full',t:'Qué significa El Niño para Argentina',src:'SMN · Agrofy · lectura propia'},
    {k:'fichas',id:'enso',w:'full',t:'Los dos escenarios del ENSO, fuera de Argentina',nombres:['Escenario El Niño','Escenario La Niña'],campos:['Probabilidad','Quién gana cosecha','Quién pierde cosecha','Efecto en precios','Efecto en Argentina'],chip:'Prob.',src:'NOAA · IRI · Bureau of Meteorology'},
    {k:'mapa',w:'full',n:7},
    {k:'fichas',id:'sequias',w:'full',t:'Sequías activas',n:3,campos:['Región','Cultivos afectados','Severidad','Efecto en Argentina'],src:'US Drought Monitor · Copernicus · CONAB'},
@@ -327,6 +329,7 @@ const PAGES = [
    {k:'kpis',w:'third',t:'Desastres de la semana',items:[K('Huracanes y tifones','activos','NOAA · JTWC'),K('Terremotos M6+','semana','USGS'),K('Erupciones volcánicas','activas','Smithsonian'),K('Tsunamis','alertas','NOAA'),K('Inundaciones graves','activas','GDACS'),K('Incendios grandes','activos','NASA FIRMS')]},
    {k:'kpis',w:'full',t:'Vórtice polar ártico y energía para el invierno del norte',items:[K('Estado del vórtice polar','estado','NASA · ECMWF'),K('Probabilidad de inversión del viento','% de modelos','ECMWF'),K('Fecha prevista de la inversión','fecha','ECMWF'),K('Almacenamiento de gas UE','% lleno','GIE AGSI+'),K('Gas TTF Europa','EUR/MWh','ICE','gas-ttf-europa'),K('GNL Asia (JKM)','USD/MMBtu','Platts','gnl-asia-jkm')]},
    {k:'vortice',w:'full',t:'El vórtice polar día por día, comparado con todos los inviernos desde 1979'},
+   {k:'nota',id:'vortice-arg',w:'full',t:'Qué significa el vórtice polar para Argentina: frío en el norte, energía cara',src:'Enarsa · Secretaría de Energía · GIE · lectura propia'},
    {k:'fichas',id:'vortice',w:'full',t:'Vórtice polar: estado y riesgo de frío extremo, fuera de Argentina',nombres:['Estado del vórtice','Norteamérica','Europa','Asia oriental'],campos:['Estado','Qué cambió','Cuándo','Efecto en Argentina'],chip:'Riesgo',src:'NASA · ECMWF · NOAA · Severe Weather Europe'},
    {k:'fichas',id:'energia-invierno',w:'full',t:'Energía para el invierno del norte: qué pasa si hace mucho frío',nombres:['Europa: gas y almacenamiento','Estados Unidos: gas y electricidad','Asia: GNL (Japón, Corea, China)'],campos:['Situación','Riesgo con frío extremo','Efecto en Argentina'],chip:'Riesgo',src:'GIE AGSI+ · EIA · ICE · Platts'},
    {k:'fichas',id:'clima-claves',w:'full',t:'Fichas clave',nombres:['Monzón de India','Temporada de huracanes','Bajantes: Panamá, Mississippi, Rin'],campos:['Estado','Qué cambió','Efecto en Argentina'],src:'IMD · NOAA · ACP · USACE'}
@@ -661,7 +664,7 @@ const R = {
     return head(b.t, b.src) + `<div class="cards">${ns.map((n, k) => { const x = dat && (dat.find(y => y.nombre === n) || (!b.nombres && dat[k])); const chipc = x && x.chipc ? ' ' + x.chipc : '';
       return `<div class="card"><div class="h"><h3>${esc(n)}</h3><span class="chip${chipc}">${x && x.chip ? esc(x.chip) : esc(b.chip || 'Estado') + ' —'}</span></div>${fields(b.campos, x && x.campos)}${x && x.url ? `<span class="src"><a href="${esc(x.url)}">${esc(x.f || 'Fuente')}</a></span>` : ''}</div>`; }).join('')}</div>`; },
   nota: b => { const n = b.id && DATA.notas && DATA.notas[b.id];
-    return head(b.t, 'Cancillería · Armada · Prefectura · prensa') + (n ? n.parrafos.map(t => `<p style="max-width:80ch;margin:0 0 10px">${esc(t)}</p>`).join('') + (n.fuentes || []).map(f => `<span class="src" style="margin-right:12px"><a href="${esc(f[1])}">${esc(f[0])}</a></span>`).join('') : `<p class="muted" style="max-width:70ch">${esc(b.txt)}</p><span class="ph" style="width:92%"></span><span class="ph" style="width:84%"></span><span class="ph" style="width:60%"></span>`); },
+    return head(b.t, b.src || 'Cancillería · Armada · Prefectura · prensa') + (n ? n.parrafos.map(t => { const m = t.match(/^([^:]{2,40}):\s(.*)$/s); return `<p style="max-width:80ch;margin:0 0 10px">${m ? `<b>${esc(m[1])}:</b> ${esc(m[2])}` : esc(t)}</p>`; }).join('') + (n.fuentes || []).map(f => `<span class="src" style="margin-right:12px"><a href="${esc(f[1])}">${esc(f[0])}</a></span>`).join('') : `<p class="muted" style="max-width:70ch">${esc(b.txt)}</p><span class="ph" style="width:92%"></span><span class="ph" style="width:84%"></span><span class="ph" style="width:60%"></span>`); },
   calendario: b => { const cal = b.id && DATA.calendario && DATA.calendario[b.id];
     if(cal){ const col = {si:'var(--ok)', no:'var(--crit)', incierto:'var(--warn)'};
       return head(b.t, 'IFES ElectionGuide · encuestas · lectura propia') + `<div class="cal">${cal.map(m => `<div><b>${esc(m.mes)}</b>${m.items.length ? m.items.map(e => `<div class="ev"><span class="dot" style="background:${col[e.alineado] || 'var(--muted)'}"></span><span><strong>${esc(e.fecha)} · ${esc(e.pais)}</strong> — ${esc(e.tipo)}<br><span class="muted">${esc(e.favorito)}</span></span></div>`).join('') : '<span class="muted">Sin elecciones relevantes</span>'}</div>`).join('')}</div>
@@ -693,6 +696,14 @@ const R = {
      ${idxLista(b.id)}
      <p class="muted" style="font-size:.8rem;margin:8px 0 0">${d.nota ? esc(d.nota) + ' ' : ''}${d.empalme ? esc(d.empalme) + ' ' : ''}Edición: ${esc((d.edicion || '—').replace(/\.$/, ''))}. Próxima: ${esc((d.proxima || '—').replace(/\.$/, ''))}.</p>
      <span class="src">${d.url ? `<a href="${esc(d.url)}">Fuente</a>` : ''}${d.url2 ? ` · <a href="${esc(d.url2)}">Fuente complementaria</a>` : ''}${d.url_mon ? ` · <a href="${esc(d.url_mon)}">Monarquías</a>` : ''}${d.url_fsi ? ` · <a href="${esc(d.url_fsi)}">Estados frágiles</a>` : ''}</span>`; },
+  ninoserie: b => { if(!NI || !NI.anios) return head(b.t) + '<p class="muted">Sin datos.</p>';
+    const act = NI.ultimo[0].slice(0, 4), yrs = Object.keys(NI.anios).filter(y => y !== act).reverse();
+    const ops = yrs.map(y => { const pk = NI.anios[y].pico; return `<option value="${y}"${y === NI_SEL ? ' selected' : ''}>${y}/${String(+y + 1).slice(2)}${pk ? ' · pico ' + (pk[1] > 0 ? '+' : '') + fmt(pk[1], 1) + ' °C' : ''}</option>`; }).join('');
+    return head(b.t, 'NOAA CPC (OISST v2.1)') + `<p class="muted" style="margin:0 0 6px">Cuántos grados por encima (o por debajo) de lo normal está el mar en el Pacífico ecuatorial central (región Niño 3.4), semana por semana. Cada línea es un año, de enero a junio del año siguiente; arriba de +0,5 °C hay condiciones de El Niño. En color, los cuatro Niños más fuertes desde 1982 y el actual.</p>
+     <div class="evfil" style="align-items:center"><label class="muted" style="font-size:.85rem">Resaltar otro año <select id="nisel"><option value="">— ninguno —</option>${ops}</select></label></div>
+     <div id="nibox">${niSVG()}</div><p id="niread" class="muted" style="font-size:.85rem;margin:6px 0 0;min-height:1.2em">${niResumen()}</p>
+     <p class="muted" style="font-size:.8rem;margin:6px 0 0">${esc(NI.fuente)}. Último dato: semana centrada el ${fecha(NI.ultimo[0])}. Los picos son semanales y con la base 1991–2020, por eso pueden diferir del índice trimestral oficial (ONI) que usa la NOAA para clasificar los eventos.</p>
+     <span class="src"><a href="https://www.cpc.ncep.noaa.gov/data/indices/wksst9120.for">NOAA CPC, datos semanales</a> · <a href="https://www.cpc.ncep.noaa.gov/products/analysis_monitoring/enso_advisory/ensodisc.shtml">Discusión ENSO de la NOAA</a></span>`; },
   vortice: b => { if(!VX || !VX.clima) return head(b.t) + '<p class="muted">Sin datos.</p>';
     const ops = Object.keys(VX.temporadas).filter(t => VX.temporadas[t].filter(v => v !== null).length > 300).reverse()
       .map(t => { const r = vxInversion(VX.temporadas[t]); return `<option value="${t}"${t === VX_SEL ? ' selected' : ''}>${t}${r !== null ? ' · inversión el ' + vxFecha(r) : ''}</option>`; }).join('');
@@ -732,6 +743,41 @@ const R = {
 /* ---------- índices por país (datos/indices.json) y eventos ---------- */
 let IDX = null;
 let VX = null, VX_SEL = '';
+let NI = null, NI_SEL = '';
+const NI_W = 960, NI_H = 340, NI_L = 44, NI_R = 14, NI_T = 14, NI_B = 30, NI_N = 546;
+const NI_DEST = {'1982':'#9B8CE8','1997':'#56C2A6','2015':'#5BA4E6','2023':'#F2994A'};
+const niFecha = (y, x) => { const d = new Date(Date.UTC(+y, 0, 1) + x * 864e5); return d.getUTCDate() + '/' + (d.getUTCMonth() + 1) + '/' + d.getUTCFullYear(); };
+function niEsc(){ const all = Object.values(NI.anios).flatMap(a => a.p.map(p => p[1])); const lo = Math.floor(Math.min(...all)), hi = Math.ceil(Math.max(...all));
+  return {lo, hi, X: x => NI_L + x * (NI_W - NI_L - NI_R) / (NI_N - 1), Y: v => NI_T + (hi - v) * (NI_H - NI_T - NI_B) / (hi - lo)}; }
+function niSVG(){
+  const {lo, hi, X, Y} = niEsc(), act = NI.ultimo[0].slice(0, 4); let s = '';
+  const line = (pts, col, w, op) => `<path d="${pts.map((p, i) => (i ? 'L' : 'M') + X(p[0]).toFixed(1) + ',' + Y(p[1]).toFixed(1)).join('')}" fill="none" stroke="${col}" stroke-width="${w}" stroke-opacity="${op}" stroke-linejoin="round"/>`;
+  for(let v = lo; v <= hi; v++){ const y = Y(v); s += `<line x1="${NI_L}" x2="${NI_W - NI_R}" y1="${y}" y2="${y}" stroke="${v === 0 ? '#5E7180' : '#22333E'}"/><text x="${NI_L - 6}" y="${y + 4}" text-anchor="end">${v > 0 ? '+' : ''}${v}</text>`; }
+  [[0.5, 'El Niño'], [1.5, 'fuerte'], [2, 'muy fuerte']].forEach(([v, t]) => { s += `<line x1="${NI_L}" x2="${NI_W - NI_R}" y1="${Y(v)}" y2="${Y(v)}" stroke="#F0675F" stroke-opacity=".45" stroke-dasharray="5 4"/><text x="${NI_W - NI_R - 4}" y="${Y(v) - 4}" text-anchor="end" style="fill:#F0675F;font-size:11px">${t} (+${fmt(v, 1)})</text>`; });
+  ['ene','feb','mar','abr','may','jun','jul','ago','sep','oct','nov','dic','ene','feb','mar','abr','may','jun'].forEach((m, k) => { const x = Math.round(k * 365 / 12); s += `<line x1="${X(x)}" x2="${X(x)}" y1="${NI_T}" y2="${NI_H - NI_B}" stroke="#1A2730"/><text x="${X(x) + 3}" y="${NI_H - 10}">${m}</text>`; });
+  s += `<text x="${X(365) + 3}" y="${NI_H - 22}" style="fill:#9AA9B3;font-size:10px">año siguiente →</text>`;
+  Object.entries(NI.anios).forEach(([y, a]) => { if(y !== act && !NI_DEST[y] && y !== NI_SEL) s += line(a.p, '#9AA9B3', 1, .22); });
+  Object.entries(NI_DEST).forEach(([y, c]) => { if(NI.anios[y] && y !== NI_SEL) s += line(NI.anios[y].p, c, 2, .9); });
+  if(NI_SEL && NI.anios[NI_SEL]) s += line(NI.anios[NI_SEL].p, '#E3BE55', 2.5, 1);
+  const a = NI.anios[act].p, k = a[a.length - 1]; s += line(a, '#F0675F', 3.5, 1) + `<circle cx="${X(k[0])}" cy="${Y(k[1])}" r="5" fill="#F0675F"/><text x="${X(k[0]) + 8}" y="${Y(k[1]) + 4}" style="fill:var(--ink);font-weight:600">+${fmt(k[1], 1)}</text>`;
+  s += `<line id="nicur" x1="0" x2="0" y1="${NI_T}" y2="${NI_H - NI_B}" stroke="#C9D3DA" stroke-opacity="0"/>`;
+  const ley = [['#F0675F', act + '/' + String(+act + 1).slice(2)], ...Object.entries(NI_DEST).map(([y, c]) => [c, y + '/' + String(+y + 1).slice(2)]), NI_SEL ? ['#E3BE55', NI_SEL + '/' + String(+NI_SEL + 1).slice(2)] : null, ['#9AA9B3', 'resto de los años']].filter(Boolean);
+  let lx = NI_L + 8; ley.forEach(([c, t]) => { s += `<rect x="${lx}" y="${NI_T + 4}" width="12" height="4" fill="${c}"/><text x="${lx + 16}" y="${NI_T + 10}">${esc(t)}</text>`; lx += 30 + t.length * 6.3; });
+  return `<div class="ghost" style="overflow-x:auto"><svg viewBox="0 0 ${NI_W} ${NI_H}" role="img" aria-label="Anomalía de Niño 3.4 por semana, todos los años" style="touch-action:pan-x pan-y;min-width:760px">${s}<rect x="${NI_L}" y="${NI_T}" width="${NI_W - NI_L - NI_R}" height="${NI_H - NI_T - NI_B}" fill="transparent" class="nihit"/></svg></div>`;
+}
+function niCerca(y, x){ const a = NI.anios[y]; if(!a) return null; let b = null; a.p.forEach(p => { if(Math.abs(p[0] - x) <= 4 && (!b || Math.abs(p[0] - x) < Math.abs(b[0] - x))) b = p; }); return b; }
+function niResumen(x){
+  const act = NI.ultimo[0].slice(0, 4), a = NI.anios[act].p; if(x === undefined) x = a[a.length - 1][0];
+  const v = niCerca(act, x), sg = n => (n > 0 ? '+' : '') + fmt(n, 1);
+  const otros = [...Object.keys(NI_DEST), NI_SEL].filter(Boolean).map(y => { const p = niCerca(y, x); return p ? `${y}/${String(+y + 1).slice(2)}: ${sg(p[1])}` : ''; }).filter(Boolean).join(' · ');
+  const vals = Object.keys(NI.anios).map(y => niCerca(y, x)).filter(Boolean).map(p => p[1]); const mx = Math.max(...vals);
+  return `<b>${niFecha(act, x).replace(/\/\d{4}$/, '')}</b>: ${v ? `${act}: <b>${sg(v[1])} °C</b>${v[1] >= mx ? ' · <b style="color:var(--crit)">el valor más alto para la fecha desde 1982</b>' : ''} · ` : ''}${otros}`;
+}
+function niScroll(){ const g = document.querySelector('#nibox .ghost'); if(!g || !NI || g.scrollWidth <= g.clientWidth) return; const a = NI.anios[NI.ultimo[0].slice(0, 4)].p; g.scrollLeft = Math.max(0, g.scrollWidth * a[a.length - 1][0] / NI_N - g.clientWidth * .6); }
+document.addEventListener('change', e => { if(e.target.id !== 'nisel') return; NI_SEL = e.target.value; $('#nibox').innerHTML = niSVG(); $('#niread').innerHTML = niResumen(); niScroll(); });
+document.addEventListener('pointermove', e => { const r = e.target.closest && e.target.closest('.nihit'); if(!r) return; const svg = r.ownerSVGElement, bb = svg.getBoundingClientRect();
+  const px = (e.clientX - bb.left) * NI_W / bb.width, x = Math.max(0, Math.min(NI_N - 1, Math.round((px - NI_L) * (NI_N - 1) / (NI_W - NI_L - NI_R))));
+  const cur = svg.querySelector('#nicur'), X = NI_L + x * (NI_W - NI_L - NI_R) / (NI_N - 1); cur.setAttribute('x1', X); cur.setAttribute('x2', X); cur.setAttribute('stroke-opacity', '.6'); $('#niread').innerHTML = niResumen(x); });
 const VX_W = 960, VX_H = 340, VX_L = 44, VX_R = 14, VX_T = 14, VX_B = 30;
 const vxDia = i => new Date(Date.UTC(2001, 6, 1) + i * 864e5);
 const vxFecha = i => { const d = vxDia(i); return d.getUTCDate() + '/' + (d.getUTCMonth() + 1); };
@@ -926,8 +972,9 @@ Promise.all([
   fetch('datos/semana.json', {cache: 'no-store'}).then(r => r.json()).then(d => { DATA = Object.assign({valores:{}, fichas:{}}, d); }).catch(() => {}),
   fetch('datos/indices.json').then(r => r.json()).then(d => { IDX = d; }).catch(() => {}),
   fetch('datos/vortice.json', {cache: 'no-store'}).then(r => r.json()).then(d => { VX = d; }).catch(() => {}),
+  fetch('datos/nino.json', {cache: 'no-store'}).then(r => r.json()).then(d => { NI = d; }).catch(() => {}),
   fetch('mundo.json').then(r => r.json()).then(d => { MUNDO = d; document.body.insertAdjacentHTML('afterbegin', worldDefs()); }).catch(() => {})
-]).finally(() => { renderAll(); stamp(); spy(); vxScroll(); if(location.hash){ const t = document.getElementById(location.hash.slice(1)); if(t) t.scrollIntoView(); } });
+]).finally(() => { renderAll(); stamp(); spy(); vxScroll(); niScroll(); if(location.hash){ const t = document.getElementById(location.hash.slice(1)); if(t) t.scrollIntoView(); } });
 </script>
 </body>
 </html>
