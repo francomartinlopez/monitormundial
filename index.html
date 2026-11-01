@@ -325,8 +325,8 @@ const PAGES = [
    {k:'fichas',id:'sequias',w:'full',t:'Sequías activas',n:3,campos:['Región','Cultivos afectados','Severidad','Efecto en Argentina'],src:'US Drought Monitor · Copernicus · CONAB'},
    {k:'mapa',w:'two3',n:8},
    {k:'kpis',w:'third',t:'Desastres de la semana',items:[K('Huracanes y tifones','activos','NOAA · JTWC'),K('Terremotos M6+','semana','USGS'),K('Erupciones volcánicas','activas','Smithsonian'),K('Tsunamis','alertas','NOAA'),K('Inundaciones graves','activas','GDACS'),K('Incendios grandes','activos','NASA FIRMS')]},
-   {k:'kpis',w:'two3',t:'Vórtice polar ártico y energía para el invierno del norte',items:[K('Estado del vórtice polar','estado','NASA · ECMWF'),K('Probabilidad de inversión del viento','% de modelos','ECMWF'),K('Fecha prevista de la inversión','fecha','ECMWF'),K('Almacenamiento de gas UE','% lleno','GIE AGSI+'),K('Gas TTF Europa','EUR/MWh','ICE','gas-ttf-europa'),K('GNL Asia (JKM)','USD/MMBtu','Platts','gnl-asia-jkm'),K('Gas Henry Hub','USD/MMBtu','NYMEX','gas-henry-hub')]},
-   {k:'chart',id:'vortice',w:'third',t:'Viento del vórtice polar a 10 hPa y 60° N (m/s)',kind:'bars',labels:['Normal','Mínimo registrado','Actual o pronóstico'],src:'NASA Ozone Watch (MERRA-2)'},
+   {k:'kpis',w:'full',t:'Vórtice polar ártico y energía para el invierno del norte',items:[K('Estado del vórtice polar','estado','NASA · ECMWF'),K('Probabilidad de inversión del viento','% de modelos','ECMWF'),K('Fecha prevista de la inversión','fecha','ECMWF'),K('Almacenamiento de gas UE','% lleno','GIE AGSI+'),K('Gas TTF Europa','EUR/MWh','ICE','gas-ttf-europa'),K('GNL Asia (JKM)','USD/MMBtu','Platts','gnl-asia-jkm')]},
+   {k:'vortice',w:'full',t:'El vórtice polar día por día, comparado con todos los inviernos desde 1979'},
    {k:'fichas',id:'vortice',w:'full',t:'Vórtice polar: estado y riesgo de frío extremo, fuera de Argentina',nombres:['Estado del vórtice','Norteamérica','Europa','Asia oriental'],campos:['Estado','Qué cambió','Cuándo','Efecto en Argentina'],chip:'Riesgo',src:'NASA · ECMWF · NOAA · Severe Weather Europe'},
    {k:'fichas',id:'energia-invierno',w:'full',t:'Energía para el invierno del norte: qué pasa si hace mucho frío',nombres:['Europa: gas y almacenamiento','Estados Unidos: gas y electricidad','Asia: GNL (Japón, Corea, China)'],campos:['Situación','Riesgo con frío extremo','Efecto en Argentina'],chip:'Riesgo',src:'GIE AGSI+ · EIA · ICE · Platts'},
    {k:'fichas',id:'clima-claves',w:'full',t:'Fichas clave',nombres:['Monzón de India','Temporada de huracanes','Bajantes: Panamá, Mississippi, Rin'],campos:['Estado','Qué cambió','Efecto en Argentina'],src:'IMD · NOAA · ACP · USACE'}
@@ -693,6 +693,14 @@ const R = {
      ${idxLista(b.id)}
      <p class="muted" style="font-size:.8rem;margin:8px 0 0">${d.nota ? esc(d.nota) + ' ' : ''}${d.empalme ? esc(d.empalme) + ' ' : ''}Edición: ${esc((d.edicion || '—').replace(/\.$/, ''))}. Próxima: ${esc((d.proxima || '—').replace(/\.$/, ''))}.</p>
      <span class="src">${d.url ? `<a href="${esc(d.url)}">Fuente</a>` : ''}${d.url2 ? ` · <a href="${esc(d.url2)}">Fuente complementaria</a>` : ''}${d.url_mon ? ` · <a href="${esc(d.url_mon)}">Monarquías</a>` : ''}${d.url_fsi ? ` · <a href="${esc(d.url_fsi)}">Estados frágiles</a>` : ''}</span>`; },
+  vortice: b => { if(!VX || !VX.clima) return head(b.t) + '<p class="muted">Sin datos.</p>';
+    const ops = Object.keys(VX.temporadas).filter(t => VX.temporadas[t].filter(v => v !== null).length > 300).reverse()
+      .map(t => { const r = vxInversion(VX.temporadas[t]); return `<option value="${t}"${t === VX_SEL ? ' selected' : ''}>${t}${r !== null ? ' · inversión el ' + vxFecha(r) : ''}</option>`; }).join('');
+    return head(b.t, 'NOAA (reanálisis NCEP/NCAR y modelo GFS)') + `<p class="muted" style="margin:0 0 6px">Viento del oeste que rodea el Polo Norte a unos 30 km de altura (10 hPa, 60° N). Cuando baja de cero el viento se invierte: es un calentamiento estratosférico súbito, que suele traer olas de frío al hemisferio norte 2 a 4 semanas después. Las franjas muestran el rango de los ${VX.clima.n} inviernos ${esc(VX.clima.desde)}–${esc(VX.clima.hasta)}.</p>
+     <div class="evfil" style="align-items:center"><label class="muted" style="font-size:.85rem">Comparar con el invierno <select id="vxsel"><option value="">— ninguno —</option>${ops}</select></label></div>
+     <div id="vxbox">${vxSVG()}</div><p id="vxread" class="muted" style="font-size:.85rem;margin:6px 0 0;min-height:1.2em">${vxResumen()}</p>
+     <p class="muted" style="font-size:.8rem;margin:6px 0 0">Historia: ${esc(VX.historia_fuente)}. Esta temporada: ${esc(VX.actual ? VX.actual.fuente : '—')}, último dato ${VX.actual && VX.actual.ultimo ? fecha(VX.actual.ultimo) : '—'}. Promedio zonal del viento a 60° N y 10 hPa, cálculo propio con los datos de NOAA; es la misma medida que publican NASA Ozone Watch y la NOAA para seguir el vórtice.</p>
+     <span class="src"><a href="https://psl.noaa.gov/data/gridded/data.ncep.reanalysis.html">NOAA PSL</a> · <a href="https://www.ncei.noaa.gov/products/weather-climate-models/global-forecast">NOAA NCEI (GFS)</a> · <a href="https://ozonewatch.gsfc.nasa.gov/meteorology/NH.html">NASA Ozone Watch</a></span>`; },
   religiones: b => { const d = IDX && IDX.religiones; if(!d) return head(b.t) + '<p class="muted">Sin datos.</p>';
     return head(b.t, d.fuente) + `<p class="muted" style="margin:0 0 4px">Elegí una religión para ver qué porcentaje de la población de cada país la profesa, o "Mayoritaria" para ver la religión principal de cada país. Tocá un país para ver su composición completa.</p>
      <div id="relbox"><div class="evfil"><button type="button" data-r="mayoritaria" aria-pressed="true">Mayoritaria</button>${Object.entries(REL_COL).filter(([r]) => Object.values(d.paises).some(x => x[r] !== undefined)).map(([r, c]) => `<button type="button" data-r="${r}" aria-pressed="false"><i style="background:${c}"></i>${esc(r[0].toUpperCase() + r.slice(1))}</button>`).join('')}</div>
@@ -723,6 +731,42 @@ const R = {
 
 /* ---------- índices por país (datos/indices.json) y eventos ---------- */
 let IDX = null;
+let VX = null, VX_SEL = '';
+const VX_W = 960, VX_H = 340, VX_L = 44, VX_R = 14, VX_T = 14, VX_B = 30;
+const vxDia = i => new Date(Date.UTC(2001, 6, 1) + i * 864e5);
+const vxFecha = i => { const d = vxDia(i); return d.getUTCDate() + '/' + (d.getUTCMonth() + 1); };
+const vxInversion = a => { for(let i = 92; i < 300; i++) if(a[i] !== null && a[i] < 0) return i; return null; };
+function vxEsc(){ const c = VX.clima, vals = [...c.min, ...c.max, ...(VX.actual ? VX.actual.valores : []), ...(VX_SEL ? VX.temporadas[VX_SEL] : [])].filter(v => v !== null);
+  const lo = Math.floor(Math.min(...vals, -10) / 10) * 10, hi = Math.ceil(Math.max(...vals) / 10) * 10;
+  return {lo, hi, X: i => VX_L + i * (VX_W - VX_L - VX_R) / 364, Y: v => VX_T + (hi - v) * (VX_H - VX_T - VX_B) / (hi - lo)}; }
+function vxSVG(){
+  const c = VX.clima, {lo, hi, X, Y} = vxEsc(); let s = '';
+  const band = (a, b, op) => { let d = 'M' + a.map((v, i) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join('L'); d += 'L' + b.map((v, i) => [i, v]).reverse().map(([i, v]) => `${X(i).toFixed(1)},${Y(v).toFixed(1)}`).join('L') + 'Z'; return `<path d="${d}" fill="#5BA4E6" fill-opacity="${op}"/>`; };
+  const line = (a, col, w, dash) => { let d = '', pen = false; a.forEach((v, i) => { if(v === null){ pen = false; return; } d += (pen ? 'L' : 'M') + X(i).toFixed(1) + ',' + Y(v).toFixed(1); pen = true; }); return `<path d="${d}" fill="none" stroke="${col}" stroke-width="${w}"${dash ? ` stroke-dasharray="${dash}"` : ''} stroke-linejoin="round"/>`; };
+  for(let v = lo; v <= hi; v += 10){ const y = Y(v); s += `<line x1="${VX_L}" x2="${VX_W - VX_R}" y1="${y}" y2="${y}" stroke="${v === 0 ? '#F0675F' : '#22333E'}"${v === 0 ? ' stroke-dasharray="5 4" stroke-opacity=".7"' : ''}/><text x="${VX_L - 6}" y="${y + 4}" text-anchor="end">${v}</text>`; }
+  s += `<text x="${VX_W - VX_R - 4}" y="${Y(0) + 14}" text-anchor="end" style="fill:#F0675F;font-size:11px">bajo cero: viento invertido</text>`;
+  ['jul','ago','sep','oct','nov','dic','ene','feb','mar','abr','may','jun'].forEach((m, k) => { const i = Math.round(k * 365 / 12); s += `<line x1="${X(i)}" x2="${X(i)}" y1="${VX_T}" y2="${VX_H - VX_B}" stroke="#1A2730"/><text x="${X(i) + 4}" y="${VX_H - 10}">${m}</text>`; });
+  s += band(c.min, c.max, .10) + band(c.p10, c.p90, .16) + band(c.p30, c.p70, .22) + line(c.media, '#9AA9B3', 1.5, '6 4');
+  if(VX_SEL) s += line(VX.temporadas[VX_SEL], '#E3BE55', 2);
+  if(VX.actual){ const a = VX.actual.valores; s += line(a, '#F0675F', 3); const k = a.map((v, i) => v === null ? -1 : i).reduce((m, i) => Math.max(m, i), -1);
+    if(k >= 0) s += `<circle cx="${X(k)}" cy="${Y(a[k])}" r="5" fill="#F0675F"/><text x="${X(k) + 8}" y="${Y(a[k]) + 4}" style="fill:var(--ink);font-weight:600">${fmt(a[k], 1)}</text>`; }
+  s += `<line id="vxcur" x1="0" x2="0" y1="${VX_T}" y2="${VX_H - VX_B}" stroke="#C9D3DA" stroke-opacity="0" />`;
+  const ley = [['#F0675F', VX.actual ? VX.actual.temporada + ' (esta temporada)' : ''], VX_SEL ? ['#E3BE55', VX_SEL] : null, ['#9AA9B3', 'promedio'], ['#5BA4E6', 'rango: 30–70 %, 10–90 % y extremos']].filter(Boolean);
+  let lx = VX_L + 8; ley.forEach(([col, t]) => { s += `<rect x="${lx}" y="${VX_T + 4}" width="12" height="4" fill="${col}"/><text x="${lx + 16}" y="${VX_T + 10}">${esc(t)}</text>`; lx += 30 + t.length * 6.3; });
+  return `<div class="ghost" style="overflow-x:auto"><svg viewBox="0 0 ${VX_W} ${VX_H}" role="img" aria-label="Viento del vórtice polar por día" style="touch-action:pan-x pan-y;min-width:760px">${s}<rect x="${VX_L}" y="${VX_T}" width="${VX_W - VX_L - VX_R}" height="${VX_H - VX_T - VX_B}" fill="transparent" class="vxhit"/></svg></div>`;
+}
+function vxResumen(i){
+  const c = VX.clima, a = VX.actual ? VX.actual.valores : [];
+  if(i === undefined){ i = a.map((v, k) => v === null ? -1 : k).reduce((m, k) => Math.max(m, k), -1); if(i < 0) return ''; }
+  const v = a[i], sel = VX_SEL ? VX.temporadas[VX_SEL][i] : null;
+  const pos = v === null || v === undefined ? '' : v < 0 ? ' · <b style="color:var(--crit)">viento invertido</b>' : v < c.min[i] ? ' · <b style="color:var(--crit)">por debajo del mínimo registrado para la fecha</b>' : v < c.p10[i] ? ' · <b style="color:var(--warn)">entre el 10 % más bajo</b>' : v > c.p90[i] ? ' · entre el 10 % más alto' : '';
+  return `<b>${vxFecha(i)}</b>: ${v !== null && v !== undefined ? `esta temporada <b>${fmt(v, 1)} m/s</b>${pos} · ` : ''}promedio ${fmt(c.media[i], 1)} · mínimo ${fmt(c.min[i], 1)} · máximo ${fmt(c.max[i], 1)}${sel !== null && sel !== undefined ? ` · ${esc(VX_SEL)}: ${fmt(sel, 1)}` : ''}`;
+}
+function vxScroll(){ const g = document.querySelector('#vxbox .ghost'); if(!g || !VX || !VX.actual || g.scrollWidth <= g.clientWidth) return; const k = VX.actual.valores.map((v, i) => v === null ? -1 : i).reduce((m, i) => Math.max(m, i), -1); g.scrollLeft = Math.max(0, g.scrollWidth * k / 364 - g.clientWidth * .6); }
+document.addEventListener('change', e => { if(e.target.id !== 'vxsel') return; VX_SEL = e.target.value; $('#vxbox').innerHTML = vxSVG(); $('#vxread').innerHTML = vxResumen(); vxScroll(); });
+document.addEventListener('pointermove', e => { const r = e.target.closest && e.target.closest('.vxhit'); if(!r) return; const svg = r.ownerSVGElement, bb = svg.getBoundingClientRect();
+  const x = (e.clientX - bb.left) * VX_W / bb.width, i = Math.max(0, Math.min(364, Math.round((x - VX_L) * 364 / (VX_W - VX_L - VX_R))));
+  const cur = svg.querySelector('#vxcur'), X = VX_L + i * (VX_W - VX_L - VX_R) / 364; cur.setAttribute('x1', X); cur.setAttribute('x2', X); cur.setAttribute('stroke-opacity', '.6'); $('#vxread').innerHTML = vxResumen(i); });
 const IDX_DEF = {
   prensa:{t:'Libertad de prensa',q:'Cómo trabaja el periodismo en cada país, según Reporteros sin Fronteras.',col:{'buena':'#2E9E6B','satisfactoria':'#9ACD60','problemática':'#E3BE55','difícil':'#F2994A','muy grave':'#D9534F'},val:'Puntaje',rk:'Puesto (de 180)'},
   economica:{t:'Libertad económica',q:'Propiedad, Estado, regulación y apertura, según el Índice de Libertad Económica de la Heritage Foundation.',col:{'libre':'#2E9E6B','mayormente libre':'#9ACD60','moderadamente libre':'#E3BE55','mayormente no libre':'#F2994A','reprimida':'#D9534F','sin calificar':'#3A4A55'},val:'Puntaje',rk:'Puesto'},
@@ -881,8 +925,9 @@ const stamp = () => { if(DATA.corte){ const n = Object.keys(DATA.valores).length
 Promise.all([
   fetch('datos/semana.json', {cache: 'no-store'}).then(r => r.json()).then(d => { DATA = Object.assign({valores:{}, fichas:{}}, d); }).catch(() => {}),
   fetch('datos/indices.json').then(r => r.json()).then(d => { IDX = d; }).catch(() => {}),
+  fetch('datos/vortice.json', {cache: 'no-store'}).then(r => r.json()).then(d => { VX = d; }).catch(() => {}),
   fetch('mundo.json').then(r => r.json()).then(d => { MUNDO = d; document.body.insertAdjacentHTML('afterbegin', worldDefs()); }).catch(() => {})
-]).finally(() => { renderAll(); stamp(); spy(); if(location.hash){ const t = document.getElementById(location.hash.slice(1)); if(t) t.scrollIntoView(); } });
+]).finally(() => { renderAll(); stamp(); spy(); vxScroll(); if(location.hash){ const t = document.getElementById(location.hash.slice(1)); if(t) t.scrollIntoView(); } });
 </script>
 </body>
 </html>

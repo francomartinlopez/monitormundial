@@ -3584,7 +3584,7 @@
     "chip": "Debilitamiento récord",
     "chipc": "crit",
     "campos": {
-     "Estado": "El viento del vórtice a 10 hPa y 60° N, que normalmente se fortalece en noviembre, cae muy por debajo del mínimo registrado: NASA pronostica 4,15 m/s para el 3/11, contra 25,97 de promedio y 14,35 de mínimo histórico para la fecha.",
+     "Estado": "Último dato medido: 15,7 m/s el 28/10 (análisis del GFS), contra 22,3 de promedio para la fecha desde 1979; venía de 23 m/s el 24/10. NASA pronostica 4,15 m/s para el 3/11, contra 25,97 de promedio y 14,35 de mínimo registrado para ese día.",
      "Qué cambió": "Los modelos pasaron de un debilitamiento a una inversión del viento alrededor del 4–5/11, con el vórtice partido en dos núcleos (sobre Canadá y Siberia) y temperaturas en la estratosfera hasta 22 °C sobre lo normal. El 96 % de las corridas del ECMWF muestra la inversión antes del 11/11; el récord anterior es el 28/11.",
      "Cuándo": "El efecto en superficie suele llegar 2 a 4 semanas después de la perturbación: segunda mitad de noviembre y diciembre. Los pronósticos estacionales también marcan otra perturbación a mitad del invierno (enero–febrero).",
      "Efecto en Argentina": "Indirecto, por precios: más frío en el norte sube la demanda de gas y electricidad, y con ella el precio del GNL y de la urea. Ver la ficha de energía."
@@ -4338,28 +4338,6 @@
    "f": "FMI DataMapper",
    "url": "https://www.imf.org/external/datamapper/GGXWDG_NGDP",
    "nota": "Deuda bruta del gobierno general, proyección 2026. Rojo: 100 % o más; ámbar: 60 a 100 %; verde: menos de 60 %; celeste: Argentina, como referencia. EE.UU. y Reino Unido: FMI, sin confirmar si es la edición de octubre. Rusia: edición de abril. *Zona euro: Eurostat, primer trimestre. Paraguay (31 %) y Uruguay (61 %) solo tienen datos de CEPAL, que mide distinto."
-  },
-  "vortice": {
-   "labels": [
-    "Normal",
-    "Mínimo registrado",
-    "Actual o pronóstico"
-   ],
-   "values": [
-    25.97,
-    14.35,
-    4.15
-   ],
-   "u": "m/s",
-   "colores": [
-    "#9AA9B3",
-    "#E3BE55",
-    "#F0675F"
-   ],
-   "src": "NASA Ozone Watch (MERRA-2), pronóstico del 26/10",
-   "f": "NASA Ozone Watch vía The Watchers",
-   "url": "https://watchers.news/2026/10/26/arctic-stratospheric-polar-vortex-forecast-to-weaken-sharply-in-early-november/",
-   "nota": "Valores para el 3/11: promedio 1978/79–2025/26 (normal), el más bajo registrado para esa fecha y el pronóstico de NASA. Un valor bajo cero es la inversión del viento (calentamiento estratosférico súbito). Cada semana se reemplaza la última barra por el dato observado del viernes."
   }
  },
  "notas": {
