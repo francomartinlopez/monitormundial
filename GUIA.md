@@ -77,7 +77,7 @@ Esta guía la sigue Claude cada sábado a la mañana. El sitio es estático: `in
     - Revisar a ojo la portada y 3 bloques al azar.
 11. **Publicar:**
     - Hacer commit ("Actualización semanal: corte DD/MM") y push a `main`. GitHub Pages publica solo.
-    - Si está disponible, republicar también el artifact "Monitor Mundial" (slug `554a6ca3-822d-46b0-9def-d8e06dd04fdf`) con `publish_files`, enviando `index.html`, `mundo.json` y `datos/semana.json`.
+    - Si está disponible, republicar también el artifact "Monitor Mundial" (slug `554a6ca3-822d-46b0-9def-d8e06dd04fdf`) con `publish_files`, enviando `index.html`, `mundo.json`, `datos/semana.json` y `datos/vortice.json`.
 12. **Avisar:** mandar un mail a francomartinlopez@gmail.com con:
     - el titular de la semana;
     - las 3 noticias principales;
