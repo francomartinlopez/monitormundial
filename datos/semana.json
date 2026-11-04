@@ -527,23 +527,23 @@
    "url": "https://www.oliberal.com/mundo/governo-milei-diz-que-eleicao-no-brasil-foi-notada-e-revela-por-que-nao-ira-parabenizar-lula-1.1187501"
   },
   "proxima-eleccion-relevante": {
-   "v": 4,
+   "v": 25,
    "dec": 0,
    "u": "días",
-   "f": "prensa",
-   "fecha": "2026-10-30",
-   "nota": "EE.UU. vota el martes 3/11 (legislativas de medio término). Israel ya votó el 27/10: con el conteo completo, ningún bloque llega a 61 bancas; resultado oficial el 4/11.",
-   "url": "https://www.pollcheck.co.uk/us-midterms-2026/generic-ballot"
+   "f": "NBC News · prensa",
+   "fecha": "2026-11-04",
+   "nota": "Próxima elección relevante: España, 29/11 (generales anticipadas). EE.UU. votó el 3/11: los demócratas ganaron las dos cámaras (conteo parcial). Nueva Zelanda vota el 7/11.",
+   "url": "https://www.nbcnews.com/politics/2026-election/live-blog/election-results-house-senate-trump-live-updates-rcna607376"
   },
   "elecciones-en-6-meses": {
-   "v": 4,
+   "v": 3,
    "dec": 0,
    "u": "relevantes",
    "f": "IFES · IDEA · prensa",
-   "fecha": "2026-10-30",
-   "nota": "Relevantes para Argentina: EE.UU. (3/11), España (29/11), El Salvador (28/2/2027) y Francia (18/4/2027). En el calendario también: Nueva Zelanda (7/11), Haití (13/12) y Nigeria (16/1/2027).",
+   "fecha": "2026-11-04",
+   "nota": "Relevantes para Argentina hasta mayo de 2027: España (29/11), El Salvador (28/2/2027) y Francia (18/4/2027). EE.UU. salió del calendario tras votar el 3/11. En el calendario también: Nueva Zelanda (7/11), Haití (13/12) y Nigeria (16/1/2027).",
    "url": "https://www.idea.int/democracytracker/elections-list",
-   "d": 1,
+   "d": -1,
    "dt": "pts"
   },
   "gobiernos-inestables": {
@@ -2269,6 +2269,20 @@
   ],
   "estabilidad": [
    {
+    "nombre": "Estados Unidos",
+    "chip": "Congreso demócrata",
+    "chipc": "warn",
+    "f": "NBC News · CBS News · CNBC · BA Times · lectura propia",
+    "url": "https://www.nbcnews.com/politics/2026-election/live-blog/election-results-house-senate-trump-live-updates-rcna607376",
+    "campos": {
+     "País": "Estados Unidos",
+     "Situación": "Los demócratas ganaron Diputados (NBC: al menos 258 de 435, parcial) y el Senado (54 de 100, con Alaska y Mississippi sin definir) el 3/11. Trump seguirá hasta 2029 pero con vetos y sin control del Congreso.",
+     "Riesgo": "Medio: Trump gobierna por decreto y veto; el acuerdo comercial con Argentina no depende de una ley nueva en EE.UU. según lo publicado, pero una Cámara opositora puede cuestionar aranceles, el swap del Tesoro y el apoyo en el FMI (lectura propia, sin confirmación oficial).",
+     "Efecto en Argentina": "Acuerdo ARTI: el protocolo del 15/10 busca enviarlo al Congreso argentino; el resultado quita margen a Trump para cambios arancelarios por ley. Swap del Tesoro (US$ 20.000 M, 2025) y apoyo en el FMI: sin anuncios nuevos; Milei dijo que importa que Trump salga \"fortalecido\". Relación Trump–Milei: sin cambios (lectura propia)."
+    },
+    "fecha": "2026-11-04"
+   },
+   {
     "nombre": "Israel",
     "chip": "Sin mayoría",
     "chipc": "crit",
@@ -2315,15 +2329,15 @@
     "nombre": "Estados Unidos",
     "chip": "Alta",
     "chipc": "ok",
-    "f": "PollCheck · Kalshi · Reuters/Ipsos · ONU · lectura propia (afinidad)",
+    "f": "NBC News · CBS News · CNBC · CNN · Al Jazeera · Time · BA Times · lectura propia",
     "campos": {
      "Gobierno": "Donald Trump (republicano)",
-     "Afinidad": "Alta: alianza política, acuerdo comercial (aún sin ratificar) y swap de 2025. Vance visita Buenos Aires en noviembre.",
-     "Hechos de la semana": "Vota el martes 3/11 (legislativas). Los demócratas llegan con ventaja: D+8,5 en el promedio de encuestas genéricas al Congreso (PollCheck, 31/10) y 90,6 % de chances de ganar Diputados y 64 % el Senado en el mercado de Kalshi (26/10). Aprobación de Trump: 32 % (Reuters/Ipsos, 26/10). En la ONU, votó con Argentina contra la resolución anual por el fin del embargo a Cuba (28/10).",
-     "Próxima elección": "Legislativas, 3/11/2026"
+     "Afinidad": "Alta: alianza política, acuerdo comercial (aún sin ratificar) y swap de 2025. Vance visita Buenos Aires en noviembre. Lectura propia: con Diputados y Senado demócratas, Trump pierde margen en el Congreso y vetará leyes; el vínculo con Milei sigue siendo con el gobierno de Trump.",
+     "Hechos de la semana": "Los demócratas ganaron el control de las dos cámaras en las legislativas del 3/11 (conteo parcial al 4/11, ~12:00 hora argentina). Senado: 54 demócratas (derrotaron a republicanos en Iowa, Kansas, Ohio, Maine, Carolina del Norte, Carolina del Sur y Texas), 44 republicanos y 2 sin definir (Alaska y Mississippi, a unas decenas de votos) (NBC, 4/11). Diputados (435; mayoría 218): AP proyectó mayoría demócrata a la 1:25 del 4/11; NBC estima al menos 258 bancas demócratas y CBS 259 (la mayor cifra desde 1993), con unas 75 carreras aún sin definir a las 4:18 ET, por lo que el total puede cambiar. Gobernaciones: los demócratas ganaron Georgia, Ohio, Texas y Nevada (NBC suma Iowa) y, según NBC, tendrían mayoría de gobernaciones por primera vez en 16 años. Participación: sin cifra nacional; casi 60 millones votaron anticipado (Univ. de Florida). Trump dijo que acepta el resultado, que \"no es una derrota para mí\" porque no estaba en la boleta, y que vetará lo que apruebe el Congreso (\"I'll veto everything\"). Mercados: tras caer 2,4 % en la noche, los futuros del Nasdaq-100 se recuperaron; el Dow subió cerca de 1.000 puntos (2 %) y el S&P 500 1,25 % tras la apertura, y los rendimientos de los bonos bajaron (CNN; un solo medio en bonos). Sin dato verificado del dólar. Milei: \"es importante que Trump salga fortalecido\" (BA Times, titular; sin otra reacción oficial verificada).",
+     "Próxima elección": "Presidencial, 3/11/2028 (legislativas del 3/11/2026 ya votaron; conteo final de bancas pendiente)"
     },
-    "url": "https://www.pollcheck.co.uk/us-midterms-2026/generic-ballot",
-    "fecha": "2026-10-30"
+    "url": "https://www.nbcnews.com/politics/2026-election/live-blog/election-results-house-senate-trump-live-updates-rcna607376",
+    "fecha": "2026-11-04"
    },
    {
     "nombre": "China",
@@ -3776,23 +3790,26 @@
   "encuestas": {
    "labels": [
     "Demócratas",
-    "Republicanos"
+    "Republicanos",
+    "Sin definir"
    ],
    "values": [
-    50.8,
-    42.3
+    54,
+    44,
+    2
    ],
-   "u": " %",
+   "u": " bancas",
    "colores": [
     "var(--warn)",
-    "var(--ok)"
+    "var(--ok)",
+    "var(--muted)"
    ],
-   "src": "Promedio de encuestas genéricas al Congreso de PollCheck (actualizado 31/10, con sondeos hasta el 30/10)",
-   "nota": "EE.UU., legislativas del 3/11: intención de voto genérica a Diputados, votantes probables. Ventaja demócrata de 8,5 puntos; Reuters/Ipsos (26/10): 47–36 entre empadronados; NPR/PBS/Marist: 52–44 entre probables. Pronósticos: Kalshi da a los demócratas 90,6 % en Diputados (238 bancas promedio; mayoría 218) y 64 % en el Senado (26/10). Verde: republicanos, partido del aliado del gobierno argentino.",
-   "f": "PollCheck · Reuters/Ipsos · Marist · Kalshi",
-   "url": "https://www.pollcheck.co.uk/us-midterms-2026/generic-ballot",
-   "title": "EE.UU. 3/11: voto genérico al Congreso (promedio)",
-   "fecha": "2026-10-30"
+   "src": "NBC News (4/11, ~10:00 ET), CNBC y Al Jazeera: demócratas 54",
+   "nota": "Senado de 100 bancas: demócratas 54, republicanos 44, sin definir 2 (Alaska y Mississippi). Diputados (435; mayoría 218): AP proyectó mayoría demócrata; NBC estima al menos 258 bancas demócratas, CBS 259 y CNBC al menos 250, con unas 75 carreras sin definir al 4/11 a las 4:18 ET: el conteo es parcial. Verde: republicanos, partido del aliado del gobierno argentino.",
+   "f": "NBC News · CNBC · CBS News · Al Jazeera",
+   "url": "https://www.cnbc.com/2026/11/04/2026-midterm-election-results-live-updates.html",
+   "title": "EE.UU. 3/11: Senado, bancas por partido (parcial)",
+   "fecha": "2026-11-04"
   },
   "brotes": {
    "labels": [
@@ -4426,13 +4443,6 @@
     "mes": "Nov 2026",
     "items": [
      {
-      "fecha": "3/11",
-      "pais": "EE.UU.",
-      "tipo": "Legislativas de medio término (toda Diputados y 35 bancas del Senado)",
-      "favorito": "Demócratas: D+8,5 en el promedio de encuestas genéricas (PollCheck, 31/10). Kalshi: 91 % de chances en Diputados y 64 % en el Senado (26/10); Silver Bulletin: 95 % y 76 % (23/10)",
-      "alineado": "no"
-     },
-     {
       "fecha": "7/11",
       "pais": "Nueva Zelanda",
       "tipo": "Generales",
@@ -4551,23 +4561,23 @@
     "fecha": "2026-10-30"
    },
    {
-    "t": "EE.UU. vota el martes 3/11 con los demócratas favoritos; después podría atacar a Irán",
-    "por": "Una Cámara opositora complicaría la ratificación del acuerdo comercial con Argentina; un nuevo ataque a Irán sostendría el petróleo caro y la amenaza terrorista elevada.",
-    "f": "PollCheck · Kalshi · Fox News/WSJ",
-    "url": "https://www.criticalthreats.org/analysis/iran-update-october-29-2026",
-    "fecha": "2026-10-30"
+    "t": "Los demócratas ganan Diputados y el Senado de EE.UU. en las legislativas; Trump dice que vetará todo",
+    "por": "Trump pierde el control del Congreso: menos margen para cambios arancelarios por ley, y el swap, el apoyo en el FMI y el acuerdo comercial con Argentina quedan expuestos a una Cámara opositora (lectura propia). Milei dijo que importa que Trump salga fortalecido.",
+    "f": "NBC News · CBS News · CNBC · Al Jazeera · BA Times",
+    "url": "https://www.nbcnews.com/politics/2026-election/live-blog/election-results-house-senate-trump-live-updates-rcna607376",
+    "fecha": "2026-11-04"
    }
   ]
  },
  "resumen": {
   "corte": "30/10",
-  "titular": "Brasil se derrumba tras el triunfo de Lula, Ormuz cierra octubre con récord de ataques y EE.UU. vota el martes: semana negra para los activos argentinos",
+  "titular": "Los demócratas ganan el Congreso de EE.UU. en las legislativas del 3/11: Trump pierde Diputados y Senado, y queda en duda el respaldo a Milei",
   "texto": [
    "Lula ganó el balotaje con 51,79 % y los mercados brasileños se hundieron: el real perdió cerca de 9 % en la semana (5,44 por dólar) y la bolsa de San Pablo 18 %, con un −13,9 % el lunes que obligó a suspender las operaciones. El gobierno argentino fue el único vecino que no felicitó a Lula, y Flávio Bolsonaro, que no reconoce la derrota, salió de Brasil por Puerto Iguazú rumbo a Miami. Los ADR argentinos cayeron en bloque y el Merval en dólares perdió 10,3 %.",
    "Ormuz cerró octubre con 43 ataques a buques, el récord desde febrero, y el Brent terminó en 117,6 USD. Cerca de un millón de toneladas de urea quedaron varadas dentro del Golfo en plena siembra, y el gas europeo y asiático se disparó. EE.UU. prepararía bombardeos sobre Irán después de sus elecciones del 3/11, mientras Qatar y Pakistán median para reabrir el estrecho. En Chicago siguieron cayendo los granos y la canasta exportadora tocó 94,1, el mínimo de la serie.",
-   "La Fed, el BCE y el Banco de Japón hicieron pausa. EE.UU. vota el martes con los demócratas favoritos para ganar Diputados, algo que complicaría la ratificación del acuerdo comercial con Argentina (lectura propia). Israel cerró el conteo sin mayoría, y en la ONU Argentina votó con EE.UU. e Israel contra el pedido de levantar el embargo a Cuba."
+   "EE.UU. votó el martes y los demócratas ganaron las dos cámaras (conteo parcial al 4/11): 54 de 100 bancas en el Senado, con Alaska y Mississippi sin definir, y al menos 258 de 435 en Diputados según NBC (259 según CBS; mayoría: 218; unas 75 carreras seguían abiertas). Trump dijo que acepta el resultado y que vetará lo que apruebe el Congreso; los futuros de Wall Street cayeron en la noche y luego el Dow subió cerca de 1.000 puntos. Para Argentina, el acuerdo comercial depende ahora del Congreso argentino (el protocolo del 15/10 busca enviarlo), pero un Congreso demócrata limita a Trump en aranceles y puede revisar el swap del Tesoro y el apoyo en el FMI (lectura propia). Milei dijo que importa que Trump salga fortalecido. La Fed, el BCE y el Banco de Japón hicieron pausa; Israel cerró el conteo sin mayoría y en la ONU Argentina votó con EE.UU. e Israel contra el pedido de levantar el embargo a Cuba."
   ],
-  "mirar": "el resultado de las legislativas de EE.UU. (3/11) y su efecto sobre el acuerdo comercial, un posible ataque de EE.UU. a Irán después de esa fecha, si Flávio Bolsonaro sigue sin reconocer la derrota, el real y la bolsa de San Pablo, y la urea en plena siembra."
+  "mirar": "el conteo final de Diputados, Alaska y Mississippi; qué hace Trump con el veto; el acuerdo comercial en el Congreso argentino; un posible ataque de EE.UU. a Irán; si Flávio Bolsonaro sigue sin reconocer la derrota, el real y la bolsa de San Pablo, y la urea en plena siembra."
  },
  "semaforos": {
   "Dólares comerciales": {
@@ -4781,8 +4791,8 @@
      "lon": -98,
      "c": "#5E7180",
      "r": 0.1,
-     "t": "EE.UU. 3/11: legislativas, demócratas favoritos",
-     "lbl": "EE.UU. 3/11"
+     "t": "EE.UU. votó el 3/11: los demócratas ganaron Diputados (parcial, al menos 258 de 435) y el Senado (54 de 100)",
+     "lbl": "EE.UU. (resultado)"
     },
     {
      "lat": -41,
