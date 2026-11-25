@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Genera datos-informe.json (raíz del sitio) para la web de informes de Plexum.
 
-Formato: "Datos que cada web publica para la web de informes de Plexum", v1.2, parte común y
+Formato: "Datos que cada web publica para la web de informes de Plexum", v1.3, parte común y
 apartado 9 (Monitor Mundial · Economía internacional). Sale solo de lo que ya está en
 datos/semana.json: no se inventa ni se estima nada. No cambia nada visible del sitio.
 
@@ -12,6 +12,7 @@ import calendar, datetime as dt, json, os, re, unicodedata
 RAIZ = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SEMANA = os.path.join(RAIZ, 'datos', 'semana.json')
 SALIDA = os.path.join(RAIZ, 'datos-informe.json')
+SERIES = os.path.join(RAIZ, 'datos', 'series_informe.json')
 SITIO = 'https://francomartinlopez.github.io/monitormundial/'
 TZ = dt.timezone(dt.timedelta(hours=-3))
 EJE = 'Economía internacional'
@@ -41,6 +42,14 @@ IND = [
     ('indice-dolar-dxy', 'Índice del dólar (DXY)', 'indice-dolar-dxy', pais('Estados Unidos'), [], [], ['Deuda en dólares'], 'economia'),
     ('actividad-brasil', 'Actividad económica de Brasil (IBC-Br, variación mensual)', 'actividad-brasil', pais('Brasil'), ['Industria'], [], ['Exporta'], 'economia'),
 ]
+# Versión 1.3: tipo de valor y frecuencia de cada indicador (los que no figuran: nivel, semanal).
+TIPO = {'riesgo-pais-argentina': 'tasa', 'actividad-brasil': 'tasa'}
+FREC = {'actividad-brasil': 'mensual'}
+# Grupos (dimensión «otro»): solo se arman si todos los miembros tienen la misma fecha_dato y unidad.
+GRUPOS = [('precios-granos-chicago', 'Precios de granos en Chicago', ['soja-chicago', 'maiz-chicago', 'trigo-chicago'], ['Soja', 'Maíz', 'Trigo']),
+          ('precios-granos-fob-argentina', 'Precios FOB oficiales de granos', ['soja-fob-argentina', 'maiz-fob-argentina', 'trigo-fob-argentina'], ['Soja', 'Maíz', 'Trigo'])]
+MESES_SERIE = 25
+
 # Indicadores del apartado que el sitio no muestra: van siempre a faltantes.
 NO_MUESTRA = [
     ('acero', 'Precio internacional del acero', 'El sitio no publica un precio del acero; las medidas sobre el acero están en las barreras comerciales.'),
@@ -126,6 +135,28 @@ def main():
                     'exposicion': [], 'url': a.get('url') or SITIO + '#economia'})
         indicadores.append(reg)
 
+    # Versión 1.3: serie de fin de mes, tipo, frecuencia, comparaciones y grupos.
+    try: SH = json.load(open(SERIES))
+    except FileNotFoundError: SH = {'nota': '', 'series': {}}
+    for r in indicadores:
+        r['tipo_valor'] = 'estado' if not isinstance(r['valor'], (int, float)) else TIPO.get(r['id'], 'nivel')
+        r['frecuencia'] = FREC.get(r['id'], 'semanal')
+        if isinstance(r['valor'], (int, float)) and not r['id'].startswith('adr-') and r['frecuencia'] == 'semanal':
+            h = SH['series'].setdefault(r['id'], {})
+            h[r['fecha_dato'][:7]] = [r['fecha_dato'], r['valor']]
+            pts = [h[m] for m in sorted(h)][-MESES_SERIE:]
+            if len(pts) >= 2:
+                r['serie'] = [{'fecha': f, 'valor': v} for f, v in pts]
+        n = len(r.get('serie', []))
+        r['comparar'] = (['mensual', 'interanual'] if n >= 13 else ['mensual']) if n >= 2 else []
+    json.dump(SH, open(SERIES, 'w'), ensure_ascii=False, indent=1)
+    por_id = {r['id']: r for r in indicadores}
+    for gid, gnom, miembros, claves in GRUPOS:
+        regs = [por_id.get(m) for m in miembros]
+        if all(regs) and len({(x['fecha_dato'], x['unidad']) for x in regs}) == 1:
+            for x, k in zip(regs, claves):
+                x['grupo'] = {'id': gid, 'nombre': gnom, 'dimension': 'otro', 'clave': k}
+
     for iid, nombre, motivo in NO_MUESTRA:
         faltantes.append({'id': iid, 'nombre': nombre, 'motivo': motivo, 'ultimo_dato': None})
 
@@ -174,10 +205,11 @@ def main():
                                'eje': 'Política internacional', 'alcance': pais(it['pais']), 'rubros': [], 'url': SITIO + '#politica'})
     agenda.sort(key=lambda e: e['fecha'])
 
-    out = {'web': 'Monitor Mundial', 'version': '1.0', 'generado': hoy.replace(microsecond=0).isoformat(),
+    out = {'web': 'Monitor Mundial', 'version': '1.3', 'generado': hoy.replace(microsecond=0).isoformat(),
            'indicadores': indicadores, 'novedades': novedades, 'agenda': agenda, 'faltantes': faltantes}
     json.dump(out, open(SALIDA, 'w'), ensure_ascii=False, indent=1)
-    print(f'datos-informe.json: {len(indicadores)} indicadores, {len(novedades)} novedades, {len(agenda)} en agenda, {len(faltantes)} faltantes')
+    print(f'datos-informe.json: {len(indicadores)} indicadores ({sum(1 for r in indicadores if "serie" in r)} con serie, '
+          f'{len({r["grupo"]["id"] for r in indicadores if "grupo" in r})} grupos), {len(novedades)} novedades, {len(agenda)} en agenda, {len(faltantes)} faltantes')
 
 if __name__ == '__main__':
     main()
