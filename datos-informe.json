@@ -1,0 +1,1249 @@
+{
+ "web": "Monitor Mundial",
+ "version": "1.0",
+ "generado": "2026-11-25T10:53:35-03:00",
+ "indicadores": [
+  {
+   "id": "riesgo-pais-argentina",
+   "nombre": "Riesgo país (EMBI Argentina)",
+   "valor": 1070,
+   "unidad": "pb",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": 240,
+    "unidad": "p. b.",
+    "contra": "semana anterior"
+   },
+   "fuente_original": "Rava · Ámbito · Examedia",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [],
+   "subrubros": [],
+   "exposicion": [
+    "Deuda en dólares"
+   ],
+   "url": "https://www.rava.com/cotizaciones/historico/riesgo-pais"
+  },
+  {
+   "id": "merval-pesos",
+   "nombre": "Merval en pesos (MSCI Merval)",
+   "valor": 81255,
+   "unidad": "pts",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -4.51,
+    "unidad": "%",
+    "contra": "semana anterior"
+   },
+   "fuente_original": "Rava (MSCI Merval)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [],
+   "subrubros": [],
+   "exposicion": [],
+   "url": "https://www.rava.com/cotizaciones/historico/merval"
+  },
+  {
+   "id": "merval-dolares",
+   "nombre": "Merval en dólares (CCL)",
+   "valor": 45.16,
+   "unidad": "USD (CCL)",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -10.98,
+    "unidad": "%",
+    "contra": "semana anterior"
+   },
+   "fuente_original": "Rava (Merval en dólares CCL) · Examedia",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [],
+   "subrubros": [],
+   "exposicion": [],
+   "url": "https://www.rava.com/cotizaciones/historico/merval-usd"
+  },
+  {
+   "id": "indice-adr-argentinos",
+   "nombre": "Índice de ADR argentinos (base 31/12/2025 = 100)",
+   "valor": 59.4,
+   "unidad": "base 31/12/2025 = 100",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -13.67,
+    "unidad": "%",
+    "contra": "semana anterior"
+   },
+   "fuente_original": "cálculo propio sobre cierres de Yahoo Finance y Stock Analysis",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [],
+   "subrubros": [],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/ggal/history/"
+  },
+  {
+   "id": "petroleo-brent",
+   "nombre": "Petróleo Brent",
+   "valor": 92.57,
+   "unidad": "USD/bbl",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -3.41,
+    "unidad": "%",
+    "contra": "semana anterior"
+   },
+   "fuente_original": "EnergyNow (Reuters) · Trading Economics",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "mundo",
+    "provincia": "",
+    "localidad": "",
+    "pais": ""
+   },
+   "rubros": [
+    "Energía"
+   ],
+   "subrubros": [
+    "petróleo"
+   ],
+   "exposicion": [
+    "Energía intensiva"
+   ],
+   "url": "https://energynow.com/2026/11/oil-prices-rebound-friday-on-middle-east-tensions-but-fall-for-third-straight-week-wti-closes-at-83-98-brent-at-92-57/"
+  },
+  {
+   "id": "soja-chicago",
+   "nombre": "Soja (Chicago)",
+   "valor": 448.5,
+   "unidad": "USD/t",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -0.88,
+    "unidad": "%",
+    "contra": "semana anterior"
+   },
+   "fuente_original": "CBOT ene. (Brownfield)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "mundo",
+    "provincia": "",
+    "localidad": "",
+    "pais": ""
+   },
+   "rubros": [
+    "Agro"
+   ],
+   "subrubros": [
+    "soja"
+   ],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://brownfieldagnews.com/news/closing-grain-and-livestock-futures-november-20-2026/"
+  },
+  {
+   "id": "maiz-chicago",
+   "nombre": "Maíz (Chicago)",
+   "valor": 171.0,
+   "unidad": "USD/t",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -2.06,
+    "unidad": "%",
+    "contra": "semana anterior"
+   },
+   "fuente_original": "CBOT dic. (Brownfield)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "mundo",
+    "provincia": "",
+    "localidad": "",
+    "pais": ""
+   },
+   "rubros": [
+    "Agro"
+   ],
+   "subrubros": [
+    "maíz"
+   ],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://brownfieldagnews.com/news/closing-grain-and-livestock-futures-november-20-2026/"
+  },
+  {
+   "id": "trigo-chicago",
+   "nombre": "Trigo (Chicago)",
+   "valor": 211.0,
+   "unidad": "USD/t",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -3.21,
+    "unidad": "%",
+    "contra": "semana anterior"
+   },
+   "fuente_original": "CBOT dic. (Brownfield)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "mundo",
+    "provincia": "",
+    "localidad": "",
+    "pais": ""
+   },
+   "rubros": [
+    "Agro"
+   ],
+   "subrubros": [
+    "trigo"
+   ],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://brownfieldagnews.com/news/closing-grain-and-livestock-futures-november-20-2026/"
+  },
+  {
+   "id": "soja-fob-argentina",
+   "nombre": "Soja FOB oficial (puertos argentinos)",
+   "valor": 474,
+   "unidad": "USD/t",
+   "fecha_dato": "2026-11-20",
+   "fuente_original": "Secretaría de Agricultura (FOB oficial)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Agro"
+   ],
+   "subrubros": [
+    "soja"
+   ],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://www.magyp.gob.ar/mercadosagropecuarios/precios.php"
+  },
+  {
+   "id": "aceite-soja-fob-argentina",
+   "nombre": "Aceite de soja FOB Up River",
+   "valor": 1181.24,
+   "unidad": "USD/t",
+   "fecha_dato": "2026-11-11",
+   "fuente_original": "S&P Global (Up River, embarque dic.)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Agro",
+    "Industria"
+   ],
+   "subrubros": [
+    "aceite de soja"
+   ],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/111226-usda-raises-brazil-soybean-oil-exports-cuts-regional-stocks"
+  },
+  {
+   "id": "maiz-fob-argentina",
+   "nombre": "Maíz FOB oficial (puertos argentinos)",
+   "valor": 197,
+   "unidad": "USD/t",
+   "fecha_dato": "2026-11-20",
+   "fuente_original": "Secretaría de Agricultura (FOB oficial)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Agro"
+   ],
+   "subrubros": [
+    "maíz"
+   ],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://www.magyp.gob.ar/mercadosagropecuarios/precios.php"
+  },
+  {
+   "id": "trigo-fob-argentina",
+   "nombre": "Trigo FOB oficial (puertos argentinos)",
+   "valor": 221,
+   "unidad": "USD/t",
+   "fecha_dato": "2026-11-20",
+   "fuente_original": "Secretaría de Agricultura (FOB oficial)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Agro"
+   ],
+   "subrubros": [
+    "trigo"
+   ],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://www.magyp.gob.ar/mercadosagropecuarios/precios.php"
+  },
+  {
+   "id": "real-por-dolar",
+   "nombre": "Real brasileño por dólar (nominal)",
+   "valor": 5.934,
+   "unidad": "BRL",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": 5.2,
+    "unidad": "%",
+    "contra": "semana anterior"
+   },
+   "fuente_original": "Yahoo Finance · FRED (DEXBZUS, hasta 13/11)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Brasil"
+   },
+   "rubros": [],
+   "subrubros": [],
+   "exposicion": [
+    "Exporta",
+    "Importa insumos"
+   ],
+   "url": "https://finance.yahoo.com/quote/BRL%3DX/history/"
+  },
+  {
+   "id": "yuan-por-dolar",
+   "nombre": "Yuan por dólar (nominal)",
+   "valor": 6.6665,
+   "unidad": "CNY",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -0.1,
+    "unidad": "%",
+    "contra": "semana anterior"
+   },
+   "fuente_original": "Yahoo Finance · FRED (DEXCHUS, hasta 13/11)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "China"
+   },
+   "rubros": [],
+   "subrubros": [],
+   "exposicion": [
+    "Exporta",
+    "Importa insumos"
+   ],
+   "url": "https://finance.yahoo.com/quote/CNY%3DX/history/"
+  },
+  {
+   "id": "indice-dolar-dxy",
+   "nombre": "Índice del dólar (DXY)",
+   "valor": 103.81,
+   "unidad": "pts",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": 0.4,
+    "unidad": "%",
+    "contra": "semana anterior"
+   },
+   "fuente_original": "Yahoo Finance (ICE DXY)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Estados Unidos"
+   },
+   "rubros": [],
+   "subrubros": [],
+   "exposicion": [
+    "Deuda en dólares"
+   ],
+   "url": "https://finance.yahoo.com/quote/DX-Y.NYB/history/"
+  },
+  {
+   "id": "actividad-brasil",
+   "nombre": "Actividad económica de Brasil (IBC-Br, variación mensual)",
+   "valor": -0.25,
+   "unidad": "% mensual",
+   "fecha_dato": "2026-09-30",
+   "periodo": "2026-09",
+   "fuente_original": "IBC-Br, septiembre (Banco Central do Brasil) vía Atlas Público · BP Money",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Brasil"
+   },
+   "rubros": [
+    "Industria"
+   ],
+   "subrubros": [],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://atlaspublico.com.br/bcb/noticias/atividade-economica-recua-0-25pct-em-setembro-de-2026-102221"
+  },
+  {
+   "id": "adr-ypf",
+   "nombre": "ADR YPF (YPF, Nueva York)",
+   "valor": 32.32,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -14.7,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 32,32)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Energía"
+   ],
+   "subrubros": [
+    "petróleo y gas"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/ypf/history/"
+  },
+  {
+   "id": "adr-pam",
+   "nombre": "ADR Pampa Energía (PAM, Nueva York)",
+   "valor": 60.63,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -7.0,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 60,63)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Energía"
+   ],
+   "subrubros": [
+    "petróleo y gas"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/pam/history/"
+  },
+  {
+   "id": "adr-vist",
+   "nombre": "ADR Vista Energy (VIST, Nueva York)",
+   "valor": 49.58,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -11.2,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 49,58)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Energía"
+   ],
+   "subrubros": [
+    "petróleo y gas"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/vist/history/"
+  },
+  {
+   "id": "adr-tgs",
+   "nombre": "ADR Transportadora de Gas del Sur (TGS, Nueva York)",
+   "valor": 19.23,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -10.7,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 19,23)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Energía"
+   ],
+   "subrubros": [
+    "petróleo y gas"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/tgs/history/"
+  },
+  {
+   "id": "adr-cepu",
+   "nombre": "ADR Central Puerto (CEPU, Nueva York)",
+   "valor": 9.74,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -10.3,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 9,74)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Energía"
+   ],
+   "subrubros": [
+    "petróleo y gas"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/cepu/history/"
+  },
+  {
+   "id": "adr-edn",
+   "nombre": "ADR Edenor (EDN, Nueva York)",
+   "valor": 11.5,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -18.1,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 11,5)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Energía"
+   ],
+   "subrubros": [
+    "petróleo y gas"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/edn/history/"
+  },
+  {
+   "id": "adr-ggal",
+   "nombre": "ADR Grupo Financiero Galicia (GGAL, Nueva York)",
+   "valor": 25.29,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -15.0,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 25,29)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Comercio y servicios"
+   ],
+   "subrubros": [
+    "bancos"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/ggal/history/"
+  },
+  {
+   "id": "adr-bma",
+   "nombre": "ADR Banco Macro (BMA, Nueva York)",
+   "valor": 49.86,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -12.3,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 49,86)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Comercio y servicios"
+   ],
+   "subrubros": [
+    "bancos"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/bma/history/"
+  },
+  {
+   "id": "adr-bbar",
+   "nombre": "ADR BBVA Argentina (BBAR, Nueva York)",
+   "valor": 8.78,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -17.2,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 8,78)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Comercio y servicios"
+   ],
+   "subrubros": [
+    "bancos"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/bbar/history/"
+  },
+  {
+   "id": "adr-supv",
+   "nombre": "ADR Grupo Supervielle (SUPV, Nueva York)",
+   "valor": 4.51,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -24.1,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 4,51)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Comercio y servicios"
+   ],
+   "subrubros": [
+    "bancos"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/supv/history/"
+  },
+  {
+   "id": "adr-teo",
+   "nombre": "ADR Telecom Argentina (TEO, Nueva York)",
+   "valor": 9.58,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -9.4,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 9,58)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Comercio y servicios"
+   ],
+   "subrubros": [
+    "telecomunicaciones"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/teo/history/"
+  },
+  {
+   "id": "adr-loma",
+   "nombre": "ADR Loma Negra (LOMA, Nueva York)",
+   "valor": 7.93,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -8.7,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 7,93)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Construcción",
+    "Industria"
+   ],
+   "subrubros": [
+    "cemento"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/loma/history/"
+  },
+  {
+   "id": "adr-irs",
+   "nombre": "ADR IRSA (IRS, Nueva York)",
+   "valor": 10.67,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -14.9,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "EODData · FinancialContent (NYSE, cierres diarios) · StockScan y Digrin (cierre 2025)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Construcción"
+   ],
+   "subrubros": [
+    "inmobiliario"
+   ],
+   "exposicion": [],
+   "url": "https://eoddata.com/stockquote/NYSE/IRS.htm"
+  },
+  {
+   "id": "adr-cresy",
+   "nombre": "ADR Cresud (CRESY, Nueva York)",
+   "valor": 7.785,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -20.1,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "EODData (Nasdaq, cierres diarios) · StockScan y Digrin (cierre 2025)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Agro",
+    "Construcción"
+   ],
+   "subrubros": [
+    "agro e inmobiliario"
+   ],
+   "exposicion": [],
+   "url": "https://eoddata.com/stockquote/NASDAQ/CRESY.htm"
+  },
+  {
+   "id": "adr-caap",
+   "nombre": "ADR Corporación América Airports (CAAP, Nueva York)",
+   "valor": 22.13,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -11.4,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 22,13)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Comercio y servicios"
+   ],
+   "subrubros": [
+    "aeropuertos"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/caap/history/"
+  },
+  {
+   "id": "adr-meli",
+   "nombre": "ADR Mercado Libre (MELI, Nueva York)",
+   "valor": 1355.0,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -9.2,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 1355)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Comercio y servicios"
+   ],
+   "subrubros": [
+    "tecnología"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/meli/history/"
+  },
+  {
+   "id": "adr-glob",
+   "nombre": "ADR Globant (GLOB, Nueva York)",
+   "valor": 41.63,
+   "unidad": "USD",
+   "fecha_dato": "2026-11-20",
+   "variacion": {
+    "valor": -8.3,
+    "unidad": "%",
+    "contra": "viernes anterior"
+   },
+   "fuente_original": "Yahoo Finance y Stock Analysis (cierre 20/11: 41,63)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "nacional",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Argentina"
+   },
+   "rubros": [
+    "Comercio y servicios"
+   ],
+   "subrubros": [
+    "tecnología"
+   ],
+   "exposicion": [],
+   "url": "https://stockanalysis.com/stocks/glob/history/"
+  }
+ ],
+ "novedades": [
+  {
+   "id": "2026-11-19-ee-uu-cupo-de-100-000-t-para-carne-vacuna-argentina",
+   "fecha_dato": "2026-11-19",
+   "titulo": "EE.UU.: cupo de 100.000 t para carne vacuna argentina",
+   "resumen": "El acuerdo de febrero de 2026 amplió el cupo preferencial de 20.000 t a 100.000 t en 2026, con unas 80.000 t adicionales en cuatro tramos (el último se abrió el 1/10). La carne dentro del cupo no paga el arancel adicional del 10%. Vigente en 2026.",
+   "tipo": "medida comercial",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Estados Unidos"
+   },
+   "rubros": [
+    "Agro",
+    "Industria"
+   ],
+   "subrubros": [],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://www.apea.org.ar/cuotas-arancelarias-buena-performance-a-octubre-2026/"
+  },
+  {
+   "id": "2026-11-18-ee-uu-argentina-acuerdo-de-comercio-e-inversion-reciprocos-a",
+   "fecha_dato": "2026-11-18",
+   "titulo": "EE.UU.–Argentina: Acuerdo de Comercio e Inversión Recíprocos (ARTI)",
+   "resumen": "Se firmó el 5/2/2026 en Washington. En octubre se firmó un protocolo de enmienda (Quirno–Greer) que quita las referencias a los aranceles recíprocos anulados por la Corte Suprema. EE.UU. ratificó el trato de nación más favorecida para los productos argentinos. Sin ratificar. Al 18/11 todavía no se había enviado al Congreso.",
+   "tipo": "medida comercial",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Estados Unidos"
+   },
+   "rubros": [
+    "Agro",
+    "Industria",
+    "Energía"
+   ],
+   "subrubros": [],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://www.perfil.com/noticias/amp/politica/pese-a-la-derrota-de-trump-milei-acelera-la-ratificacion-del-acuerdo-comercial-con-washington-aF3hq6B0sEVG.phtml"
+  },
+  {
+   "id": "2026-11-18-china-y-canada-amplian-el-alivio-de-aranceles",
+   "fecha_dato": "2026-11-18",
+   "titulo": "China y Canadá amplían el alivio de aranceles",
+   "resumen": "China suspende del 1/1/2027 al 31/12/2028 el arancel extra de 25 % a la mayoría de los cortes de cerdo congelado y varios mariscos de Canadá (unos 400 M de dólares canadienses). Antes había extendido hasta 2028 el alivio a la harina de canola y las arvejas. Canadá mantiene exenciones al acero y aluminio chinos y suma 32 categorías.",
+   "tipo": "medida comercial",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "China"
+   },
+   "rubros": [
+    "Agro",
+    "Industria"
+   ],
+   "subrubros": [],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://euronews.com/2026/11/18/canada-and-china-expand-tariff-relief-on-pork-seafood-and-metals-amid-us-trade-tensions"
+  },
+  {
+   "id": "2026-11-12-ee-uu-seccion-232-sobre-acero-y-aluminio-50",
+   "fecha_dato": "2026-11-12",
+   "titulo": "EE.UU.: Sección 232 sobre acero y aluminio (50%)",
+   "resumen": "50% sobre acero y aluminio primarios. Desde el 6/4/2026 el derecho se cobra sobre el valor aduanero total. Los derivados hechos sustancialmente de esos metales pagan 25%, y algunos equipos industriales pagan 15% hasta 2027 (National Law Review). Vigente. Quedó afuera del arancel de julio de 2026 y también del acuerdo bilateral (iProfesional, 24/7).",
+   "tipo": "medida comercial",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Estados Unidos"
+   },
+   "rubros": [
+    "Industria"
+   ],
+   "subrubros": [],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://perfil.com/economia/el-gobierno-busca-acelerar-el-envio-del-acuerdo-con-ee.uu.-al-congreso-pero-la-apertura-a-china-puede-complicar-negociaciones-para-el-acero-aLlV39N3zkLS"
+  },
+  {
+   "id": "2026-11-04-china-salvaguardia-con-cupo-a-la-carne-vacuna",
+   "fecha_dato": "2026-11-04",
+   "titulo": "China: salvaguardia con cupo a la carne vacuna",
+   "resumen": "Cupo por país: Argentina tiene 511.000 t en 2026 con el arancel habitual del 12,5%. Lo que supere el cupo paga un 55% adicional. El cupo sube 2% por año en 2027 y 2028 (fuente: iProfesional, 6/1/2026). Vigente desde el 1/1/2026 hasta el 31/12/2028. Según Perfil (4/11), Brasil y Australia ya agotaron sus cupos y Argentina todavía tiene margen.",
+   "tipo": "medida comercial",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "China"
+   },
+   "rubros": [
+    "Agro"
+   ],
+   "subrubros": [],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://www.perfil.com/economia/brasil-y-australia-agotaron-sus-cupos-de-carne-en-china-la-oportunidad-que-se-abre-para-argentina-aqEgr8B9PNnZ"
+  },
+  {
+   "id": "2026-10-04-japon-reapertura-para-la-carne-vacuna-argentina",
+   "fecha_dato": "2026-10-04",
+   "titulo": "Japón: reapertura para la carne vacuna argentina",
+   "resumen": "Se habilita la carne vacuna deshuesada y madurada y la lengua de zonas libres de aftosa con vacunación. Antes Japón solo aceptaba carne de la Patagonia. Acuerdo anunciado en octubre de 2026. Los primeros envíos dependen de las auditorías del MAFF japonés en las plantas.",
+   "tipo": "medida comercial",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Japón"
+   },
+   "rubros": [
+    "Agro"
+   ],
+   "subrubros": [],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://www.iprofesional.com/comex/465832-tras-20-anos-argentina-reabrio-un-mercado-de-carne-de-mas-de-us3-000-millones-anuales.amp"
+  },
+  {
+   "id": "2026-09-30-uemercosur-acuerdo-comercial-interino-aplicado-de-forma-prov",
+   "fecha_dato": "2026-09-30",
+   "titulo": "UE–Mercosur: acuerdo comercial interino aplicado de forma provisional",
+   "resumen": "La UE elimina aranceles sobre el 92% de las importaciones del Mercosur y da acceso preferencial a otro 7,5% mediante cupos. La carne dentro de cupo paga 7,5% desde el primer día. Hay una cláusula de salvaguardia bilateral. Se aplica de forma provisional desde el 1/5/2026. El 30/9 el TJUE rechazó la medida cautelar que pidió Polonia.",
+   "tipo": "medida comercial",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Unión Europea"
+   },
+   "rubros": [
+    "Agro",
+    "Industria",
+    "Energía"
+   ],
+   "subrubros": [],
+   "exposicion": [
+    "Exporta",
+    "Importa insumos"
+   ],
+   "url": "https://es.euronews.com/2026/09/30/polonia-pierde-una-primera-batalla-sobre-el-mercosur-tras-el-fallo-del-tribunal-de-justici"
+  },
+  {
+   "id": "2026-09-24-india-rebaja-de-aranceles-al-aceite-crudo-de-soja-y-girasol",
+   "fecha_dato": "2026-09-24",
+   "titulo": "India: rebaja de aranceles al aceite crudo de soja y girasol",
+   "resumen": "El arancel básico al aceite crudo de soja baja de 10% a 5% (de 16,5% a 11% efectivo) y el del aceite crudo de girasol de 10% a 0% (de 16,5% a 5,5% efectivo). Vigente desde el 24/9/2026. La fuente no indica hasta cuándo.",
+   "tipo": "medida comercial",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "India"
+   },
+   "rubros": [
+    "Agro"
+   ],
+   "subrubros": [],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://www.businesstoday.in/latest/economy/story/govt-cuts-customs-duty-on-edible-oil-ahead-of-festive-season-557539-2026-09-24"
+  },
+  {
+   "id": "2026-09-18-ee-uu-antidumping-a-tubos-petroleros-octg",
+   "fecha_dato": "2026-09-18",
+   "titulo": "EE.UU.: antidumping a tubos petroleros (OCTG)",
+   "resumen": "Orden antidumping sobre tubos para la industria petrolera (OCTG). En la revisión cerrada en 2025, Siderca (Tenaris) quedó con un margen final de 6,76%. El 18/9/2026 la Corte de Apelaciones del Circuito Federal confirmó que la petición tenía suficiente respaldo de la industria. Vigente, y confirmada por el fallo de septiembre de 2026. Se suma a la Sección 232.",
+   "tipo": "medida comercial",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Estados Unidos"
+   },
+   "rubros": [
+    "Industria"
+   ],
+   "subrubros": [],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://www.mlex.com/articles/2527495/steel-pipe-dumping-order-petition-had-enough-industry-backing-us-appeals-court-rules"
+  },
+  {
+   "id": "2026-08-27-ee-uu-argentina-excluida-del-cupo-temporal-de-300-000-t-de-c",
+   "fecha_dato": "2026-08-27",
+   "titulo": "EE.UU.: Argentina excluida del cupo temporal de 300.000 t de carne",
+   "resumen": "Cupo temporal de unas 300.000 t de carne vacuna para bajar el precio interno. Argentina, Uruguay, Australia y Nueva Zelanda quedan afuera porque ya tienen cupos propios. Vigente desde fines de agosto de 2026. La fuente no da fecha de cierre ni arancel.",
+   "tipo": "medida comercial",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Estados Unidos"
+   },
+   "rubros": [
+    "Agro"
+   ],
+   "subrubros": [],
+   "exposicion": [
+    "Exporta"
+   ],
+   "url": "https://www.bloomberglinea.com/latinoamerica/argentina/el-nuevo-cupo-de-300000-toneladas-de-carne-de-eeuu-que-dejo-afuera-a-argentina/"
+  }
+ ],
+ "agenda": [
+  {
+   "fecha": "2026-11-29",
+   "evento": "Elecciones en España: Generales anticipadas",
+   "eje": "Política internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "España"
+   },
+   "rubros": [],
+   "url": "https://francomartinlopez.github.io/monitormundial/#politica"
+  },
+  {
+   "fecha": "2026-11-29",
+   "evento": "Elecciones en Ecuador: Seccionales (prefectos, alcaldes, concejales) y CPCCS",
+   "eje": "Política internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Ecuador"
+   },
+   "rubros": [],
+   "url": "https://francomartinlopez.github.io/monitormundial/#politica"
+  },
+  {
+   "fecha": "2026-12-09",
+   "evento": "Decisión de tasas de la Reserva Federal (reunión del 8 y 9 de diciembre)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Estados Unidos"
+   },
+   "rubros": [],
+   "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+  },
+  {
+   "fecha": "2026-12-09",
+   "evento": "Decisión de la tasa Selic del Banco Central do Brasil (Copom)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Brasil"
+   },
+   "rubros": [],
+   "url": "https://www.bcb.gov.br/content/copom/atascopom/Copom282-not20261104282.pdf"
+  },
+  {
+   "fecha": "2026-12-17",
+   "evento": "Decisión de tasas del Banco Central Europeo",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Unión Europea"
+   },
+   "rubros": [],
+   "url": "https://ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html"
+  },
+  {
+   "fecha": "2027-01-16",
+   "evento": "Elecciones en Nigeria: Presidencial y legislativas (la comisión electoral la adelantó desde el 20/2/2027)",
+   "eje": "Política internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Nigeria"
+   },
+   "rubros": [],
+   "url": "https://francomartinlopez.github.io/monitormundial/#politica"
+  }
+ ],
+ "faltantes": [
+  {
+   "id": "harina-soja-fob-argentina",
+   "nombre": "Harina de soja FOB",
+   "motivo": "Sin dato al 20/11/2026. La tabla diaria de la SAGyP no incluye subproductos, y la última circular FOB oficial accesible es del 19/10/2026 (harina/pellets 419 USD/t, embarque nov-26), demasiado vieja p",
+   "ultimo_dato": null
+  },
+  {
+   "id": "acero",
+   "nombre": "Precio internacional del acero",
+   "motivo": "El sitio no publica un precio del acero; las medidas sobre el acero están en las barreras comerciales.",
+   "ultimo_dato": null
+  },
+  {
+   "id": "tipo-cambio-real-brasil",
+   "nombre": "Tipo de cambio real con Brasil",
+   "motivo": "El sitio muestra el tipo de cambio nominal (real por dólar), no el tipo de cambio real bilateral.",
+   "ultimo_dato": null
+  },
+  {
+   "id": "tipo-cambio-real-china",
+   "nombre": "Tipo de cambio real con China",
+   "motivo": "El sitio muestra el tipo de cambio nominal (yuan por dólar), no el tipo de cambio real bilateral.",
+   "ultimo_dato": null
+  },
+  {
+   "id": "tipo-cambio-real-eeuu",
+   "nombre": "Tipo de cambio real con EE. UU.",
+   "motivo": "El sitio no publica el tipo de cambio real bilateral con EE. UU.",
+   "ultimo_dato": null
+  }
+ ]
+}

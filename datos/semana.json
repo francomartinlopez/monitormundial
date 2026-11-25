@@ -304,7 +304,8 @@
    "fecha": "2026-11-16",
    "dec": 2,
    "sig": "+",
-   "nota": "IBC-Br de septiembre (16/11): −0,25 % mensual (algunos medios redondean −0,2 %; el mercado esperaba −0,3 %). Casi sin cambio interanual; +1,43 % en 12 meses. El tercer trimestre cae 0,9 %: riesgo de PBI negativo en Brasil, principal comprador de autos argentinos (lectura propia)."
+   "nota": "IBC-Br de septiembre (16/11): −0,25 % mensual (algunos medios redondean −0,2 %; el mercado esperaba −0,3 %). Casi sin cambio interanual; +1,43 % en 12 meses. El tercer trimestre cae 0,9 %: riesgo de PBI negativo en Brasil, principal comprador de autos argentinos (lectura propia).",
+   "periodo": "2026-09"
   },
   "fase-enso-actual": {
    "v": "El Niño fuerte a muy fuerte",
@@ -10022,5 +10023,46 @@
   },
   "f": "Yahoo Finance · Stock Analysis · Rava Bursátil",
   "nota": "Cierres en dólares del viernes 20/11 contra el 13/11 y contra el último cierre de 2025; variación solo de precio, sin dividendos. Semana muy mala: las 17 acciones bajaron, en medio del derrumbe de Wall Street por las tecnológicas y la suba del riesgo emergente. Los bancos fueron los más castigados (Supervielle −24 %, BBVA −17 %, Galicia −15 %); también Edenor (−18 %) e YPF (−15 %). Todos los cierres coinciden en Yahoo Finance y Stock Analysis. Mercado Libre y Globant tienen hoy sede fuera de Argentina; se incluyen como referencia."
- }
+ },
+ "agenda_informe": [
+  {
+   "fecha": "2026-12-09",
+   "evento": "Decisión de tasas de la Reserva Federal (reunión del 8 y 9 de diciembre)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Estados Unidos"
+   },
+   "rubros": [],
+   "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm"
+  },
+  {
+   "fecha": "2026-12-09",
+   "evento": "Decisión de la tasa Selic del Banco Central do Brasil (Copom)",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Brasil"
+   },
+   "rubros": [],
+   "url": "https://www.bcb.gov.br/content/copom/atascopom/Copom282-not20261104282.pdf"
+  },
+  {
+   "fecha": "2026-12-17",
+   "evento": "Decisión de tasas del Banco Central Europeo",
+   "eje": "Economía internacional",
+   "alcance": {
+    "nivel": "país",
+    "provincia": "",
+    "localidad": "",
+    "pais": "Unión Europea"
+   },
+   "rubros": [],
+   "url": "https://ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html"
+  }
+ ]
 }
