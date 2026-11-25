@@ -66,36 +66,36 @@
   "oro": {
    "v": 3535,
    "u": "USD/oz",
-   "f": "Trading Economics · Brownfield",
-   "url": "https://tradingeconomics.com/commodity/gold",
+   "f": "Trading Economics · goldprice.org",
+   "url": "https://goldprice.org/gold-price-today/2026-11-20",
    "fecha": "2026-11-20",
    "d": -8.94,
    "dt": "pct",
    "sig": "+",
    "dec": 0,
-   "nota": "3.535 USD/oz (Trading Economics), −2,5 % el viernes; futuro de diciembre 3.523,90 (−161,60, Brownfield). Peor semana en ocho meses: el mercado descuenta casi 99 % de probabilidad de una suba de tasas de la Fed en diciembre (CME FedWatch) y el gobernador Waller habló de hasta 50 pb; dólar más firme y venta de oro para cubrir pérdidas en bolsas."
+   "nota": "goldprice.org da cierre 20/11 de 3524,80 USD/oz (−2,24 % diario) frente a 3535 de Trading Economics: diferencia de −0,29 %, dentro del margen entre pantallas. Kitco ubicaba el spot en ~3883,40 el 13/11 (tarde EE.UU.); contra goldprice.org la baja semanal daría −9,2 %. Se mantiene −8,94 % (Trading Economics)."
   },
   "plata": {
    "v": 41.19,
    "u": "USD/oz",
-   "f": "Trading Economics",
-   "url": "https://tradingeconomics.com/commodity/silver",
+   "f": "Trading Economics · goldprice.org",
+   "url": "https://goldprice.org/gold-price-today/2026-11-20",
    "fecha": "2026-11-20",
    "sig": "+",
    "dec": 2,
    "d": -15.46,
    "dt": "pct",
-   "nota": "41,19 USD/oz, −3,9 % el viernes y más de 13 % en la semana (Trading Economics); −29 % en el mes. Mismos motivos que el oro: suba de tasas esperada en EE.UU. y dólar firme. Una sola fuente para el cierre."
+   "nota": "goldprice.org: cierre 20/11 de 40,99 USD/oz (−3,69 %) frente a 41,19 de Trading Economics (−0,49 %). Coherente con TE, que el 23/11 reporta 43,251 tras subir un 5 % (lo que implica un cierre previo de unos 41,2). Se mantiene la variación semanal de TE."
   },
   "cobre": {
    "v": 12092,
    "u": "USD/t",
-   "f": "Trading Economics",
+   "f": "Trading Economics (COMEX) · Reuters vía Business Recorder (LME)",
    "url": "https://tradingeconomics.com/commodity/copper",
    "fecha": "2026-11-20",
    "sig": "+",
    "dec": 0,
-   "nota": "5,485 USD/lb (6,08 el 13/11, misma fuente) · conversión propia. COMEX, no LME. −2,6 % el viernes y cerca de −16 % en el mes. Pesan la salida de inversores de las apuestas a la inteligencia artificial (centros de datos), la industria china más floja en octubre y stocks de la LME en unas 320.000 t. Una sola fuente.",
+   "nota": "No hallé una segunda fuente para el cierre COMEX (5,485 USD/lb = 12092 USD/t). El LME 3 meses cotizaba a 12.310,50 USD/t a las 10:30 GMT del 20/11 (−1,7 % en el día, mínimo 12.202) y acumulaba una baja semanal de ~8,2 %. No es un cierre. Crux Investor: COMEX 5,63 USD/lb el 18/11.",
    "d": -9.79,
    "dt": "pct"
   },
@@ -127,7 +127,7 @@
    "f": "Trading Economics",
    "url": "https://tradingeconomics.com/commodity/natural-gas",
    "fecha": "2026-11-20",
-   "nota": "3,41 USD/MMBtu el 20/11 (+4,4 % el viernes); otra pantalla de la misma página da 3,47 (+6 %). Tercera semana de suba por pronósticos más fríos para fin de noviembre y diciembre. La EIA informó una inyección de 20 Bcf en la semana al 13/11 (promedio de cinco años: 15); almacenamiento 2,1 % sobre lo normal. Una sola fuente; liquidación de NYMEX no confirmada.",
+   "nota": "No encontré la liquidación NYMEX oficial del 20/11. TE informa que el viernes 20/11 tocó máximos de más de 9 meses y que el lunes 23/11 cayó 6–7 % a ~3,15–3,18. Eso implica un cierre del 20/11 de unos 3,37–3,42, coherente con 3,41 (no con 3,47).",
    "dec": 2,
    "d": 5.57,
    "dt": "pct"
@@ -135,24 +135,24 @@
   "gas-ttf-europa": {
    "v": 88.45,
    "u": "EUR/MWh",
-   "f": "Trading Economics",
+   "f": "Trading Economics · Al Attiyah Foundation",
    "url": "https://tradingeconomics.com/commodity/eu-natural-gas",
    "fecha": "2026-11-20",
    "d": -1.06,
    "dt": "pct",
    "sig": "-",
-   "nota": "Cotización del 20/11: 88,45 EUR/MWh (+4,7 % el viernes; otra pantalla de la misma página, 89,54). Rebotó el viernes por menos gas de Noruega (falla en Troll), frío pronosticado en el noroeste de Europa y los ataques cerca de Ormuz. Almacenamiento de la UE 69,8 % al 19/11 (81,2 % un año atrás). Liquidación de ICE Endex no confirmada."
+   "nota": "No encontré la liquidación ICE Endex del 20/11. TE dice que el viernes 20/11 subió por encima de 90 EUR/MWh (dato intradiario). Al Attiyah reporta TTF a 28,32 USD/MMBtu, −2,1 % semanal. Sobre el ~91 del 13/11 (TE), eso daría ~89, entre 88,45 y 89,54. La variación −2,1 % es de la fuente en USD."
   },
   "gnl-asia-jkm": {
-   "v": 31.3,
+   "v": 26.9,
    "u": "USD/MMBtu",
-   "f": "Reuters (columna de Clyde Russell vía BOE Report)",
-   "url": "https://boereport.com/2026/11/15/europe-draws-lng-from-asia-but-not-fast-enough-russell/amp/",
-   "fecha": "2026-11-13",
-   "d": -0.32,
+   "f": "Al Attiyah Foundation (revisión semanal 21/11) · PGJ/Reuters (13/11)",
+   "url": "https://marhaba.qa/al-attiyah-foundation-weekly-energy-market-review-21-november-2026/",
+   "fecha": "2026-11-20",
+   "d": -14.06,
    "dt": "pct",
    "sig": "-",
-   "nota": "Spot de GNL para el norte de Asia: 31,3 USD/MMBtu en la semana al 13/11, cerca del máximo en casi cuatro años (32,5 la semana al 30/10); antes de la guerra con Irán estaba en 10,4. Sin dato de la semana al 20/11. Qatar exporta un tercio de lo que exportaba antes del conflicto; Europa compra más GNL (10,1 Mt estimadas en noviembre)."
+   "nota": "El spot noreste asiático (entrega diciembre) para la semana al 20/11 fue 26,90 USD/MMBtu, contra 31,30 de la semana al 13/11 (valor confirmado por PGJ). Es la tercera baja semanal seguida (−14,06 %). Energy Intelligence (24/11) dice que el spot subió 2,45 hasta 30, lo que implica unos 27,55 en la evaluación previa (otra metodología y fecha). Único dato directo del 20/11."
   },
   "tesoro-ee-uu-10-anos": {
    "v": 4.91,
@@ -265,15 +265,15 @@
    "nota": "−0,1 % el viernes y −2,8 % en la semana (Trading Economics). Capesize 4.502 (bajó por el mineral de hierro); panamax 2.140, algo arriba; supramax 1.810. El lunes 16/11 había caído 2 % a 2.921."
   },
   "litio-carbonato": {
-   "v": 14789,
+   "v": 13560,
    "u": "USD/t",
-   "f": "Jiemian (futuro de Guangzhou, contrato principal)",
-   "url": "https://www.jiemian.com/article/10419002.html",
+   "f": "Trading Economics · Sina Finance / Eastmoney (futuro GFEX)",
+   "url": "https://tradingeconomics.com/commodity/lithium",
    "fecha": "2026-11-20",
    "dec": 0,
    "sig": "+",
-   "nota": "98.980 CNY/t el 20/11 (+0,84 % en el día; tocó un máximo del año durante la rueda) · conversión propia al mismo tipo implícito de la serie (104.740 CNY = 15.650 USD). Contra 91.000 del 13/11 (SunSirs) sube 8,8 %; el 17/11 había saltado 5,2 % a 93.180. La bolsa de Guangzhou subió comisiones y limitó posiciones para frenar la volatilidad. Una sola fuente para el cierre. Lectura propia: buena noticia para el litio que exporta Argentina.",
-   "d": 8.77,
+   "nota": "Corrección: el dato anterior del sitio (98.980 CNY/t) era de otro año. 98.980 CNY/t es el cierre del 20/11/2025 (informe Ruida Futures fechado 2025-11-20), no de 2026. En 2026, Trading Economics indica que el 20/11 se estabilizó cerca de 91.000 CNY/t (24/11: 90.300). Sina muestra el LC2701 a 93.220 a media mañana del 20/11 (+2,84 %) y Eastmoney da un cierre de 93.180 el 17/11. Conversión propia: 91.000 / 6,7128 (fijación PBoC del 19/11; no hallé la del 20/11) ≈ 13.556 USD/t. Con el tipo esperado por mercado (~6,668) serían ≈ 13.646.",
+   "d": null,
    "dt": "pct"
   },
   "urea": {
@@ -284,7 +284,7 @@
    "fecha": "2026-11-04",
    "dec": 0,
    "sig": "-",
-   "nota": "Sin dato nuevo al 20/11 de Medio Oriente: se deja 450 USD/t (4/11). Egipto sigue en 535 FOB para noviembre, el origen más caro, con 20 % menos de gas a las plantas desde el 1/11 (Fertilizer Daily, 9/11). Procurement Resource (19/11) describe un mercado mundial “decididamente más firme” en la primera mitad de noviembre, sin cifras. Pink Sheet: promedio de octubre 420. Siguen los ataques a petroleros en Ormuz (16 y 18/11).",
+   "nota": "No encontré el precio de la urea granulada Medio Oriente FOB de la semana al 20/11. Como referencia, Fertilizer Daily (9/11) informa urea granulada egipcia a ~535 USD/t FOB en contratos de noviembre, por cortes de gas. Sin dato nuevo.",
    "d": 0,
    "dt": "pct"
   },
@@ -792,7 +792,7 @@
    "url": "https://ukragroconsult.com/en/news/sunflower-oil-prices-remain-high-despite-declining-palm-and-soybean-oil-quotations/",
    "fecha": "2026-11-04",
    "sig": "+",
-   "nota": "Sin dato nuevo al 20/11: no hay FOB comparable. Se deja 1.450 USD/t (aceite con entrega a India, UkrAgroConsult, 4/11). Una sola fuente.",
+   "nota": "No encontré un nivel en USD/t para la semana al 20/11. Según UkrAgroConsult (24/11), el aceite de girasol FOB Danubio subió 6,5 % entre el 13 y el 20/11. Es otra base que la entrega a India del sitio, así que no se aplica la variación.",
    "d": null,
    "dt": "pct"
   },
@@ -804,7 +804,7 @@
    "url": "https://commodity-board.com/barley-market-flat-futures-soft-physicals-and-rising-black-sea-risk",
    "fecha": "2026-11-05",
    "sig": "+",
-   "nota": "Sin dato nuevo al 20/11 en la misma serie: se deja 197,5 USD/t (FOB Mar Negro, fines de octubre). Una sola fuente.",
+   "nota": "Sin dato de la semana al 20/11. CMBroker (4/11): la cebada forrajera FOB Mar Negro estaba 'estable, apenas por debajo de 200 USD/t' a fines de octubre y comienzos de noviembre. UkrAgroConsult (9/11): ofertas de exportación en Ucrania de 140–150 USD/t puesto en puertos del Danubio (no FOB).",
    "d": 0,
    "dt": "pct"
   },
@@ -1414,6 +1414,197 @@
    "nota": "69,95 % al 17/11 según los datos de AGSI+ (Trading Economics da 69,8 % al 19/11): el nivel más bajo para la fecha desde que empieza la serie, en 2011 (el mínimo anterior era 73,09 %). Interanual: al 11/11 estaba en 71,24 % contra 82,30 % un año antes (−11,1 puntos). Alemania: 57,11 % al 17/11. AGSI+ exige clave de API; el dato llega por terceros.",
    "d": -2.7,
    "dt": "pts"
+  },
+  "tasa-fed": {
+   "v": 4.0,
+   "u": "%",
+   "f": "Reserva Federal (FOMC)",
+   "url": "https://federalreserve.gov/newsevents/pressreleases/monetary20261028a.htm",
+   "fecha": "2026-10-28",
+   "d": 0,
+   "dt": "pb",
+   "sig": "-",
+   "dec": 2,
+   "nota": "Rango de fondos federales 3,75%–4,00%, mantenido el 28/10/2026 por 10 votos a 2: Lisa Cook y Beth Hammack disintieron porque querían SUBIR 25 pb. Sin cambios en la semana al 20/11. Próxima reunión: 8-9/12/2026.",
+   "dd": 0
+  },
+  "tasa-bce": {
+   "v": 2.5,
+   "u": "%",
+   "f": "BCE",
+   "url": "https://ecb.europa.eu/press/pr/date/2026/html/ecb.mp261029~9a493adf17.en.html",
+   "fecha": "2026-10-29",
+   "d": 0,
+   "dt": "pb",
+   "sig": "-",
+   "dec": 2,
+   "nota": "Tasa de depósito 2,50% (refinanciación 2,65%, facilidad marginal 2,90%), las tres sin cambios en la reunión del 29/10/2026. El BCE dice que decide 'reunión por reunión' y no se compromete con un sendero. Próxima decisión: jueves 17/12/2026.",
+   "dd": 0
+  },
+  "tasa-selic": {
+   "v": 13.75,
+   "u": "%",
+   "f": "BCB – Copom",
+   "url": "https://www.bcb.gov.br/content/copom/atascopom/Copom282-not20261104282.pdf",
+   "fecha": "2026-11-04",
+   "d": 0,
+   "dt": "pb",
+   "sig": "-",
+   "dec": 2,
+   "nota": "El Copom (reunión 282, 3-4/11/2026) mantuvo la Selic en 13,75% por unanimidad. Cortó el ciclo de 'calibración' después de cinco recortes de 25 pb desde marzo de 2026; antes había estado en 15%. Próxima reunión: 8-9/12/2026; la decisión se anuncia el 9/12 (Investidor10).",
+   "dd": 0
+  },
+  "tasa-china-lpr": {
+   "v": 3.0,
+   "u": "%",
+   "f": "PBoC vía Trading Economics",
+   "url": "https://tradingeconomics.com/china/interest-rate/news/593249",
+   "fecha": "2026-11-20",
+   "d": 0,
+   "dt": "pb",
+   "sig": "-",
+   "dec": 2,
+   "nota": "LPR a 1 año 3,0% y a 5 años 3,5%, sin cambios el 20/11/2026: 18.º mes seguido en estos niveles (según el News Stream de Trading Economics; no se abrió el comunicado del PBoC). La repo inversa a 7 días figuraba en 1,40% en la fijación de octubre. La LPR se fija habitualmente el día 20 de cada mes; no se confirmó la fecha de diciembre.",
+   "dd": 0
+  },
+  "fob-soja-rosario": {
+   "v": 474,
+   "u": "USD/t",
+   "f": "Secretaría de Agricultura (FOB oficial)",
+   "url": "https://www.magyp.gob.ar/mercadosagropecuarios/precios.php",
+   "fecha": "2026-11-20",
+   "d": null,
+   "dt": "pct",
+   "sig": "+",
+   "dec": 0,
+   "nota": "Precio FOB de referencia de la Secretaría de Agricultura en su tabla 'Cotizaciones de granos a: 20/11/2026', con flecha de suba contra el día anterior. No es un precio Up River: la Res. SAGyP 65/2025 define los FOB oficiales sobre 'puertos argentinos' en general, y la tabla no indica mes de embarque. No se encontró el valor del 13/11, así que no hay variación semanal. Como referencia posterior al corte, Agrofy mostraba el 24/11/2026 un FOB oficial 'dispo' de 482 USD/t."
+  },
+  "fob-harina-soja-rosario": {
+   "v": "—",
+   "u": "USD/t",
+   "f": "—",
+   "url": "https://www.magyp.gob.ar/sitio/areas/ss_mercados_agropecuarios/fob_oficiales/_archivoFob/00001_Resolucion%20Actual.php",
+   "fecha": null,
+   "d": null,
+   "dt": "pct",
+   "sig": "+",
+   "dec": 0,
+   "nota": "Sin dato al 20/11/2026. La tabla diaria de la SAGyP no incluye subproductos, y la última circular FOB oficial accesible es del 19/10/2026 (harina/pellets 419 USD/t, embarque nov-26), demasiado vieja para usarla. Tampoco aparecieron cifras de la semana en BCR ni en la prensa."
+  },
+  "fob-aceite-soja-rosario": {
+   "v": 1181.24,
+   "u": "USD/t",
+   "f": "S&P Global (Up River, embarque dic.)",
+   "url": "https://www.spglobal.com/energy/en/news-research/latest-news/agriculture/111226-usda-raises-brazil-soybean-oil-exports-cuts-regional-stocks",
+   "fecha": "2026-11-11",
+   "d": null,
+   "dt": "pct",
+   "sig": "+",
+   "dec": 0,
+   "nota": "Sin dato de la semana al 20/11: último precio encontrado, 1.181,24 USD/t el 11/11 (Up River, embarque diciembre, +2,43), según S&P Global. La circular FOB oficial del 19/10 daba 1.213 USD/t para noviembre."
+  },
+  "fob-maiz-rosario": {
+   "v": 197,
+   "u": "USD/t",
+   "f": "Secretaría de Agricultura (FOB oficial)",
+   "url": "https://www.magyp.gob.ar/mercadosagropecuarios/precios.php",
+   "fecha": "2026-11-20",
+   "d": null,
+   "dt": "pct",
+   "sig": "+",
+   "dec": 0,
+   "nota": "Precio FOB de referencia de la SAGyP al 20/11/2026, con flecha de baja contra el día anterior. Se refiere a 'puertos argentinos' en general, no específicamente al Up River (Res. SAGyP 65/2025), y no indica mes de embarque. No se encontró el valor del 13/11 para calcular la variación semanal."
+  },
+  "fob-trigo-rosario": {
+   "v": 221,
+   "u": "USD/t",
+   "f": "Secretaría de Agricultura (FOB oficial)",
+   "url": "https://www.magyp.gob.ar/mercadosagropecuarios/precios.php",
+   "fecha": "2026-11-20",
+   "d": null,
+   "dt": "pct",
+   "sig": "+",
+   "dec": 0,
+   "nota": "Precio FOB de referencia de la SAGyP al 20/11/2026, con flecha de suba contra el día anterior. Se refiere a 'puertos argentinos' en general, no específicamente al Up River (Res. SAGyP 65/2025), y no indica mes de embarque ni proteína. No se encontró el valor del 13/11."
+  },
+  "importacion-china-soja": {
+   "v": 7.35,
+   "u": "millones de t",
+   "f": "Aduana de China vía Forbes Brasil · Global Agriculture",
+   "url": "https://forbes.com.br/forbes-agro/2026/11/importacao-de-soja-pela-china-cai-em-meio-a-estoques-altos-e-margens-de-esmagamento-fracas/",
+   "fecha": "2026-10-31",
+   "d": -22.5,
+   "dt": "pct",
+   "sig": "+",
+   "dec": 2,
+   "nota": "En octubre de 2026 China importó 7,35 Mt de soja, 22,5% menos que los 9,48 Mt de octubre de 2025, 38% menos que en septiembre y el nivel más bajo desde 2023. Enero-octubre suma 93,48 Mt (-2,3% interanual); el dato se publicó el 10/11/2026 (confirmado en Global Agriculture). No se encontró el desglose por origen de octubre. En septiembre había sido Brasil 10,70 Mt, EE.UU. 0,36 Mt y Argentina 0,51 Mt (Fastmarkets)."
+  },
+  "arancel-eeuu-argentina": {
+   "v": 10,
+   "u": "%",
+   "f": "Perfil",
+   "url": "https://www.perfil.com/noticias/economia/argentina-mantendra-el-arancel-mas-bajo-de-estados-unidos-y-amplia-beneficios-para-sus-exportaciones-a40.phtml",
+   "fecha": "2026-07-24",
+   "nota": "Recargo adicional del régimen vigente desde el 24/7/2026 (según Perfil, Sección 301). Es la franja más baja; el resto paga 12,5%. Hay 2.212 posiciones al 0%. No alcanza al acero ni al aluminio (50% por la Sección 232) ni a la carne dentro del cupo.",
+   "dec": 0
+  },
+  "medidas-vigentes-contra-arg": {
+   "v": 9,
+   "u": "medidas",
+   "f": "cálculo propio",
+   "nota": "Cantidad de fichas marcadas crit (2) o warn (7) en este tablero. No es un inventario exhaustivo de barreras.",
+   "fecha": "2026-11-20",
+   "url": "https://ustr.gov/",
+   "dec": 0
+  },
+  "riesgo-pais-argentina": {
+   "v": 1070,
+   "u": "pb",
+   "f": "Rava · Ámbito · Examedia",
+   "url": "https://www.rava.com/cotizaciones/historico/riesgo-pais",
+   "fecha": "2026-11-20",
+   "nota": "Saltó 240 pb en la semana (de 830 a 1.070 según Rava; Ámbito habla de 'unos 1.071' contra 832 del viernes anterior y Examedia de 'alrededor de 1.070'; iProfesional confirma 830 al 13/11). Ámbito lo atribuye a la venta masiva en Wall Street liderada por tecnológicas (dudas sobre valuaciones e inversión en IA, expectativa de tasas más altas de la Fed; el S&P 500 entró en corrección el viernes) y a factores locales: dificultad para acumular reservas, vencimientos del Tesoro en 2027, malos balances de Supervielle e incertidumbre por el escenario electoral 2027. Dato diario de Rava: 18/11 848, 19/11 931, 20/11 1.070.",
+   "d": 240,
+   "dt": "pb",
+   "sig": "-",
+   "dec": 0,
+   "dd": 0
+  },
+  "merval-pesos": {
+   "v": 81255,
+   "u": "pts",
+   "f": "Rava (MSCI Merval)",
+   "url": "https://www.rava.com/cotizaciones/historico/merval",
+   "fecha": "2026-11-20",
+   "nota": "Cayó 4,5% en la semana (85.096 → 81.255, Rava). Desde el 19/10/2026 el índice es el MSCI Merval (antes S&P Merval; S&P lo calculó hasta el 16/10, según DolarHoy e iProfesional) y la escala se reexpresó de una referencia de unos $2,8 millones a 100.000 puntos (iProfesional, 27/10/2026), por eso el cierre de 2025 (3.051.620 pts al 30/12/2025 en Rava, escala vieja; Rava no muestra dato del 31/12/2025) no es comparable directamente.",
+   "d": -4.51,
+   "dt": "pct",
+   "sig": "+",
+   "dec": 0
+  },
+  "merval-usd": {
+   "v": 45.16,
+   "u": "USD (CCL)",
+   "f": "Rava (Merval en dólares CCL) · Examedia",
+   "url": "https://www.rava.com/cotizaciones/historico/merval-usd",
+   "fecha": "2026-11-20",
+   "nota": "Cayó 11,0% en la semana según Rava (50,73 → 45,16), con un CCL de Rava de $1.677,53 (13/11) y $1.799,14 (20/11), +7,2%; el recálculo 81.255/1.799,14 = 45,16 y 85.096/1.677,53 = 50,73 cierra. Examedia da una caída de 12,3% a US$44,5 con un CCL redondeado de $1.800 (+7,8%), y Ámbito, una baja de casi 10% en cinco ruedas; iProfesional daba un CCL de $1.669,98 al 13/11, otra medición.",
+   "d": -10.98,
+   "dt": "pct",
+   "sig": "+",
+   "dec": 2
+  },
+  "indice-adr": {
+   "v": 59.4,
+   "u": "base 31/12/2025 = 100",
+   "dec": 1,
+   "f": "cálculo propio sobre cierres de Yahoo Finance y Stock Analysis",
+   "url": "https://stockanalysis.com/stocks/ggal/history/",
+   "fecha": "2026-11-20",
+   "d": -13.67,
+   "dt": "pct",
+   "sig": "+",
+   "nota": "Promedio simple de 13 ADR (GGAL, YPF, PAM, BMA, BBAR, SUPV, CEPU, TGS, TEO, EDN, CRESY, IRS, LOMA), cada uno relativo a su cierre del 31/12/2025. Viernes anterior: 68,8. Pierde 40,6 % en el año."
   }
  },
  "fichas": {
@@ -3960,16 +4151,310 @@
     "url": "https://globallnghub.com/?p=20914",
     "fecha": "2026-10-30"
    }
+  ],
+  "barreras": [
+   {
+    "nombre": "China: salvaguardia con cupo a la carne vacuna",
+    "chip": "Cupo",
+    "chipc": "warn",
+    "fecha": "2026-11-04",
+    "f": "Perfil (4/11/2026); iProfesional (6/1/2026)",
+    "url": "https://www.perfil.com/economia/brasil-y-australia-agotaron-sus-cupos-de-carne-en-china-la-oportunidad-que-se-abre-para-argentina-aqEgr8B9PNnZ",
+    "campos": {
+     "País": "China → importaciones de carne vacuna (incluida Argentina)",
+     "Medida": "Cupo por país: Argentina tiene 511.000 t en 2026 con el arancel habitual del 12,5%. Lo que supere el cupo paga un 55% adicional. El cupo sube 2% por año en 2027 y 2028 (fuente: iProfesional, 6/1/2026).",
+     "Productos": "Carne vacuna y huesos bovinos (China es el principal destino: 61% del volumen exportado en enero–septiembre de 2026).",
+     "Estado": "Vigente desde el 1/1/2026 hasta el 31/12/2028. Según Perfil (4/11), Brasil y Australia ya agotaron sus cupos y Argentina todavía tiene margen.",
+     "Efecto en Argentina": "Entre enero y septiembre se exportaron más de 331.000 t a China por USD 1.525,8 millones: el volumen cayó 7,6% y la facturación subió 14,2%. El techo de volumen limita el principal mercado de la carne, aunque por ahora no se tocó. Lectura propia."
+    }
+   },
+   {
+    "nombre": "EE.UU.: Sección 232 sobre acero y aluminio (50%)",
+    "chip": "Arancel",
+    "chipc": "crit",
+    "fecha": "2026-11-12",
+    "f": "Perfil (12/11/2026); National Law Review (3/4/2026); iProfesional (24/7/2026)",
+    "url": "https://perfil.com/economia/el-gobierno-busca-acelerar-el-envio-del-acuerdo-con-ee.uu.-al-congreso-pero-la-apertura-a-china-puede-complicar-negociaciones-para-el-acero-aLlV39N3zkLS",
+    "campos": {
+     "País": "EE.UU. → todos los orígenes, incluida Argentina",
+     "Medida": "50% sobre acero y aluminio primarios. Desde el 6/4/2026 el derecho se cobra sobre el valor aduanero total. Los derivados hechos sustancialmente de esos metales pagan 25%, y algunos equipos industriales pagan 15% hasta 2027 (National Law Review).",
+     "Productos": "Tubos y productos siderúrgicos (Tenaris/Techint) y aluminio primario (Aluar).",
+     "Estado": "Vigente. Quedó afuera del arancel de julio de 2026 y también del acuerdo bilateral (iProfesional, 24/7). Según Perfil (12/11), incluirlo depende de la postura argentina frente a China y la triangulación de acero, y el Gobierno todavía no cambió el proyecto.",
+     "Efecto en Argentina": "Es la barrera más alta que enfrenta un producto industrial argentino en EE.UU. Las siderúrgicas buscan un arancel menor al que se aplica al resto del mundo. Lectura propia."
+    }
+   },
+   {
+    "nombre": "UE: Reglamento de deforestación (EUDR)",
+    "chip": "Ambiental",
+    "chipc": "warn",
+    "fecha": "2026-07-13",
+    "f": "Comisión Europea, DG Medio Ambiente (13/7/2026); La Nación (24/11/2026)",
+    "url": "https://environment.ec.europa.eu/news/commission-updates-product-scope-and-tools-support-eudr-2026-07-13_en",
+    "campos": {
+     "País": "Unión Europea → importaciones de soja, carne vacuna, madera y otras materias primas",
+     "Medida": "Obliga a demostrar que el producto no viene de tierras deforestadas después del 31/12/2020, con un sistema de debida diligencia y trazabilidad. Un acto delegado de julio de 2026 saca del alcance los cueros y pieles bovinos y la soja para siembra.",
+     "Productos": "Soja y derivados (harina, aceite), carne vacuna y madera. El cuero quedó excluido.",
+     "Estado": "Rige desde el 30/12/2026 para operadores grandes y medianos, y desde el 30/6/2027 para micro y pequeños. Según La Nación (24/11), Argentina figura como país de riesgo 'estándar', pide pasar a 'bajo' y ya hizo más de 50 gestiones.",
+     "Efecto en Argentina": "Los exportadores de soja y carne a la UE deberán tener trazabilidad hasta el lote en semanas. Ser país de riesgo estándar implica más controles que el riesgo bajo. Lectura propia."
+    }
+   },
+   {
+    "nombre": "EE.UU.: arancel adicional del 10% (régimen de julio de 2026)",
+    "chip": "Arancel",
+    "chipc": "warn",
+    "fecha": "2026-07-24",
+    "f": "Perfil (24/7/2026); MercoPress (25/7/2026); iProfesional (24/7/2026)",
+    "url": "https://www.perfil.com/noticias/economia/argentina-mantendra-el-arancel-mas-bajo-de-estados-unidos-y-amplia-beneficios-para-sus-exportaciones-a40.phtml",
+    "campos": {
+     "País": "EE.UU. → Argentina",
+     "Medida": "10% adicional, la franja más baja del régimen (al resto le tocó 12,5%). Según Perfil se adoptó bajo la Sección 301 y reemplazó al 10% universal que venció el 24/7. Hay 2.212 posiciones arancelarias argentinas que entran al 0%: las 1.675 del acuerdo bilateral más 537 agregadas por la USTR.",
+     "Productos": "Pagan el 10%, entre otros, maderas tropicales, corcho, aceites de jojoba y argán y algunas flores. Están exentos el acero y el aluminio (que van por la 232), la carne dentro del cupo, el petróleo, el litio y otros minerales críticos, el vino, la miel y la yerba (iProfesional).",
+     "Estado": "Vigente desde el 24/7/2026. Reemplazó a los aranceles 'recíprocos' que la Corte Suprema de EE.UU. anuló en 2026.",
+     "Efecto en Argentina": "Las principales exportaciones a EE.UU. quedaron exentas o con régimen propio, así que el 10% recae sobre productos de menor peso. Lectura propia."
+    }
+   },
+   {
+    "nombre": "EE.UU.: derechos antidumping y compensatorios al biodiésel",
+    "chip": "Antidumping",
+    "chipc": "crit",
+    "fecha": "2026-02-07",
+    "f": "Bichos de Campo (7/2/2026)",
+    "url": "https://bichosdecampo.com/biodiesel-el-segundo-item-comercial-mas-relevante-para-la-argentina-quedo-afuera-del-acuerdo-comercial-con-ee-uu/",
+    "campos": {
+     "País": "EE.UU. → Argentina",
+     "Medida": "Derechos antidumping y compensatorios aplicados desde comienzos de 2018. La fuente no informa las alícuotas.",
+     "Productos": "Biodiésel de soja.",
+     "Estado": "Vigentes. El biodiésel quedó afuera del acuerdo comercial firmado en febrero de 2026.",
+     "Efecto en Argentina": "En la práctica hacen inviables las ventas de biodiésel a EE.UU., que la fuente describe como el segundo rubro comercial más relevante para Argentina."
+    }
+   },
+   {
+    "nombre": "UE: criterio ILUC que pondría a la soja como 'alto riesgo' (biodiésel)",
+    "chip": "Ambiental",
+    "chipc": "warn",
+    "fecha": "2026-03-24",
+    "f": "iProfesional (24/3/2026); La Nación (30/1/2026)",
+    "url": "https://www.iprofesional.com/energia/450785-una-millonaria-trampa-regulatoria-de-la-union-europea-contra-el-mercosur",
+    "campos": {
+     "País": "Unión Europea → biodiésel de soja (Argentina, Brasil, EE.UU.)",
+     "Medida": "Una propuesta de la Comisión Europea cambia los criterios de cambio indirecto del uso del suelo (ILUC) y pasaría a la soja a la categoría de alto riesgo, igual que el aceite de palma. Con eso, el biodiésel de soja ya no contaría para las metas de descarbonización de los países de la UE.",
+     "Productos": "Biodiésel de soja (en 2025 se exportaron 280.000 t por unos USD 350 millones) y aceite de soja de uso industrial.",
+     "Estado": "Propuesta en consulta pública. No se confirmó fecha de adopción. Santa Fe prepara un reclamo ante la OMC.",
+     "Efecto en Argentina": "Anularía la eliminación del arancel del 6,5% al biodiésel que trae el acuerdo UE–Mercosur, y pone en riesgo un mercado de USD 350–400 millones al año. Toda la exportación sale de Santa Fe."
+    }
+   },
+   {
+    "nombre": "EE.UU.: Argentina excluida del cupo temporal de 300.000 t de carne",
+    "chip": "Cupo",
+    "chipc": "warn",
+    "fecha": "2026-08-27",
+    "f": "Bloomberg Línea (27/8/2026)",
+    "url": "https://www.bloomberglinea.com/latinoamerica/argentina/el-nuevo-cupo-de-300000-toneladas-de-carne-de-eeuu-que-dejo-afuera-a-argentina/",
+    "campos": {
+     "País": "EE.UU. → 'otros países' (Brasil, Paraguay, Irlanda, Japón, Países Bajos)",
+     "Medida": "Cupo temporal de unas 300.000 t de carne vacuna para bajar el precio interno. Argentina, Uruguay, Australia y Nueva Zelanda quedan afuera porque ya tienen cupos propios.",
+     "Productos": "Carne vacuna.",
+     "Estado": "Vigente desde fines de agosto de 2026. La fuente no da fecha de cierre ni arancel.",
+     "Efecto en Argentina": "Brasil y Paraguay ganan acceso adicional al mercado estadounidense y compiten con la carne argentina. Lectura propia."
+    }
+   },
+   {
+    "nombre": "EE.UU.: antidumping a la miel",
+    "chip": "Antidumping",
+    "chipc": "warn",
+    "fecha": "2026-06-12",
+    "f": "Federal Register, Departamento de Comercio de EE.UU. (12/6/2026)",
+    "url": "https://www.federalregister.gov/documents/2026/06/12/2026-11865/raw-honey-from-argentina-final-results-of-the-antidumping-duty-administrative-review-2023-2024",
+    "campos": {
+     "País": "EE.UU. → Argentina",
+     "Medida": "Resultado final de la revisión 2023–2024: margen del 21,35% para la ACA y para las empresas no examinadas, y 0% para NEXCO S.A.",
+     "Productos": "Miel cruda.",
+     "Estado": "Orden antidumping vigente desde junio de 2022. La revisión final se publicó el 12/6/2026.",
+     "Efecto en Argentina": "EE.UU. es un destino clave de la miel argentina. Con márgenes distintos según la empresa, la exportación se concentra en las firmas con tasa baja. Lectura propia."
+    }
+   },
+   {
+    "nombre": "EE.UU.: antidumping a tubos petroleros (OCTG)",
+    "chip": "Antidumping",
+    "chipc": "warn",
+    "fecha": "2026-09-18",
+    "f": "MLex (18/9/2026); SteelOrbis (13/6/2025)",
+    "url": "https://www.mlex.com/articles/2527495/steel-pipe-dumping-order-petition-had-enough-industry-backing-us-appeals-court-rules",
+    "campos": {
+     "País": "EE.UU. → Argentina",
+     "Medida": "Orden antidumping sobre tubos para la industria petrolera (OCTG). En la revisión cerrada en 2025, Siderca (Tenaris) quedó con un margen final de 6,76%. El 18/9/2026 la Corte de Apelaciones del Circuito Federal confirmó que la petición tenía suficiente respaldo de la industria.",
+     "Productos": "Tubos sin costura OCTG (Siderca/Tenaris).",
+     "Estado": "Vigente, y confirmada por el fallo de septiembre de 2026. Se suma a la Sección 232.",
+     "Efecto en Argentina": "Los tubos argentinos pagan el antidumping además del 50% de la 232, lo que encarece el acceso al mercado estadounidense. Lectura propia."
+    }
+   },
+   {
+    "nombre": "EE.UU.–Argentina: Acuerdo de Comercio e Inversión Recíprocos (ARTI)",
+    "chip": "Apertura",
+    "chipc": "ok",
+    "fecha": "2026-11-18",
+    "f": "Perfil (18/11/2026); La República/Reuters (15/10/2026)",
+    "url": "https://www.perfil.com/noticias/amp/politica/pese-a-la-derrota-de-trump-milei-acelera-la-ratificacion-del-acuerdo-comercial-con-washington-aF3hq6B0sEVG.phtml",
+    "campos": {
+     "País": "EE.UU. ↔ Argentina",
+     "Medida": "Se firmó el 5/2/2026 en Washington. En octubre se firmó un protocolo de enmienda (Quirno–Greer) que quita las referencias a los aranceles recíprocos anulados por la Corte Suprema. EE.UU. ratificó el trato de nación más favorecida para los productos argentinos.",
+     "Productos": "Acceso al 0% para miles de posiciones arancelarias (1.675 originales, 2.212 con la ampliación de julio) y cupo de carne ampliado. No incluye acero, aluminio ni biodiésel.",
+     "Estado": "Sin ratificar. Al 18/11 todavía no se había enviado al Congreso. El Gobierno dijo que lo mandará 'en los próximos días' para sesiones extraordinarias en diciembre. Entra en vigor 60 días después de que ambos países lo ratifiquen.",
+     "Efecto en Argentina": "Le da previsibilidad al acceso preferencial al mercado estadounidense. Su aplicación depende del Congreso argentino. Lectura propia."
+    }
+   },
+   {
+    "nombre": "EE.UU.: cupo de 100.000 t para carne vacuna argentina",
+    "chip": "Cupo",
+    "chipc": "ok",
+    "fecha": "2026-11-19",
+    "f": "APEA (19/11/2026); Bichos de Campo (15/9/2026)",
+    "url": "https://www.apea.org.ar/cuotas-arancelarias-buena-performance-a-octubre-2026/",
+    "campos": {
+     "País": "EE.UU. → Argentina",
+     "Medida": "El acuerdo de febrero de 2026 amplió el cupo preferencial de 20.000 t a 100.000 t en 2026, con unas 80.000 t adicionales en cuatro tramos (el último se abrió el 1/10). La carne dentro del cupo no paga el arancel adicional del 10%.",
+     "Productos": "Carne vacuna (cortes y recortes industriales).",
+     "Estado": "Vigente en 2026. Al 30/10 estaba certificado el 81% (81.000 t, unos USD 693 millones), según APEA.",
+     "Efecto en Argentina": "Multiplicó por cinco el acceso preferencial a un mercado con precios altos por la escasez de ganado en EE.UU. Lectura propia."
+    }
+   },
+   {
+    "nombre": "UE–Mercosur: acuerdo comercial interino aplicado de forma provisional",
+    "chip": "Apertura",
+    "chipc": "ok",
+    "fecha": "2026-09-30",
+    "f": "Comisión Europea, Access2Markets (30/4/2026); Euronews (30/9/2026); Diario Panorama (2/5/2026)",
+    "url": "https://es.euronews.com/2026/09/30/polonia-pierde-una-primera-batalla-sobre-el-mercosur-tras-el-fallo-del-tribunal-de-justici",
+    "campos": {
+     "País": "Unión Europea ↔ Mercosur (incluida Argentina)",
+     "Medida": "La UE elimina aranceles sobre el 92% de las importaciones del Mercosur y da acceso preferencial a otro 7,5% mediante cupos. La carne dentro de cupo paga 7,5% desde el primer día. Hay una cláusula de salvaguardia bilateral.",
+     "Productos": "Carne vacuna (cuota Hilton de 29.389 t y nuevos cupos de carne enfriada y congelada), miel, vinos, derivados de soja, biodiésel y pollo.",
+     "Estado": "Se aplica de forma provisional desde el 1/5/2026. El 30/9 el TJUE rechazó la medida cautelar que pidió Polonia. Siguen pendientes el recurso de fondo y el dictamen sobre la compatibilidad del acuerdo con los tratados de la UE.",
+     "Efecto en Argentina": "Baja aranceles para las exportaciones agroindustriales a la UE. Hay riesgo judicial mientras el TJUE no se pronuncie sobre el fondo. Lectura propia."
+    }
+   },
+   {
+    "nombre": "India: rebaja de aranceles al aceite crudo de soja y girasol",
+    "chip": "Apertura",
+    "chipc": "ok",
+    "fecha": "2026-09-24",
+    "f": "Business Today (24/9/2026)",
+    "url": "https://www.businesstoday.in/latest/economy/story/govt-cuts-customs-duty-on-edible-oil-ahead-of-festive-season-557539-2026-09-24",
+    "campos": {
+     "País": "India → importaciones de aceites comestibles",
+     "Medida": "El arancel básico al aceite crudo de soja baja de 10% a 5% (de 16,5% a 11% efectivo) y el del aceite crudo de girasol de 10% a 0% (de 16,5% a 5,5% efectivo).",
+     "Productos": "Aceite crudo de soja y aceite crudo de girasol.",
+     "Estado": "Vigente desde el 24/9/2026. La fuente no indica hasta cuándo.",
+     "Efecto en Argentina": "Abarata la entrada de los aceites argentinos en uno de sus principales destinos. Lectura propia."
+    }
+   },
+   {
+    "nombre": "Japón: reapertura para la carne vacuna argentina",
+    "chip": "Sanitaria",
+    "chipc": "ok",
+    "fecha": "2026-10-04",
+    "f": "iProfesional (4/10/2026)",
+    "url": "https://www.iprofesional.com/comex/465832-tras-20-anos-argentina-reabrio-un-mercado-de-carne-de-mas-de-us3-000-millones-anuales.amp",
+    "campos": {
+     "País": "Japón → Argentina",
+     "Medida": "Se habilita la carne vacuna deshuesada y madurada y la lengua de zonas libres de aftosa con vacunación. Antes Japón solo aceptaba carne de la Patagonia.",
+     "Productos": "Carne vacuna deshuesada y lengua.",
+     "Estado": "Acuerdo anunciado en octubre de 2026. Los primeros envíos dependen de las auditorías del MAFF japonés en las plantas.",
+     "Efecto en Argentina": "Abre un mercado que importa más de USD 3.000 millones al año en carne vacuna."
+    }
+   }
+  ],
+  "rubros": [
+   {
+    "nombre": "Industria",
+    "chip": "Desfavorable",
+    "chipc": "crit",
+    "f": "Banco Central do Brasil (FRED) · USTR · Comisión Europea",
+    "url": "https://fred.stlouisfed.org/series/DEXBZUS",
+    "campos": {
+     "Qué pasó afuera": "El real perdió 5,2 % en la semana (5,93 por dólar) y la actividad de Brasil cayó 0,25 % en septiembre. EE.UU. sigue cobrando 50 % al acero y al aluminio (Sección 232) y la UE sumó antidumping al acero laminado en frío de cinco países.",
+     "Efecto en Argentina": "Brasil es el principal comprador de autos y manufacturas argentinas: un real más débil y una economía que se frena achican ese mercado y abaratan lo que llega de Brasil. El acero que Europa y EE.UU. cierran busca otros destinos, incluida Sudamérica. Lectura propia.",
+     "Qué mirar": "Copom el 9/12 y el envío del acuerdo con EE.UU. al Congreso en sesiones extraordinarias de diciembre."
+    }
+   },
+   {
+    "nombre": "Agro",
+    "chip": "Desfavorable",
+    "chipc": "warn",
+    "f": "Secretaría de Agricultura · Aduana de China · Brownfield",
+    "url": "https://www.magyp.gob.ar/mercadosagropecuarios/precios.php",
+    "campos": {
+     "Qué pasó afuera": "La canasta exportadora bajó a 92,7 (−1,4) con el trigo −3,2 % en Chicago. FOB oficiales del 20/11: soja 474, maíz 197 y trigo 221 USD/t. China importó 7,35 Mt de soja en octubre (−22,5 % interanual) y demora la liberación de soja en puertos. La urea sigue cara (450 USD/t en Medio Oriente; Egipto, 535).",
+     "Efecto en Argentina": "Precios más bajos justo antes de la cosecha de trigo de diciembre y una China que compra menos y prioriza la soja de EE.UU. Los fertilizantes caros encarecen la siembra de maíz. A favor: India bajó los aranceles a los aceites de soja y girasol, y Japón reabrió la carne. Lectura propia.",
+     "Qué mirar": "Avance de la cosecha de trigo, el cupo de carne de EE.UU. (81 % certificado al 30/10) y el dato de importación china de noviembre (alrededor del 7/12)."
+    }
+   },
+   {
+    "nombre": "Minería",
+    "chip": "Desfavorable",
+    "chipc": "crit",
+    "f": "Trading Economics · goldprice.org",
+    "url": "https://goldprice.org/gold-price-today/2026-11-20",
+    "campos": {
+     "Qué pasó afuera": "Semana de derrumbe de metales: oro −8,9 % (3.535 USD/oz), plata −15,5 % (41,19) y cobre −9,8 % (12.092 USD/t). El litio quedó cerca de 91.000 CNY/t en China (unos 13.560 USD/t).",
+     "Efecto en Argentina": "El oro y la plata son las principales exportaciones mineras del país (Santa Cruz, San Juan): caen el valor exportado y las regalías. El cobre más bajo enfría el apuro por los proyectos de cobre en el RIGI. El litio se sostiene. Lectura propia.",
+     "Qué mirar": "Reunión de la Fed del 8–9/12: una suba de tasas esperada pesa sobre el oro y la plata."
+    }
+   },
+   {
+    "nombre": "Energía",
+    "chip": "Mixta",
+    "chipc": "warn",
+    "f": "ICE · GIE AGSI+ · Al Attiyah Foundation",
+    "url": "https://agsi.gie.eu/",
+    "campos": {
+     "Qué pasó afuera": "El Brent bajó por tercera semana (92,6 USD, −3,4 %) pese a los ataques en el Golfo y Ormuz. El GNL asiático (JKM) bajó a unos 26,9 USD/MMBtu (−14 %, una sola fuente). Europa entra al invierno con el gas almacenado más bajo para la fecha desde 2011 y los modelos marcan frío en EE.UU. y Europa hasta el 10/12.",
+     "Efecto en Argentina": "Un petróleo más barato reduce lo que cobra Vaca Muerta por exportar (YPF −14,7 %, Vista −11,2 % en la semana) y abarata lo que se importa. El GNL que Argentina compra para su invierno de 2027 sigue muy por encima de los precios de antes de la guerra con Irán. Lectura propia.",
+     "Qué mirar": "Ormuz, el frío en el hemisferio norte y el almacenamiento europeo (GIE)."
+    }
+   },
+   {
+    "nombre": "Construcción",
+    "chip": "Mixta",
+    "chipc": "warn",
+    "f": "FRED · Reserva Federal",
+    "url": "https://fred.stlouisfed.org/series/DGS10",
+    "campos": {
+     "Qué pasó afuera": "El bono a 10 años de EE.UU. bajó a 4,91 % (−24 pb), pero las minutas de la Fed dejan casi descontada una suba de tasas el 9/12 y el riesgo de las empresas emergentes subió 17 pb. Europa y EE.UU. se cierran más al acero importado. El riesgo país de Argentina saltó de 830 a 1.070 pb.",
+     "Efecto en Argentina": "Financiarse afuera para obras e inversiones del RIGI sigue caro y puede encarecerse si la Fed sube. El acero desviado de Europa y EE.UU. puede abaratar insumos importados. Lectura propia.",
+     "Qué mirar": "Decisión de la Fed del 9/12 y el riesgo país."
+    }
+   },
+   {
+    "nombre": "Comercio",
+    "chip": "Mixta",
+    "chipc": "warn",
+    "f": "Drewry · Baltic Exchange · USTR",
+    "url": "https://www.drewry.co.uk/supply-chain-advisors/supply-chain-expertise/world-container-index-assessed-by-drewry",
+    "campos": {
+     "Qué pasó afuera": "El real se devaluó 5,2 %, el flete de contenedores bajó por cuarta semana (Drewry −3 %) y el Baltic Dry −2,8 %. EE.UU. cobra 10 % adicional a Argentina, con 2.212 posiciones al 0 %; el acuerdo UE–Mercosur se aplica de forma provisional desde el 1/5.",
+     "Efecto en Argentina": "Importar desde Brasil y Asia sale más barato (moneda y flete), lo que compite con lo que se produce en el país. Exportar a EE.UU. y a la UE tiene hoy mejores condiciones que a comienzos de 2026. Lectura propia.",
+     "Qué mirar": "Tipo de cambio en Brasil y la ratificación del acuerdo con EE.UU."
+    }
+   },
+   {
+    "nombre": "Servicios",
+    "chip": "Desfavorable",
+    "chipc": "crit",
+    "f": "Yahoo Finance · Stock Analysis · Rava",
+    "url": "https://stockanalysis.com/stocks/ggal/history/",
+    "campos": {
+     "Qué pasó afuera": "Las tecnológicas arrastraron a Wall Street (Nasdaq −10 %). Los bancos argentinos fueron los más castigados: Supervielle −24,1 %, BBVA −17,2 %, Galicia −15,0 %; Mercado Libre −9,2 % y Globant −8,3 %. El Merval en dólares cayó 11 % y el riesgo país subió 240 pb, a 1.070.",
+     "Efecto en Argentina": "Bancos que valen menos afuera tienen más difícil financiarse en el exterior. Las exportaciones de servicios de software dependen de la demanda de EE.UU., hoy frenada por el ajuste en las tecnológicas. Un real más débil también encarece a la Argentina para el turista brasileño. Lectura propia.",
+     "Qué mirar": "Recuperación (o no) de las tecnológicas en Wall Street y el riesgo país."
+    }
+   }
   ]
  },
  "pendientes": [
   "[materias] Se agotó el cupo de búsquedas web antes de terminar: urea, girasol, cebada, Bósforo y Malaca quedaron sin revisar a fondo.",
-  "[materias] gas-henry-hub y gas-ttf-europa: Trading Economics muestra dos cifras para el 20/11 (3,41/3,47 USD y 88,45/89,54 EUR); liquidaciones de NYMEX e ICE Endex no confirmadas.",
-  "[materias] gnl-asia-jkm: dato de la semana al 13/11 (31,3, Reuters vía BOE Report); falta el de la semana al 20/11.",
-  "[materias] oro, plata, cobre: cierres de una sola fuente (Trading Economics; oro también Brownfield). Litio: una sola fuente (Jiemian, 98.980 CNY), conversión propia.",
   "[materias] contenedor-asia-sudamerica: Drewry WCI del 19/11 tomado de ShipUniverse (fuente secundaria).",
   "[materias] jet-fuel: IATA no muestra la fecha exacta; se asume semana al 13/11.",
-  "[materias] urea: sin precio nuevo de Medio Oriente al 20/11; girasol, cebada: sin dato nuevo comparable.",
   "[materias] spr-china, spr-japon, spr-corea, spr-india, pasajes: sin dato nuevo al 20/11. carne-vacuna, fosfato-diamonico, potasa, fao-*: mensuales, próximos a comienzos de diciembre.",
   "[materias] pasos: Bab el-Mandeb y Suez sin cifras nuevas (Lloyd's List pasa a quincenal, próximo 26/11); Bósforo y Malaca sin dato nuevo al 20/11. Panamá: fecha exacta del anuncio de 34 cupos tomada de buscador (AJOT no se pudo abrir). El incendio del petrolero del 20/11 cerca de Khasab, de una sola fuente (IBTimes, que lo fecha mal el 21/11).",
   "[materias] comercio: antidumping de la UE al acero visto solo por el resumen de Bloomberg (paywall). No se revisaron OFAC ni medidas sanitarias de la semana.",
@@ -4037,7 +4522,13 @@
   "[tecsalud] cortes-de-cables-o-gps: la causa de la falla del SEA-ME-WE 5 frente a Pakistán no se informó; no se revisaron UKMTO ni GPSJam para la semana.",
   "[tecsalud] ia: los lanzamientos de Google (Gemini 4 Neon, 18/11) salen de listados de terceros; IA y empleo sin dato nuevo en la semana (el informe Challenger de noviembre sale a comienzos de diciembre); sin novedad de Stargate Argentina.",
   "[tecsalud] brotes-animales-relevantes: OMSA/WAHIS no consultado directamente; no se halló fiebre aftosa ni peste porcina nueva en Sudamérica. Maersk confirmó un robo de datos (WhiteArmor, USD 5 M) el 11/11, fuera de la semana: no se incluyó.",
-  "[tecsalud] emergencias-oms-vigentes: la ratificación del 18/11 se tomó de Anadolu y CIDRAP; las recomendaciones temporales nuevas de la OMS todavía no estaban publicadas."
+  "[tecsalud] emergencias-oms-vigentes: la ratificación del 18/11 se tomó de Anadolu y CIDRAP; las recomendaciones temporales nuevas de la OMS todavía no estaban publicadas.",
+  "[revisión 25/11] Confirmados con segunda fuente: oro y plata (goldprice.org). Corregido el litio: el cierre cargado era de otro año; queda ~91.000 CNY/t (Trading Economics), una sola fuente.",
+  "[revisión 25/11] Siguen con una sola fuente o sin liquidación oficial: cobre COMEX, JKM (26,90, Al Attiyah), Henry Hub (settlement NYMEX) y TTF (liquidación ICE Endex). Sin dato de la semana: urea, girasol y cebada.",
+  "[tasas-fob] FOB oficiales de la Secretaría de Agricultura = \"puertos argentinos\" (Res. SAGyP 65/2025), no específicamente Up River; sin dato del 13/11 para la variación. Harina de soja sin dato al 20/11; aceite con el último dato encontrado (11/11, Up River, S&P Global). Falta la tabla FOB/FAS Up River de la BCR.",
+  "[tasas-fob] Importación china de soja de octubre sin desglose por origen. LPR de China tomada de Trading Economics (no del comunicado del PBoC).",
+  "[barreras] Sin verificar: base legal del 10 % de EE.UU. (Perfil dice Sección 301), cupo de carne de EE.UU. (80.000 o 100.000 t según la fuente), alícuotas actuales del biodiésel en EE.UU. y la UE, cuota Hilton dentro del acuerdo UE–Mercosur, limones y vino en EE.UU. Chile, México, Rusia, Indonesia y Turquía sin revisar.",
+  "[mercados] Merval en pesos del 20/11 (81.255) de una sola fuente (Rava). Desde el 19/10 el índice es el MSCI Merval con nueva escala: no hay cierre de 2025 comparable. Cierres de 2025 de CRESY e IRS de StockScan y Digrin."
  ],
  "series": {
   "pib": {
@@ -4674,6 +5165,18 @@
    "f": "FMI DataMapper",
    "url": "https://www.imf.org/external/datamapper/GGXWDG_NGDP",
    "nota": "Deuda bruta del gobierno general, proyección 2026. Rojo: 100 % o más; ámbar: 60 a 100 %; verde: menos de 60 %; celeste: Argentina, como referencia. EE.UU. y Reino Unido: FMI, sin confirmar si es la edición de octubre. Rusia: edición de abril. *Zona euro: Eurostat, primer trimestre. Paraguay (31 %) y Uruguay (61 %) solo tienen datos de CEPAL, que mide distinto."
+  },
+  "indice-adr": {
+   "labels": [
+    "13/11",
+    "20/11"
+   ],
+   "values": [
+    68.8,
+    59.4
+   ],
+   "u": "base 31/12/2025 = 100",
+   "src": "cálculo propio"
   }
  },
  "notas": {
@@ -9446,6 +9949,32 @@
     "url_2": "https://finance.yahoo.com/quote/LOMA/history/"
    },
    {
+    "ticker": "IRS",
+    "nombre": "IRSA",
+    "sector": "Inmobiliario",
+    "cierre": 10.67,
+    "cierre_prev": 12.54,
+    "cierre_2025": 16.54,
+    "var_sem": -14.9,
+    "var_anio": -35.5,
+    "f": "EODData · FinancialContent (NYSE, cierres diarios) · StockScan y Digrin (cierre 2025)",
+    "url": "https://eoddata.com/stockquote/NYSE/IRS.htm",
+    "url_2": "https://www.financialcontent.com/quote/NY:IRS/historical"
+   },
+   {
+    "ticker": "CRESY",
+    "nombre": "Cresud",
+    "sector": "Agro e inmobiliario",
+    "cierre": 7.785,
+    "cierre_prev": 9.74,
+    "cierre_2025": 12.63,
+    "var_sem": -20.1,
+    "var_anio": -38.4,
+    "f": "EODData (Nasdaq, cierres diarios) · StockScan y Digrin (cierre 2025)",
+    "url": "https://eoddata.com/stockquote/NASDAQ/CRESY.htm",
+    "url_2": "https://stockscan.io/stocks/CRESY/price-history"
+   },
+   {
     "ticker": "CAAP",
     "nombre": "Corporación América Airports",
     "sector": "Otras",
@@ -9492,6 +10021,6 @@
    "nota": "De 50,73 (13/11) a 45,16 (20/11) dólares CCL: cinco bajas seguidas."
   },
   "f": "Yahoo Finance · Stock Analysis · Rava Bursátil",
-  "nota": "Cierres en dólares del viernes 20/11 contra el 13/11 y contra el último cierre de 2025; variación solo de precio, sin dividendos. Semana muy mala: las 15 acciones bajaron, en medio del derrumbe de Wall Street por las tecnológicas y la suba del riesgo emergente. Los bancos fueron los más castigados (Supervielle −24 %, BBVA −17 %, Galicia −15 %); también Edenor (−18 %) e YPF (−15 %). Todos los cierres coinciden en Yahoo Finance y Stock Analysis. Mercado Libre y Globant tienen hoy sede fuera de Argentina; se incluyen como referencia."
+  "nota": "Cierres en dólares del viernes 20/11 contra el 13/11 y contra el último cierre de 2025; variación solo de precio, sin dividendos. Semana muy mala: las 17 acciones bajaron, en medio del derrumbe de Wall Street por las tecnológicas y la suba del riesgo emergente. Los bancos fueron los más castigados (Supervielle −24 %, BBVA −17 %, Galicia −15 %); también Edenor (−18 %) e YPF (−15 %). Todos los cierres coinciden en Yahoo Finance y Stock Analysis. Mercado Libre y Globant tienen hoy sede fuera de Argentina; se incluyen como referencia."
  }
 }

@@ -19,8 +19,9 @@ Esta guía la sigue Claude cada sábado a la mañana. El sitio es estático: `in
 
 ## Cómo trabajar (importante)
 
-- El cupo de búsquedas web por turno es limitado: no hagas todo en serie. Lanzá 6 o 7 subagentes en paralelo, cada uno con un área y su propio archivo de salida (no editan `semana.json`): materias primas y fletes; finanzas, bolsas, bancos centrales y ADR; clima, vórtice polar y eventos de la semana; conflictos y crimen; injerencia y relaciones; política, elecciones y ONU; tecnología y salud. Después juntá los archivos, escribí la portada (resumen, noticias, semáforos, vulnerabilidades) y publicá.
+- El cupo de búsquedas web por turno es limitado: no hagas todo en serie. Lanzá 6 o 7 subagentes en paralelo, cada uno con un área y su propio archivo de salida (no editan `semana.json`): materias primas, precios FOB del Gran Rosario y fletes; finanzas, bolsas, tasas de los bancos centrales y ADR; medidas comerciales y barreras contra exportaciones argentinas; clima, vórtice polar y eventos de la semana; conflictos y crimen; injerencia y relaciones; política, elecciones y ONU; tecnología y salud. Después juntá los archivos, escribí la portada (resumen, noticias, semáforos, vulnerabilidades e impacto por rubro) y publicá.
 - Si un subagente se queda sin búsquedas, retomalo en otro turno para que complete lo que falta.
+- Datos de una sola fuente: buscá siempre una segunda fuente independiente para los cierres de la semana (metales, litio, gas, GNL, fertilizantes, aceites, cebada). Si las dos difieren, poné en la nota ambos valores y cuál se usó; solo si no hay segunda fuente, anotalo en `pendientes`.
 - Si después de eso algo sigue sin dato, dejá el valor anterior con la nota "Sin dato nuevo al DD/MM" y anotalo en `pendientes`. No dejes de publicar por unos pocos datos faltantes: publicá y avisá en el mail.
 
 ## Paso a paso
@@ -71,6 +72,7 @@ Esta guía la sigue Claude cada sábado a la mañana. El sitio es estático: `in
    - `semaforos`: por canal.
    - `vulner`: vulnerabilidades externas.
    - `notas.atlantico`: Malvinas, pesca y Atlántico Sur.
+   - `fichas.rubros` (bloque "Qué significa la semana para cada rubro"): siete fichas con nombre fijo, en este orden: Industria, Agro, Minería, Energía, Construcción, Comercio y Servicios. Campos: "Qué pasó afuera" (los hechos de la semana que tocan ese rubro, con cifras del propio `semana.json`), "Efecto en Argentina" (cómo le pega al rubro, en 1–3 frases, terminando con "Lectura propia.") y "Qué mirar" (lo que viene: fecha o dato). `chip` con la señal de la semana ("Favorable", "Mixta", "Desfavorable") y `chipc` `ok`, `warn` o `crit`. Va `f`/`url` con la fuente del dato principal. Usá solo hechos ya cargados en la semana; no agregues datos nuevos sin fuente.
 10. **Verificar:**
     - Validar el JSON.
     - Levantar `python3 -m http.server`, abrir el sitio con Playwright y revisar que no haya errores de consola ni "—" nuevos sin nota.
@@ -97,12 +99,22 @@ Se sigue igual que el ENSO: cada semana, aunque no haya novedades. Vale de octub
 - Si el frío extremo o la falta de energía en el norte pasa a ser de las noticias más importantes de la semana, va a la portada y a los semáforos.
 - Fuentes: NASA Ozone Watch (https://ozonewatch.gsfc.nasa.gov/meteorology/NH.html), blog del vórtice polar de NOAA en climate.gov, blog de Judah Cohen (AER/MIT), Severe Weather Europe (seguimiento diario), Polar Vortex Earth, Met Office, ECMWF; NOAA CPC y Copernicus para las anomalías de temperatura; GIE AGSI+ (https://agsi.gie.eu/), informe semanal de almacenamiento de la EIA (jueves), ENTSOG, ACER; para Asia, Platts/JKM, JMA y el Centro Meteorológico de China. Un pronóstico se escribe como pronóstico, con la fecha del modelo; nunca como hecho.
 
+## Tasas, precios FOB y barreras comerciales (página Economía)
+
+- **Tasas de referencia** (valores, cada semana): `tasa-fed` (techo del rango de fondos federales; el rango va en la nota), `tasa-bce` (tasa de depósito), `tasa-selic` y `tasa-china-lpr` (LPR a 1 año; la de 5 años y la repo a 7 días en la nota). `dt` = `"pb"`, `d` = cambio de la semana en puntos básicos (0 si no hubo decisión), `sig` = `"-"`. En la nota: fecha y sentido de la última decisión y fecha de la próxima reunión. Fuentes: federalreserve.gov, ecb.europa.eu, bcb.gov.br (Copom), pbc.gov.cn; Reuters o Trading Economics para confirmar. Las fichas `bancos` siguen con el detalle de cada banco.
+- **Precios FOB de exportación** (valores, cada semana, cierre del viernes): `fob-soja-rosario`, `fob-harina-soja-rosario`, `fob-aceite-soja-rosario`, `fob-maiz-rosario`, `fob-trigo-rosario`, en USD/t, con variación contra el viernes anterior. Fuentes: tabla diaria "Cotizaciones de granos" de la Secretaría de Agricultura (magyp.gob.ar/mercadosagropecuarios/precios.php; son FOB oficiales de "puertos argentinos", Res. SAGyP 65/2025, y no traen harina ni aceite), tabla "FOB/FAS Argentina" de la BCR (Up River, con pellets y aceite; preferida si está accesible), CIARA-CEC y S&P Global. Guardá el valor de cada viernes en la nota para calcular la variación de la semana siguiente. En la nota, posición de embarque y si es oficial o de mercado. No reemplazan a los de Chicago: los dos bloques conviven.
+- **Importación china de soja** (`importacion-china-soja`, mensual): Aduana de China (GACC), alrededor del día 7 el total y del 20 el desglose por origen (Brasil, EE.UU., Argentina). `d` = variación interanual. Las compras chinas de soja o harina argentina de la semana van en la nota.
+- **Barreras a lo que exporta Argentina** (`fichas.barreras`, cada semana): medidas vigentes o en negociación de EE.UU. (arancel a Argentina, acuerdo comercial bilateral, Sección 232 acero y aluminio, cupo de carne, biodiésel, cítricos, sanciones OFAC) y de otros países (UE: acuerdo con el Mercosur, reglamento de deforestación, antidumping; China: cupos y habilitaciones sanitarias; India: aranceles a los aceites; Brasil y otros). Entre 8 y 14 fichas, de mayor a menor impacto. Campos: País, Medida, Productos, Estado, Efecto en Argentina. `chip` = tipo (Arancel, Cupo, Antidumping, Sanción, Sanitaria, Ambiental, Apertura); `chipc` = `crit` (perjuicio vigente), `warn` (riesgo o perjuicio moderado), `ok` (apertura o alivio). Cada ficha con `fecha` de la última novedad, `f` y `url`. Revisá cada semana si alguna cambió de estado y sumá las nuevas; las medidas de la semana en cualquier país siguen yendo también a `fichas.comercio`.
+- KPIs del bloque: `arancel-eeuu-argentina` (% que aplica EE.UU. a Argentina, con exenciones en la nota) y `medidas-vigentes-contra-arg` (cantidad de fichas `barreras` en `crit` o `warn`; cálculo propio).
+
 ## Calendario de fuentes que no son semanales
 
 - Pink Sheet del Banco Mundial (fertilizantes, carne): primeros días hábiles del mes.
 - NOAA CPC, discusión ENSO: segundo jueves del mes. IRI: alrededor del 19 de cada mes.
 - EIA, almacenamiento de gas de EE.UU.: todos los jueves. GIE AGSI+: diario, con dos días de demora.
 - Remesas de México (Banxico): primeros días del mes.
+- Aduana de China: importación de soja, alrededor del 7 (total) y del 20 (por origen).
+- Decisiones de tasas: Fed (8 reuniones al año), BCE (cada 6 semanas), Copom (cada 45 días), LPR de China (día 20 de cada mes).
 - FMI WEO: abril, julio, octubre y enero.
 - ONU WPP: población; revisión cada dos años.
 
@@ -149,6 +161,9 @@ Cada índice: `{fuente, url, edicion, proxima, cats, paises:{ISO numérico: {cat
 Cuando sale una edición nueva, la actualización semanal de esa semana reemplaza el índice completo, cambia `edicion` y `proxima`, y lo menciona en la portada si Argentina cambió de categoría.
 
 ## Empresas argentinas en Wall Street (`semana.json` → `adr`)
-- Cada viernes: cierre en dólares de YPF, PAM, VIST, TGS, CEPU, EDN, GGAL, BMA, BBAR, SUPV, TEO, LOMA, CAAP, MELI y GLOB (campos `cierre`, `cierre_prev` = viernes anterior, `cierre_2025` = 31/12/2025, `var_sem`, `var_anio` redondeados a 1 decimal; `sector`, `f`, `url`) y `corte`.
+- Cada viernes, con el mismo cierre del viernes que las bolsas del mundo: cierre en dólares de YPF, PAM, VIST, TGS, CEPU, EDN, GGAL, BMA, BBAR, SUPV, TEO, LOMA, CRESY, IRS, CAAP, MELI y GLOB (campos `cierre`, `cierre_prev` = viernes anterior, `cierre_2025` = 31/12/2025, `var_sem`, `var_anio` redondeados a 1 decimal; `sector`, `f`, `url`) y `corte`.
 - `merval_usd.var_sem`: variación semanal del Merval en dólares CCL (Rava, merval-usd). Se muestra solo la variación porque el índice cambió de base en octubre de 2026.
+- **Índice de ADR argentinos** (`valores.indice-adr`, cálculo propio): promedio simple de `cierre / cierre_2025` de las 13 acciones GGAL, YPF, PAM, BMA, BBAR, SUPV, CEPU, TGS, TEO, EDN, CRESY, IRS y LOMA, por 100 (base 31/12/2025 = 100). `d` = variación contra el mismo cálculo con `cierre_prev` (`dt` `"pct"`, `sig` `"+"`). Se calcula con `python3 scripts/indice_adr.py`, que también agrega el valor a `series.indice-adr` (últimas 12 semanas). Si falta el cierre de alguna, el índice no se publica esa semana y se anota en `pendientes`.
+- **Riesgo país** (`valores.riesgo-pais-argentina`): EMBI Argentina de JP Morgan en puntos básicos al cierre del viernes, `dt` `"pb"`, `sig` `"-"`. Fuentes: Ámbito, Rava, Infobae, Reuters o Bloomberg Línea, dos cuando se pueda (suele publicarse con un día de demora).
+- **Merval** (`valores.merval-pesos` en puntos y `valores.merval-usd` en dólares CCL): cierre del viernes y variación semanal; en la nota del Merval en dólares, el CCL usado. Fuentes: BYMA, Rava (merval y merval-usd), Ámbito. Siguen siendo datos de mercado, no de economía interna: no se suman otros indicadores argentinos.
 - Fuentes: stockanalysis.com/stocks/<ticker>/history/, stockscan.io, marketbeat.com, rava.com. Verificar al menos dos fuentes en los papeles con grandes movimientos.
